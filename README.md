@@ -1,2 +1,1 @@
-# zeromq-component-model
-A Component Model using ZeroMQ
+A C++ Component Model for ZeroMQ
