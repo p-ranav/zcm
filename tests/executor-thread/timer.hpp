@@ -18,10 +18,12 @@
 class Timer {
 public:
 
-  Timer(std::string name, unsigned int priority, long long period) : 
+  Timer(std::string name, unsigned int priority, long long period, 
+	std::function<void()> operation_function) : 
     name(name), 
     priority(priority),
-    period(std::chrono::nanoseconds(period)) {}
+    period(std::chrono::nanoseconds(period)), 
+    operation_function(operation_function) {}
 
   void operation() {
     while(true) {
@@ -33,7 +35,7 @@ public:
     std::cout << name << "::Timer Expired::Period::" <<
       std::chrono::duration_cast<std::chrono::nanoseconds>(expiry - start).count() 
 	      << " ns" << std::endl;    
-    Operation new_operation(name, priority);
+    Operation new_operation(name, priority, operation_function);
     operation_queue->enqueue(new_operation);
     queue_mutex.unlock();   
     }    
@@ -46,6 +48,7 @@ public:
 private:
   std::string name;
   unsigned int priority;
+  std::function<void()> operation_function;
   std::chrono::duration<long long, std::ratio<1, 1000000000>> period;
 };
 

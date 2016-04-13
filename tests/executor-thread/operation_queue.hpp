@@ -11,16 +11,20 @@
 #include <queue>
 #include <mutex>
 #include <thread>
+#include <functional>
 
 class Operation_Queue;
 Operation_Queue * operation_queue;
 std::mutex queue_mutex;
 
 struct Operation {
-  Operation(std::string name, unsigned int priority) : 
-    name(name), priority(priority){ }
+  Operation(std::string name, 
+	      unsigned int priority, 
+	      std::function<void()> operation) : 
+    name(name), priority(priority), operation(operation) {}
   std::string name;
   unsigned int priority;
+  std::function<void()> operation;
 };
 
 class Operation_Queue {
@@ -54,6 +58,7 @@ public:
         queue_mutex.lock();
         Operation top_operation = operation_queue.top();
 	std::cout << "Dequeueing Top Operation: " << top_operation.name << std::endl;
+        top_operation.operation();
 	dequeue();
         queue_mutex.unlock();
       }
