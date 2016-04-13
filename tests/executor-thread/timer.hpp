@@ -29,13 +29,13 @@ public:
       while(std::chrono::duration_cast<std::chrono::nanoseconds>
       (std::chrono::high_resolution_clock::now() - start) < period) {}
       auto expiry = std::chrono::high_resolution_clock::now();
-    enqueue_mutex.lock();
+    queue_mutex.lock();
     std::cout << name << "::Timer Expired::Period::" <<
       std::chrono::duration_cast<std::chrono::nanoseconds>(expiry - start).count() 
 	      << " ns" << std::endl;    
     Operation new_operation(name, priority);
     operation_queue->enqueue(new_operation);
-    enqueue_mutex.unlock();   
+    queue_mutex.unlock();   
     }    
   }
 
@@ -46,7 +46,6 @@ public:
 private:
   std::string name;
   unsigned int priority;
-  std::mutex enqueue_mutex;
   std::chrono::duration<long long, std::ratio<1, 1000000000>> period;
 };
 

@@ -10,6 +10,7 @@
 int main() {
 
   operation_queue = new Operation_Queue();
+  std::thread executor_thread = operation_queue->spawn();
 
   // Create a New Timer - Name, Priority, Period (ns)
   Timer timer_1("Timer_1", 50, 1000000000);  
@@ -20,6 +21,7 @@ int main() {
 
   timer_1_thread.join();
   timer_2_thread.join();
+  executor_thread.join();
 
   return 0;
 }
