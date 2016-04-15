@@ -8,32 +8,16 @@
 #include <string>
 #include <thread>
 #include <zmq.hpp>
+#include "client.hpp"
 
 void client_function() {
-
-  zmq::context_t context(1);
-  zmq::socket_t socket (context, ZMQ_REQ);
-  std::cout << "Connecting to the Hello World Server" << std::endl;
-
-  socket.connect("tcp://localhost:5555");
-  while (true) {
-
+  while(true) {
+    Client new_client("tcp://localhost:5555");
     std::string message;
-    std::cout << "Enter message: ";
+    std::cout << "New Message: ";
     std::cin >> message;
-
-    // Prepare request message
-    zmq::message_t request (message.length());
-    memcpy(request.data(), message.c_str(), message.length());
-    std::cout << "Sending " << message << std::endl;
-    socket.send(request);
-
-    // Receive response from server
-    zmq::message_t reply;
-    socket.recv(&reply);
-    std::string reply_string = std::string(static_cast<char *>(reply.data()), 
-					   reply.size());
-    std::cout << "Received " << reply_string << std::endl;
+    std::string reply = new_client.call(message);
+    std::cout << "Received: " << reply << std::endl;
   }
 }
 
