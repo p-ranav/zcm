@@ -13,13 +13,16 @@
 #include <functional>
 #include "operation.hpp"
 
+class Operation_Queue;
+Operation_Queue * operation_queue;
 std::mutex queue_mutex;
 
 class Operation_Queue {
 public:
   void enqueue(const Operation& new_operation) {
-    std::lock_guard<std::mutex> lock(queue_mutex);
+    queue_mutex.lock();
     operation_queue.push(new_operation);
+    queue_mutex.unlock();
   }
 
   void dequeue() {
@@ -38,10 +41,11 @@ public:
   void process() {
     while(true) {
       if (operation_queue.size() > 0) {
-	std::lock_guard<std::mutex> lock(queue_mutex);
+	queue_mutex.lock();
 	Operation top_operation = operation_queue.top();
 	top_operation.execute();
 	dequeue();
+	queue_mutex.unlock();
       }
     }
   }

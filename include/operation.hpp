@@ -13,7 +13,7 @@ class Operation {
 public:
   Operation(std::string name, 
 	    unsigned int priority, 
-	    std::function<void ()> operation_function) : 
+	    std::function<void()> operation_function) : 
     name(name),
     priority(priority),
     operation_function(operation_function) {}
