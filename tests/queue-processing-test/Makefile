@@ -1,4 +1,4 @@
 all:
-	g++ -o queue_test queue_test.cpp -std=c++11 -I../../include -pthread
+	g++ -o run_test queue_test.cpp -std=c++11 -I../../include -pthread -L/usr/local/lib -I/usr/local -lzmq
 clean:
-	$(RM) *.o *~ queue_test
+	$(RM) *.o *~ run_test
