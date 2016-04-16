@@ -1,5 +1,5 @@
 /*
- * Operation Class - Initial Design
+ * Operation class
  * Author: Pranav Srinivas Kumar
  * Date: 2016.04.16
  */
@@ -20,6 +20,10 @@ public:
 
   void execute() {
     operation_function();
+  }
+
+  unsigned int get_priority() const {
+    return priority;
   }
 
 private:

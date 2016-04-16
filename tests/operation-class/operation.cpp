@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "operation.hpp"
+#include "operation_queue.hpp"
 
 void timer_function() {
   std::cout << "Timer" << std::endl;
@@ -16,8 +16,12 @@ int main() {
   Operation subscriber_operation("subscriber_operation", 60, 
 				 std::bind(subscriber_function, "received_message"));
 
-  timer_operation.execute();
-  subscriber_operation.execute();
+  Operation_Queue new_queue;
+  new_queue.enqueue(timer_operation);
+  new_queue.enqueue(subscriber_operation);
+  std::thread executor_thread = new_queue.spawn();
+
+  executor_thread.join();
 
   return 0;
 }
