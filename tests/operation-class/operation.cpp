@@ -12,8 +12,9 @@ void subscriber_function(std::string message) {
 
 int main() {
 
-  Operation timer_operation(timer_function);
-  Operation subscriber_operation(std::bind(subscriber_function, "received_message"));
+  Operation timer_operation("timer_operation", 50, timer_function);
+  Operation subscriber_operation("subscriber_operation", 60, 
+				 std::bind(subscriber_function, "received_message"));
 
   timer_operation.execute();
   subscriber_operation.execute();

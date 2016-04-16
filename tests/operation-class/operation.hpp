@@ -11,7 +11,11 @@
 
 class Operation {
 public:
-  Operation(std::function<void ()> operation_function) : 
+  Operation(std::string name, 
+	    unsigned int priority, 
+	    std::function<void ()> operation_function) : 
+    name(name),
+    priority(priority),
     operation_function(operation_function) {}
 
   void execute() {
@@ -20,6 +24,7 @@ public:
 
 private:
   std::string name;
+  unsigned int priority;
   std::function<void ()> operation_function;
 };
 
