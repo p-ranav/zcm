@@ -11,8 +11,6 @@
 #include <chrono>
 #include <ratio>
 #include <thread>
-#include <mutex>
-
 #include "operation_queue.hpp"
 
 class Timer {
