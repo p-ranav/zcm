@@ -11,8 +11,6 @@
 class Pub_Sub_Component : public Component {
 public:
 
-  Pub_Sub_Component(std::string name) : Component(name) {}
-
   void init() {
     // Initialize First Publisher
     component_timer_1 = new Timer("timer_1",

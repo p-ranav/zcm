@@ -13,8 +13,7 @@
 class Component {
 public:
 
-  Component(std::string name) : 
-    name(name) {
+  Component() {
     operation_queue = new Operation_Queue();
   }
 
@@ -49,8 +48,6 @@ public:
   }
 
 protected:
-  std::string name;
-
   Operation_Queue * operation_queue;
   std::thread * executor_thread;
 
