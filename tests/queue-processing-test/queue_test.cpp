@@ -5,9 +5,10 @@
 #include "publisher.hpp"
 #include "subscriber.hpp"
 
+Publisher timer_pub("timer_pub", "tcp://*:5555");
+
 void timer_function() {
-  Publisher timer_pub("timer_pub", "tcp://*:5559");
-  timer_pub.publish("timer_message");
+  timer_pub.send("timer_message");
 }
 
 void subscriber_function(std::string received_message) {
@@ -22,7 +23,7 @@ int main() {
   Subscriber new_subscriber("subscriber_operation", 
 			    60, 
 			    "timer_message", 
-			    "tcp://localhost:5559", 
+			    "tcp://127.0.0.1:5555", 
 			    std::bind(&subscriber_function, 
 				      std::placeholders::_1));
   std::thread new_subscriber_thread = new_subscriber.spawn();
@@ -32,6 +33,8 @@ int main() {
 		  1000000000, 
 		  timer_function);
   std::thread new_timer_thread = new_timer.spawn();
+  
+  new_subscriber.recv();
   
   new_subscriber_thread.join();
   new_timer_thread.join();

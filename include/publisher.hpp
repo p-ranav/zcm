@@ -24,12 +24,9 @@ public:
     delete publisher_socket;
   }
 
-  void publish(std::string message) {
-    std::cout << "Sending message... " << message << "; size: " 
-	      << message.length() << std::endl;
+  void send(std::string message) {
     zmq::message_t message_struct (message.length());
-    snprintf ((char *) message_struct.data(), message.length(),
-	      "%s", message.c_str());
+    snprintf ((char *) message_struct.data(), message.length(), "%s", message.c_str());
     publisher_socket->send(message_struct); 
   }
 

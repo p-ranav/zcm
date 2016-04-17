@@ -13,21 +13,21 @@
 
 class Subscriber {
 public:
-    Subscriber(std::string name, 
-	       unsigned int priority, 
-	       std::string filter,
-	       std::string endpoint, 
-	       std::function<void(const std::string&)> operation_function) : 
-      name(name),
-      priority(priority),
-      filter(filter),
-      endpoint(endpoint),
-      operation_function(operation_function) {
-      context = new zmq::context_t(1);
-      subscriber_socket = new zmq::socket_t(*context, ZMQ_SUB);
-      subscriber_socket->connect(endpoint);
-      subscriber_socket->setsockopt(ZMQ_SUBSCRIBE, filter.c_str(), filter.length());
-    }
+  Subscriber(std::string name, 
+	     unsigned int priority, 
+	     std::string filter,
+	     std::string endpoint, 
+	     std::function<void(const std::string&)> operation_function) : 
+    name(name),
+    priority(priority),
+    filter(filter),
+    endpoint(endpoint),
+    operation_function(operation_function) {
+    context = new zmq::context_t(2);
+    subscriber_socket = new zmq::socket_t(*context, ZMQ_SUB);
+    subscriber_socket->connect(endpoint);
+    subscriber_socket->setsockopt(ZMQ_SUBSCRIBE, filter.c_str(), filter.length());
+  }
 
   ~Subscriber() {
     subscriber_socket->close();
@@ -36,12 +36,13 @@ public:
   }
 
   void recv() {
-    while (true) {
+    while(true) {
       zmq::message_t received_message; 
       subscriber_socket->recv(&received_message);
+      std::cout << "Receiving..." << std::endl;
       std::istringstream recv_string(static_cast<char*>(received_message.data()));
       if (recv_string.str().length() > 0)
-	std::cout << "Receive successful" << std::endl;
+	std::cout << "Receive successful " << recv_string.str() << std::endl;
       //Operation new_operation(name, priority,
       // std::bind(operation_function, 
       //				recv_string));
