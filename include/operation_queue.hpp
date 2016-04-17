@@ -48,8 +48,8 @@ public:
     }
   }
 
-  std::thread spawn() {
-    return std::thread(&Operation_Queue::process, this);
+  std::thread * spawn() {
+    return new std::thread(&Operation_Queue::process, this);
   }
 
   struct PriorityOrdering {

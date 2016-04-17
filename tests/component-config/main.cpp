@@ -4,6 +4,7 @@
 int main() {
   Pub_Sub_Component * new_instance = new Pub_Sub_Component("publish_subscribe_component");
   new_instance->init();
-  new_instance->run();
+  std::thread * instance_1_thread = new_instance->spawn();
+  instance_1_thread->join();
   return 0;
 }

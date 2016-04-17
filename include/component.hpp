@@ -39,19 +39,20 @@ public:
     subscribers.push_back(new_subscriber);
   }
 
-  void run() {
+  std::thread * spawn() {
     executor_thread = operation_queue->spawn();
     for(auto timer : timers)
       timer->start();
     for(auto subscriber : subscribers)
       subscriber->start();
-    executor_thread.join();
+    return executor_thread;
   }
 
 protected:
   std::string name;
+
   Operation_Queue * operation_queue;
-  std::thread executor_thread;
+  std::thread * executor_thread;
 
   std::vector<Publisher*> publishers;
   std::vector<Subscriber*> subscribers;
