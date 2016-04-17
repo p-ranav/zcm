@@ -50,10 +50,19 @@ public:
       std::string message = std::string(static_cast<char*>(received_message.data()), 
 					received_message.size());
       if (message.length() > 0) {
+	func_mutex.lock();      
 	Operation new_operation(name, priority, std::bind(operation_function, message));
 	operation_queue_ptr->enqueue(new_operation);
+	func_mutex.unlock();      
       }
     }
+  }
+
+  void rebind_operation_function(std::function<void(const std::string&)> 
+				 new_operation_function) {
+    func_mutex.lock();
+    operation_function = new_operation_function;
+    func_mutex.unlock();
   }
 
   std::thread spawn() {
@@ -73,7 +82,8 @@ private:
   std::function<void(const std::string&)> operation_function;
   Operation_Queue * operation_queue_ptr;
   zmq::context_t * context;
-  zmq::socket_t * subscriber_socket;  
+  zmq::socket_t * subscriber_socket; 
+  std::mutex func_mutex; // used when changing operation_function at runtime 
 };
 
 #endif

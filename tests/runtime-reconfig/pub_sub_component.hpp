@@ -71,6 +71,10 @@ public:
     std::cout << "Subscriber Operation : Received : " << received_message << std::endl;  
   }
 
+  void subscriber_reconfig_function(std::string received_message) {
+    std::cout << "Reconfigured Subscriber Operation : Received : " << received_message << std::endl;  
+  }
+
   void run() {
     std::thread executor_thread = operation_queue->spawn();
     component_timer_1->start();
@@ -78,9 +82,15 @@ public:
     component_subscriber->start();
     usleep(10000000);
     component_timer_1->change_period(5000000000);
-    component_timer_1->rebind_operation_function(std::bind(&Pub_Sub_Component::
-							   timer_1_reconfig_function, 
-							   this));
+    component_timer_1->
+      rebind_operation_function(std::bind(&Pub_Sub_Component::
+					  timer_1_reconfig_function, 
+					  this));
+    usleep(5000000);
+    component_subscriber->
+      rebind_operation_function(std::bind(&Pub_Sub_Component::subscriber_reconfig_function, 
+					  this,
+					  std::placeholders::_1));
     executor_thread.join();
   }
 
