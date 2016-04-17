@@ -73,17 +73,11 @@ public:
 
   void run() {
     std::thread executor_thread = operation_queue->spawn();
-    std::thread timer_1_thread = timer_1->spawn();
-    std::thread timer_2_thread = timer_2->spawn();
-    std::thread timer_3_thread = timer_3->spawn();
-    std::thread timer_4_thread = timer_4->spawn();
-    std::thread timer_5_thread = timer_5->spawn();
-
-    timer_1_thread.join();
-    timer_2_thread.join();
-    timer_3_thread.join();
-    timer_4_thread.join();
-    timer_5_thread.join();
+    timer_1->start();
+    timer_2->start();
+    timer_3->start();
+    timer_4->start();
+    timer_5->start();
     executor_thread.join();
   }
 

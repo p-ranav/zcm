@@ -54,6 +54,11 @@ public:
     return std::thread(&Subscriber::recv, this);
   }
 
+  void start() {
+    std::thread subscriber_thread = spawn();
+    subscriber_thread.detach();
+  }
+
 private:
   std::string name;
   unsigned int priority;

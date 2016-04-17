@@ -40,6 +40,11 @@ public:
     return std::thread(&Timer::operation, this);
   }
 
+  void start() {
+    std::thread timer_thread = spawn();
+    timer_thread.detach();
+  }
+
 private:
   std::string name;
   unsigned int priority;

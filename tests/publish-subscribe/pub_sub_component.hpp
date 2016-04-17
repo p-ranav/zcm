@@ -17,7 +17,7 @@ public:
     operation_queue = new Operation_Queue();
     component_timer = new Timer("timer_operation",
 				50, 
-				1000000000, 
+				500000000, 
 				std::bind(&Pub_Sub_Component::timer_function, this), 
 				operation_queue);
     component_publisher = new Publisher("timer_pub", "tcp://*:5555");
@@ -47,11 +47,8 @@ public:
 
   void run() {
     std::thread executor_thread = operation_queue->spawn();
-    std::thread new_subscriber_thread = component_subscriber->spawn();
-    std::thread new_timer_thread = component_timer->spawn();
-
-    new_subscriber_thread.join();
-    new_timer_thread.join();
+    component_timer->start();
+    component_subscriber->start();
     executor_thread.join();
   }
 
