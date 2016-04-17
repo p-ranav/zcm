@@ -7,7 +7,7 @@
 
 void timer_function() {
   Publisher timer_pub("timer_pub", "tcp://*:5559");
-  timer_pub.publish("timer_message 12345");
+  timer_pub.publish("timer_message");
 }
 
 void subscriber_function(std::string received_message) {

@@ -22,18 +22,23 @@ public:
       priority(priority),
       filter(filter),
       endpoint(endpoint),
-      operation_function(operation_function) {}
+      operation_function(operation_function) {
+      context = new zmq::context_t(1);
+      subscriber_socket = new zmq::socket_t(*context, ZMQ_SUB);
+      subscriber_socket->connect(endpoint);
+      subscriber_socket->setsockopt(ZMQ_SUBSCRIBE, filter.c_str(), filter.length());
+    }
+
+  ~Subscriber() {
+    subscriber_socket->close();
+    delete context;
+    delete subscriber_socket;
+  }
 
   void recv() {
     while (true) {
-      zmq::context_t context (1);
-      zmq::socket_t subscriber (context, ZMQ_SUB);
-      subscriber.connect(endpoint);
-      if (!subscriber.connected())
-	std::cout << "Connect failed!" << std::endl;
-      subscriber.setsockopt(ZMQ_SUBSCRIBE, filter.c_str(), filter.length());
       zmq::message_t received_message; 
-      subscriber.recv(&received_message, ZMQ_NOBLOCK);
+      subscriber_socket->recv(&received_message);
       std::istringstream recv_string(static_cast<char*>(received_message.data()));
       if (recv_string.str().length() > 0)
 	std::cout << "Receive successful" << std::endl;
@@ -54,6 +59,8 @@ private:
   std::string filter;
   std::string endpoint;
   std::function<void(const std::string&)> operation_function;
+  zmq::context_t * context;
+  zmq::socket_t * subscriber_socket;  
 };
 
 #endif
