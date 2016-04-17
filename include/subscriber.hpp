@@ -39,6 +39,14 @@ public:
     delete subscriber_socket;
   }
 
+  std::string get_name() {
+    return name;
+  }
+
+  unsigned int get_priority() {
+    return priority;
+  }
+
   void add_connection(std::string new_connection) {
     subscriber_socket->connect(new_connection);
   }

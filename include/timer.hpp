@@ -39,6 +39,14 @@ public:
       func_mutex.unlock();
     }    
   }
+
+  std::string get_name() {
+    return name;
+  }
+
+  unsigned int get_priority() {
+    return priority;
+  }
   
   void change_period(long long new_period) {
     period_mutex.lock();
@@ -61,6 +69,7 @@ public:
     std::thread timer_thread = spawn();
     timer_thread.detach();
   }
+  
 
 private:
   std::string name;
