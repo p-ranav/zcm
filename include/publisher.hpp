@@ -29,6 +29,22 @@ public:
     delete publisher_socket;
   }
 
+  std::string get_name() {
+    return name;
+  }
+
+  void change_connection(std::string new_endpoint) {
+    std::string old_endpoint = endpoint;
+    endpoint = new_endpoint;
+    try {
+      publisher_socket->bind(endpoint);
+    } catch (zmq::error_t error) {
+      std::cout << "change_connection failed! Unable to bind publisher " << 
+	name << " to " << new_endpoint << std::endl;      
+      endpoint = old_endpoint;
+    }
+  }
+
   void send(std::string message) {
     zmq::message_t message_struct (message.length());
     memcpy(message_struct.data(), message.c_str(), message.length());
