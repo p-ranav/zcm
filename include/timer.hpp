@@ -33,8 +33,10 @@ public:
       auto expiry = std::chrono::high_resolution_clock::now();
       period_mutex.unlock();
 
+      func_mutex.lock();
       Operation new_operation(name, priority, operation_function);
       operation_queue_ptr->enqueue(new_operation);
+      func_mutex.unlock();
     }    
   }
   
@@ -43,6 +45,12 @@ public:
     period = std::chrono::nanoseconds(new_period);
     std::cout << "Changed Timer Period to: " << new_period << std::endl;
     period_mutex.unlock();
+  }
+
+  void rebind_operation_function(std::function<void()> new_operation_function) {
+    func_mutex.lock();
+    operation_function = new_operation_function;
+    func_mutex.unlock();
   }
 
   std::thread spawn() {
@@ -60,7 +68,8 @@ private:
   std::function<void()> operation_function;
   std::chrono::duration<long long, std::ratio<1, 1000000000>> period;
   Operation_Queue * operation_queue_ptr;
-  std::mutex period_mutex;
+  std::mutex period_mutex; // used when changing timer period at runtime
+  std::mutex func_mutex; // used when changing operation_function at runtime
 };
 
 #endif

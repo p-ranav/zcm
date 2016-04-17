@@ -59,6 +59,10 @@ public:
     component_publisher_1->send("timer_1_message");
   }
 
+  void timer_1_reconfig_function() {
+    component_publisher_1->send("timer_1_reconfigured_message");
+  }
+
   void timer_2_function() {
     component_publisher_2->send("timer_2_message");
   }
@@ -74,6 +78,9 @@ public:
     component_subscriber->start();
     usleep(10000000);
     component_timer_1->change_period(5000000000);
+    component_timer_1->rebind_operation_function(std::bind(&Pub_Sub_Component::
+							   timer_1_reconfig_function, 
+							   this));
     executor_thread.join();
   }
 
