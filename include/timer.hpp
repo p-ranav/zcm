@@ -16,11 +16,13 @@
 class Timer {
 public:
   Timer(std::string name, unsigned int priority, long long period, 
-	std::function<void()> operation_function) : 
+	std::function<void()> operation_function, 
+	Operation_Queue * operation_queue_ptr) : 
     name(name), 
     priority(priority),
     period(std::chrono::nanoseconds(period)), 
-    operation_function(operation_function) {}
+    operation_function(operation_function),
+    operation_queue_ptr(operation_queue_ptr) {}
 
   void operation() {
     while(true) {
@@ -30,7 +32,7 @@ public:
       auto expiry = std::chrono::high_resolution_clock::now();
 
       Operation new_operation(name, priority, operation_function);
-      operation_queue->enqueue(new_operation);
+      operation_queue_ptr->enqueue(new_operation);
     }    
   }
 
@@ -43,6 +45,7 @@ private:
   unsigned int priority;
   std::function<void()> operation_function;
   std::chrono::duration<long long, std::ratio<1, 1000000000>> period;
+  Operation_Queue * operation_queue_ptr;
 };
 
 #endif

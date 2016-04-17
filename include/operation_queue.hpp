@@ -13,8 +13,6 @@
 #include <functional>
 #include "operation.hpp"
 
-class Operation_Queue;
-Operation_Queue * operation_queue;
 std::mutex queue_mutex;
 
 class Operation_Queue {
