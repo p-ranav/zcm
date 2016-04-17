@@ -10,6 +10,8 @@
 
 class Publisher {
 public:
+  Publisher(std::string name) : name(name) {}
+
   Publisher(std::string name, std::vector<std::string> endpoints) : 
     name(name),
     endpoints(endpoints) {
@@ -29,6 +31,20 @@ public:
     publisher_socket->close();
     delete context;
     delete publisher_socket;
+  }
+
+  void bind(std::vector<std::string> new_endpoints) {
+    endpoints = new_endpoints;
+    context = new zmq::context_t(1);
+    publisher_socket = new zmq::socket_t(*context, ZMQ_PUB);
+    for (auto endpoint : endpoints) {
+      try {
+	publisher_socket->bind(endpoint);
+      } catch (zmq::error_t error) {
+	std::cout << "Unable to bind publisher " << 
+	  name << " to " << endpoint << std::endl;      
+      }
+    }
   }
 
   std::string get_name() {

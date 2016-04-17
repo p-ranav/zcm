@@ -38,11 +38,11 @@ public:
     component_subscriber = new Subscriber("subscriber_operation", 
 					  60, 
 					  "", 
-					  subscriber_endpoints,
 					  std::bind(&Pub_Sub_Component::subscriber_function, 
 						    this,
 						    std::placeholders::_1), 
 					  operation_queue);  
+    component_subscriber->connect(subscriber_endpoints);
   }
 
   ~Pub_Sub_Component() {

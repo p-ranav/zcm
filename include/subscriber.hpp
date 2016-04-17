@@ -14,6 +14,18 @@
 
 class Subscriber {
 public:
+
+  Subscriber(std::string name,
+	     unsigned int priority, 
+	     std::string filter,
+	     std::function<void(const std::string&)> operation_function, 
+	     Operation_Queue * operation_queue_ptr) : 
+    name(name),
+    priority(priority),
+    filter(filter),
+    operation_function(operation_function),
+    operation_queue_ptr(operation_queue_ptr) {}    
+
   Subscriber(std::string name, 
 	     unsigned int priority, 
 	     std::string filter,
@@ -37,6 +49,14 @@ public:
     subscriber_socket->close();
     delete context;
     delete subscriber_socket;
+  }
+
+  void connect(std::vector<std::string> new_endpoints) {
+    context = new zmq::context_t(2);
+    subscriber_socket = new zmq::socket_t(*context, ZMQ_SUB);
+    for (auto endpoint : endpoints)
+      subscriber_socket->connect(endpoint);
+    subscriber_socket->setsockopt(ZMQ_SUBSCRIBE, filter.c_str(), filter.length());
   }
 
   std::string get_name() {
