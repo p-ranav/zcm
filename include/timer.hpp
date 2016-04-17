@@ -26,14 +26,23 @@ public:
 
   void operation() {
     while(true) {
+      period_mutex.lock();
       auto start = std::chrono::high_resolution_clock::now();
       while(std::chrono::duration_cast<std::chrono::nanoseconds>
       (std::chrono::high_resolution_clock::now() - start) < period) {}
       auto expiry = std::chrono::high_resolution_clock::now();
+      period_mutex.unlock();
 
       Operation new_operation(name, priority, operation_function);
       operation_queue_ptr->enqueue(new_operation);
     }    
+  }
+  
+  void change_period(long long new_period) {
+    period_mutex.lock();
+    period = std::chrono::nanoseconds(new_period);
+    std::cout << "Changed Timer Period to: " << new_period << std::endl;
+    period_mutex.unlock();
   }
 
   std::thread spawn() {
@@ -51,6 +60,7 @@ private:
   std::function<void()> operation_function;
   std::chrono::duration<long long, std::ratio<1, 1000000000>> period;
   Operation_Queue * operation_queue_ptr;
+  std::mutex period_mutex;
 };
 
 #endif
