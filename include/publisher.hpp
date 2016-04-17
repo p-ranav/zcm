@@ -15,7 +15,12 @@ public:
     endpoint(endpoint) {
     context = new zmq::context_t(1);
     publisher_socket = new zmq::socket_t(*context, ZMQ_PUB);
-    publisher_socket->bind(endpoint);
+    try {
+      publisher_socket->bind(endpoint);
+    } catch (zmq::error_t error) {
+      std::cout << "Unable to bind publisher " << 
+	name << " to " << endpoint << std::endl;      
+    }
   }
 
   ~Publisher() {
