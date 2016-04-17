@@ -39,14 +39,12 @@ public:
     while(true) {
       zmq::message_t received_message; 
       subscriber_socket->recv(&received_message);
-      std::cout << "Receiving..." << std::endl;
-      std::istringstream recv_string(static_cast<char*>(received_message.data()));
-      if (recv_string.str().length() > 0)
-	std::cout << "Receive successful " << recv_string.str() << std::endl;
-      //Operation new_operation(name, priority,
-      // std::bind(operation_function, 
-      //				recv_string));
-      //operation_queue->enqueue(new_operation);
+      std::string message = std::string(static_cast<char*>(received_message.data()), 
+					received_message.size());
+      if (message.length() > 0) {
+	Operation new_operation(name, priority, std::bind(operation_function, message));
+	operation_queue->enqueue(new_operation);
+      }
     }
   }
 

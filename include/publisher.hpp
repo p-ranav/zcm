@@ -26,8 +26,9 @@ public:
 
   void send(std::string message) {
     zmq::message_t message_struct (message.length());
-    snprintf ((char *) message_struct.data(), message.length(), "%s", message.c_str());
+    memcpy(message_struct.data(), message.c_str(), message.length());
     publisher_socket->send(message_struct); 
+    std::cout << "Send message: " << message << std::endl;
   }
 
 private:
