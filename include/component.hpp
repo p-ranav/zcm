@@ -59,6 +59,25 @@ public:
     return NULL;
   }
 
+  void port_config(std::map<std::string, std::vector<std::string>> publisher_endpoints,
+		   std::map<std::string, std::vector<std::string>> subscriber_endpoints) {
+    for (auto pub_map : publisher_endpoints) {
+      Publisher * pub_ptr = get_publisher(pub_map.first);
+      if (pub_ptr)
+	pub_ptr->bind(pub_map.second);
+      else
+	std::cout << "ERROR::Unable to find publisher \"" << pub_map.first << "\"" << std::endl;
+    }    
+    for (auto sub_map : subscriber_endpoints) {
+      Subscriber * sub_ptr = get_subscriber(sub_map.first);
+      if (sub_ptr)
+	sub_ptr->connect(sub_map.second);
+      else
+	std::cout << "ERROR::Unable to find subscriber \"" << sub_map.first << "\"" << std::endl;
+    }    
+  }
+
+
   std::thread * spawn() {
     executor_thread = operation_queue->spawn();
     for(auto timer : timers)

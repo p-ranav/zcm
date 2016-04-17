@@ -8,6 +8,7 @@
 #define SUBSCRIBER
 #include <iostream>
 #include <vector>
+#include <map>
 #include <sstream>
 #include <zmq.hpp>
 #include "operation_queue.hpp"
@@ -52,6 +53,7 @@ public:
   }
 
   void connect(std::vector<std::string> new_endpoints) {
+    endpoints = new_endpoints;
     context = new zmq::context_t(2);
     subscriber_socket = new zmq::socket_t(*context, ZMQ_SUB);
     for (auto endpoint : endpoints)

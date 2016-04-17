@@ -11,39 +11,29 @@
 class Pub_Sub_Component : public Component {
 public:
 
-  void init() {
-    // Initialize First Publisher
+  Pub_Sub_Component() {
+
     component_timer_1 = new Timer("timer_1",
 				  50, 
 				  500000000, 
 				  std::bind(&Pub_Sub_Component::timer_1_function, this), 
 				  operation_queue);   
-    std::vector<std::string> component_publisher_1_endpoints = {"tcp://*:5555"};
     component_publisher_1 = new Publisher("timer_pub_1");
-    component_publisher_1->bind(component_publisher_1_endpoints);
 
-    // Initialize Second Publisher
     component_timer_2 = new Timer("timer_2",
 				  50, 
 				  1000000000, 
 				  std::bind(&Pub_Sub_Component::timer_2_function, this), 
 				  operation_queue);
-    std::vector<std::string> component_publisher_2_endpoints = {"tcp://*:5556"};
     component_publisher_2 = new Publisher("timer_pub_2");
-    component_publisher_2->bind(component_publisher_2_endpoints);
 
-    // Initialize Subscriber
-    std::vector<std::string> subscriber_endpoints = {"tcp://127.0.0.1:5555",
-						     "tcp://127.0.0.1:5556"};
     component_subscriber = new Subscriber("subscriber_operation", 
 					  60, 
 					  "", 
-					  subscriber_endpoints,
 					  std::bind(&Pub_Sub_Component::subscriber_function, 
 						    this,
 						    std::placeholders::_1), 
 					  operation_queue);
-
     add_timer(component_timer_1);
     add_publisher(component_publisher_1);
     add_timer(component_timer_2);
