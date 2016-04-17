@@ -20,25 +20,35 @@ public:
 				500000000, 
 				std::bind(&Pub_Sub_Component::timer_function, this), 
 				operation_queue);
+
+    // Two component publishers that are set to publish in different ports
     component_publisher = new Publisher("timer_pub", "tcp://*:5555");
+    second_publisher = new Publisher("second_pub", "tcp://*:5556");
+
+    // Subscriber receives from both publishers
     component_subscriber = new Subscriber("subscriber_operation", 
 					  60, 
 					  "", 
 					  "tcp://127.0.0.1:5555", 
 					  std::bind(&Pub_Sub_Component::subscriber_function, this,
 						    std::placeholders::_1), 
-					  operation_queue);    
+					  operation_queue);  
+    // If there is more than one port to listen to, use the add_connection function 
+    // and conenct to new endpoint
+    component_subscriber->add_connection("tcp://127.0.0.1:5556");
   }
 
   ~Pub_Sub_Component() {
     delete operation_queue;
     delete component_timer;
     delete component_publisher;
+    delete second_publisher;
     delete component_subscriber;
   }
   
   void timer_function() {
     component_publisher->send("timer_message");
+    second_publisher->send("different_publisher");
   }
 
   void subscriber_function(std::string received_message) {
@@ -56,6 +66,7 @@ private:
   Operation_Queue * operation_queue;
   Timer * component_timer;
   Publisher * component_publisher;
+  Publisher * second_publisher;
   Subscriber * component_subscriber;
 };
 

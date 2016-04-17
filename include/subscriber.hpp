@@ -37,6 +37,10 @@ public:
     delete subscriber_socket;
   }
 
+  void add_connection(std::string new_connection) {
+    subscriber_socket->connect(new_connection);
+  }
+
   void recv() {
     while(true) {
       zmq::message_t received_message; 
