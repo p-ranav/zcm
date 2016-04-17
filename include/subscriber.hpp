@@ -7,6 +7,7 @@
 #ifndef SUBSCRIBER
 #define SUBSCRIBER
 #include <iostream>
+#include <vector>
 #include <sstream>
 #include <zmq.hpp>
 #include "operation_queue.hpp"
@@ -16,18 +17,19 @@ public:
   Subscriber(std::string name, 
 	     unsigned int priority, 
 	     std::string filter,
-	     std::string endpoint, 
+	     std::vector<std::string> endpoints, 
 	     std::function<void(const std::string&)> operation_function, 
 	     Operation_Queue * operation_queue_ptr) : 
     name(name),
     priority(priority),
     filter(filter),
-    endpoint(endpoint),
+    endpoints(endpoints),
     operation_function(operation_function),
     operation_queue_ptr(operation_queue_ptr) {
     context = new zmq::context_t(2);
     subscriber_socket = new zmq::socket_t(*context, ZMQ_SUB);
-    subscriber_socket->connect(endpoint);
+    for (auto endpoint : endpoints)
+      subscriber_socket->connect(endpoint);
     subscriber_socket->setsockopt(ZMQ_SUBSCRIBE, filter.c_str(), filter.length());
   }
 
@@ -67,7 +69,7 @@ private:
   std::string name;
   unsigned int priority;
   std::string filter;
-  std::string endpoint;
+  std::vector<std::string> endpoints;
   std::function<void(const std::string&)> operation_function;
   Operation_Queue * operation_queue_ptr;
   zmq::context_t * context;

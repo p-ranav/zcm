@@ -28,7 +28,6 @@ public:
     zmq::message_t message_struct (message.length());
     memcpy(message_struct.data(), message.c_str(), message.length());
     publisher_socket->send(message_struct); 
-    std::cout << "Send message: " << message << std::endl;
   }
 
 private:
