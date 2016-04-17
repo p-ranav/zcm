@@ -10,16 +10,18 @@
 
 class Publisher {
 public:
-  Publisher(std::string name, std::string endpoint) : 
+  Publisher(std::string name, std::vector<std::string> endpoints) : 
     name(name),
-    endpoint(endpoint) {
+    endpoints(endpoints) {
     context = new zmq::context_t(1);
     publisher_socket = new zmq::socket_t(*context, ZMQ_PUB);
-    try {
-      publisher_socket->bind(endpoint);
-    } catch (zmq::error_t error) {
-      std::cout << "Unable to bind publisher " << 
-	name << " to " << endpoint << std::endl;      
+    for (auto endpoint : endpoints) {
+      try {
+	publisher_socket->bind(endpoint);
+      } catch (zmq::error_t error) {
+	std::cout << "Unable to bind publisher " << 
+	  name << " to " << endpoint << std::endl;      
+      }
     }
   }
 
@@ -33,15 +35,12 @@ public:
     return name;
   }
 
-  void change_connection(std::string new_endpoint) {
-    std::string old_endpoint = endpoint;
-    endpoint = new_endpoint;
+  void add_connection(std::string new_connection) {
     try {
-      publisher_socket->bind(endpoint);
+    publisher_socket->bind(new_connection);
     } catch (zmq::error_t error) {
-      std::cout << "change_connection failed! Unable to bind publisher " << 
-	name << " to " << new_endpoint << std::endl;      
-      endpoint = old_endpoint;
+      std::cout << "ERROR::add_connection failed trying to bind to address: " 
+		<< new_connection << std::endl;
     }
   }
 
@@ -55,7 +54,7 @@ private:
   std::string name;
   zmq::context_t * context;
   zmq::socket_t * publisher_socket;
-  std::string endpoint;
+  std::vector<std::string> endpoints;
 };
 
 #endif

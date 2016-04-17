@@ -51,12 +51,6 @@ public:
     subscriber_socket->connect(new_connection);
   }
 
-  void change_connection(std::vector<std::string> new_endpoints) {
-    endpoints = new_endpoints;
-    for (auto endpoint : endpoints)
-      subscriber_socket->connect(endpoint);
-  }
-
   void recv() {
     while(true) {
       zmq::message_t received_message; 
