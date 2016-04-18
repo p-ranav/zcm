@@ -1,4 +1,5 @@
 #include <iostream>
+#include "test_message.pb.h"
 #include "pub_sub_component.hpp"
 
 int main() {

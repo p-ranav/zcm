@@ -42,15 +42,41 @@ public:
   }
   
   void timer_1_function() {
-    component_publisher_1->send("timer_1_message");
+
+    // Create new message
+    TestMessage new_message;
+    new_message.set_message("timer_1_message");
+    new_message.set_id(0);
+
+    // Prepare string to publish
+    std::string * message_string; 
+    new_message.SerializeToString(message_string);
+
+    // Publish message
+    component_publisher_1->send(*message_string);
   }
 
   void timer_2_function() {
-    component_publisher_2->send("timer_2_message");
+
+    // Create new message
+    TestMessage new_message;
+    new_message.set_message("timer_2_message");
+    new_message.set_id(1);
+
+    // Prepare string to publish
+    std::string * message_string; 
+    new_message.SerializeToString(message_string);
+
+    component_publisher_2->send(*message_string);
   }
 
   void subscriber_function(std::string received_message) {
-    std::cout << "Subscriber Operation : Received : " << received_message << std::endl;  
+
+    TestMessage received_message_obj;
+    received_message_obj.ParseFromString(received_message);
+    std::cout << "Subscriber Operation : Received Message: " 
+	      << received_message_obj.message() 
+	      << " ID : " << received_message_obj.id() << std::endl;  
   }
 
 private:
