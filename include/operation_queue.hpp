@@ -41,9 +41,9 @@ public:
       if (operation_queue.size() > 0) {
 	queue_mutex.lock();
 	Operation top_operation = operation_queue.top();
+	queue_mutex.unlock();
 	top_operation.execute();
 	dequeue();
-	queue_mutex.unlock();
       }
     }
   }
