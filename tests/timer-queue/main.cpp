@@ -23,4 +23,6 @@ int main()
              []() {
                  std::cout << "Timer fired 2" << std::endl;
              });
+    t.threadStart();
+    
 }
