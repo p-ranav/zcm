@@ -18,18 +18,20 @@ public:
 				  500000000, 
 				  std::bind(&Pub_Sub_Component::timer_1_function, this), 
 				  operation_queue);   
-    component_publisher_1 = new Publisher("timer_pub_1");
+    component_publisher_1 = new Publisher("timer_pub_1", {"tcp://*:5555"});
 
     component_timer_2 = new Timer("timer_2",
 				  50, 
 				  1000000000, 
 				  std::bind(&Pub_Sub_Component::timer_2_function, this), 
 				  operation_queue);
-    component_publisher_2 = new Publisher("timer_pub_2");
+    component_publisher_2 = new Publisher("timer_pub_2", {"tcp://*:5556"});
 
     component_subscriber = new Subscriber("subscriber_operation", 
 					  60, 
-					  "", 
+					  "",
+					  {"tcp://127.0.0.1:5555",
+					      "tcp://127.0.0.1:5556"},
 					  std::bind(&Pub_Sub_Component::subscriber_function, 
 						    this,
 						    std::placeholders::_1), 
