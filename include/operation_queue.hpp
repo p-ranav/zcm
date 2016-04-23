@@ -42,7 +42,17 @@ public:
 	queue_mutex.lock();
 	Operation top_operation = operation_queue.top();
 	queue_mutex.unlock();
-	top_operation.execute();
+	zmq::socket_t * socket_ptr = top_operation.get_socket_ptr();
+	if (!socket_ptr) {
+	  top_operation.execute();
+	}
+	else {
+	  std::string response = top_operation.execute_server();
+	  zmq::message_t reply(response.length());
+	  memcpy(reply.data(), response.c_str(), response.length());
+	  socket_ptr->send(reply);
+	  top_operation.set_ready();
+	}
 	dequeue();
       }
     }
