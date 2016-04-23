@@ -26,7 +26,7 @@ public:
     recv_ready(recv_ready) {}  
 
   void execute() {
-      operation_function();
+    operation_function();
   }
 
   std::string execute_server() {
@@ -65,5 +65,4 @@ private:
   zmq::socket_t * socket_ptr;
   bool * recv_ready;
 };
-
 #endif
