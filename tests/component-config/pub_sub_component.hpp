@@ -49,7 +49,7 @@ public:
     new_message.set_id(0);
 
     // Prepare string to publish
-    std::string * message_string; 
+    std::string * message_string = new std::string; 
     new_message.SerializeToString(message_string);
 
     // Publish message
@@ -59,12 +59,13 @@ public:
   void timer_2_function() {
 
     // Create new message
+
     TestMessage new_message;
     new_message.set_message("timer_2_message");
     new_message.set_id(1);
 
     // Prepare string to publish
-    std::string * message_string; 
+    std::string * message_string = new std::string; 
     new_message.SerializeToString(message_string);
 
     component_publisher_2->send(*message_string);
