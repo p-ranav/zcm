@@ -1,7 +1,7 @@
-/*
- * Server class
- * Author: Pranav Srinivas Kumar
- * Date: 2016.04.23
+/** @file    server.hpp 
+ *  @author  Pranav Srinivas Kumar
+ *  @date    2016.04.24
+ *  @brief   This file declares the Server class
  */
 
 #ifndef SERVER
@@ -13,8 +13,19 @@
 #include <zmq.hpp>
 #include "operation_queue.hpp"
 
+/**
+ * @brief Server class
+ */
 class Server {
 public:
+
+  /**
+   * @brief Construct a server object
+   * @param[in] name Server name
+   * @param[in] priority Priority of the server
+   * @param[in] operation_function Operation function of the server
+   * @param[in] operation_queue_ptr Pointer to the operation queue
+   */    
   Server(std::string name,
 	 unsigned int priority,
 	 std::function<std::string(const std::string&)> operation_function,
@@ -24,96 +35,102 @@ public:
     operation_function(operation_function),
     operation_queue_ptr(operation_queue_ptr) {}
 
+  /**
+   * @brief Construct a server object with known endpoints
+   * @param[in] name Server name
+   * @param[in] priority Priority of the server
+   * @param[in] endpoints A vector of endpoints to bind to
+   * @param[in] operation_function Operation function of the server
+   * @param[in] operation_queue_ptr Pointer to the operation queue
+   */      
   Server(std::string name,
 	 unsigned int priority,
 	 std::vector<std::string> endpoints,
 	 std::function<std::string(const std::string&)> operation_function,
-	 Operation_Queue * operation_queue_ptr) :
-    name(name),
-    priority(priority),
-    endpoints(endpoints),
-    operation_function(operation_function),
-    operation_queue_ptr(operation_queue_ptr) {
-    context = new zmq::context_t(2);
-    server_socket = new zmq::socket_t(*context, ZMQ_REP);
-    for (auto endpoint : endpoints)
-      server_socket->bind(endpoint);
-    ready = true;
-  }
+	 Operation_Queue * operation_queue_ptr);
 
-  ~Server() {
-    server_socket->close();
-    delete context;
-    delete server_socket;
-  }
+  /**
+   * @brief Close the server socket and destroy the ZMQ context
+   */  
+  ~Server();
 
-  void bind(std::vector<std::string> new_endpoints) {
-    endpoints = new_endpoints;
-    context = new zmq::context_t(2);
-    server_socket = new zmq::socket_t(*context, ZMQ_REP);
-    for (auto endpoint : endpoints)
-      server_socket->bind(endpoint);
-    ready = true;
-  }
+  /**
+   * @brief Bind to a new set of endpoints
+   * param[in] new_endpoints A new vector of endpoints to bind to
+   */  
+  void bind(std::vector<std::string> new_endpoints);
 
-  std::string get_name() {
-    return name;
-  }
+  /**
+   * @brief Get the name of the server
+   */  
+  std::string get_name();
 
-  unsigned int get_priority() {
-    return priority;
-  }
+  /**
+   * @brief Get the priority of the server
+   */   
+  unsigned int get_priority();
 
-  void add_connection(std::string new_connection) {
-    server_socket->bind(new_connection);
-  }
+  /**
+   * @brief Add a new connection to the server
+   * @param[in] new_connection New connection address to bind to
+   */      
+  void add_connection(std::string new_connection);
 
-  void recv() {
-    while(true) {
-      while(!ready) {}
-      zmq::message_t received_request;
-      server_socket->recv(&received_request);
-      std::string request = std::string(static_cast<char*>(received_request.data()), 
-					received_request.size());
-      ready = false;
-      if (request.length() > 0) {
-	func_mutex.lock();
-	// Create a new operation & bind the request as the first argument
-	Server_Operation * new_operation
-	  = new Server_Operation(name, priority, std::bind(operation_function, request),
-				 server_socket, &ready);
-	operation_queue_ptr->enqueue(new_operation);
-	func_mutex.unlock();
-      }
-    }
-  }
+  /**
+   * @brief Thread function of the server
+   * Behavior:
+   * (1) Wait for a new request on the server ZMQ socket
+   * (2) Create a Server Operation
+   * (3) Enqueue onto operation_queue
+   * (4) Goto step (1)
+   */  
+  void recv();
+ 
+  /**
+   * @brief Rebind the server operation function
+   * @param[in] new_operation_function New server function to be handled upon recv() 
+   */  
+  void rebind_operation_function(std::function<std::string(const std::string&)> new_operation_function);
 
-  void rebind_operation_function(std::function<std::string(const std::string&)>
-				 new_operation_function) {
-    func_mutex.lock();
-    operation_function = new_operation_function;
-    func_mutex.unlock();
-  }
+  /**
+   * @brief Spawn a new thread for the server
+   * @return Server thread
+   */    
+  std::thread spawn();
 
-  std::thread spawn() {
-    return std::thread(&Server::recv, this);
-  }
-
-  void start() {
-    std::thread server_thread = spawn();
-    server_thread.detach();
-  }
+  /**
+   * @brief Start the server thread
+   */  
+  void start();
 
 private:
+
+  /** @brief Name of the server */
   std::string name;
+
+  /** @brief Priority of the server */
   unsigned int priority;
+
+  /** @brief Vector of connection endpoints */
   std::vector<std::string> endpoints;
+
+  /** @brief Operation function bound to the server - Component method that handles received requests */
   std::function<std::string(const std::string&)> operation_function;
+
+  /** @brief Pointer to the operation_queue */
   Operation_Queue * operation_queue_ptr;
+
+  /** @brief Pointer to the server ZMQ context */
   zmq::context_t * context;
+
+  /** @brief Pointer to the server ZMQ socket */
   zmq::socket_t * server_socket;
+
+  /** @brief Boolean representing the state of the server to receive new requests */
   bool ready;
-  std::mutex func_mutex; // used when changing operation_function at runtime
+
+  /** @brief Mutex used when changing operation_function at runtime */
+  std::mutex func_mutex;
 };
 
 #endif

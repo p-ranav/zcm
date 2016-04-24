@@ -20,10 +20,11 @@ all:
 	src/operation_queue.cpp \
 	src/publisher.cpp \
 	src/subscriber.cpp \
-	src/client.cpp
+	src/client.cpp \
+	src/server.cpp
 
-	g++ -shared -o build/libzcm.so timer.o component.o operation_types.o operation_queue.o publisher.o subscriber.o client.o
-	rm timer.o component.o operation_types.o operation_queue.o publisher.o subscriber.o client.o
+	g++ -shared -o build/libzcm.so timer.o component.o operation_types.o operation_queue.o publisher.o subscriber.o client.o server.o
+	rm timer.o component.o operation_types.o operation_queue.o publisher.o subscriber.o client.o server.o
 install:
 	mkdir -p $(LIBZCM_LIBDIR)
 	cp build/libzcm.so $(LIBZCM_LIBDIR)

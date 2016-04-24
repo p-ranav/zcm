@@ -39,7 +39,7 @@ public:
     operation_queue_ptr(operation_queue_ptr) {}    
 
   /**
-   * @brief Construct a subscriber object
+   * @brief Construct a subscriber object with known endpoints
    * @param[in] name Subscriber name
    * @param[in] priority Priority of the subscriber
    * @param[in] filter ZMQ filter for the subscriber
@@ -77,7 +77,7 @@ public:
 
   /**
    * @brief Add a new connection to the subscriber
-   * @param[in] new_connection New connection address to add
+   * @param[in] new_connection New connection address to connect to
    */    
   void add_connection(std::string new_connection);
 
