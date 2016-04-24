@@ -42,7 +42,8 @@ $ sudo make install
 $ sudo ldconfig
 ```
 
-* Install ZCM
+Install ZCM
+------------
 
 ```bash
 $ git clone https://github.com/pranav-srinivas-kumar/zcm
