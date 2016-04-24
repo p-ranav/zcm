@@ -6,70 +6,69 @@
 
 #ifndef PUBLISHER
 #define PUBLISHER
+#include <iostream>
 #include <zmq.hpp>
 
+/**
+ * @brief Publisher class
+ */
 class Publisher {
 public:
-  Publisher(std::string name) : name(name) {}
 
-  Publisher(std::string name, std::vector<std::string> endpoints) : 
-    name(name),
-    endpoints(endpoints) {
-    context = new zmq::context_t(1);
-    publisher_socket = new zmq::socket_t(*context, ZMQ_PUB);
-    for (auto endpoint : endpoints) {
-      try {
-	publisher_socket->bind(endpoint);
-      } catch (zmq::error_t error) {
-	std::cout << "Unable to bind publisher " << 
-	  name << " to " << endpoint << std::endl;      
-      }
-    }
-  }
+  /**
+   * @brief Construct a publisher object
+   * @param[in] name Publisher name
+   */  
+  Publisher(std::string name);
 
-  ~Publisher() {
-    publisher_socket->close();
-    delete context;
-    delete publisher_socket;
-  }
+  /**
+   * @brief Construct a publisher object with known endpoints
+   * @param[in] name Publisher name
+   * @param[in] endpoints A vector of endpoint strings
+   */  
+  Publisher(std::string name, std::vector<std::string> endpoints);
 
-  void bind(std::vector<std::string> new_endpoints) {
-    endpoints = new_endpoints;
-    context = new zmq::context_t(1);
-    publisher_socket = new zmq::socket_t(*context, ZMQ_PUB);
-    for (auto endpoint : endpoints) {
-      try {
-	publisher_socket->bind(endpoint);
-      } catch (zmq::error_t error) {
-	std::cout << "Unable to bind publisher " << 
-	  name << " to " << endpoint << std::endl;      
-      }
-    }
-  }
+  /**
+   * @brief Close the publisher ZMQ socket and destroy the context
+   */  
+  ~Publisher();
 
-  std::string get_name() {
-    return name;
-  }
+  /**
+   * @brief Bind the publisher to a new set of endpoints
+   * @param[in] new_endpoints New set of endpoints as a vector
+   */    
+  void bind(std::vector<std::string> new_endpoints);
 
-  void add_connection(std::string new_connection) {
-    try {
-    publisher_socket->bind(new_connection);
-    } catch (zmq::error_t error) {
-      std::cout << "ERROR::add_connection failed trying to bind to address: " 
-		<< new_connection << std::endl;
-    }
-  }
+  /**
+   * @brief Return the publisher name
+   * @return Publisher name
+   */  
+  std::string get_name();
 
-  void send(std::string message) {
-    zmq::message_t message_struct (message.length());
-    memcpy(message_struct.data(), message.c_str(), message.length());
-    publisher_socket->send(message_struct); 
-  }
+  /**
+   * @brief Add a new endpoint to the publisher
+   * @param[in] new_connection New endpoint to bind to
+   */    
+  void add_connection(std::string new_connection);
+
+  /**
+   * @brief Publish a new message
+   * @param[in] message The message string. Serialize complex objects to strings with protobuf
+   */
+  void send(std::string message);
 
 private:
+
+  /** @brief Name of the publisher */
   std::string name;
+
+  /** @brief ZMQ Context of the publisher */
   zmq::context_t * context;
+
+  /** @brief ZMQ Socket of the publisher */
   zmq::socket_t * publisher_socket;
+
+  /** @brief Vector of endpoints to bind to */
   std::vector<std::string> endpoints;
 };
 
