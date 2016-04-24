@@ -1,7 +1,7 @@
 ZeroMQ Component Model
 ======================
 
-Model-driven Development & Component Model for ZeroMQ
+A lightweight component model using ZeroMQ and Google Protobuf
 
 Dependencies
 ------------
