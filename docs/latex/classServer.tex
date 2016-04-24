@@ -1,0 +1,40 @@
+\hypertarget{classServer}{}\section{Server Class Reference}
+\label{classServer}\index{Server@{Server}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Server} (std\+::string name, unsigned int priority, std\+::function$<$ std\+::string(const std\+::string \&)$>$ operation\+\_\+function, \hyperlink{classOperation__Queue}{Operation\+\_\+\+Queue} $\ast$operation\+\_\+queue\+\_\+ptr)\hypertarget{classServer_a1e77c9c5b6fbc63b023ac083efd8c6ea}{}\label{classServer_a1e77c9c5b6fbc63b023ac083efd8c6ea}
+
+\item 
+{\bfseries Server} (std\+::string name, unsigned int priority, std\+::vector$<$ std\+::string $>$ endpoints, std\+::function$<$ std\+::string(const std\+::string \&)$>$ operation\+\_\+function, \hyperlink{classOperation__Queue}{Operation\+\_\+\+Queue} $\ast$operation\+\_\+queue\+\_\+ptr)\hypertarget{classServer_a6c8e865c9e8a488719f10e106abc75be}{}\label{classServer_a6c8e865c9e8a488719f10e106abc75be}
+
+\item 
+void {\bfseries bind} (std\+::vector$<$ std\+::string $>$ new\+\_\+endpoints)\hypertarget{classServer_a25286f8ab603f3cd7bd76842f2a8b78d}{}\label{classServer_a25286f8ab603f3cd7bd76842f2a8b78d}
+
+\item 
+std\+::string {\bfseries get\+\_\+name} ()\hypertarget{classServer_a09d72bd75643ee43dea39a4753d6df05}{}\label{classServer_a09d72bd75643ee43dea39a4753d6df05}
+
+\item 
+unsigned int {\bfseries get\+\_\+priority} ()\hypertarget{classServer_a1c7613df4abf1aaf59b709ad4b3ed8a3}{}\label{classServer_a1c7613df4abf1aaf59b709ad4b3ed8a3}
+
+\item 
+void {\bfseries add\+\_\+connection} (std\+::string new\+\_\+connection)\hypertarget{classServer_a71256b14e081575403eefbb6aa6c08bf}{}\label{classServer_a71256b14e081575403eefbb6aa6c08bf}
+
+\item 
+void {\bfseries recv} ()\hypertarget{classServer_a6bb73ef31c7ed34fad165435b581d7a9}{}\label{classServer_a6bb73ef31c7ed34fad165435b581d7a9}
+
+\item 
+void {\bfseries rebind\+\_\+operation\+\_\+function} (std\+::function$<$ std\+::string(const std\+::string \&)$>$ new\+\_\+operation\+\_\+function)\hypertarget{classServer_add9087ce6bbe672d22d4d80565696653}{}\label{classServer_add9087ce6bbe672d22d4d80565696653}
+
+\item 
+std\+::thread {\bfseries spawn} ()\hypertarget{classServer_afaa5fab09f6a4582ae4b29232ebd9f76}{}\label{classServer_afaa5fab09f6a4582ae4b29232ebd9f76}
+
+\item 
+void {\bfseries start} ()\hypertarget{classServer_a7eac07d2582fa01c2671362efa955b31}{}\label{classServer_a7eac07d2582fa01c2671362efa955b31}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/pranav/\+Repositories/zmq-\/comm/include/server.\+hpp\end{DoxyCompactItemize}

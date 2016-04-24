@@ -1,7 +1,7 @@
-/*
- * Timer Class
- * Author: Pranav Srinivas Kumar
- * Date: 2016.04.13
+/** @file    timer.hpp 
+ *  @author  Pranav Srinivas Kumar
+ *  @date    2016.04.24
+ *  @brief   This file declares the Timer class
  */
 
 #ifndef TIMER
@@ -13,8 +13,20 @@
 #include <thread>
 #include "operation_queue.hpp"
 
+/**
+ * @brief Timer class
+ */
 class Timer {
 public:
+
+  /*
+   * @brief Construct a timer
+   * @param[in] name Name of the timer
+   * @param[in] priority Priority of the timer
+   * @param[in] period Period of the timer in nanoseconds
+   * @param[in] operation_function Operation to which the timer is bound
+   * @param[in] operation_queue_ptr Pointer to the operation_queue
+   */
   Timer(std::string name, unsigned int priority, long long period, 
 	std::function<void()> operation_function, 
 	Operation_Queue * operation_queue_ptr) : 
@@ -24,61 +36,74 @@ public:
     operation_function(operation_function),
     operation_queue_ptr(operation_queue_ptr) {}
 
-  void operation() {
-    while(true) {
-      period_mutex.lock();
-      auto start = std::chrono::high_resolution_clock::now();
-      while(std::chrono::duration_cast<std::chrono::nanoseconds>
-      (std::chrono::high_resolution_clock::now() - start) < period) {}
-      auto expiry = std::chrono::high_resolution_clock::now();
-      period_mutex.unlock();
+  /*
+   * @brief Timer thread function
+   * Behavior:
+   * (1) Wait for timer expiry
+   * (2) Create a Timer_Operation
+   * (3) Enqueue onto operation_queue
+   * (4) Goto step (1)
+   */
+  void operation();
 
-      func_mutex.lock();
-      Timer_Operation * new_operation = new Timer_Operation(name, priority, operation_function);
-      operation_queue_ptr->enqueue(new_operation);
-      func_mutex.unlock();
-    }    
-  }
+  /*
+   * @brief Get the timer name
+   * @return Timer name
+   */
+  std::string get_name();
 
-  std::string get_name() {
-    return name;
-  }
+  /*
+   * @brief Get the timer priority
+   * @return Timer priority
+   */  
+  unsigned int get_priority();
 
-  unsigned int get_priority() {
-    return priority;
-  }
-  
-  void change_period(long long new_period) {
-    period_mutex.lock();
-    period = std::chrono::nanoseconds(new_period);
-    std::cout << "Changed Timer Period to: " << new_period << std::endl;
-    period_mutex.unlock();
-  }
+  /*
+   * @brief Change the timer period
+   * @param[in] new_period New timer period in nanoseconds
+   */  
+  void change_period(long long new_period);
 
-  void rebind_operation_function(std::function<void()> new_operation_function) {
-    func_mutex.lock();
-    operation_function = new_operation_function;
-    func_mutex.unlock();
-  }
+  /*
+   * @brief Rebind the timer operation function
+   * @param[in] new_operation_function New timer function to be handled upon expiry 
+   */    
+  void rebind_operation_function(std::function<void()> new_operation_function);
 
-  std::thread spawn() {
-    return std::thread(&Timer::operation, this);
-  }
+  /*
+   * @brief Spawn a new thread for the timer
+   * @return Timer thread
+   */    
+  std::thread spawn();
 
-  void start() {
-    std::thread timer_thread = spawn();
-    timer_thread.detach();
-  }
+  /*
+   * @brief Start the timer thread
+   */
+  void start();
   
 
 private:
+
+  /** @brief Name of the timer */
   std::string name;
+
+  /** @brief Priority of the timer */
   unsigned int priority;
-  std::function<void()> operation_function;
+
+  /** @brief Period of the timer */
   std::chrono::duration<long long, std::ratio<1, 1000000000>> period;
+  
+  /** @brief Operation function bound to the timer */
+  std::function<void()> operation_function;
+
+  /** @brief Pointer to the operation queue */
   Operation_Queue * operation_queue_ptr;
-  std::mutex period_mutex; // used when changing timer period at runtime
-  std::mutex func_mutex; // used when changing operation_function at runtime
+
+  /** @brief Mutex used to change the timer period at runtime */
+  std::mutex period_mutex;
+
+  /** @brief Mutex used to change the operation_function at runtime */
+  std::mutex func_mutex; 
 };
 
 #endif
