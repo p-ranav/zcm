@@ -29,7 +29,7 @@ $ cd cppzmq
 $ sudo cp *.hpp /usr/local/include/.
 ```
 
-* Install protobuf
+* Install protobuf (used in tests)
 
 ```bash
 $ git clone https://github.com/google/protobuf
