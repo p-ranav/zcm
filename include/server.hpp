@@ -79,8 +79,9 @@ public:
       if (request.length() > 0) {
 	func_mutex.lock();
 	// Create a new operation & bind the request as the first argument
-	Operation new_operation(name, priority, NULL, std::bind(operation_function, request),
-				server_socket, &ready);
+	Server_Operation * new_operation
+	  = new Server_Operation(name, priority, std::bind(operation_function, request),
+				 server_socket, &ready);
 	operation_queue_ptr->enqueue(new_operation);
 	func_mutex.unlock();
       }

@@ -81,7 +81,8 @@ public:
 					received_message.size());
       if (message.length() > 0) {
 	func_mutex.lock();      
-	Operation new_operation(name, priority, std::bind(operation_function, message));
+	Subscriber_Operation * new_operation
+	  = new Subscriber_Operation(name, priority, std::bind(operation_function, message));
 	operation_queue_ptr->enqueue(new_operation);
 	func_mutex.unlock();      
       }

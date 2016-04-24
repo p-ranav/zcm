@@ -11,13 +11,13 @@
 #include <mutex>
 #include <thread>
 #include <functional>
-#include "operation.hpp"
+#include "operation_types.hpp"
 
 std::mutex queue_mutex;
 
 class Operation_Queue {
 public:
-  void enqueue(const Operation& new_operation) {
+  void enqueue(Base_Operation * new_operation) {
     queue_mutex.lock();
     operation_queue.push(new_operation);
     queue_mutex.unlock();
@@ -32,7 +32,7 @@ public:
     return operation_queue.empty();
   }
 
-  Operation top() {
+  Base_Operation * top() {
     return operation_queue.top();
   }
 
@@ -40,19 +40,10 @@ public:
     while(true) {
       if (operation_queue.size() > 0) {
 	queue_mutex.lock();
-	Operation top_operation = operation_queue.top();
+	Base_Operation * top_operation = operation_queue.top();
 	dequeue();
 	queue_mutex.unlock();
-	zmq::socket_t * socket_ptr = top_operation.get_socket_ptr();
-	if (!socket_ptr)
-	  top_operation.execute();	  
-	else {
-	  std::string response = top_operation.execute_server();
-	  zmq::message_t reply(response.length());
-	  memcpy(reply.data(), response.c_str(), response.length());
-	  socket_ptr->send(reply);
-	  top_operation.set_ready();
-	}
+	top_operation->execute();	  
       }
     }
   }
@@ -62,12 +53,12 @@ public:
   }
 
   struct PriorityOrdering {
-    bool operator()(const Operation& lhs, const Operation& rhs) const {
-      return lhs.get_priority() < rhs.get_priority();
+    bool operator()(const Base_Operation * lhs, const Base_Operation * rhs) const {
+      return lhs->get_priority() < rhs->get_priority();
     }
   };
 private:
-  std::priority_queue<Operation, std::vector<Operation>, PriorityOrdering> operation_queue;
+  std::priority_queue<Base_Operation, std::vector<Base_Operation*>, PriorityOrdering> operation_queue;
 };
 
 #endif
