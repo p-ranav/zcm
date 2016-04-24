@@ -9,6 +9,7 @@ LIBZMQ_INCDIR=$(LIBZMQ_DIR)/include
 # Install Location for ZCM
 LIBZCM_DIR=/usr/local
 LIBZCM_LIBDIR=/usr/local/lib
+LIBZCM_INCDIR=/usr/local/include/zcm
 
 all:
 	mkdir -p build
@@ -23,6 +24,8 @@ all:
 install:
 	mkdir -p $(LIBZCM_LIBDIR)
 	cp build/libzcm.so $(LIBZCM_LIBDIR)
+	mkdir -p $(LIBZCM_INCDIR)
+	cp include/*.hpp $(LIBZCM_INCDIR)/.
 clean:
 	rm build/libzcm.so
 	rm -rf build

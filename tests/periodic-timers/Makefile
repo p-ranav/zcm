@@ -1,4 +1,7 @@
+ZCM_HEADERS=/usr/local/include/zcm
+ZCM_LIBRARY=/usr/local/lib
+
 all:
-	g++ -o timers main.cpp -std=c++11 -I../../include -pthread -L/usr/local/lib -I/usr/local -lzmq
+	g++ -o timers main.cpp -std=c++11 -pthread -I$(ZCM_HEADERS) -L$(ZCM_LIBRARY) -lzcm -lzmq
 clean:
 	$(RM) *.o *~ timers
