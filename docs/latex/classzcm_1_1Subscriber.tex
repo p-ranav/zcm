@@ -1,0 +1,309 @@
+\hypertarget{classzcm_1_1Subscriber}{}\section{zcm\+:\+:Subscriber Class Reference}
+\label{classzcm_1_1Subscriber}\index{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}}
+
+
+\hyperlink{classzcm_1_1Subscriber}{Subscriber} class.  
+
+
+
+
+{\ttfamily \#include $<$subscriber.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classzcm_1_1Subscriber_a054fca0d1323df3a9639b44cb3b3e183}{Subscriber} (std\+::string \hyperlink{classzcm_1_1Subscriber_a2ec3b22204d0f3f72e996b19b086910b}{name}, unsigned int \hyperlink{classzcm_1_1Subscriber_a208baedba808c9229887ab8af00725fd}{priority}, std\+::string \hyperlink{classzcm_1_1Subscriber_a28ab0921d97bc4d05ac6bb64c977cc35}{filter}, std\+::function$<$ void(const std\+::string \&)$>$ \hyperlink{classzcm_1_1Subscriber_aee61c147a26fd83f6e69e5fed48d8221}{operation\+\_\+function}, \hyperlink{classzcm_1_1Operation__Queue}{Operation\+\_\+\+Queue} $\ast$\hyperlink{classzcm_1_1Subscriber_a1cd579aa570832f9656b9fa24747dde3}{operation\+\_\+queue\+\_\+ptr})
+\begin{DoxyCompactList}\small\item\em Construct a subscriber object. \end{DoxyCompactList}\item 
+\hyperlink{classzcm_1_1Subscriber_a4573631cdf31199a937c87f9714daae3}{Subscriber} (std\+::string \hyperlink{classzcm_1_1Subscriber_a2ec3b22204d0f3f72e996b19b086910b}{name}, unsigned int \hyperlink{classzcm_1_1Subscriber_a208baedba808c9229887ab8af00725fd}{priority}, std\+::string \hyperlink{classzcm_1_1Subscriber_a28ab0921d97bc4d05ac6bb64c977cc35}{filter}, std\+::vector$<$ std\+::string $>$ \hyperlink{classzcm_1_1Subscriber_a81590d7017038d6f50073baaa485a1b7}{endpoints}, std\+::function$<$ void(const std\+::string \&)$>$ \hyperlink{classzcm_1_1Subscriber_aee61c147a26fd83f6e69e5fed48d8221}{operation\+\_\+function}, \hyperlink{classzcm_1_1Operation__Queue}{Operation\+\_\+\+Queue} $\ast$\hyperlink{classzcm_1_1Subscriber_a1cd579aa570832f9656b9fa24747dde3}{operation\+\_\+queue\+\_\+ptr})
+\begin{DoxyCompactList}\small\item\em Construct a subscriber object with known endpoints. \end{DoxyCompactList}\item 
+\hyperlink{classzcm_1_1Subscriber_a6f647c7d9f952e07b22b3aa4b63778e7}{$\sim$\+Subscriber} ()
+\begin{DoxyCompactList}\small\item\em Close the subscriber socket and destroy the Z\+MQ context. \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Subscriber_a542674cff70f8d22b490a6b4a87476fe}{connect} (std\+::vector$<$ std\+::string $>$ new\+\_\+endpoints)
+\begin{DoxyCompactList}\small\item\em Connect to a new set of endpoints param\mbox{[}in\mbox{]} new\+\_\+endpoints A new vector of endpoints to connect to. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classzcm_1_1Subscriber_a013f450dff91644668a84cdb65d51b53}{get\+\_\+name} ()
+\begin{DoxyCompactList}\small\item\em Get the name of the subscriber. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classzcm_1_1Subscriber_a67427b093be45c979b4f091e6a9831ab}{get\+\_\+priority} ()
+\begin{DoxyCompactList}\small\item\em Get the priority of the subscriber. \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Subscriber_acbfe7d4ab1b4a6fad5d9a7cbd3b8ee09}{add\+\_\+connection} (std\+::string new\+\_\+connection)
+\begin{DoxyCompactList}\small\item\em Add a new connection to the subscriber. \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Subscriber_a3e270344beb730e009d48b04792e5526}{recv} ()
+\begin{DoxyCompactList}\small\item\em Thread function of the subscriber Behavior\+: (1) Wait for a new message on the subscriber Z\+MQ socket (2) Create a Susbcriber Operation (3) Enqueue onto operation\+\_\+queue (4) Goto step (1) \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Subscriber_aab48fd83ea797680fba25be1f3c7ba14}{rebind\+\_\+operation\+\_\+function} (std\+::function$<$ void(const std\+::string \&)$>$ new\+\_\+operation\+\_\+function)
+\begin{DoxyCompactList}\small\item\em Rebind the subscriber operation function. \end{DoxyCompactList}\item 
+std\+::thread \hyperlink{classzcm_1_1Subscriber_a05334a6b27ce47e46ad525c2fc015347}{spawn} ()
+\begin{DoxyCompactList}\small\item\em Spawn a new thread for the subscriber. \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Subscriber_af255252bdc1808c7436208b919612a48}{start} ()
+\begin{DoxyCompactList}\small\item\em Start the subscriber thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classzcm_1_1Subscriber_a2ec3b22204d0f3f72e996b19b086910b}{name}
+\begin{DoxyCompactList}\small\item\em Name of the subscriber. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classzcm_1_1Subscriber_a208baedba808c9229887ab8af00725fd}{priority}
+\begin{DoxyCompactList}\small\item\em Priority of the subscriber. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classzcm_1_1Subscriber_a28ab0921d97bc4d05ac6bb64c977cc35}{filter}
+\begin{DoxyCompactList}\small\item\em Reception filter enforced on all received messages. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classzcm_1_1Subscriber_a81590d7017038d6f50073baaa485a1b7}{endpoints}
+\begin{DoxyCompactList}\small\item\em Vector of connection endpoints. \end{DoxyCompactList}\item 
+std\+::function$<$ void(const std\+::string \&)$>$ \hyperlink{classzcm_1_1Subscriber_aee61c147a26fd83f6e69e5fed48d8221}{operation\+\_\+function}
+\begin{DoxyCompactList}\small\item\em Operation function bound to the subscriber -\/ \hyperlink{classzcm_1_1Component}{Component} method that handles received message. \end{DoxyCompactList}\item 
+\hyperlink{classzcm_1_1Operation__Queue}{Operation\+\_\+\+Queue} $\ast$ \hyperlink{classzcm_1_1Subscriber_a1cd579aa570832f9656b9fa24747dde3}{operation\+\_\+queue\+\_\+ptr}
+\begin{DoxyCompactList}\small\item\em Pointer to the operation queue. \end{DoxyCompactList}\item 
+zmq\+::context\+\_\+t $\ast$ \hyperlink{classzcm_1_1Subscriber_a271ab3c945d1d3a84551bdca5e50f83f}{context}
+\begin{DoxyCompactList}\small\item\em Pointer to the subscriber Z\+MQ context. \end{DoxyCompactList}\item 
+zmq\+::socket\+\_\+t $\ast$ \hyperlink{classzcm_1_1Subscriber_ab6b9ee85d97a209b7c370b90882ed028}{subscriber\+\_\+socket}
+\begin{DoxyCompactList}\small\item\em Pointer to the subscriber Z\+MQ socket. \end{DoxyCompactList}\item 
+std\+::mutex \hyperlink{classzcm_1_1Subscriber_abd7e5c8f6ab6ce6e8854d8d407476c25}{func\+\_\+mutex}
+\begin{DoxyCompactList}\small\item\em Mutex used to change operation\+\_\+function at runtime. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classzcm_1_1Subscriber}{Subscriber} class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!Subscriber@{Subscriber}}
+\index{Subscriber@{Subscriber}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}}
+\subsubsection[{\texorpdfstring{Subscriber(std\+::string name, unsigned int priority, std\+::string filter, std\+::function$<$ void(const std\+::string \&)$>$ operation\+\_\+function, Operation\+\_\+\+Queue $\ast$operation\+\_\+queue\+\_\+ptr)}{Subscriber(std::string name, unsigned int priority, std::string filter, std::function< void(const std::string &)> operation_function, Operation_Queue *operation_queue_ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}zcm\+::\+Subscriber\+::\+Subscriber (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name, }
+\item[{unsigned int}]{priority, }
+\item[{std\+::string}]{filter, }
+\item[{std\+::function$<$ void(const std\+::string \&)$>$}]{operation\+\_\+function, }
+\item[{{\bf Operation\+\_\+\+Queue} $\ast$}]{operation\+\_\+queue\+\_\+ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classzcm_1_1Subscriber_a054fca0d1323df3a9639b44cb3b3e183}{}\label{classzcm_1_1Subscriber_a054fca0d1323df3a9639b44cb3b3e183}
+
+
+Construct a subscriber object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em name} & \hyperlink{classzcm_1_1Subscriber}{Subscriber} name \\
+\hline
+\mbox{\tt in}  & {\em priority} & Priority of the subscriber \\
+\hline
+\mbox{\tt in}  & {\em filter} & Z\+MQ filter for the subscriber \\
+\hline
+\mbox{\tt in}  & {\em operation\+\_\+function} & Operation function of the subscriber \\
+\hline
+\mbox{\tt in}  & {\em operation\+\_\+queue\+\_\+ptr} & Pointer to the operation queue \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!Subscriber@{Subscriber}}
+\index{Subscriber@{Subscriber}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}}
+\subsubsection[{\texorpdfstring{Subscriber(std\+::string name, unsigned int priority, std\+::string filter, std\+::vector$<$ std\+::string $>$ endpoints, std\+::function$<$ void(const std\+::string \&)$>$ operation\+\_\+function, Operation\+\_\+\+Queue $\ast$operation\+\_\+queue\+\_\+ptr)}{Subscriber(std::string name, unsigned int priority, std::string filter, std::vector< std::string > endpoints, std::function< void(const std::string &)> operation_function, Operation_Queue *operation_queue_ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}zcm\+::\+Subscriber\+::\+Subscriber (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name, }
+\item[{unsigned int}]{priority, }
+\item[{std\+::string}]{filter, }
+\item[{std\+::vector$<$ std\+::string $>$}]{endpoints, }
+\item[{std\+::function$<$ void(const std\+::string \&)$>$}]{operation\+\_\+function, }
+\item[{{\bf Operation\+\_\+\+Queue} $\ast$}]{operation\+\_\+queue\+\_\+ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Subscriber_a4573631cdf31199a937c87f9714daae3}{}\label{classzcm_1_1Subscriber_a4573631cdf31199a937c87f9714daae3}
+
+
+Construct a subscriber object with known endpoints. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em name} & \hyperlink{classzcm_1_1Subscriber}{Subscriber} name \\
+\hline
+\mbox{\tt in}  & {\em priority} & Priority of the subscriber \\
+\hline
+\mbox{\tt in}  & {\em filter} & Z\+MQ filter for the subscriber \\
+\hline
+\mbox{\tt in}  & {\em endpoints} & A vector of endpoints to connect to \\
+\hline
+\mbox{\tt in}  & {\em operation\+\_\+function} & Operation function of the subscriber \\
+\hline
+\mbox{\tt in}  & {\em operation\+\_\+queue\+\_\+ptr} & Pointer to the operation queue \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!````~Subscriber@{$\sim$\+Subscriber}}
+\index{````~Subscriber@{$\sim$\+Subscriber}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}}
+\subsubsection[{\texorpdfstring{$\sim$\+Subscriber()}{~Subscriber()}}]{\setlength{\rightskip}{0pt plus 5cm}zcm\+::\+Subscriber\+::$\sim$\+Subscriber (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Subscriber_a6f647c7d9f952e07b22b3aa4b63778e7}{}\label{classzcm_1_1Subscriber_a6f647c7d9f952e07b22b3aa4b63778e7}
+
+
+Close the subscriber socket and destroy the Z\+MQ context. 
+
+
+
+\subsection{Member Function Documentation}
+\index{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!add\+\_\+connection@{add\+\_\+connection}}
+\index{add\+\_\+connection@{add\+\_\+connection}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}}
+\subsubsection[{\texorpdfstring{add\+\_\+connection(std\+::string new\+\_\+connection)}{add_connection(std::string new_connection)}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Subscriber\+::add\+\_\+connection (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{new\+\_\+connection}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Subscriber_acbfe7d4ab1b4a6fad5d9a7cbd3b8ee09}{}\label{classzcm_1_1Subscriber_acbfe7d4ab1b4a6fad5d9a7cbd3b8ee09}
+
+
+Add a new connection to the subscriber. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new\+\_\+connection} & New connection address to connect to \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!connect@{connect}}
+\index{connect@{connect}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}}
+\subsubsection[{\texorpdfstring{connect(std\+::vector$<$ std\+::string $>$ new\+\_\+endpoints)}{connect(std::vector< std::string > new_endpoints)}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Subscriber\+::connect (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::string $>$}]{new\+\_\+endpoints}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Subscriber_a542674cff70f8d22b490a6b4a87476fe}{}\label{classzcm_1_1Subscriber_a542674cff70f8d22b490a6b4a87476fe}
+
+
+Connect to a new set of endpoints param\mbox{[}in\mbox{]} new\+\_\+endpoints A new vector of endpoints to connect to. 
+
+\index{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!get\+\_\+name@{get\+\_\+name}}
+\index{get\+\_\+name@{get\+\_\+name}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}}
+\subsubsection[{\texorpdfstring{get\+\_\+name()}{get_name()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string zcm\+::\+Subscriber\+::get\+\_\+name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Subscriber_a013f450dff91644668a84cdb65d51b53}{}\label{classzcm_1_1Subscriber_a013f450dff91644668a84cdb65d51b53}
+
+
+Get the name of the subscriber. 
+
+\index{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!get\+\_\+priority@{get\+\_\+priority}}
+\index{get\+\_\+priority@{get\+\_\+priority}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}}
+\subsubsection[{\texorpdfstring{get\+\_\+priority()}{get_priority()}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int zcm\+::\+Subscriber\+::get\+\_\+priority (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Subscriber_a67427b093be45c979b4f091e6a9831ab}{}\label{classzcm_1_1Subscriber_a67427b093be45c979b4f091e6a9831ab}
+
+
+Get the priority of the subscriber. 
+
+\index{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!rebind\+\_\+operation\+\_\+function@{rebind\+\_\+operation\+\_\+function}}
+\index{rebind\+\_\+operation\+\_\+function@{rebind\+\_\+operation\+\_\+function}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}}
+\subsubsection[{\texorpdfstring{rebind\+\_\+operation\+\_\+function(std\+::function$<$ void(const std\+::string \&)$>$ new\+\_\+operation\+\_\+function)}{rebind_operation_function(std::function< void(const std::string &)> new_operation_function)}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Subscriber\+::rebind\+\_\+operation\+\_\+function (
+\begin{DoxyParamCaption}
+\item[{std\+::function$<$ void(const std\+::string \&)$>$}]{new\+\_\+operation\+\_\+function}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Subscriber_aab48fd83ea797680fba25be1f3c7ba14}{}\label{classzcm_1_1Subscriber_aab48fd83ea797680fba25be1f3c7ba14}
+
+
+Rebind the subscriber operation function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new\+\_\+operation\+\_\+function} & New subscriber function to be handled upon \hyperlink{classzcm_1_1Subscriber_a3e270344beb730e009d48b04792e5526}{recv()} \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!recv@{recv}}
+\index{recv@{recv}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}}
+\subsubsection[{\texorpdfstring{recv()}{recv()}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Subscriber\+::recv (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Subscriber_a3e270344beb730e009d48b04792e5526}{}\label{classzcm_1_1Subscriber_a3e270344beb730e009d48b04792e5526}
+
+
+Thread function of the subscriber Behavior\+: (1) Wait for a new message on the subscriber Z\+MQ socket (2) Create a Susbcriber Operation (3) Enqueue onto operation\+\_\+queue (4) Goto step (1) 
+
+\index{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!spawn@{spawn}}
+\index{spawn@{spawn}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}}
+\subsubsection[{\texorpdfstring{spawn()}{spawn()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::thread zcm\+::\+Subscriber\+::spawn (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Subscriber_a05334a6b27ce47e46ad525c2fc015347}{}\label{classzcm_1_1Subscriber_a05334a6b27ce47e46ad525c2fc015347}
+
+
+Spawn a new thread for the subscriber. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classzcm_1_1Subscriber}{Subscriber} thread 
+\end{DoxyReturn}
+\index{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!start@{start}}
+\index{start@{start}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}}
+\subsubsection[{\texorpdfstring{start()}{start()}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Subscriber\+::start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Subscriber_af255252bdc1808c7436208b919612a48}{}\label{classzcm_1_1Subscriber_af255252bdc1808c7436208b919612a48}
+
+
+Start the subscriber thread. 
+
+
+
+\subsection{Member Data Documentation}
+\index{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!context@{context}}
+\index{context@{context}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}}
+\subsubsection[{\texorpdfstring{context}{context}}]{\setlength{\rightskip}{0pt plus 5cm}zmq\+::context\+\_\+t$\ast$ zcm\+::\+Subscriber\+::context\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Subscriber_a271ab3c945d1d3a84551bdca5e50f83f}{}\label{classzcm_1_1Subscriber_a271ab3c945d1d3a84551bdca5e50f83f}
+
+
+Pointer to the subscriber Z\+MQ context. 
+
+\index{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!endpoints@{endpoints}}
+\index{endpoints@{endpoints}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}}
+\subsubsection[{\texorpdfstring{endpoints}{endpoints}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::string$>$ zcm\+::\+Subscriber\+::endpoints\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Subscriber_a81590d7017038d6f50073baaa485a1b7}{}\label{classzcm_1_1Subscriber_a81590d7017038d6f50073baaa485a1b7}
+
+
+Vector of connection endpoints. 
+
+\index{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!filter@{filter}}
+\index{filter@{filter}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}}
+\subsubsection[{\texorpdfstring{filter}{filter}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string zcm\+::\+Subscriber\+::filter\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Subscriber_a28ab0921d97bc4d05ac6bb64c977cc35}{}\label{classzcm_1_1Subscriber_a28ab0921d97bc4d05ac6bb64c977cc35}
+
+
+Reception filter enforced on all received messages. 
+
+\index{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!func\+\_\+mutex@{func\+\_\+mutex}}
+\index{func\+\_\+mutex@{func\+\_\+mutex}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}}
+\subsubsection[{\texorpdfstring{func\+\_\+mutex}{func_mutex}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::mutex zcm\+::\+Subscriber\+::func\+\_\+mutex\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Subscriber_abd7e5c8f6ab6ce6e8854d8d407476c25}{}\label{classzcm_1_1Subscriber_abd7e5c8f6ab6ce6e8854d8d407476c25}
+
+
+Mutex used to change operation\+\_\+function at runtime. 
+
+\index{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!name@{name}}
+\index{name@{name}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}}
+\subsubsection[{\texorpdfstring{name}{name}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string zcm\+::\+Subscriber\+::name\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Subscriber_a2ec3b22204d0f3f72e996b19b086910b}{}\label{classzcm_1_1Subscriber_a2ec3b22204d0f3f72e996b19b086910b}
+
+
+Name of the subscriber. 
+
+\index{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!operation\+\_\+function@{operation\+\_\+function}}
+\index{operation\+\_\+function@{operation\+\_\+function}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}}
+\subsubsection[{\texorpdfstring{operation\+\_\+function}{operation_function}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::function$<$void(const std\+::string\&)$>$ zcm\+::\+Subscriber\+::operation\+\_\+function\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Subscriber_aee61c147a26fd83f6e69e5fed48d8221}{}\label{classzcm_1_1Subscriber_aee61c147a26fd83f6e69e5fed48d8221}
+
+
+Operation function bound to the subscriber -\/ \hyperlink{classzcm_1_1Component}{Component} method that handles received message. 
+
+\index{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!operation\+\_\+queue\+\_\+ptr@{operation\+\_\+queue\+\_\+ptr}}
+\index{operation\+\_\+queue\+\_\+ptr@{operation\+\_\+queue\+\_\+ptr}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}}
+\subsubsection[{\texorpdfstring{operation\+\_\+queue\+\_\+ptr}{operation_queue_ptr}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Operation\+\_\+\+Queue}$\ast$ zcm\+::\+Subscriber\+::operation\+\_\+queue\+\_\+ptr\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Subscriber_a1cd579aa570832f9656b9fa24747dde3}{}\label{classzcm_1_1Subscriber_a1cd579aa570832f9656b9fa24747dde3}
+
+
+Pointer to the operation queue. 
+
+\index{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!priority@{priority}}
+\index{priority@{priority}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}}
+\subsubsection[{\texorpdfstring{priority}{priority}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int zcm\+::\+Subscriber\+::priority\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Subscriber_a208baedba808c9229887ab8af00725fd}{}\label{classzcm_1_1Subscriber_a208baedba808c9229887ab8af00725fd}
+
+
+Priority of the subscriber. 
+
+\index{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!subscriber\+\_\+socket@{subscriber\+\_\+socket}}
+\index{subscriber\+\_\+socket@{subscriber\+\_\+socket}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}}
+\subsubsection[{\texorpdfstring{subscriber\+\_\+socket}{subscriber_socket}}]{\setlength{\rightskip}{0pt plus 5cm}zmq\+::socket\+\_\+t$\ast$ zcm\+::\+Subscriber\+::subscriber\+\_\+socket\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Subscriber_ab6b9ee85d97a209b7c370b90882ed028}{}\label{classzcm_1_1Subscriber_ab6b9ee85d97a209b7c370b90882ed028}
+
+
+Pointer to the subscriber Z\+MQ socket. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/pranav/\+Repositories/zcm/include/\hyperlink{subscriber_8hpp}{subscriber.\+hpp}\item 
+/home/pranav/\+Repositories/zcm/src/\hyperlink{subscriber_8cpp}{subscriber.\+cpp}\end{DoxyCompactItemize}

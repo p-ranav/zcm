@@ -1,0 +1,303 @@
+\hypertarget{classzcm_1_1Server}{}\section{zcm\+:\+:Server Class Reference}
+\label{classzcm_1_1Server}\index{zcm\+::\+Server@{zcm\+::\+Server}}
+
+
+\hyperlink{classzcm_1_1Server}{Server} class.  
+
+
+
+
+{\ttfamily \#include $<$server.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classzcm_1_1Server_ab5026e5eebdcf7c5bbfe00dc4cd4f202}{Server} (std\+::string \hyperlink{classzcm_1_1Server_a9d59737b196a7abb3a891dc8723e0dcf}{name}, unsigned int \hyperlink{classzcm_1_1Server_ad088a068dc025ff7aa4bf560cc7c43c1}{priority}, std\+::function$<$ std\+::string(const std\+::string \&)$>$ \hyperlink{classzcm_1_1Server_a287609eb19370fe01adf47f26633ce01}{operation\+\_\+function}, \hyperlink{classzcm_1_1Operation__Queue}{Operation\+\_\+\+Queue} $\ast$\hyperlink{classzcm_1_1Server_a667c0fef537aa6acc6245d956250c860}{operation\+\_\+queue\+\_\+ptr})
+\begin{DoxyCompactList}\small\item\em Construct a server object. \end{DoxyCompactList}\item 
+\hyperlink{classzcm_1_1Server_a79dae6a2cac7751c71e11a53ec506a8c}{Server} (std\+::string \hyperlink{classzcm_1_1Server_a9d59737b196a7abb3a891dc8723e0dcf}{name}, unsigned int \hyperlink{classzcm_1_1Server_ad088a068dc025ff7aa4bf560cc7c43c1}{priority}, std\+::vector$<$ std\+::string $>$ \hyperlink{classzcm_1_1Server_a488d1398b76851565a4d116f7cf72af1}{endpoints}, std\+::function$<$ std\+::string(const std\+::string \&)$>$ \hyperlink{classzcm_1_1Server_a287609eb19370fe01adf47f26633ce01}{operation\+\_\+function}, \hyperlink{classzcm_1_1Operation__Queue}{Operation\+\_\+\+Queue} $\ast$\hyperlink{classzcm_1_1Server_a667c0fef537aa6acc6245d956250c860}{operation\+\_\+queue\+\_\+ptr})
+\begin{DoxyCompactList}\small\item\em Construct a server object with known endpoints. \end{DoxyCompactList}\item 
+\hyperlink{classzcm_1_1Server_a1aac28d71da6d5e66fff629d7206b3c6}{$\sim$\+Server} ()
+\begin{DoxyCompactList}\small\item\em Close the server socket and destroy the Z\+MQ context. \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Server_a663b9c844bd17d3174cdfe367fe7d2e2}{bind} (std\+::vector$<$ std\+::string $>$ new\+\_\+endpoints)
+\begin{DoxyCompactList}\small\item\em Bind to a new set of endpoints param\mbox{[}in\mbox{]} new\+\_\+endpoints A new vector of endpoints to bind to. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classzcm_1_1Server_adff186f44785ea8c17f3d96cf8e254e6}{get\+\_\+name} ()
+\begin{DoxyCompactList}\small\item\em Get the name of the server. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classzcm_1_1Server_ae570e2fe8f61761951d79c9c5b6ea988}{get\+\_\+priority} ()
+\begin{DoxyCompactList}\small\item\em Get the priority of the server. \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Server_ad1c5e86ea9384c95774046ac469092b7}{add\+\_\+connection} (std\+::string new\+\_\+connection)
+\begin{DoxyCompactList}\small\item\em Add a new connection to the server. \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Server_ae30eb0c0b4cfad74b7f73c17815511eb}{recv} ()
+\begin{DoxyCompactList}\small\item\em Thread function of the server Behavior\+: (1) Wait for a new request on the server Z\+MQ socket (2) Create a \hyperlink{classzcm_1_1Server}{Server} Operation (3) Enqueue onto operation\+\_\+queue (4) Goto step (1) \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Server_ae76811b738db33b85e5c39307f08c5e2}{rebind\+\_\+operation\+\_\+function} (std\+::function$<$ std\+::string(const std\+::string \&)$>$ new\+\_\+operation\+\_\+function)
+\begin{DoxyCompactList}\small\item\em Rebind the server operation function. \end{DoxyCompactList}\item 
+std\+::thread \hyperlink{classzcm_1_1Server_a77c0b86016dce3e6cef6a64118edd584}{spawn} ()
+\begin{DoxyCompactList}\small\item\em Spawn a new thread for the server. \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Server_ab94400c32a097989a769cfb1d77936b4}{start} ()
+\begin{DoxyCompactList}\small\item\em Start the server thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classzcm_1_1Server_a9d59737b196a7abb3a891dc8723e0dcf}{name}
+\begin{DoxyCompactList}\small\item\em Name of the server. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classzcm_1_1Server_ad088a068dc025ff7aa4bf560cc7c43c1}{priority}
+\begin{DoxyCompactList}\small\item\em Priority of the server. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classzcm_1_1Server_a488d1398b76851565a4d116f7cf72af1}{endpoints}
+\begin{DoxyCompactList}\small\item\em Vector of connection endpoints. \end{DoxyCompactList}\item 
+std\+::function$<$ std\+::string(const std\+::string \&)$>$ \hyperlink{classzcm_1_1Server_a287609eb19370fe01adf47f26633ce01}{operation\+\_\+function}
+\begin{DoxyCompactList}\small\item\em Operation function bound to the server -\/ \hyperlink{classzcm_1_1Component}{Component} method that handles received requests. \end{DoxyCompactList}\item 
+\hyperlink{classzcm_1_1Operation__Queue}{Operation\+\_\+\+Queue} $\ast$ \hyperlink{classzcm_1_1Server_a667c0fef537aa6acc6245d956250c860}{operation\+\_\+queue\+\_\+ptr}
+\begin{DoxyCompactList}\small\item\em Pointer to the operation\+\_\+queue. \end{DoxyCompactList}\item 
+zmq\+::context\+\_\+t $\ast$ \hyperlink{classzcm_1_1Server_a2de8909537ebb88665bfcca1f931c2f8}{context}
+\begin{DoxyCompactList}\small\item\em Pointer to the server Z\+MQ context. \end{DoxyCompactList}\item 
+zmq\+::socket\+\_\+t $\ast$ \hyperlink{classzcm_1_1Server_a4312bf38cfd6bb1d169d6bd3682651e3}{server\+\_\+socket}
+\begin{DoxyCompactList}\small\item\em Pointer to the server Z\+MQ socket. \end{DoxyCompactList}\item 
+bool \hyperlink{classzcm_1_1Server_a709ad2426e77a5e442d70a762cbe504b}{ready}
+\begin{DoxyCompactList}\small\item\em Boolean representing the state of the server to receive new requests. \end{DoxyCompactList}\item 
+std\+::mutex \hyperlink{classzcm_1_1Server_a3e36a37479457237786db9e163d6fef0}{func\+\_\+mutex}
+\begin{DoxyCompactList}\small\item\em Mutex used when changing operation\+\_\+function at runtime. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classzcm_1_1Server}{Server} class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{zcm\+::\+Server@{zcm\+::\+Server}!Server@{Server}}
+\index{Server@{Server}!zcm\+::\+Server@{zcm\+::\+Server}}
+\subsubsection[{\texorpdfstring{Server(std\+::string name, unsigned int priority, std\+::function$<$ std\+::string(const std\+::string \&)$>$ operation\+\_\+function, Operation\+\_\+\+Queue $\ast$operation\+\_\+queue\+\_\+ptr)}{Server(std::string name, unsigned int priority, std::function< std::string(const std::string &)> operation_function, Operation_Queue *operation_queue_ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}zcm\+::\+Server\+::\+Server (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name, }
+\item[{unsigned int}]{priority, }
+\item[{std\+::function$<$ std\+::string(const std\+::string \&)$>$}]{operation\+\_\+function, }
+\item[{{\bf Operation\+\_\+\+Queue} $\ast$}]{operation\+\_\+queue\+\_\+ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classzcm_1_1Server_ab5026e5eebdcf7c5bbfe00dc4cd4f202}{}\label{classzcm_1_1Server_ab5026e5eebdcf7c5bbfe00dc4cd4f202}
+
+
+Construct a server object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em name} & \hyperlink{classzcm_1_1Server}{Server} name \\
+\hline
+\mbox{\tt in}  & {\em priority} & Priority of the server \\
+\hline
+\mbox{\tt in}  & {\em operation\+\_\+function} & Operation function of the server \\
+\hline
+\mbox{\tt in}  & {\em operation\+\_\+queue\+\_\+ptr} & Pointer to the operation queue \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Server@{zcm\+::\+Server}!Server@{Server}}
+\index{Server@{Server}!zcm\+::\+Server@{zcm\+::\+Server}}
+\subsubsection[{\texorpdfstring{Server(std\+::string name, unsigned int priority, std\+::vector$<$ std\+::string $>$ endpoints, std\+::function$<$ std\+::string(const std\+::string \&)$>$ operation\+\_\+function, Operation\+\_\+\+Queue $\ast$operation\+\_\+queue\+\_\+ptr)}{Server(std::string name, unsigned int priority, std::vector< std::string > endpoints, std::function< std::string(const std::string &)> operation_function, Operation_Queue *operation_queue_ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}zcm\+::\+Server\+::\+Server (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name, }
+\item[{unsigned int}]{priority, }
+\item[{std\+::vector$<$ std\+::string $>$}]{endpoints, }
+\item[{std\+::function$<$ std\+::string(const std\+::string \&)$>$}]{operation\+\_\+function, }
+\item[{{\bf Operation\+\_\+\+Queue} $\ast$}]{operation\+\_\+queue\+\_\+ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Server_a79dae6a2cac7751c71e11a53ec506a8c}{}\label{classzcm_1_1Server_a79dae6a2cac7751c71e11a53ec506a8c}
+
+
+Construct a server object with known endpoints. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em name} & \hyperlink{classzcm_1_1Server}{Server} name \\
+\hline
+\mbox{\tt in}  & {\em priority} & Priority of the server \\
+\hline
+\mbox{\tt in}  & {\em endpoints} & A vector of endpoints to bind to \\
+\hline
+\mbox{\tt in}  & {\em operation\+\_\+function} & Operation function of the server \\
+\hline
+\mbox{\tt in}  & {\em operation\+\_\+queue\+\_\+ptr} & Pointer to the operation queue \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Server@{zcm\+::\+Server}!````~Server@{$\sim$\+Server}}
+\index{````~Server@{$\sim$\+Server}!zcm\+::\+Server@{zcm\+::\+Server}}
+\subsubsection[{\texorpdfstring{$\sim$\+Server()}{~Server()}}]{\setlength{\rightskip}{0pt plus 5cm}zcm\+::\+Server\+::$\sim$\+Server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Server_a1aac28d71da6d5e66fff629d7206b3c6}{}\label{classzcm_1_1Server_a1aac28d71da6d5e66fff629d7206b3c6}
+
+
+Close the server socket and destroy the Z\+MQ context. 
+
+
+
+\subsection{Member Function Documentation}
+\index{zcm\+::\+Server@{zcm\+::\+Server}!add\+\_\+connection@{add\+\_\+connection}}
+\index{add\+\_\+connection@{add\+\_\+connection}!zcm\+::\+Server@{zcm\+::\+Server}}
+\subsubsection[{\texorpdfstring{add\+\_\+connection(std\+::string new\+\_\+connection)}{add_connection(std::string new_connection)}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Server\+::add\+\_\+connection (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{new\+\_\+connection}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Server_ad1c5e86ea9384c95774046ac469092b7}{}\label{classzcm_1_1Server_ad1c5e86ea9384c95774046ac469092b7}
+
+
+Add a new connection to the server. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new\+\_\+connection} & New connection address to bind to \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Server@{zcm\+::\+Server}!bind@{bind}}
+\index{bind@{bind}!zcm\+::\+Server@{zcm\+::\+Server}}
+\subsubsection[{\texorpdfstring{bind(std\+::vector$<$ std\+::string $>$ new\+\_\+endpoints)}{bind(std::vector< std::string > new_endpoints)}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Server\+::bind (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::string $>$}]{new\+\_\+endpoints}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Server_a663b9c844bd17d3174cdfe367fe7d2e2}{}\label{classzcm_1_1Server_a663b9c844bd17d3174cdfe367fe7d2e2}
+
+
+Bind to a new set of endpoints param\mbox{[}in\mbox{]} new\+\_\+endpoints A new vector of endpoints to bind to. 
+
+\index{zcm\+::\+Server@{zcm\+::\+Server}!get\+\_\+name@{get\+\_\+name}}
+\index{get\+\_\+name@{get\+\_\+name}!zcm\+::\+Server@{zcm\+::\+Server}}
+\subsubsection[{\texorpdfstring{get\+\_\+name()}{get_name()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string zcm\+::\+Server\+::get\+\_\+name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Server_adff186f44785ea8c17f3d96cf8e254e6}{}\label{classzcm_1_1Server_adff186f44785ea8c17f3d96cf8e254e6}
+
+
+Get the name of the server. 
+
+\index{zcm\+::\+Server@{zcm\+::\+Server}!get\+\_\+priority@{get\+\_\+priority}}
+\index{get\+\_\+priority@{get\+\_\+priority}!zcm\+::\+Server@{zcm\+::\+Server}}
+\subsubsection[{\texorpdfstring{get\+\_\+priority()}{get_priority()}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int zcm\+::\+Server\+::get\+\_\+priority (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Server_ae570e2fe8f61761951d79c9c5b6ea988}{}\label{classzcm_1_1Server_ae570e2fe8f61761951d79c9c5b6ea988}
+
+
+Get the priority of the server. 
+
+\index{zcm\+::\+Server@{zcm\+::\+Server}!rebind\+\_\+operation\+\_\+function@{rebind\+\_\+operation\+\_\+function}}
+\index{rebind\+\_\+operation\+\_\+function@{rebind\+\_\+operation\+\_\+function}!zcm\+::\+Server@{zcm\+::\+Server}}
+\subsubsection[{\texorpdfstring{rebind\+\_\+operation\+\_\+function(std\+::function$<$ std\+::string(const std\+::string \&)$>$ new\+\_\+operation\+\_\+function)}{rebind_operation_function(std::function< std::string(const std::string &)> new_operation_function)}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Server\+::rebind\+\_\+operation\+\_\+function (
+\begin{DoxyParamCaption}
+\item[{std\+::function$<$ std\+::string(const std\+::string \&)$>$}]{new\+\_\+operation\+\_\+function}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Server_ae76811b738db33b85e5c39307f08c5e2}{}\label{classzcm_1_1Server_ae76811b738db33b85e5c39307f08c5e2}
+
+
+Rebind the server operation function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new\+\_\+operation\+\_\+function} & New server function to be handled upon \hyperlink{classzcm_1_1Server_ae30eb0c0b4cfad74b7f73c17815511eb}{recv()} \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Server@{zcm\+::\+Server}!recv@{recv}}
+\index{recv@{recv}!zcm\+::\+Server@{zcm\+::\+Server}}
+\subsubsection[{\texorpdfstring{recv()}{recv()}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Server\+::recv (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Server_ae30eb0c0b4cfad74b7f73c17815511eb}{}\label{classzcm_1_1Server_ae30eb0c0b4cfad74b7f73c17815511eb}
+
+
+Thread function of the server Behavior\+: (1) Wait for a new request on the server Z\+MQ socket (2) Create a \hyperlink{classzcm_1_1Server}{Server} Operation (3) Enqueue onto operation\+\_\+queue (4) Goto step (1) 
+
+\index{zcm\+::\+Server@{zcm\+::\+Server}!spawn@{spawn}}
+\index{spawn@{spawn}!zcm\+::\+Server@{zcm\+::\+Server}}
+\subsubsection[{\texorpdfstring{spawn()}{spawn()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::thread zcm\+::\+Server\+::spawn (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Server_a77c0b86016dce3e6cef6a64118edd584}{}\label{classzcm_1_1Server_a77c0b86016dce3e6cef6a64118edd584}
+
+
+Spawn a new thread for the server. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classzcm_1_1Server}{Server} thread 
+\end{DoxyReturn}
+\index{zcm\+::\+Server@{zcm\+::\+Server}!start@{start}}
+\index{start@{start}!zcm\+::\+Server@{zcm\+::\+Server}}
+\subsubsection[{\texorpdfstring{start()}{start()}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Server\+::start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Server_ab94400c32a097989a769cfb1d77936b4}{}\label{classzcm_1_1Server_ab94400c32a097989a769cfb1d77936b4}
+
+
+Start the server thread. 
+
+
+
+\subsection{Member Data Documentation}
+\index{zcm\+::\+Server@{zcm\+::\+Server}!context@{context}}
+\index{context@{context}!zcm\+::\+Server@{zcm\+::\+Server}}
+\subsubsection[{\texorpdfstring{context}{context}}]{\setlength{\rightskip}{0pt plus 5cm}zmq\+::context\+\_\+t$\ast$ zcm\+::\+Server\+::context\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Server_a2de8909537ebb88665bfcca1f931c2f8}{}\label{classzcm_1_1Server_a2de8909537ebb88665bfcca1f931c2f8}
+
+
+Pointer to the server Z\+MQ context. 
+
+\index{zcm\+::\+Server@{zcm\+::\+Server}!endpoints@{endpoints}}
+\index{endpoints@{endpoints}!zcm\+::\+Server@{zcm\+::\+Server}}
+\subsubsection[{\texorpdfstring{endpoints}{endpoints}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::string$>$ zcm\+::\+Server\+::endpoints\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Server_a488d1398b76851565a4d116f7cf72af1}{}\label{classzcm_1_1Server_a488d1398b76851565a4d116f7cf72af1}
+
+
+Vector of connection endpoints. 
+
+\index{zcm\+::\+Server@{zcm\+::\+Server}!func\+\_\+mutex@{func\+\_\+mutex}}
+\index{func\+\_\+mutex@{func\+\_\+mutex}!zcm\+::\+Server@{zcm\+::\+Server}}
+\subsubsection[{\texorpdfstring{func\+\_\+mutex}{func_mutex}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::mutex zcm\+::\+Server\+::func\+\_\+mutex\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Server_a3e36a37479457237786db9e163d6fef0}{}\label{classzcm_1_1Server_a3e36a37479457237786db9e163d6fef0}
+
+
+Mutex used when changing operation\+\_\+function at runtime. 
+
+\index{zcm\+::\+Server@{zcm\+::\+Server}!name@{name}}
+\index{name@{name}!zcm\+::\+Server@{zcm\+::\+Server}}
+\subsubsection[{\texorpdfstring{name}{name}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string zcm\+::\+Server\+::name\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Server_a9d59737b196a7abb3a891dc8723e0dcf}{}\label{classzcm_1_1Server_a9d59737b196a7abb3a891dc8723e0dcf}
+
+
+Name of the server. 
+
+\index{zcm\+::\+Server@{zcm\+::\+Server}!operation\+\_\+function@{operation\+\_\+function}}
+\index{operation\+\_\+function@{operation\+\_\+function}!zcm\+::\+Server@{zcm\+::\+Server}}
+\subsubsection[{\texorpdfstring{operation\+\_\+function}{operation_function}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::function$<$std\+::string(const std\+::string\&)$>$ zcm\+::\+Server\+::operation\+\_\+function\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Server_a287609eb19370fe01adf47f26633ce01}{}\label{classzcm_1_1Server_a287609eb19370fe01adf47f26633ce01}
+
+
+Operation function bound to the server -\/ \hyperlink{classzcm_1_1Component}{Component} method that handles received requests. 
+
+\index{zcm\+::\+Server@{zcm\+::\+Server}!operation\+\_\+queue\+\_\+ptr@{operation\+\_\+queue\+\_\+ptr}}
+\index{operation\+\_\+queue\+\_\+ptr@{operation\+\_\+queue\+\_\+ptr}!zcm\+::\+Server@{zcm\+::\+Server}}
+\subsubsection[{\texorpdfstring{operation\+\_\+queue\+\_\+ptr}{operation_queue_ptr}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Operation\+\_\+\+Queue}$\ast$ zcm\+::\+Server\+::operation\+\_\+queue\+\_\+ptr\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Server_a667c0fef537aa6acc6245d956250c860}{}\label{classzcm_1_1Server_a667c0fef537aa6acc6245d956250c860}
+
+
+Pointer to the operation\+\_\+queue. 
+
+\index{zcm\+::\+Server@{zcm\+::\+Server}!priority@{priority}}
+\index{priority@{priority}!zcm\+::\+Server@{zcm\+::\+Server}}
+\subsubsection[{\texorpdfstring{priority}{priority}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int zcm\+::\+Server\+::priority\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Server_ad088a068dc025ff7aa4bf560cc7c43c1}{}\label{classzcm_1_1Server_ad088a068dc025ff7aa4bf560cc7c43c1}
+
+
+Priority of the server. 
+
+\index{zcm\+::\+Server@{zcm\+::\+Server}!ready@{ready}}
+\index{ready@{ready}!zcm\+::\+Server@{zcm\+::\+Server}}
+\subsubsection[{\texorpdfstring{ready}{ready}}]{\setlength{\rightskip}{0pt plus 5cm}bool zcm\+::\+Server\+::ready\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Server_a709ad2426e77a5e442d70a762cbe504b}{}\label{classzcm_1_1Server_a709ad2426e77a5e442d70a762cbe504b}
+
+
+Boolean representing the state of the server to receive new requests. 
+
+\index{zcm\+::\+Server@{zcm\+::\+Server}!server\+\_\+socket@{server\+\_\+socket}}
+\index{server\+\_\+socket@{server\+\_\+socket}!zcm\+::\+Server@{zcm\+::\+Server}}
+\subsubsection[{\texorpdfstring{server\+\_\+socket}{server_socket}}]{\setlength{\rightskip}{0pt plus 5cm}zmq\+::socket\+\_\+t$\ast$ zcm\+::\+Server\+::server\+\_\+socket\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Server_a4312bf38cfd6bb1d169d6bd3682651e3}{}\label{classzcm_1_1Server_a4312bf38cfd6bb1d169d6bd3682651e3}
+
+
+Pointer to the server Z\+MQ socket. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/pranav/\+Repositories/zcm/include/\hyperlink{server_8hpp}{server.\+hpp}\item 
+/home/pranav/\+Repositories/zcm/src/\hyperlink{server_8cpp}{server.\+cpp}\end{DoxyCompactItemize}

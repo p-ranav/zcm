@@ -1,0 +1,95 @@
+\hypertarget{classzcm_1_1Component}{}\section{zcm\+:\+:Component Class Reference}
+\label{classzcm_1_1Component}\index{zcm\+::\+Component@{zcm\+::\+Component}}
+
+
+\hyperlink{classzcm_1_1Component}{Component} class.  
+
+
+
+
+{\ttfamily \#include $<$component.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classzcm_1_1Component_a6fd6b1f309a6b464a14c22a94d18f040}{Component} ()
+\begin{DoxyCompactList}\small\item\em Construct a component Prepare the component operation queue. \end{DoxyCompactList}\item 
+\hyperlink{classzcm_1_1Component_a0bab6bb89e49affa281179f5d6aeff6a}{$\sim$\+Component} ()
+\begin{DoxyCompactList}\small\item\em Destroy the component. \end{DoxyCompactList}\item 
+std\+::thread $\ast$ \hyperlink{classzcm_1_1Component_a328d6f79aab5455e96a2badfdb6bb451}{spawn} ()
+\begin{DoxyCompactList}\small\item\em Spawn the component executor thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classzcm_1_1Operation__Queue}{Operation\+\_\+\+Queue} $\ast$ \hyperlink{classzcm_1_1Component_a4c9f3591c18dde89bc3c2af7717c6692}{operation\+\_\+queue}
+\begin{DoxyCompactList}\small\item\em Pointer to the \hyperlink{classzcm_1_1Component}{Component} Operation Queue. \end{DoxyCompactList}\item 
+std\+::thread $\ast$ \hyperlink{classzcm_1_1Component_a392ca3b6cd537cd7aa1d4db31dacdf4d}{executor\+\_\+thread}
+\begin{DoxyCompactList}\small\item\em Pointer to the \hyperlink{classzcm_1_1Component}{Component} Executor Thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classzcm_1_1Component}{Component} class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{zcm\+::\+Component@{zcm\+::\+Component}!Component@{Component}}
+\index{Component@{Component}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{Component()}{Component()}}]{\setlength{\rightskip}{0pt plus 5cm}zcm\+::\+Component\+::\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Component_a6fd6b1f309a6b464a14c22a94d18f040}{}\label{classzcm_1_1Component_a6fd6b1f309a6b464a14c22a94d18f040}
+
+
+Construct a component Prepare the component operation queue. 
+
+\index{zcm\+::\+Component@{zcm\+::\+Component}!````~Component@{$\sim$\+Component}}
+\index{````~Component@{$\sim$\+Component}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{$\sim$\+Component()}{~Component()}}]{\setlength{\rightskip}{0pt plus 5cm}zcm\+::\+Component\+::$\sim$\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Component_a0bab6bb89e49affa281179f5d6aeff6a}{}\label{classzcm_1_1Component_a0bab6bb89e49affa281179f5d6aeff6a}
+
+
+Destroy the component. 
+
+
+
+\subsection{Member Function Documentation}
+\index{zcm\+::\+Component@{zcm\+::\+Component}!spawn@{spawn}}
+\index{spawn@{spawn}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{spawn()}{spawn()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::thread $\ast$ zcm\+::\+Component\+::spawn (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Component_a328d6f79aab5455e96a2badfdb6bb451}{}\label{classzcm_1_1Component_a328d6f79aab5455e96a2badfdb6bb451}
+
+
+Spawn the component executor thread. 
+
+\begin{DoxyReturn}{Returns}
+Return a pointer to the executor thread 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{zcm\+::\+Component@{zcm\+::\+Component}!executor\+\_\+thread@{executor\+\_\+thread}}
+\index{executor\+\_\+thread@{executor\+\_\+thread}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{executor\+\_\+thread}{executor_thread}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::thread$\ast$ zcm\+::\+Component\+::executor\+\_\+thread\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classzcm_1_1Component_a392ca3b6cd537cd7aa1d4db31dacdf4d}{}\label{classzcm_1_1Component_a392ca3b6cd537cd7aa1d4db31dacdf4d}
+
+
+Pointer to the \hyperlink{classzcm_1_1Component}{Component} Executor Thread. 
+
+\index{zcm\+::\+Component@{zcm\+::\+Component}!operation\+\_\+queue@{operation\+\_\+queue}}
+\index{operation\+\_\+queue@{operation\+\_\+queue}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{operation\+\_\+queue}{operation_queue}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Operation\+\_\+\+Queue}$\ast$ zcm\+::\+Component\+::operation\+\_\+queue\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classzcm_1_1Component_a4c9f3591c18dde89bc3c2af7717c6692}{}\label{classzcm_1_1Component_a4c9f3591c18dde89bc3c2af7717c6692}
+
+
+Pointer to the \hyperlink{classzcm_1_1Component}{Component} Operation Queue. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/pranav/\+Repositories/zcm/include/\hyperlink{component_8hpp}{component.\+hpp}\item 
+/home/pranav/\+Repositories/zcm/src/\hyperlink{component_8cpp}{component.\+cpp}\end{DoxyCompactItemize}

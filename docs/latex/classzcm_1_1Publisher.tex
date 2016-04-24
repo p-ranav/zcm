@@ -1,0 +1,193 @@
+\hypertarget{classzcm_1_1Publisher}{}\section{zcm\+:\+:Publisher Class Reference}
+\label{classzcm_1_1Publisher}\index{zcm\+::\+Publisher@{zcm\+::\+Publisher}}
+
+
+\hyperlink{classzcm_1_1Publisher}{Publisher} class.  
+
+
+
+
+{\ttfamily \#include $<$publisher.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classzcm_1_1Publisher_a42553620c51aa767ad77fd527c660199}{Publisher} (std\+::string \hyperlink{classzcm_1_1Publisher_a2e3902339b55647dc6a7d2f3de64d8fe}{name})
+\begin{DoxyCompactList}\small\item\em Construct a publisher object. \end{DoxyCompactList}\item 
+\hyperlink{classzcm_1_1Publisher_adb0e344d4ab2bdd62de874a29404543b}{Publisher} (std\+::string \hyperlink{classzcm_1_1Publisher_a2e3902339b55647dc6a7d2f3de64d8fe}{name}, std\+::vector$<$ std\+::string $>$ \hyperlink{classzcm_1_1Publisher_a34548b5f2611391263acd10cb7d197e5}{endpoints})
+\begin{DoxyCompactList}\small\item\em Construct a publisher object with known endpoints. \end{DoxyCompactList}\item 
+\hyperlink{classzcm_1_1Publisher_adde9cdf939d305abeec3ef98331f5f40}{$\sim$\+Publisher} ()
+\begin{DoxyCompactList}\small\item\em Close the publisher Z\+MQ socket and destroy the context. \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Publisher_a74a5e00ea8b49a70e4077727b318864f}{bind} (std\+::vector$<$ std\+::string $>$ new\+\_\+endpoints)
+\begin{DoxyCompactList}\small\item\em Bind the publisher to a new set of endpoints. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classzcm_1_1Publisher_adc12b48e001014854e35141457d5c90d}{get\+\_\+name} ()
+\begin{DoxyCompactList}\small\item\em Return the publisher name. \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Publisher_aa581fdeacd01dca767c2c1d0e3e4031f}{add\+\_\+connection} (std\+::string new\+\_\+connection)
+\begin{DoxyCompactList}\small\item\em Add a new endpoint to the publisher. \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Publisher_a1e72bb0eef5a99fdbec0e2df957668e0}{send} (std\+::string message)
+\begin{DoxyCompactList}\small\item\em Publish a new message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classzcm_1_1Publisher_a2e3902339b55647dc6a7d2f3de64d8fe}{name}
+\begin{DoxyCompactList}\small\item\em Name of the publisher. \end{DoxyCompactList}\item 
+zmq\+::context\+\_\+t $\ast$ \hyperlink{classzcm_1_1Publisher_a399965216cd17f1097313f044487d968}{context}
+\begin{DoxyCompactList}\small\item\em Z\+MQ Context of the publisher. \end{DoxyCompactList}\item 
+zmq\+::socket\+\_\+t $\ast$ \hyperlink{classzcm_1_1Publisher_acb22f36a592a5a0beaf4100e472578d5}{publisher\+\_\+socket}
+\begin{DoxyCompactList}\small\item\em Z\+MQ Socket of the publisher. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classzcm_1_1Publisher_a34548b5f2611391263acd10cb7d197e5}{endpoints}
+\begin{DoxyCompactList}\small\item\em Vector of endpoints to bind to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classzcm_1_1Publisher}{Publisher} class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{zcm\+::\+Publisher@{zcm\+::\+Publisher}!Publisher@{Publisher}}
+\index{Publisher@{Publisher}!zcm\+::\+Publisher@{zcm\+::\+Publisher}}
+\subsubsection[{\texorpdfstring{Publisher(std\+::string name)}{Publisher(std::string name)}}]{\setlength{\rightskip}{0pt plus 5cm}zcm\+::\+Publisher\+::\+Publisher (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Publisher_a42553620c51aa767ad77fd527c660199}{}\label{classzcm_1_1Publisher_a42553620c51aa767ad77fd527c660199}
+
+
+Construct a publisher object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em name} & \hyperlink{classzcm_1_1Publisher}{Publisher} name \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Publisher@{zcm\+::\+Publisher}!Publisher@{Publisher}}
+\index{Publisher@{Publisher}!zcm\+::\+Publisher@{zcm\+::\+Publisher}}
+\subsubsection[{\texorpdfstring{Publisher(std\+::string name, std\+::vector$<$ std\+::string $>$ endpoints)}{Publisher(std::string name, std::vector< std::string > endpoints)}}]{\setlength{\rightskip}{0pt plus 5cm}zcm\+::\+Publisher\+::\+Publisher (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name, }
+\item[{std\+::vector$<$ std\+::string $>$}]{endpoints}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Publisher_adb0e344d4ab2bdd62de874a29404543b}{}\label{classzcm_1_1Publisher_adb0e344d4ab2bdd62de874a29404543b}
+
+
+Construct a publisher object with known endpoints. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em name} & \hyperlink{classzcm_1_1Publisher}{Publisher} name \\
+\hline
+\mbox{\tt in}  & {\em endpoints} & A vector of endpoint strings \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Publisher@{zcm\+::\+Publisher}!````~Publisher@{$\sim$\+Publisher}}
+\index{````~Publisher@{$\sim$\+Publisher}!zcm\+::\+Publisher@{zcm\+::\+Publisher}}
+\subsubsection[{\texorpdfstring{$\sim$\+Publisher()}{~Publisher()}}]{\setlength{\rightskip}{0pt plus 5cm}zcm\+::\+Publisher\+::$\sim$\+Publisher (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Publisher_adde9cdf939d305abeec3ef98331f5f40}{}\label{classzcm_1_1Publisher_adde9cdf939d305abeec3ef98331f5f40}
+
+
+Close the publisher Z\+MQ socket and destroy the context. 
+
+
+
+\subsection{Member Function Documentation}
+\index{zcm\+::\+Publisher@{zcm\+::\+Publisher}!add\+\_\+connection@{add\+\_\+connection}}
+\index{add\+\_\+connection@{add\+\_\+connection}!zcm\+::\+Publisher@{zcm\+::\+Publisher}}
+\subsubsection[{\texorpdfstring{add\+\_\+connection(std\+::string new\+\_\+connection)}{add_connection(std::string new_connection)}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Publisher\+::add\+\_\+connection (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{new\+\_\+connection}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Publisher_aa581fdeacd01dca767c2c1d0e3e4031f}{}\label{classzcm_1_1Publisher_aa581fdeacd01dca767c2c1d0e3e4031f}
+
+
+Add a new endpoint to the publisher. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new\+\_\+connection} & New endpoint to bind to \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Publisher@{zcm\+::\+Publisher}!bind@{bind}}
+\index{bind@{bind}!zcm\+::\+Publisher@{zcm\+::\+Publisher}}
+\subsubsection[{\texorpdfstring{bind(std\+::vector$<$ std\+::string $>$ new\+\_\+endpoints)}{bind(std::vector< std::string > new_endpoints)}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Publisher\+::bind (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::string $>$}]{new\+\_\+endpoints}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Publisher_a74a5e00ea8b49a70e4077727b318864f}{}\label{classzcm_1_1Publisher_a74a5e00ea8b49a70e4077727b318864f}
+
+
+Bind the publisher to a new set of endpoints. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new\+\_\+endpoints} & New set of endpoints as a vector \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Publisher@{zcm\+::\+Publisher}!get\+\_\+name@{get\+\_\+name}}
+\index{get\+\_\+name@{get\+\_\+name}!zcm\+::\+Publisher@{zcm\+::\+Publisher}}
+\subsubsection[{\texorpdfstring{get\+\_\+name()}{get_name()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string zcm\+::\+Publisher\+::get\+\_\+name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Publisher_adc12b48e001014854e35141457d5c90d}{}\label{classzcm_1_1Publisher_adc12b48e001014854e35141457d5c90d}
+
+
+Return the publisher name. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classzcm_1_1Publisher}{Publisher} name 
+\end{DoxyReturn}
+\index{zcm\+::\+Publisher@{zcm\+::\+Publisher}!send@{send}}
+\index{send@{send}!zcm\+::\+Publisher@{zcm\+::\+Publisher}}
+\subsubsection[{\texorpdfstring{send(std\+::string message)}{send(std::string message)}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Publisher\+::send (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{message}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Publisher_a1e72bb0eef5a99fdbec0e2df957668e0}{}\label{classzcm_1_1Publisher_a1e72bb0eef5a99fdbec0e2df957668e0}
+
+
+Publish a new message. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em message} & The message string. Serialize complex objects to strings with protobuf \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{zcm\+::\+Publisher@{zcm\+::\+Publisher}!context@{context}}
+\index{context@{context}!zcm\+::\+Publisher@{zcm\+::\+Publisher}}
+\subsubsection[{\texorpdfstring{context}{context}}]{\setlength{\rightskip}{0pt plus 5cm}zmq\+::context\+\_\+t$\ast$ zcm\+::\+Publisher\+::context\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Publisher_a399965216cd17f1097313f044487d968}{}\label{classzcm_1_1Publisher_a399965216cd17f1097313f044487d968}
+
+
+Z\+MQ Context of the publisher. 
+
+\index{zcm\+::\+Publisher@{zcm\+::\+Publisher}!endpoints@{endpoints}}
+\index{endpoints@{endpoints}!zcm\+::\+Publisher@{zcm\+::\+Publisher}}
+\subsubsection[{\texorpdfstring{endpoints}{endpoints}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::string$>$ zcm\+::\+Publisher\+::endpoints\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Publisher_a34548b5f2611391263acd10cb7d197e5}{}\label{classzcm_1_1Publisher_a34548b5f2611391263acd10cb7d197e5}
+
+
+Vector of endpoints to bind to. 
+
+\index{zcm\+::\+Publisher@{zcm\+::\+Publisher}!name@{name}}
+\index{name@{name}!zcm\+::\+Publisher@{zcm\+::\+Publisher}}
+\subsubsection[{\texorpdfstring{name}{name}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string zcm\+::\+Publisher\+::name\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Publisher_a2e3902339b55647dc6a7d2f3de64d8fe}{}\label{classzcm_1_1Publisher_a2e3902339b55647dc6a7d2f3de64d8fe}
+
+
+Name of the publisher. 
+
+\index{zcm\+::\+Publisher@{zcm\+::\+Publisher}!publisher\+\_\+socket@{publisher\+\_\+socket}}
+\index{publisher\+\_\+socket@{publisher\+\_\+socket}!zcm\+::\+Publisher@{zcm\+::\+Publisher}}
+\subsubsection[{\texorpdfstring{publisher\+\_\+socket}{publisher_socket}}]{\setlength{\rightskip}{0pt plus 5cm}zmq\+::socket\+\_\+t$\ast$ zcm\+::\+Publisher\+::publisher\+\_\+socket\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Publisher_acb22f36a592a5a0beaf4100e472578d5}{}\label{classzcm_1_1Publisher_acb22f36a592a5a0beaf4100e472578d5}
+
+
+Z\+MQ Socket of the publisher. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/pranav/\+Repositories/zcm/include/\hyperlink{publisher_8hpp}{publisher.\+hpp}\item 
+/home/pranav/\+Repositories/zcm/src/\hyperlink{publisher_8cpp}{publisher.\+cpp}\end{DoxyCompactItemize}

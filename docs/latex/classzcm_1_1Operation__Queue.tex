@@ -1,0 +1,109 @@
+\hypertarget{classzcm_1_1Operation__Queue}{}\section{zcm\+:\+:Operation\+\_\+\+Queue Class Reference}
+\label{classzcm_1_1Operation__Queue}\index{zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}}
+
+
+\hyperlink{classzcm_1_1Operation__Queue}{Operation\+\_\+\+Queue} class.  
+
+
+
+
+{\ttfamily \#include $<$operation\+\_\+queue.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structzcm_1_1Operation__Queue_1_1PriorityOrdering}{Priority\+Ordering}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classzcm_1_1Operation__Queue_a22229dc65dd7a4dafcd9880e467c7259}{enqueue} (\hyperlink{classzcm_1_1Base__Operation}{Base\+\_\+\+Operation} $\ast$new\+\_\+operation)
+\item 
+void \hyperlink{classzcm_1_1Operation__Queue_a2f2e1d6674f1b148eb75320eca01c4b7}{dequeue} ()
+\item 
+bool \hyperlink{classzcm_1_1Operation__Queue_aa2ace1c0c0483b01a391e54e31281e1a}{empty} ()
+\item 
+\hyperlink{classzcm_1_1Base__Operation}{Base\+\_\+\+Operation} $\ast$ \hyperlink{classzcm_1_1Operation__Queue_aca92acffae896456388a6b74c24a1d68}{top} ()
+\item 
+void \hyperlink{classzcm_1_1Operation__Queue_a7a1b4578e27c24f6ce126cbd9b76e2c8}{process} ()
+\item 
+std\+::thread $\ast$ \hyperlink{classzcm_1_1Operation__Queue_a7ee35bb38b4c40770043674e61a344e2}{spawn} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::priority\+\_\+queue$<$ \hyperlink{classzcm_1_1Base__Operation}{Base\+\_\+\+Operation}, std\+::vector$<$ \hyperlink{classzcm_1_1Base__Operation}{Base\+\_\+\+Operation} $\ast$ $>$, \hyperlink{structzcm_1_1Operation__Queue_1_1PriorityOrdering}{Priority\+Ordering} $>$ \hyperlink{classzcm_1_1Operation__Queue_a5f846fe69a28fd93c1182bff69b20379}{operation\+\_\+queue}
+\begin{DoxyCompactList}\small\item\em The component operation queue -\/ S\+TL priority\+\_\+queue with fixed-\/priority scheduling. \end{DoxyCompactList}\item 
+std\+::mutex \hyperlink{classzcm_1_1Operation__Queue_a2203c4541451d68bbf3f5dfc7efe8449}{queue\+\_\+mutex}
+\begin{DoxyCompactList}\small\item\em Mutex that protects the queue during enqueue/dequeue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classzcm_1_1Operation__Queue}{Operation\+\_\+\+Queue} class. 
+
+\subsection{Member Function Documentation}
+\index{zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}!dequeue@{dequeue}}
+\index{dequeue@{dequeue}!zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}}
+\subsubsection[{\texorpdfstring{dequeue()}{dequeue()}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Operation\+\_\+\+Queue\+::dequeue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Operation__Queue_a2f2e1d6674f1b148eb75320eca01c4b7}{}\label{classzcm_1_1Operation__Queue_a2f2e1d6674f1b148eb75320eca01c4b7}
+\index{zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}!empty@{empty}}
+\index{empty@{empty}!zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}}
+\subsubsection[{\texorpdfstring{empty()}{empty()}}]{\setlength{\rightskip}{0pt plus 5cm}bool zcm\+::\+Operation\+\_\+\+Queue\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Operation__Queue_aa2ace1c0c0483b01a391e54e31281e1a}{}\label{classzcm_1_1Operation__Queue_aa2ace1c0c0483b01a391e54e31281e1a}
+\index{zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}}
+\subsubsection[{\texorpdfstring{enqueue(\+Base\+\_\+\+Operation $\ast$new\+\_\+operation)}{enqueue(Base_Operation *new_operation)}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Operation\+\_\+\+Queue\+::enqueue (
+\begin{DoxyParamCaption}
+\item[{{\bf Base\+\_\+\+Operation} $\ast$}]{new\+\_\+operation}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Operation__Queue_a22229dc65dd7a4dafcd9880e467c7259}{}\label{classzcm_1_1Operation__Queue_a22229dc65dd7a4dafcd9880e467c7259}
+\index{zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}!process@{process}}
+\index{process@{process}!zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}}
+\subsubsection[{\texorpdfstring{process()}{process()}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Operation\+\_\+\+Queue\+::process (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Operation__Queue_a7a1b4578e27c24f6ce126cbd9b76e2c8}{}\label{classzcm_1_1Operation__Queue_a7a1b4578e27c24f6ce126cbd9b76e2c8}
+\index{zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}!spawn@{spawn}}
+\index{spawn@{spawn}!zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}}
+\subsubsection[{\texorpdfstring{spawn()}{spawn()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::thread $\ast$ zcm\+::\+Operation\+\_\+\+Queue\+::spawn (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Operation__Queue_a7ee35bb38b4c40770043674e61a344e2}{}\label{classzcm_1_1Operation__Queue_a7ee35bb38b4c40770043674e61a344e2}
+\index{zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}!top@{top}}
+\index{top@{top}!zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}}
+\subsubsection[{\texorpdfstring{top()}{top()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Base\+\_\+\+Operation} $\ast$ zcm\+::\+Operation\+\_\+\+Queue\+::top (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Operation__Queue_aca92acffae896456388a6b74c24a1d68}{}\label{classzcm_1_1Operation__Queue_aca92acffae896456388a6b74c24a1d68}
+
+
+\subsection{Member Data Documentation}
+\index{zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}!operation\+\_\+queue@{operation\+\_\+queue}}
+\index{operation\+\_\+queue@{operation\+\_\+queue}!zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}}
+\subsubsection[{\texorpdfstring{operation\+\_\+queue}{operation_queue}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::priority\+\_\+queue$<${\bf Base\+\_\+\+Operation}, std\+::vector$<${\bf Base\+\_\+\+Operation}$\ast$$>$, {\bf Priority\+Ordering}$>$ zcm\+::\+Operation\+\_\+\+Queue\+::operation\+\_\+queue\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Operation__Queue_a5f846fe69a28fd93c1182bff69b20379}{}\label{classzcm_1_1Operation__Queue_a5f846fe69a28fd93c1182bff69b20379}
+
+
+The component operation queue -\/ S\+TL priority\+\_\+queue with fixed-\/priority scheduling. 
+
+\index{zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}!queue\+\_\+mutex@{queue\+\_\+mutex}}
+\index{queue\+\_\+mutex@{queue\+\_\+mutex}!zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}}
+\subsubsection[{\texorpdfstring{queue\+\_\+mutex}{queue_mutex}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::mutex zcm\+::\+Operation\+\_\+\+Queue\+::queue\+\_\+mutex\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Operation__Queue_a2203c4541451d68bbf3f5dfc7efe8449}{}\label{classzcm_1_1Operation__Queue_a2203c4541451d68bbf3f5dfc7efe8449}
+
+
+Mutex that protects the queue during enqueue/dequeue. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/pranav/\+Repositories/zcm/include/\hyperlink{operation__queue_8hpp}{operation\+\_\+queue.\+hpp}\item 
+/home/pranav/\+Repositories/zcm/src/\hyperlink{operation__queue_8cpp}{operation\+\_\+queue.\+cpp}\end{DoxyCompactItemize}

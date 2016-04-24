@@ -1,0 +1,175 @@
+\hypertarget{classzcm_1_1Client}{}\section{zcm\+:\+:Client Class Reference}
+\label{classzcm_1_1Client}\index{zcm\+::\+Client@{zcm\+::\+Client}}
+
+
+\hyperlink{classzcm_1_1Client}{Client} class.  
+
+
+
+
+{\ttfamily \#include $<$client.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classzcm_1_1Client_a5da343b18178f50c0ab24b852af7f349}{Client} (std\+::string \hyperlink{classzcm_1_1Client_ae972b951134774fd2246d802e2bc6fc0}{name})
+\begin{DoxyCompactList}\small\item\em Construct a client object. \end{DoxyCompactList}\item 
+\hyperlink{classzcm_1_1Client_a070dd5b851fe5f5c0a679bcb23d085b3}{Client} (std\+::string \hyperlink{classzcm_1_1Client_ae972b951134774fd2246d802e2bc6fc0}{name}, std\+::vector$<$ std\+::string $>$ \hyperlink{classzcm_1_1Client_a01cfee292bb3546a47ec70fff35ff1b6}{endpoints})
+\begin{DoxyCompactList}\small\item\em Construct a client object with known endpoints. \end{DoxyCompactList}\item 
+\hyperlink{classzcm_1_1Client_a927b35854850369d4d95b3101f3a9baa}{$\sim$\+Client} ()
+\begin{DoxyCompactList}\small\item\em Close the client Z\+MQ socket and destroy the context. \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Client_aabf03e1bc961b1e525cff57986b1b5a8}{connect} (std\+::vector$<$ std\+::string $>$ new\+\_\+endpoints)
+\begin{DoxyCompactList}\small\item\em Connect the client to a new set of endpoints. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classzcm_1_1Client_ad4178e9b209db19994204b9dad7aa374}{get\+\_\+name} ()
+\begin{DoxyCompactList}\small\item\em Return the client name. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classzcm_1_1Client_a9f62555765181c2feee4631a4b50786d}{call} (std\+::string message)
+\begin{DoxyCompactList}\small\item\em Call the server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classzcm_1_1Client_ae972b951134774fd2246d802e2bc6fc0}{name}
+\begin{DoxyCompactList}\small\item\em Name of the publisher. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classzcm_1_1Client_a01cfee292bb3546a47ec70fff35ff1b6}{endpoints}
+\begin{DoxyCompactList}\small\item\em Vector of endpoints to connect to. \end{DoxyCompactList}\item 
+zmq\+::context\+\_\+t $\ast$ \hyperlink{classzcm_1_1Client_a0519b850f2a5167a0636f7a7adcabe1e}{context}
+\begin{DoxyCompactList}\small\item\em Z\+MQ Context of the client. \end{DoxyCompactList}\item 
+zmq\+::socket\+\_\+t $\ast$ \hyperlink{classzcm_1_1Client_a022f5e131d58cea7f6cc49b4580940a0}{client\+\_\+socket}
+\begin{DoxyCompactList}\small\item\em Z\+MQ Socket of the client. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classzcm_1_1Client}{Client} class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{zcm\+::\+Client@{zcm\+::\+Client}!Client@{Client}}
+\index{Client@{Client}!zcm\+::\+Client@{zcm\+::\+Client}}
+\subsubsection[{\texorpdfstring{Client(std\+::string name)}{Client(std::string name)}}]{\setlength{\rightskip}{0pt plus 5cm}zcm\+::\+Client\+::\+Client (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Client_a5da343b18178f50c0ab24b852af7f349}{}\label{classzcm_1_1Client_a5da343b18178f50c0ab24b852af7f349}
+
+
+Construct a client object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em name} & \hyperlink{classzcm_1_1Client}{Client} name \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Client@{zcm\+::\+Client}!Client@{Client}}
+\index{Client@{Client}!zcm\+::\+Client@{zcm\+::\+Client}}
+\subsubsection[{\texorpdfstring{Client(std\+::string name, std\+::vector$<$ std\+::string $>$ endpoints)}{Client(std::string name, std::vector< std::string > endpoints)}}]{\setlength{\rightskip}{0pt plus 5cm}zcm\+::\+Client\+::\+Client (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name, }
+\item[{std\+::vector$<$ std\+::string $>$}]{endpoints}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Client_a070dd5b851fe5f5c0a679bcb23d085b3}{}\label{classzcm_1_1Client_a070dd5b851fe5f5c0a679bcb23d085b3}
+
+
+Construct a client object with known endpoints. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em name} & \hyperlink{classzcm_1_1Client}{Client} name \\
+\hline
+\mbox{\tt in}  & {\em endpoints} & A vector of endpoint strings \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Client@{zcm\+::\+Client}!````~Client@{$\sim$\+Client}}
+\index{````~Client@{$\sim$\+Client}!zcm\+::\+Client@{zcm\+::\+Client}}
+\subsubsection[{\texorpdfstring{$\sim$\+Client()}{~Client()}}]{\setlength{\rightskip}{0pt plus 5cm}zcm\+::\+Client\+::$\sim$\+Client (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Client_a927b35854850369d4d95b3101f3a9baa}{}\label{classzcm_1_1Client_a927b35854850369d4d95b3101f3a9baa}
+
+
+Close the client Z\+MQ socket and destroy the context. 
+
+
+
+\subsection{Member Function Documentation}
+\index{zcm\+::\+Client@{zcm\+::\+Client}!call@{call}}
+\index{call@{call}!zcm\+::\+Client@{zcm\+::\+Client}}
+\subsubsection[{\texorpdfstring{call(std\+::string message)}{call(std::string message)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string zcm\+::\+Client\+::call (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{message}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Client_a9f62555765181c2feee4631a4b50786d}{}\label{classzcm_1_1Client_a9f62555765181c2feee4631a4b50786d}
+
+
+Call the server. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em message} & The message string. Serialize complex objects to strings with protobuf \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Client@{zcm\+::\+Client}!connect@{connect}}
+\index{connect@{connect}!zcm\+::\+Client@{zcm\+::\+Client}}
+\subsubsection[{\texorpdfstring{connect(std\+::vector$<$ std\+::string $>$ new\+\_\+endpoints)}{connect(std::vector< std::string > new_endpoints)}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Client\+::connect (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::string $>$}]{new\+\_\+endpoints}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Client_aabf03e1bc961b1e525cff57986b1b5a8}{}\label{classzcm_1_1Client_aabf03e1bc961b1e525cff57986b1b5a8}
+
+
+Connect the client to a new set of endpoints. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new\+\_\+endpoints} & New set of endpoints as a vector \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Client@{zcm\+::\+Client}!get\+\_\+name@{get\+\_\+name}}
+\index{get\+\_\+name@{get\+\_\+name}!zcm\+::\+Client@{zcm\+::\+Client}}
+\subsubsection[{\texorpdfstring{get\+\_\+name()}{get_name()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string zcm\+::\+Client\+::get\+\_\+name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Client_ad4178e9b209db19994204b9dad7aa374}{}\label{classzcm_1_1Client_ad4178e9b209db19994204b9dad7aa374}
+
+
+Return the client name. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classzcm_1_1Client}{Client} name 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{zcm\+::\+Client@{zcm\+::\+Client}!client\+\_\+socket@{client\+\_\+socket}}
+\index{client\+\_\+socket@{client\+\_\+socket}!zcm\+::\+Client@{zcm\+::\+Client}}
+\subsubsection[{\texorpdfstring{client\+\_\+socket}{client_socket}}]{\setlength{\rightskip}{0pt plus 5cm}zmq\+::socket\+\_\+t$\ast$ zcm\+::\+Client\+::client\+\_\+socket\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Client_a022f5e131d58cea7f6cc49b4580940a0}{}\label{classzcm_1_1Client_a022f5e131d58cea7f6cc49b4580940a0}
+
+
+Z\+MQ Socket of the client. 
+
+\index{zcm\+::\+Client@{zcm\+::\+Client}!context@{context}}
+\index{context@{context}!zcm\+::\+Client@{zcm\+::\+Client}}
+\subsubsection[{\texorpdfstring{context}{context}}]{\setlength{\rightskip}{0pt plus 5cm}zmq\+::context\+\_\+t$\ast$ zcm\+::\+Client\+::context\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Client_a0519b850f2a5167a0636f7a7adcabe1e}{}\label{classzcm_1_1Client_a0519b850f2a5167a0636f7a7adcabe1e}
+
+
+Z\+MQ Context of the client. 
+
+\index{zcm\+::\+Client@{zcm\+::\+Client}!endpoints@{endpoints}}
+\index{endpoints@{endpoints}!zcm\+::\+Client@{zcm\+::\+Client}}
+\subsubsection[{\texorpdfstring{endpoints}{endpoints}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::string$>$ zcm\+::\+Client\+::endpoints\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Client_a01cfee292bb3546a47ec70fff35ff1b6}{}\label{classzcm_1_1Client_a01cfee292bb3546a47ec70fff35ff1b6}
+
+
+Vector of endpoints to connect to. 
+
+\index{zcm\+::\+Client@{zcm\+::\+Client}!name@{name}}
+\index{name@{name}!zcm\+::\+Client@{zcm\+::\+Client}}
+\subsubsection[{\texorpdfstring{name}{name}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string zcm\+::\+Client\+::name\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Client_ae972b951134774fd2246d802e2bc6fc0}{}\label{classzcm_1_1Client_ae972b951134774fd2246d802e2bc6fc0}
+
+
+Name of the publisher. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/pranav/\+Repositories/zcm/include/\hyperlink{client_8hpp}{client.\+hpp}\item 
+/home/pranav/\+Repositories/zcm/src/\hyperlink{client_8cpp}{client.\+cpp}\end{DoxyCompactItemize}
