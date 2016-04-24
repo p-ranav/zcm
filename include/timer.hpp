@@ -19,7 +19,7 @@
 class Timer {
 public:
 
-  /*
+  /**
    * @brief Construct a timer
    * @param[in] name Name of the timer
    * @param[in] priority Priority of the timer
@@ -36,7 +36,7 @@ public:
     operation_function(operation_function),
     operation_queue_ptr(operation_queue_ptr) {}
 
-  /*
+  /**
    * @brief Timer thread function
    * Behavior:
    * (1) Wait for timer expiry
@@ -46,37 +46,37 @@ public:
    */
   void operation();
 
-  /*
+  /**
    * @brief Get the timer name
    * @return Timer name
    */
   std::string get_name();
 
-  /*
+  /**
    * @brief Get the timer priority
    * @return Timer priority
    */  
   unsigned int get_priority();
 
-  /*
+  /**
    * @brief Change the timer period
    * @param[in] new_period New timer period in nanoseconds
    */  
   void change_period(long long new_period);
 
-  /*
+  /**
    * @brief Rebind the timer operation function
    * @param[in] new_operation_function New timer function to be handled upon expiry 
    */    
   void rebind_operation_function(std::function<void()> new_operation_function);
 
-  /*
+  /**
    * @brief Spawn a new thread for the timer
    * @return Timer thread
    */    
   std::thread spawn();
 
-  /*
+  /**
    * @brief Start the timer thread
    */
   void start();
