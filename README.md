@@ -41,3 +41,13 @@ $ make check
 $ sudo make install
 $ sudo ldconfig
 ```
+
+* Install ZCM
+
+```bash
+$ git clone https://github.com/pranav-srinivas-kumar/zcm
+$ cd zcm
+$ make
+$ sudo make install
+$ sudo ldconfig
+```
