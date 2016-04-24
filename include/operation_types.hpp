@@ -25,9 +25,7 @@ public:
     return priority;
   }
 
-  virtual void execute() {
-    std::cout << "Calling base class execute" << std::endl;
-  }
+  virtual void execute() {}
 
 private:
   std::string name;
