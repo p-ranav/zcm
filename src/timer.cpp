@@ -6,6 +6,16 @@
 
 #include "timer.hpp"
 
+// Construct the periodic timer
+Timer::Timer(std::string name, unsigned int priority, long long period, 
+      std::function<void()> operation_function, 
+      Operation_Queue * operation_queue_ptr) : 
+  name(name), 
+  priority(priority),
+  period(std::chrono::nanoseconds(period)), 
+  operation_function(operation_function),
+  operation_queue_ptr(operation_queue_ptr) {}
+
 // Timer thread function
 void Timer::operation() {
   while(true) {

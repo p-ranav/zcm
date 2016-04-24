@@ -29,12 +29,7 @@ public:
    */
   Timer(std::string name, unsigned int priority, long long period, 
 	std::function<void()> operation_function, 
-	Operation_Queue * operation_queue_ptr) : 
-    name(name), 
-    priority(priority),
-    period(std::chrono::nanoseconds(period)), 
-    operation_function(operation_function),
-    operation_queue_ptr(operation_queue_ptr) {}
+	Operation_Queue * operation_queue_ptr);
 
   /**
    * @brief Timer thread function
