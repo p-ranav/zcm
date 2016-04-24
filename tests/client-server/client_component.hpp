@@ -8,36 +8,40 @@
 #define CLIENT_COMPONENT
 #include "component.hpp"
 
-class Client_Component : public Component {
-public:
-  Client_Component() {
-    component_timer = new Timer("timer_1",
-				50,
-				1000000000,				
-				std::bind(&Client_Component::timer_function, this),
-				operation_queue);
-    component_timer->start();
-    component_client = new Client("client", {"tcp://127.0.0.1:5510"});
-  }
+namespace zcm {
 
-  void timer_function() {
-    // Create new message
-    TestMessage new_message;
-    new_message.set_message("client_timer_message");
-    new_message.set_id(0);
+  class Client_Component : public Component {
+  public:
+    Client_Component() {
+      component_timer = new Timer("timer_1",
+				  50,
+				  1000000000,				
+				  std::bind(&Client_Component::timer_function, this),
+				  operation_queue);
+      component_timer->start();
+      component_client = new Client("client", {"tcp://127.0.0.1:5510"});
+    }
 
-    // Prepare request string
-    std::string * request_string = new std::string;
-    new_message.SerializeToString(request_string);
+    void timer_function() {
+      // Create new message
+      TestMessage new_message;
+      new_message.set_message("client_timer_message");
+      new_message.set_id(0);
 
-    // Call server
-    std::string response = component_client->call(*request_string);
-    std::cout << "Client Timer : Received response: " << response << std::endl;
-  }
+      // Prepare request string
+      std::string * request_string = new std::string;
+      new_message.SerializeToString(request_string);
+
+      // Call server
+      std::string response = component_client->call(*request_string);
+      std::cout << "Client Timer : Received response: " << response << std::endl;
+    }
   
-private:
-  Timer * component_timer;
-  Client * component_client;
-};
+  private:
+    Timer * component_timer;
+    Client * component_client;
+  };
+
+}
 
 #endif

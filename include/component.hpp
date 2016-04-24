@@ -12,36 +12,40 @@
 #include "client.hpp"
 #include "server.hpp"
 
-/**
- * @brief Component class
- */
-class Component {
-public:
+namespace zcm {
 
   /**
-   * @brief Construct a component
-   * Prepare the component operation queue
+   * @brief Component class
    */
-  Component();
+  class Component {
+  public:
 
-  /**
-   * @brief Destroy the component
-   */  
-  ~Component();
+    /**
+     * @brief Construct a component
+     * Prepare the component operation queue
+     */
+    Component();
 
-  /**
-   * @brief Spawn the component executor thread
-   * @return Return a pointer to the executor thread
-   */    
-  std::thread * spawn();
+    /**
+     * @brief Destroy the component
+     */  
+    ~Component();
 
-protected:
+    /**
+     * @brief Spawn the component executor thread
+     * @return Return a pointer to the executor thread
+     */    
+    std::thread * spawn();
 
-  /** @brief Pointer to the Component Operation Queue */  
-  Operation_Queue * operation_queue;
+  protected:
 
-  /** @brief Pointer to the Component Executor Thread */    
-  std::thread * executor_thread;
-};
+    /** @brief Pointer to the Component Operation Queue */  
+    Operation_Queue * operation_queue;
+
+    /** @brief Pointer to the Component Executor Thread */    
+    std::thread * executor_thread;
+  };
+
+}
 
 #endif

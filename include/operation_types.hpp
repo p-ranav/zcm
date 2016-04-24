@@ -10,155 +10,159 @@
 #include <functional>
 #include "zmq.hpp"
 
-/**
- * @brief Base Operation class
- */
-class Base_Operation {
-public:
+namespace zcm {
 
   /**
-   * @brief Construct a base operation
-   * @param[in] name Name of the operation
-   * @param[in] priority Priority of the operation
+   * @brief Base Operation class
    */
-  Base_Operation(std::string name,
-		 unsigned int priority) :
-    name(name),
-    priority(priority) {}
+  class Base_Operation {
+  public:
+
+    /**
+     * @brief Construct a base operation
+     * @param[in] name Name of the operation
+     * @param[in] priority Priority of the operation
+     */
+    Base_Operation(std::string name,
+		   unsigned int priority) :
+      name(name),
+      priority(priority) {}
+
+    /**
+     * @brief Return the operation name
+     * @return Name of the operation
+     */  
+    std::string get_name();
+
+    /**
+     * @brief Return the operation priority
+     * @return Priority of the operation
+     */    
+    unsigned int get_priority() const;
+
+    /**
+     * @brief Virtual execute function overridden by concrete types 
+     */
+    virtual void execute() {}
+
+  private:
+
+    /** @brief Name of the Operation */    
+    std::string name;
+
+    /** @brief Priority of the Operation */    
+    unsigned int priority;
+  };
 
   /**
-   * @brief Return the operation name
-   * @return Name of the operation
-   */  
-  std::string get_name();
-
-  /**
-   * @brief Return the operation priority
-   * @return Priority of the operation
-   */    
-  unsigned int get_priority() const;
-
-  /**
-   * @brief Virtual execute function overridden by concrete types 
+   * @brief Timer Operation class
    */
-  virtual void execute() {}
+  class Timer_Operation : public Base_Operation {
+  public:
 
-private:
+    /**
+     * @brief Construct a timer operation
+     * @param[in] name Name of the operation
+     * @param[in] priority Priority of the operation
+     * @param[in] operation_function Timer function
+     */  
+    Timer_Operation(std::string name,
+		    unsigned int priority,
+		    std::function<void()> operation_function) :
+      Base_Operation(name, priority),
+      operation_function(operation_function) {}
 
-  /** @brief Name of the Operation */    
-  std::string name;
+    /**
+     * @brief Timer operation function 
+     */  
+    void execute();
 
-  /** @brief Priority of the Operation */    
-  unsigned int priority;
-};
+  private:
 
-/**
- * @brief Timer Operation class
- */
-class Timer_Operation : public Base_Operation {
-public:
-
-  /**
-   * @brief Construct a timer operation
-   * @param[in] name Name of the operation
-   * @param[in] priority Priority of the operation
-   * @param[in] operation_function Timer function
-   */  
-  Timer_Operation(std::string name,
-		  unsigned int priority,
-		  std::function<void()> operation_function) :
-    Base_Operation(name, priority),
-    operation_function(operation_function) {}
+    /** @brief Timer operation function */    
+    std::function<void()> operation_function;
+  };
 
   /**
-   * @brief Timer operation function 
-   */  
-  void execute();
+   * @brief Subscriber Operation class
+   */
+  class Subscriber_Operation : public Base_Operation {
+  public:
 
-private:
+    /**
+     * @brief Construct a subscriber operation
+     * @param[in] name Name of the operation
+     * @param[in] priority Priority of the operation
+     * @param[in] operation_function Subscriber function
+     */    
+    Subscriber_Operation(std::string name,
+			 unsigned int priority,
+			 std::function<void()> operation_function) :
+      Base_Operation(name, priority),
+      operation_function(operation_function) {}
 
-  /** @brief Timer operation function */    
-  std::function<void()> operation_function;
-};
+    /**
+     * @brief Subscriber operation function 
+     */    
+    void execute();
 
-/**
- * @brief Subscriber Operation class
- */
-class Subscriber_Operation : public Base_Operation {
-public:
+  private:
 
-  /**
-   * @brief Construct a subscriber operation
-   * @param[in] name Name of the operation
-   * @param[in] priority Priority of the operation
-   * @param[in] operation_function Subscriber function
-   */    
-  Subscriber_Operation(std::string name,
-		       unsigned int priority,
-		       std::function<void()> operation_function) :
-    Base_Operation(name, priority),
-    operation_function(operation_function) {}
-
-  /**
-   * @brief Subscriber operation function 
-   */    
-  void execute();
-
-private:
-
-  /** @brief Subscriber Operation Function */      
-  std::function<void()> operation_function;
-};
-
-/**
- * @brief Server Operation class
- */
-class Server_Operation : public Base_Operation {
-public:
+    /** @brief Subscriber Operation Function */      
+    std::function<void()> operation_function;
+  };
 
   /**
-   * @brief Construct a server operation
-   * @param[in] name Name of the operation
-   * @param[in] priority Priority of the operation
-   * @param[in] operation_function Server function
-   * @param[in] socket_ptr Pointer to the Server ZMQ socket
-   * @param[in] recv_ready Pointer to the Server ready variable
-   */   
-  Server_Operation(std::string name,
-		   unsigned int priority,
-		   std::function<std::string()> operation_function,
-		   zmq::socket_t * socket_ptr,
-		   bool * recv_ready) :
-    Base_Operation(name, priority),
-    operation_function(operation_function),
-    socket_ptr(socket_ptr),
-    recv_ready(recv_ready) {}
+   * @brief Server Operation class
+   */
+  class Server_Operation : public Base_Operation {
+  public:
 
-  /**
-   * @brief Server operation function 
-   */  
-  void execute();
+    /**
+     * @brief Construct a server operation
+     * @param[in] name Name of the operation
+     * @param[in] priority Priority of the operation
+     * @param[in] operation_function Server function
+     * @param[in] socket_ptr Pointer to the Server ZMQ socket
+     * @param[in] recv_ready Pointer to the Server ready variable
+     */   
+    Server_Operation(std::string name,
+		     unsigned int priority,
+		     std::function<std::string()> operation_function,
+		     zmq::socket_t * socket_ptr,
+		     bool * recv_ready) :
+      Base_Operation(name, priority),
+      operation_function(operation_function),
+      socket_ptr(socket_ptr),
+      recv_ready(recv_ready) {}
 
-  /**
-   * @brief Get the ZMQ server socket pointer 
-   */  
-  zmq::socket_t * get_socket_ptr();
+    /**
+     * @brief Server operation function 
+     */  
+    void execute();
 
-  /**
-   * @brief Get the ZMQ server "ready" variable 
-   */  
-  void set_ready();
+    /**
+     * @brief Get the ZMQ server socket pointer 
+     */  
+    zmq::socket_t * get_socket_ptr();
 
-private:
+    /**
+     * @brief Get the ZMQ server "ready" variable 
+     */  
+    void set_ready();
 
-  /** @brief Server Operation Function */        
-  std::function<std::string()> operation_function;
+  private:
 
-  /** @brief Pointer to the Server ZMQ socket */        
-  zmq::socket_t * socket_ptr;
+    /** @brief Server Operation Function */        
+    std::function<std::string()> operation_function;
 
-  /** @brief Pointer to the Server "ready" variable */        
-  bool * recv_ready;
-};
+    /** @brief Pointer to the Server ZMQ socket */        
+    zmq::socket_t * socket_ptr;
+
+    /** @brief Pointer to the Server "ready" variable */        
+    bool * recv_ready;
+  };
+
+}
 
 #endif

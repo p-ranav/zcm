@@ -6,45 +6,49 @@
 
 #include "operation_queue.hpp"
 
-// Enqueue a new operation onto the operation queue
-void Operation_Queue::enqueue(Base_Operation * new_operation) {
-  queue_mutex.lock();
-  operation_queue.push(new_operation);
-  queue_mutex.unlock();
-}
+namespace zcm {
 
-// Dequeue the first operation from the queue
-void Operation_Queue::dequeue() {
-  if (!empty())
-    operation_queue.pop();
-}
+  // Enqueue a new operation onto the operation queue
+  void Operation_Queue::enqueue(Base_Operation * new_operation) {
+    queue_mutex.lock();
+    operation_queue.push(new_operation);
+    queue_mutex.unlock();
+  }
 
-// Check if the operation queue is empty
-bool Operation_Queue::empty() {
-  return operation_queue.empty();
-}
+  // Dequeue the first operation from the queue
+  void Operation_Queue::dequeue() {
+    if (!empty())
+      operation_queue.pop();
+  }
 
-// Return the first operation from the queue
-Base_Operation * Operation_Queue::top() {
-  return operation_queue.top();
-}
+  // Check if the operation queue is empty
+  bool Operation_Queue::empty() {
+    return operation_queue.empty();
+  }
 
-// Thread function to process requests in the operation queue
-void Operation_Queue::process() {
-  while(true) {
-    if (operation_queue.size() > 0) {
-      queue_mutex.lock();
-      Base_Operation * top_operation = operation_queue.top();
-      dequeue();
-      queue_mutex.unlock();
-      top_operation->execute();	  
+  // Return the first operation from the queue
+  Base_Operation * Operation_Queue::top() {
+    return operation_queue.top();
+  }
+
+  // Thread function to process requests in the operation queue
+  void Operation_Queue::process() {
+    while(true) {
+      if (operation_queue.size() > 0) {
+	queue_mutex.lock();
+	Base_Operation * top_operation = operation_queue.top();
+	dequeue();
+	queue_mutex.unlock();
+	top_operation->execute();	  
+      }
     }
   }
-}
 
-// Spawn the executor thread that processes the queue
-std::thread * Operation_Queue::spawn() {
-  return new std::thread(&Operation_Queue::process, this);
+  // Spawn the executor thread that processes the queue
+  std::thread * Operation_Queue::spawn() {
+    return new std::thread(&Operation_Queue::process, this);
+  }
+
 }
 
 

@@ -13,129 +13,133 @@
 #include <zmq.hpp>
 #include "operation_queue.hpp"
 
-/**
- * @brief Subscriber class
- */
-class Subscriber {
-public:
+namespace zcm {
 
   /**
-   * @brief Construct a subscriber object
-   * @param[in] name Subscriber name
-   * @param[in] priority Priority of the subscriber
-   * @param[in] filter ZMQ filter for the subscriber
-   * @param[in] operation_function Operation function of the subscriber
-   * @param[in] operation_queue_ptr Pointer to the operation queue
-   */  
-  Subscriber(std::string name,
-	     unsigned int priority, 
-	     std::string filter,
-	     std::function<void(const std::string&)> operation_function, 
-	     Operation_Queue * operation_queue_ptr) : 
-    name(name),
-    priority(priority),
-    filter(filter),
-    operation_function(operation_function),
-    operation_queue_ptr(operation_queue_ptr) {}    
-
-  /**
-   * @brief Construct a subscriber object with known endpoints
-   * @param[in] name Subscriber name
-   * @param[in] priority Priority of the subscriber
-   * @param[in] filter ZMQ filter for the subscriber
-   * @param[in] endpoints A vector of endpoints to connect to
-   * @param[in] operation_function Operation function of the subscriber
-   * @param[in] operation_queue_ptr Pointer to the operation queue
-   */    
-  Subscriber(std::string name, 
-	     unsigned int priority, 
-	     std::string filter,
-	     std::vector<std::string> endpoints, 
-	     std::function<void(const std::string&)> operation_function, 
-	     Operation_Queue * operation_queue_ptr);
-
-  /**
-   * @brief Close the subscriber socket and destroy the ZMQ context
+   * @brief Subscriber class
    */
-  ~Subscriber();
+  class Subscriber {
+  public:
+
+    /**
+     * @brief Construct a subscriber object
+     * @param[in] name Subscriber name
+     * @param[in] priority Priority of the subscriber
+     * @param[in] filter ZMQ filter for the subscriber
+     * @param[in] operation_function Operation function of the subscriber
+     * @param[in] operation_queue_ptr Pointer to the operation queue
+     */  
+    Subscriber(std::string name,
+	       unsigned int priority, 
+	       std::string filter,
+	       std::function<void(const std::string&)> operation_function, 
+	       Operation_Queue * operation_queue_ptr) : 
+      name(name),
+      priority(priority),
+      filter(filter),
+      operation_function(operation_function),
+      operation_queue_ptr(operation_queue_ptr) {}    
+
+    /**
+     * @brief Construct a subscriber object with known endpoints
+     * @param[in] name Subscriber name
+     * @param[in] priority Priority of the subscriber
+     * @param[in] filter ZMQ filter for the subscriber
+     * @param[in] endpoints A vector of endpoints to connect to
+     * @param[in] operation_function Operation function of the subscriber
+     * @param[in] operation_queue_ptr Pointer to the operation queue
+     */    
+    Subscriber(std::string name, 
+	       unsigned int priority, 
+	       std::string filter,
+	       std::vector<std::string> endpoints, 
+	       std::function<void(const std::string&)> operation_function, 
+	       Operation_Queue * operation_queue_ptr);
+
+    /**
+     * @brief Close the subscriber socket and destroy the ZMQ context
+     */
+    ~Subscriber();
   
-  /**
-   * @brief Connect to a new set of endpoints
-   * param[in] new_endpoints A new vector of endpoints to connect to
-   */
-  void connect(std::vector<std::string> new_endpoints);
+    /**
+     * @brief Connect to a new set of endpoints
+     * param[in] new_endpoints A new vector of endpoints to connect to
+     */
+    void connect(std::vector<std::string> new_endpoints);
 
-  /**
-   * @brief Get the name of the subscriber
-   */
-  std::string get_name();
+    /**
+     * @brief Get the name of the subscriber
+     */
+    std::string get_name();
 
-  /**
-   * @brief Get the priority of the subscriber
-   */  
-  unsigned int get_priority();
+    /**
+     * @brief Get the priority of the subscriber
+     */  
+    unsigned int get_priority();
 
-  /**
-   * @brief Add a new connection to the subscriber
-   * @param[in] new_connection New connection address to connect to
-   */    
-  void add_connection(std::string new_connection);
+    /**
+     * @brief Add a new connection to the subscriber
+     * @param[in] new_connection New connection address to connect to
+     */    
+    void add_connection(std::string new_connection);
 
-  /**
-   * @brief Thread function of the subscriber
-   * Behavior:
-   * (1) Wait for a new message on the subscriber ZMQ socket
-   * (2) Create a Susbcriber Operation
-   * (3) Enqueue onto operation_queue
-   * (4) Goto step (1)
-   */
-  void recv();
+    /**
+     * @brief Thread function of the subscriber
+     * Behavior:
+     * (1) Wait for a new message on the subscriber ZMQ socket
+     * (2) Create a Susbcriber Operation
+     * (3) Enqueue onto operation_queue
+     * (4) Goto step (1)
+     */
+    void recv();
 
-  /**
-   * @brief Rebind the subscriber operation function
-   * @param[in] new_operation_function New subscriber function to be handled upon recv() 
-   */     
-  void rebind_operation_function(std::function<void(const std::string&)> new_operation_function);
+    /**
+     * @brief Rebind the subscriber operation function
+     * @param[in] new_operation_function New subscriber function to be handled upon recv() 
+     */     
+    void rebind_operation_function(std::function<void(const std::string&)> new_operation_function);
 
-  /**
-   * @brief Spawn a new thread for the subscriber
-   * @return Subscriber thread
-   */  
-  std::thread spawn();
+    /**
+     * @brief Spawn a new thread for the subscriber
+     * @return Subscriber thread
+     */  
+    std::thread spawn();
 
-  /**
-   * @brief Start the subscriber thread
-   */
-  void start();
+    /**
+     * @brief Start the subscriber thread
+     */
+    void start();
 
-private:
+  private:
 
-  /** @brief Name of the subscriber */
-  std::string name;
+    /** @brief Name of the subscriber */
+    std::string name;
 
-  /** @brief Priority of the subscriber */  
-  unsigned int priority;
+    /** @brief Priority of the subscriber */  
+    unsigned int priority;
 
-  /** @brief Reception filter enforced on all received messages */  
-  std::string filter;
+    /** @brief Reception filter enforced on all received messages */  
+    std::string filter;
 
-  /** @brief Vector of connection endpoints */  
-  std::vector<std::string> endpoints;
+    /** @brief Vector of connection endpoints */  
+    std::vector<std::string> endpoints;
 
-  /** @brief Operation function bound to the subscriber - Component method that handles received message */
-  std::function<void(const std::string&)> operation_function;
+    /** @brief Operation function bound to the subscriber - Component method that handles received message */
+    std::function<void(const std::string&)> operation_function;
 
-  /** @brief Pointer to the operation queue */  
-  Operation_Queue * operation_queue_ptr;
+    /** @brief Pointer to the operation queue */  
+    Operation_Queue * operation_queue_ptr;
 
-  /** @brief Pointer to the subscriber ZMQ context */  
-  zmq::context_t * context;
+    /** @brief Pointer to the subscriber ZMQ context */  
+    zmq::context_t * context;
 
-  /** @brief Pointer to the subscriber ZMQ socket */  
-  zmq::socket_t * subscriber_socket;
+    /** @brief Pointer to the subscriber ZMQ socket */  
+    zmq::socket_t * subscriber_socket;
 
-  /** @brief Mutex used to change operation_function at runtime */  
-  std::mutex func_mutex; 
-};
+    /** @brief Mutex used to change operation_function at runtime */  
+    std::mutex func_mutex; 
+  };
+
+}
 
 #endif

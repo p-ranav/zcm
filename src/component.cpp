@@ -6,19 +6,23 @@
 
 #include "component.hpp"
 
-// Construct the operation queue
-Component::Component() {
-  operation_queue = new Operation_Queue();
-}
+namespace zcm {
 
-// Delete the operation queue
-Component::~Component() {
-  if (operation_queue)
-    delete operation_queue;
-}
+  // Construct the operation queue
+  Component::Component() {
+    operation_queue = new Operation_Queue();
+  }
 
-// Spawn the component executor thread
-std::thread * Component::spawn() {
-  executor_thread = operation_queue->spawn();
-  return executor_thread;
+  // Delete the operation queue
+  Component::~Component() {
+    if (operation_queue)
+      delete operation_queue;
+  }
+
+  // Spawn the component executor thread
+  std::thread * Component::spawn() {
+    executor_thread = operation_queue->spawn();
+    return executor_thread;
+  }
+
 }

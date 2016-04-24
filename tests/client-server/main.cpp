@@ -4,10 +4,10 @@
 #include "server_component.hpp"
 
 int main() {
-  Client_Component * client_instance = new Client_Component();
+  zcm::Client_Component * client_instance = new zcm::Client_Component();
   std::thread * client_thread = client_instance->spawn();
 
-  Server_Component * server_instance = new Server_Component();
+  zcm::Server_Component * server_instance = new zcm::Server_Component();
   std::thread * server_thread = server_instance->spawn();      
 
   client_thread->join();
