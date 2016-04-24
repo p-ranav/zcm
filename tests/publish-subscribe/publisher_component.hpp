@@ -10,9 +10,7 @@
 
 class Publisher_Component : public Component {
 public:
-
   Publisher_Component() {
-
     component_timer = new Timer("timer_1",
 				  50, 
 				  500000000, 
@@ -40,7 +38,6 @@ public:
   }
 
 private:
-
   Timer * component_timer;
   Publisher * component_publisher;
 };

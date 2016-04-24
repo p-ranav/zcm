@@ -41,11 +41,11 @@ public:
       if (operation_queue.size() > 0) {
 	queue_mutex.lock();
 	Operation top_operation = operation_queue.top();
+	dequeue();
 	queue_mutex.unlock();
 	zmq::socket_t * socket_ptr = top_operation.get_socket_ptr();
-	if (!socket_ptr) {
-	  top_operation.execute();
-	}
+	if (!socket_ptr)
+	  top_operation.execute();	  
 	else {
 	  std::string response = top_operation.execute_server();
 	  zmq::message_t reply(response.length());
@@ -53,7 +53,6 @@ public:
 	  socket_ptr->send(reply);
 	  top_operation.set_ready();
 	}
-	dequeue();
       }
     }
   }
