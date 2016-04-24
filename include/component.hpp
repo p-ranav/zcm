@@ -1,7 +1,7 @@
-/*
- * Component class
- * Author: Pranav Srinivas Kumar
- * Date: 2016.04.17
+/** @file    component.hpp 
+ *  @author  Pranav Srinivas Kumar
+ *  @date    2016.04.24
+ *  @brief   This file declares the Component class
  */
 
 #ifndef COMPONENT
@@ -12,22 +12,28 @@
 #include "client.hpp"
 #include "server.hpp"
 
+/**
+ * @brief Component class
+ */
 class Component {
 public:
 
-  Component() {
-    operation_queue = new Operation_Queue();
-  }
+  /*
+   * @brief Construct a component
+   * Prepare the component operation queue
+   */
+  Component();
 
-  ~Component() {
-    if (operation_queue)
-      delete operation_queue;
-  }
+  /*
+   * @brief Destroy the component
+   */  
+  ~Component();
 
-  std::thread * spawn() {
-    executor_thread = operation_queue->spawn();   
-    return executor_thread;
-  }
+  /*
+   * @brief Spawn the component executor thread
+   * @return Return a pointer to the executor thread
+   */    
+  std::thread * spawn();
 
 protected:
   Operation_Queue * operation_queue;

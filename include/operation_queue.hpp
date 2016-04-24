@@ -13,8 +13,6 @@
 #include <functional>
 #include "operation_types.hpp"
 
-std::mutex queue_mutex;
-
 class Operation_Queue {
 public:
   void enqueue(Base_Operation * new_operation) {
@@ -59,6 +57,7 @@ public:
   };
 private:
   std::priority_queue<Base_Operation, std::vector<Base_Operation*>, PriorityOrdering> operation_queue;
+  std::mutex queue_mutex;
 };
 
 #endif
