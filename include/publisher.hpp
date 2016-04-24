@@ -1,7 +1,7 @@
-/*
- * Publisher class
- * Author: Pranav Srinivas Kumar
- * Date: 2016.04.16
+/** @file    publisher.hpp 
+ *  @author  Pranav Srinivas Kumar
+ *  @date    2016.04.24
+ *  @brief   This file declares the Publisher class
  */
 
 #ifndef PUBLISHER

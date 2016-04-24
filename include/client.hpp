@@ -1,71 +1,68 @@
-/*
- * Client class 
- * Author: Pranav Srinivas Kumar
- * Date: 2016.04.23
+/** @file    client.hpp 
+ *  @author  Pranav Srinivas Kumar
+ *  @date    2016.04.24
+ *  @brief   This file declares the Client class
  */
 
 #ifndef CLIENT
 #define CLIENT
+#include <iostream>
 #include <zmq.hpp>
 
+/**
+ * @brief Client class
+ */
 class Client {
 public:
-  Client(std::string name) : name(name) {}
 
-  Client(std::string name, std::vector<std::string> endpoints) :
-    name(name),
-    endpoints(endpoints) {
-    context = new zmq::context_t(1);
-    client_socket = new zmq::socket_t(*context, ZMQ_REQ);
-    for (auto endpoint : endpoints) {
-      try {
-	client_socket->connect(endpoint);
-      } catch (zmq::error_t error) {
-	std::cout << "Unable to connect client " << 
-	  name << " to " << endpoint << std::endl;      
-      }
-    }
-  }
+  /**
+   * @brief Construct a client object
+   * @param[in] name Client name
+   */   
+  Client(std::string name);
 
-  ~Client() {
-    client_socket->close();
-    delete context;
-    delete client_socket;
-  }
+  /**
+   * @brief Construct a client object with known endpoints
+   * @param[in] name Client name
+   * @param[in] endpoints A vector of endpoint strings
+   */   
+  Client(std::string name, std::vector<std::string> endpoints);
 
-  void connect(std::vector<std::string> new_endpoints) {
-    endpoints = new_endpoints;
-    context = new zmq::context_t(1);
-    client_socket = new zmq::socket_t(*context, ZMQ_REQ);
-    for (auto endpoint : endpoints) {
-      try {
-	client_socket->connect(endpoint);
-      } catch (zmq::error_t error) {
-	std::cout << "Unable to connect client " << 
-	  name << " to " << endpoint << std::endl;      
-      }
-    }
-  }  
+  /**
+   * @brief Close the client ZMQ socket and destroy the context
+   */    
+  ~Client();
 
-  std::string get_name() {
-    return name;
-  }
+  /**
+   * @brief Connect the client to a new set of endpoints
+   * @param[in] new_endpoints New set of endpoints as a vector
+   */ 
+  void connect(std::vector<std::string> new_endpoints);
 
-  std::string call(std::string message) {
-    zmq::message_t request(message.length());
-    memcpy(request.data(), message.c_str(), message.length());
-    client_socket->send(request);
+  /**
+   * @brief Return the client name
+   * @return Client name
+   */    
+  std::string get_name();
 
-    // Wait for response
-    zmq::message_t reply;
-    client_socket->recv(&reply);
-    return std::string(static_cast<char*>(reply.data()), reply.size());
-  }
+  /**
+   * @brief Call the server
+   * @param[in] message The message string. Serialize complex objects to strings with protobuf
+   */  
+  std::string call(std::string message);
   
 private:
+
+  /** @brief Name of the publisher */  
   std::string name;
+
+  /** @brief Vector of endpoints to connect to */  
   std::vector<std::string> endpoints;
+
+  /** @brief ZMQ Context of the client */  
   zmq::context_t * context;
+
+  /** @brief ZMQ Socket of the client */  
   zmq::socket_t * client_socket;
 };
 

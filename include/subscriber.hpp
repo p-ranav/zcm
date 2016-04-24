@@ -1,7 +1,7 @@
-/*
- * Subscriber class
- * Author: Pranav Srinivas Kumar
- * Date: 2016.04.16
+/** @file    subscriber.hpp 
+ *  @author  Pranav Srinivas Kumar
+ *  @date    2016.04.24
+ *  @brief   This file declares the Subscriber class
  */
 
 #ifndef SUBSCRIBER
@@ -13,9 +13,20 @@
 #include <zmq.hpp>
 #include "operation_queue.hpp"
 
+/**
+ * @brief Subscriber class
+ */
 class Subscriber {
 public:
 
+  /**
+   * @brief Construct a subscriber object
+   * @param[in] name Subscriber name
+   * @param[in] priority Priority of the subscriber
+   * @param[in] filter ZMQ filter for the subscriber
+   * @param[in] operation_function Operation function of the subscriber
+   * @param[in] operation_queue_ptr Pointer to the operation queue
+   */  
   Subscriber(std::string name,
 	     unsigned int priority, 
 	     std::string filter,
@@ -27,94 +38,104 @@ public:
     operation_function(operation_function),
     operation_queue_ptr(operation_queue_ptr) {}    
 
+  /**
+   * @brief Construct a subscriber object
+   * @param[in] name Subscriber name
+   * @param[in] priority Priority of the subscriber
+   * @param[in] filter ZMQ filter for the subscriber
+   * @param[in] endpoints A vector of endpoints to connect to
+   * @param[in] operation_function Operation function of the subscriber
+   * @param[in] operation_queue_ptr Pointer to the operation queue
+   */    
   Subscriber(std::string name, 
 	     unsigned int priority, 
 	     std::string filter,
 	     std::vector<std::string> endpoints, 
 	     std::function<void(const std::string&)> operation_function, 
-	     Operation_Queue * operation_queue_ptr) : 
-    name(name),
-    priority(priority),
-    filter(filter),
-    endpoints(endpoints),
-    operation_function(operation_function),
-    operation_queue_ptr(operation_queue_ptr) {
-    context = new zmq::context_t(2);
-    subscriber_socket = new zmq::socket_t(*context, ZMQ_SUB);
-    for (auto endpoint : endpoints)
-      subscriber_socket->connect(endpoint);
-    subscriber_socket->setsockopt(ZMQ_SUBSCRIBE, filter.c_str(), filter.length());
-  }
+	     Operation_Queue * operation_queue_ptr);
 
-  ~Subscriber() {
-    subscriber_socket->close();
-    delete context;
-    delete subscriber_socket;
-  }
+  /**
+   * @brief Close the subscriber socket and destroy the ZMQ context
+   */
+  ~Subscriber();
+  
+  /**
+   * @brief Connect to a new set of endpoints
+   * param[in] new_endpoints A new vector of endpoints to connect to
+   */
+  void connect(std::vector<std::string> new_endpoints);
 
-  void connect(std::vector<std::string> new_endpoints) {
-    endpoints = new_endpoints;
-    context = new zmq::context_t(2);
-    subscriber_socket = new zmq::socket_t(*context, ZMQ_SUB);
-    for (auto endpoint : endpoints)
-      subscriber_socket->connect(endpoint);
-    subscriber_socket->setsockopt(ZMQ_SUBSCRIBE, filter.c_str(), filter.length());
-  }
+  /**
+   * @brief Get the name of the subscriber
+   */
+  std::string get_name();
 
-  std::string get_name() {
-    return name;
-  }
+  /**
+   * @brief Get the priority of the subscriber
+   */  
+  unsigned int get_priority();
 
-  unsigned int get_priority() {
-    return priority;
-  }
+  /**
+   * @brief Add a new connection to the subscriber
+   * @param[in] new_connection New connection address to add
+   */    
+  void add_connection(std::string new_connection);
 
-  void add_connection(std::string new_connection) {
-    subscriber_socket->connect(new_connection);
-  }
+  /**
+   * @brief Thread function of the subscriber
+   * Behavior:
+   * (1) Wait for a new message on the subscriber ZMQ socket
+   * (2) Create a Susbcriber Operation
+   * (3) Enqueue onto operation_queue
+   * (4) Goto step (1)
+   */
+  void recv();
 
-  void recv() {
-    while(true) {
-      zmq::message_t received_message; 
-      subscriber_socket->recv(&received_message);
-      std::string message = std::string(static_cast<char*>(received_message.data()), 
-					received_message.size());
-      if (message.length() > 0) {
-	func_mutex.lock();      
-	Subscriber_Operation * new_operation
-	  = new Subscriber_Operation(name, priority, std::bind(operation_function, message));
-	operation_queue_ptr->enqueue(new_operation);
-	func_mutex.unlock();      
-      }
-    }
-  }
+  /**
+   * @brief Rebind the subscriber operation function
+   * @param[in] new_operation_function New subscriber function to be handled upon recv() 
+   */     
+  void rebind_operation_function(std::function<void(const std::string&)> new_operation_function);
 
-  void rebind_operation_function(std::function<void(const std::string&)> 
-				 new_operation_function) {
-    func_mutex.lock();
-    operation_function = new_operation_function;
-    func_mutex.unlock();
-  }
+  /**
+   * @brief Spawn a new thread for the subscriber
+   * @return Subscriber thread
+   */  
+  std::thread spawn();
 
-  std::thread spawn() {
-    return std::thread(&Subscriber::recv, this);
-  }
-
-  void start() {
-    std::thread subscriber_thread = spawn();
-    subscriber_thread.detach();
-  }
+  /**
+   * @brief Start the subscriber thread
+   */
+  void start();
 
 private:
+
+  /** @brief Name of the subscriber */
   std::string name;
+
+  /** @brief Priority of the subscriber */  
   unsigned int priority;
+
+  /** @brief Reception filter enforced on all received messages */  
   std::string filter;
+
+  /** @brief Vector of connection endpoints */  
   std::vector<std::string> endpoints;
+
+  /** @brief Operation function bound to the subscriber - Component method that handles received message */
   std::function<void(const std::string&)> operation_function;
+
+  /** @brief Pointer to the operation queue */  
   Operation_Queue * operation_queue_ptr;
+
+  /** @brief Pointer to the subscriber ZMQ context */  
   zmq::context_t * context;
-  zmq::socket_t * subscriber_socket; 
-  std::mutex func_mutex; // used when changing operation_function at runtime 
+
+  /** @brief Pointer to the subscriber ZMQ socket */  
+  zmq::socket_t * subscriber_socket;
+
+  /** @brief Mutex used to change operation_function at runtime */  
+  std::mutex func_mutex; 
 };
 
 #endif
