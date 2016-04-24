@@ -15,11 +15,9 @@ public:
 				  50, 
 				  500000000, 
 				  std::bind(&Publisher_Component::timer_1_function, this), 
-				  operation_queue);   
+				  operation_queue);
+    component_timer->start();    
     component_publisher = new Publisher("timer_pub_1", {"tcp://*:5555"});
-
-    add_timer(component_timer);
-    add_publisher(component_publisher);
   }
   
   void timer_1_function() {

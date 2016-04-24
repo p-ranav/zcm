@@ -36,11 +36,11 @@ public:
 			500000000, // 50 msec				
 			std::bind(&Timers_Component::timer_5_function, this),
 			operation_queue);    
-    add_timer(timer_1);
-    add_timer(timer_2);
-    add_timer(timer_3);
-    add_timer(timer_4);
-    add_timer(timer_5);        
+    timer_1->start();
+    timer_2->start();
+    timer_3->start();
+    timer_4->start();
+    timer_5->start();        
   }
 
   void timer_1_function() {

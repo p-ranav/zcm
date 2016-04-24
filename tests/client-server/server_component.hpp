@@ -18,7 +18,7 @@ public:
 					    this,
 					    std::placeholders::_1),
 				  operation_queue);
-    add_server(component_server);
+    component_server->start();
   }
 
   std::string server_function(std::string request) {

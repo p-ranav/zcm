@@ -20,7 +20,7 @@ public:
 						    this,
 						    std::placeholders::_1), 
 					  operation_queue);
-    add_subscriber(component_subscriber);
+    component_subscriber->start();
   }
 
   void subscriber_function(std::string received_message) {

@@ -22,6 +22,7 @@ public:
 		      500000000, // 500 msec 
 		      std::bind(&Component_1::timer_1_function, this), 
 		      operation_queue);
+    timer->start();
     publisher = new Publisher("Name_Publisher", {"tcp://*:5555"});
     subscriber = new Subscriber("subscriber_operation", 
 				60, 
@@ -32,9 +33,7 @@ public:
 					  this,
 					  std::placeholders::_1), 
 				operation_queue);
-    add_timer(timer);
-    add_publisher(publisher);
-    add_subscriber(subscriber);
+    subscriber->start();
   }
 
   void timer_1_function() {

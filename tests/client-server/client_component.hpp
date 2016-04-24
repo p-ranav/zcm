@@ -16,9 +16,8 @@ public:
 				1000000000,				
 				std::bind(&Client_Component::timer_function, this),
 				operation_queue);
+    component_timer->start();
     component_client = new Client("client", {"tcp://127.0.0.1:5510"});
-    add_timer(component_timer);
-    add_client(component_client);
   }
 
   void timer_function() {
