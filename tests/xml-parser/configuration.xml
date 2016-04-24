@@ -1,0 +1,47 @@
+<configuration>
+  <node name="test_node">
+    <component_instance name="Component_1_Instance">
+      <definition name="Component_1"/>
+      <timers>
+	<timer name="timer_1">
+	  <priority value="50"/>
+	  <period value="1000000000"/>	
+	</timer>
+      </timers>
+      <publishers>
+	<publisher name="timer_pub_1">
+	  <endpoints>
+	    <endpoint value="tcp://*:5555"/>
+	  </endpoints>
+	</publisher>
+      </publishers>
+      <servers>
+	<server name="server">
+	  <priority value="60"/>
+	  <endpoints>
+	    <endpoint value="tcp://*:5510"/>
+	  </endpoints>
+	</server>
+      </servers>      
+    </component_instance>
+    <component_instance>
+      <definition name="Component_2"/>
+      <subscribers>
+	<subscriber name="subscriber_operation">
+	  <priority value="60"/>
+	  <endpoints>
+	    <endpoint value="tcp://127.0.0.1:5555"/>
+	    <endpoint value="tcp://127.0.0.1:5556"/>	    
+	  </endpoints>
+	</subscriber>
+      </subscribers>
+      <clients>
+	<client name="client">
+	  <endpoints>
+	    <endpoint value="tcp://127.0.0.1:5510"/>
+	  </endpoints>
+	</client>
+      </clients>
+    </component_instance>
+  </node>
+</configuration>
