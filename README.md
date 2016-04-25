@@ -29,7 +29,10 @@ $ cd cppzmq
 $ sudo cp *.hpp /usr/local/include/.
 ```
 
-* Install protobuf (used in tests)
+Optional (Used in tests)
+------------------------
+
+* Install protobuf
 
 ```bash
 $ git clone https://github.com/google/protobuf
@@ -42,7 +45,7 @@ $ sudo make install
 $ sudo ldconfig
 ```
 
-* Install boost (used in tests)
+* Install boost
 
 ```bash
 $ sudo apt-get install libboost-all-dev
