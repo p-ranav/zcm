@@ -32,6 +32,36 @@ namespace zcm {
     ~Component();
 
     /**
+     * @brief Get a component timer by name
+     * @param[in] timer_name Name of the timer
+     */  
+    Timer * get_timer(std::string timer_name);
+
+    /**
+     * @brief Get a component publisher by name
+     * @param[in] publisher_name Name of the publisher
+     */      
+    Publisher * get_publisher(std::string publisher_name);
+
+    /**
+     * @brief Get a component subscriber by name
+     * @param[in] subscriber_name Name of the subscriber
+     */        
+    Subscriber * get_subscriber(std::string subscriber_name);
+
+    /**
+     * @brief Get a component client by name
+     * @param[in] client_name Name of the client
+     */            
+    Client * get_client(std::string client_name);
+
+    /**
+     * @brief Get a component server by name
+     * @param[in] server_name Name of the server
+     */      
+    Server * get_server(std::string server_name);
+    
+    /**
      * @brief Add a timer to this component
      * @param[in] new_timer Pointer to a timer object
      */
@@ -59,7 +89,31 @@ namespace zcm {
      * @brief Add a server to this component
      * @param[in] new_server Pointer to a server object
      */
-    void add_server(Server * new_server);     
+    void add_server(Server * new_server);
+
+    /**
+     * @brief Configure all component publishers
+     * @param[in] publisher_endpoints A map of endpoints for all publishers
+     */    
+    void configure_publishers(std::map<std::string, std::vector<std::string>> publisher_endpoints);
+
+    /**
+     * @brief Configure all component subscribers
+     * @param[in] subscriber_endpoints A map of endpoints for all subscribers
+     */        
+    void configure_subscribers(std::map<std::string, std::vector<std::string>> subscriber_endpoints);
+
+    /**
+     * @brief Configure all component clients
+     * @param[in] client_endpoints A map of endpoints for all clients
+     */        
+    void configure_clients(std::map<std::string, std::vector<std::string>> client_endpoints);
+
+    /**
+     * @brief Configure all component servers
+     * @param[in] server_endpoints A map of endpoints for all servers
+     */        
+    void configure_servers(std::map<std::string, std::vector<std::string>> server_endpoints);
 
     /**
      * @brief Spawn the component executor thread

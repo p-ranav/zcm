@@ -27,6 +27,46 @@ namespace zcm {
       delete server;    
   }
 
+  // Find timer by name
+  Timer * Component::get_timer(std::string timer_name) {
+    for (auto timer : timers) 
+      if(timer->get_name().compare(timer_name) == 0)
+	return timer;
+    return NULL;
+  }
+
+  // Find publisher by name
+  Publisher * Component::get_publisher(std::string publisher_name) {
+    for (auto publisher : publishers) 
+      if(publisher->get_name().compare(publisher_name) == 0)
+	return publisher;
+    return NULL;
+  }
+
+  // Find subscriber by name
+  Subscriber * Component::get_subscriber(std::string subscriber_name) {
+    for (auto subscriber : subscribers) 
+      if(subscriber->get_name().compare(subscriber_name) == 0)
+	return subscriber;
+    return NULL;
+  }
+
+  // Find client by name
+  Client * Component::get_client(std::string client_name) {
+    for (auto client : clients) 
+      if(client->get_name().compare(client_name) == 0)
+	return client;
+    return NULL;
+  }
+
+  // Find server by name
+  Server * Component::get_server(std::string server_name) {
+    for (auto server : servers) 
+      if(server->get_name().compare(server_name) == 0)
+	return server;
+    return NULL;
+  }     
+
   // Add a new timer
   void Component::add_timer(Timer * new_timer) {
     timers.push_back(new_timer);
@@ -50,6 +90,50 @@ namespace zcm {
   // Add a new server
   void Component::add_server(Server * new_server) {
     servers.push_back(new_server);
+  }
+
+  // Configure publisher bindings
+  void Component::configure_publishers(std::map<std::string, std::vector<std::string>> publisher_endpoints) {
+    for (auto pub_map : publisher_endpoints) {
+      Publisher * pub_ptr = get_publisher(pub_map.first);
+      if (pub_ptr)
+	pub_ptr->bind(pub_map.second);
+      else
+	std::cout << "ERROR::Unable to find publisher \"" << pub_map.first << "\"" << std::endl;
+    }      
+  }
+
+  // Configure subscriber connections
+  void Component::configure_subscribers(std::map<std::string, std::vector<std::string>> subscriber_endpoints) {
+    for (auto sub_map : subscriber_endpoints) {
+      Subscriber * sub_ptr = get_subscriber(sub_map.first);
+      if (sub_ptr)
+	sub_ptr->connect(sub_map.second);
+      else
+	std::cout << "ERROR::Unable to find subscriber \"" << sub_map.first << "\"" << std::endl;
+    }  
+  }
+
+  // Configure client connections
+  void Component::configure_clients(std::map<std::string, std::vector<std::string>> client_endpoints) {
+    for (auto client_map : client_endpoints) {
+      Client * client_ptr = get_client(client_map.first);
+      if (client_ptr)
+	client_ptr->connect(client_map.second);
+      else
+	std::cout << "ERROR::Unable to find client \"" << client_map.first << "\"" << std::endl;
+    }  
+  }
+
+  // Configure server bindings
+  void Component::configure_servers(std::map<std::string, std::vector<std::string>> server_endpoints) {
+    for (auto server_map : server_endpoints) {
+      Server * server_ptr = get_server(server_map.first);
+      if (server_ptr)
+	server_ptr->bind(server_map.second);
+      else
+	std::cout << "ERROR::Unable to find server \"" << server_map.first << "\"" << std::endl;
+    }      
   }  
 
   // Spawn the component executor thread
