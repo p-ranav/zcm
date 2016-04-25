@@ -10,6 +10,7 @@ all:
 	g++ -fPIC -shared $(TEST_SOURCE_DIR)/component_1.cpp -o $(TEST_BUILD_DIR)/component_1.so -I$(TEST_INCLUDE_DIR) -std=c++11 -pthread -I$(ZCM_HEADERS) -L$(ZCM_LIBRARY) -lzcm -lzmq -lboost_filesystem
 	g++ -fPIC -shared $(TEST_SOURCE_DIR)/component_2.cpp -o $(TEST_BUILD_DIR)/component_2.so -I$(TEST_INCLUDE_DIR) -std=c++11 -pthread -I$(ZCM_HEADERS) -L$(ZCM_LIBRARY) -lzcm -lzmq -lboost_filesystem
 	g++ -fPIC -shared $(TEST_SOURCE_DIR)/component_3.cpp -o $(TEST_BUILD_DIR)/component_3.so -I$(TEST_INCLUDE_DIR) -std=c++11 -pthread -I$(ZCM_HEADERS) -L$(ZCM_LIBRARY) -lzcm -lzmq -lboost_filesystem
-	g++ $(TEST_SOURCE_DIR)/main.cpp -o $(TEST_BUILD_DIR)/node -I$(TEST_INCLUDE_DIR) -std=c++11 -ldl -pthread -I$(ZCM_HEADERS) -L$(ZCM_LIBRARY) -lzcm -lzmq
+	g++ $(TEST_SOURCE_DIR)/main.cpp -o $(TEST_BUILD_DIR)/actor -I$(TEST_INCLUDE_DIR) -std=c++11 -ldl -pthread -I$(ZCM_HEADERS) -L$(ZCM_LIBRARY) -lzcm -lzmq
+
 clean:
-	rm -rf build
+	rm -rf $(TEST_BUILD_DIR)
