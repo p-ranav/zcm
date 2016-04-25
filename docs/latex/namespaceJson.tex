@@ -1,0 +1,654 @@
+\hypertarget{namespaceJson}{}\section{Json Namespace Reference}
+\label{namespaceJson}\index{Json@{Json}}
+
+
+J\+S\+ON (Java\+Script Object Notation).  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structJson_1_1BuiltStyledStreamWriter}{Built\+Styled\+Stream\+Writer}
+\item 
+class \hyperlink{classJson_1_1CharReader}{Char\+Reader}
+\begin{DoxyCompactList}\small\item\em Interface for reading J\+S\+ON from a char array. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1CharReaderBuilder}{Char\+Reader\+Builder}
+\begin{DoxyCompactList}\small\item\em Build a \hyperlink{classJson_1_1CharReader}{Char\+Reader} implementation. \end{DoxyCompactList}\item 
+struct \hyperlink{structJson_1_1CommentStyle}{Comment\+Style}
+\begin{DoxyCompactList}\small\item\em Scoped enums are not available until C++11. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1Exception}{Exception}
+\begin{DoxyCompactList}\small\item\em Base class for all exceptions we throw. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1FastWriter}{Fast\+Writer}
+\begin{DoxyCompactList}\small\item\em Outputs a \hyperlink{classJson_1_1Value}{Value} in \href{http://www.json.org}{\tt J\+S\+ON} format without formatting (not human friendly). \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1Features}{Features}
+\begin{DoxyCompactList}\small\item\em Configuration passed to reader and writer. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1LogicError}{Logic\+Error}
+\begin{DoxyCompactList}\small\item\em Exceptions thrown by J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+R\+T/\+J\+S\+O\+N\+\_\+\+F\+A\+IL macros. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1OurCharReader}{Our\+Char\+Reader}
+\item 
+class \hyperlink{classJson_1_1OurFeatures}{Our\+Features}
+\item 
+class \hyperlink{classJson_1_1OurReader}{Our\+Reader}
+\item 
+class \hyperlink{classJson_1_1Path}{Path}
+\begin{DoxyCompactList}\small\item\em Experimental and untested\+: represents a \char`\"{}path\char`\"{} to access a node. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1PathArgument}{Path\+Argument}
+\begin{DoxyCompactList}\small\item\em Experimental and untested\+: represents an element of the \char`\"{}path\char`\"{} to access a node. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1Reader}{Reader}
+\begin{DoxyCompactList}\small\item\em Unserialize a \href{http://www.json.org}{\tt J\+S\+ON} document into a \hyperlink{classJson_1_1Value}{Value}. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1RuntimeError}{Runtime\+Error}
+\begin{DoxyCompactList}\small\item\em Exceptions which the user cannot easily avoid. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1StaticString}{Static\+String}
+\begin{DoxyCompactList}\small\item\em Lightweight wrapper to tag static string. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1StreamWriter}{Stream\+Writer}
+\begin{DoxyCompactList}\small\item\em Usage\+: \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1StreamWriterBuilder}{Stream\+Writer\+Builder}
+\begin{DoxyCompactList}\small\item\em Build a \hyperlink{classJson_1_1StreamWriter}{Stream\+Writer} implementation. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1StyledStreamWriter}{Styled\+Stream\+Writer}
+\begin{DoxyCompactList}\small\item\em Writes a \hyperlink{classJson_1_1Value}{Value} in \href{http://www.json.org}{\tt J\+S\+ON} format in a human friendly way, to a stream rather than to a string. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1StyledWriter}{Styled\+Writer}
+\begin{DoxyCompactList}\small\item\em Writes a \hyperlink{classJson_1_1Value}{Value} in \href{http://www.json.org}{\tt J\+S\+ON} format in a human friendly way. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1Value}{Value}
+\begin{DoxyCompactList}\small\item\em Represents a \href{http://www.json.org}{\tt J\+S\+ON} value. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1ValueConstIterator}{Value\+Const\+Iterator}
+\begin{DoxyCompactList}\small\item\em const iterator for object and array value. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1ValueIterator}{Value\+Iterator}
+\begin{DoxyCompactList}\small\item\em Iterator for object and array value. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1ValueIteratorBase}{Value\+Iterator\+Base}
+\begin{DoxyCompactList}\small\item\em base class for \hyperlink{classJson_1_1Value}{Value} iterators. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1Writer}{Writer}
+\begin{DoxyCompactList}\small\item\em Abstract class for writers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef char \hyperlink{namespaceJson_a602bcf69c2042fb61c3b243cb16f04ca}{U\+Int\+To\+String\+Buffer}\mbox{[}\hyperlink{namespaceJson_a0c5f614b019f20b4598dcaec09d9e820ae4f2008c7919f20d81286121d1374424}{uint\+To\+String\+Buffer\+Size}\mbox{]}
+\item 
+typedef std\+::auto\+\_\+ptr$<$ \hyperlink{classJson_1_1CharReader}{Char\+Reader} $>$ \hyperlink{namespaceJson_a4724efb8d41614b47036cb8b54233837}{Char\+Reader\+Ptr}
+\item 
+typedef std\+::auto\+\_\+ptr$<$ \hyperlink{classJson_1_1StreamWriter}{Stream\+Writer} $>$ \hyperlink{namespaceJson_a7132404aeebfc96d7c6ad2c66260afb5}{Stream\+Writer\+Ptr}
+\item 
+typedef int \hyperlink{namespaceJson_a08122e8005b706d982e48cca1e2119c7}{Int}
+\item 
+typedef unsigned int \hyperlink{namespaceJson_a800fb90eb6ee8d5d62b600c06f87f7d4}{U\+Int}
+\item 
+typedef long long int \hyperlink{namespaceJson_ab7b47d2905da3b4ae60e4e800ec9ae5f}{Int64}
+\item 
+typedef unsigned long long int \hyperlink{namespaceJson_a01f20bce8f8229f38ff890168c0e6452}{U\+Int64}
+\item 
+typedef \hyperlink{namespaceJson_ab7b47d2905da3b4ae60e4e800ec9ae5f}{Int64} \hyperlink{namespaceJson_a218d880af853ce786cd985e82571d297}{Largest\+Int}
+\item 
+typedef \hyperlink{namespaceJson_a01f20bce8f8229f38ff890168c0e6452}{U\+Int64} \hyperlink{namespaceJson_ae202ecad69725e23443f465e257456d0}{Largest\+U\+Int}
+\item 
+typedef unsigned int \hyperlink{namespaceJson_a8048e741f2177c3b5d9ede4a5b8c53c2}{Array\+Index}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{namespaceJson_a0c5f614b019f20b4598dcaec09d9e820ae4f2008c7919f20d81286121d1374424}{uint\+To\+String\+Buffer\+Size} = 3 $\ast$ sizeof(Largest\+U\+Int) + 1
+ \}
+\item 
+enum \hyperlink{namespaceJson_a7d654b75c16a57007925868e38212b4e}{Value\+Type} \{ \\*
+\hyperlink{namespaceJson_a7d654b75c16a57007925868e38212b4ea7d9899633b4409bd3fc107e6737f8391}{null\+Value} = 0, 
+\hyperlink{namespaceJson_a7d654b75c16a57007925868e38212b4eae5a9d708d5c9e23ae9bf98898522512d}{int\+Value}, 
+\hyperlink{namespaceJson_a7d654b75c16a57007925868e38212b4eaea788d9a3bb00adc6d68d97d43e1ccd3}{uint\+Value}, 
+\hyperlink{namespaceJson_a7d654b75c16a57007925868e38212b4eab837c7b869c14d8be712deb45c9e490e}{real\+Value}, 
+\\*
+\hyperlink{namespaceJson_a7d654b75c16a57007925868e38212b4ea804ef857affea2d415843c73f261c258}{string\+Value}, 
+\hyperlink{namespaceJson_a7d654b75c16a57007925868e38212b4ea14c30dbf4da86f7b809be299f671f7fd}{boolean\+Value}, 
+\hyperlink{namespaceJson_a7d654b75c16a57007925868e38212b4eadc8f264f36b55b063c78126b335415f4}{array\+Value}, 
+\hyperlink{namespaceJson_a7d654b75c16a57007925868e38212b4eae8386dcfc36d1ae897745f7b4f77a1f6}{object\+Value}
+ \}\begin{DoxyCompactList}\small\item\em Type of the value held by a Value object. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespaceJson_a4fc417c23905b2ae9e2c47d197a45351}{Comment\+Placement} \{ \hyperlink{namespaceJson_a4fc417c23905b2ae9e2c47d197a45351a52f1733775460517b2ea6bedf4906d52}{comment\+Before} = 0, 
+\hyperlink{namespaceJson_a4fc417c23905b2ae9e2c47d197a45351a008a230a0586de54f30b76afe70fdcfa}{comment\+After\+On\+Same\+Line}, 
+\hyperlink{namespaceJson_a4fc417c23905b2ae9e2c47d197a45351ac5784ca53b12250888ddb642b06aebef}{comment\+After}, 
+\hyperlink{namespaceJson_a4fc417c23905b2ae9e2c47d197a45351abcbd3eb00417335e094e4a03379659b5}{number\+Of\+Comment\+Placement}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \hyperlink{namespaceJson_a33f8bda65a5b1fc4f5ddc39cb03dc742}{code\+Point\+To\+U\+T\+F8} (unsigned int cp)
+\begin{DoxyCompactList}\small\item\em Converts a unicode code-\/point to U\+T\+F-\/8. \end{DoxyCompactList}\item 
+static bool \hyperlink{namespaceJson_a0381e631737f51331065a388f4f59197}{is\+Control\+Character} (char ch)
+\begin{DoxyCompactList}\small\item\em Returns true if ch is a control character (in range \mbox{[}1,31\mbox{]}). \end{DoxyCompactList}\item 
+static void \hyperlink{namespaceJson_ac1ffd21a9e55122014353c773ccc496e}{uint\+To\+String} (\hyperlink{namespaceJson_ae202ecad69725e23443f465e257456d0}{Largest\+U\+Int} value, char $\ast$\&current)
+\begin{DoxyCompactList}\small\item\em Converts an unsigned integer to string. \end{DoxyCompactList}\item 
+static void \hyperlink{namespaceJson_aa208904144dc7b11ccc28f47c9afab9a}{fix\+Numeric\+Locale} (char $\ast$begin, char $\ast$end)
+\begin{DoxyCompactList}\small\item\em Change \textquotesingle{},\textquotesingle{} to \textquotesingle{}. \end{DoxyCompactList}\item 
+static bool \hyperlink{namespaceJson_a4d6ab0f651348832e5cc49b577a854d2}{contains\+New\+Line} (\hyperlink{classJson_1_1Reader_a46795b5b272bf79a7730e406cb96375a}{Reader\+::\+Location} begin, \hyperlink{classJson_1_1Reader_a46795b5b272bf79a7730e406cb96375a}{Reader\+::\+Location} end)
+\item 
+static \hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \hyperlink{namespaceJson_a63123f3dd63f340ac517a59f44ea7aa4}{normalize\+E\+OL} (\hyperlink{classJson_1_1Reader_a46795b5b272bf79a7730e406cb96375a}{Reader\+::\+Location} begin, \hyperlink{classJson_1_1Reader_a46795b5b272bf79a7730e406cb96375a}{Reader\+::\+Location} end)
+\item 
+static void \hyperlink{namespaceJson_a8c38450840f3d88e9b981ae132f7ad0a}{get\+Valid\+Reader\+Keys} (std\+::set$<$ \hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} $>$ $\ast$valid\+\_\+keys)
+\item 
+bool \hyperlink{namespaceJson_a38f903cfdb57a6c4e86a7dcc42f3712c}{parse\+From\+Stream} (\hyperlink{classJson_1_1CharReader_1_1Factory}{Char\+Reader\+::\+Factory} const \&fact, \hyperlink{json_8hpp_a15f2f70b2ce0a2abd0f8112393dbc4de}{J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+E\+AM} \&sin, \hyperlink{classJson_1_1Value}{Value} $\ast$root, \hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} $\ast$errs)
+\item 
+\hyperlink{json_8hpp_a15f2f70b2ce0a2abd0f8112393dbc4de}{J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+E\+AM} \& \hyperlink{namespaceJson_a01f08004efa8a401e01ebd17be77dc71}{operator$>$$>$} (\hyperlink{json_8hpp_a15f2f70b2ce0a2abd0f8112393dbc4de}{J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+E\+AM} \&, \hyperlink{classJson_1_1Value}{Value} \&)
+\begin{DoxyCompactList}\small\item\em Read from \textquotesingle{}sin\textquotesingle{} into \textquotesingle{}root\textquotesingle{}. \end{DoxyCompactList}\item 
+static const unsigned char \hyperlink{namespaceJson_ad0638ab262fec34f995ca3d8a22c9cc4}{A\+L\+I\+G\+N\+AS} (8) k\+Null\mbox{[}sizeof(\hyperlink{classJson_1_1Value}{Value})\mbox{]}
+\item 
+{\footnotesize template$<$typename T , typename U $>$ }\\static bool \hyperlink{namespaceJson_aff0180507262a244de61b961178d7443}{In\+Range} (double d, T min, U max)
+\item 
+static char $\ast$ \hyperlink{namespaceJson_a678ac3a60cd70ec0fb4c9abfd40eb0c4}{duplicate\+String\+Value} (const char $\ast$value, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Duplicates the specified string value. \end{DoxyCompactList}\item 
+static char $\ast$ \hyperlink{namespaceJson_a9795a09a0141d1f12d307c4386aeaee6}{duplicate\+And\+Prefix\+String\+Value} (const char $\ast$value, unsigned int length)
+\item 
+static void \hyperlink{namespaceJson_aad8b4982c1acd164f541fba396ac9fb1}{decode\+Prefixed\+String} (bool is\+Prefixed, char const $\ast$prefixed, unsigned $\ast$length, char const $\ast$$\ast$value)
+\item 
+static void \hyperlink{namespaceJson_a48f4e3ea655e3b4a5d7f892c81f00511}{release\+Prefixed\+String\+Value} (char $\ast$value)
+\begin{DoxyCompactList}\small\item\em Free the string duplicated by \hyperlink{namespaceJson_a678ac3a60cd70ec0fb4c9abfd40eb0c4}{duplicate\+String\+Value()}/duplicate\+And\+Prefix\+String\+Value(). \end{DoxyCompactList}\item 
+static void \hyperlink{namespaceJson_a3e0d81d514d0e8bddf33b08074214abd}{release\+String\+Value} (char $\ast$value, unsigned)
+\item 
+\hyperlink{json_8hpp_a78c5ba441d8b48f24a5095b97f01f282}{J\+S\+O\+N\+C\+P\+P\+\_\+\+N\+O\+R\+E\+T\+U\+RN} void \hyperlink{namespaceJson_a0ab7ff7f99788262d92d9ff3d924e065}{throw\+Runtime\+Error} (\hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} const \&msg)
+\begin{DoxyCompactList}\small\item\em used internally \end{DoxyCompactList}\item 
+\hyperlink{json_8hpp_a78c5ba441d8b48f24a5095b97f01f282}{J\+S\+O\+N\+C\+P\+P\+\_\+\+N\+O\+R\+E\+T\+U\+RN} void \hyperlink{namespaceJson_a27790f21f17922fac81e7cd72a5659a5}{throw\+Logic\+Error} (\hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} const \&msg)
+\begin{DoxyCompactList}\small\item\em used internally \end{DoxyCompactList}\item 
+static bool \hyperlink{namespaceJson_a1a04cc9d31e64b5912dade003c9b99b5}{Is\+Integral} (double d)
+\item 
+static bool \hyperlink{namespaceJson_aa11b210ff98a4f4dd4e2df19260f8c3a}{contains\+Control\+Character} (const char $\ast$str)
+\item 
+static bool \hyperlink{namespaceJson_ae8a357381f264cf28f46449e79ab1dea}{contains\+Control\+Character0} (const char $\ast$str, unsigned len)
+\item 
+\hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \hyperlink{namespaceJson_a77501ed00903d1b183a55a5fbf6b749a}{value\+To\+String} (\hyperlink{namespaceJson_a218d880af853ce786cd985e82571d297}{Largest\+Int} value)
+\item 
+\hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \hyperlink{namespaceJson_a9a0432e5ac3dd69b6c7f29db7776ef21}{value\+To\+String} (\hyperlink{namespaceJson_ae202ecad69725e23443f465e257456d0}{Largest\+U\+Int} value)
+\item 
+\hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \hyperlink{namespaceJson_a41f0a9fca69a534a8646ce0123683a8b}{value\+To\+String} (double value, bool use\+Special\+Floats, unsigned int precision)
+\item 
+\hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \hyperlink{namespaceJson_aa99b8b8dc736259e5a229a4e61d7ea92}{value\+To\+String} (double value)
+\item 
+\hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \hyperlink{namespaceJson_aed05b7acd30f7442fe36b24c7abd10b9}{value\+To\+String} (bool value)
+\item 
+\hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \hyperlink{namespaceJson_a19a9262b788aa2754d3931e7cd01f2fc}{value\+To\+Quoted\+String} (const char $\ast$value)
+\item 
+static char const $\ast$ \hyperlink{namespaceJson_a7492156d0c7d2dd2f672acacfb240320}{strnpbrk} (char const $\ast$s, char const $\ast$accept, size\+\_\+t n)
+\item 
+static \hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \hyperlink{namespaceJson_a29aff81733b8fdaabf3f1acfc3ad339f}{value\+To\+Quoted\+StringN} (const char $\ast$value, unsigned length)
+\item 
+static void \hyperlink{namespaceJson_a77ffcc6bb405332d84c260d304d4384e}{get\+Valid\+Writer\+Keys} (std\+::set$<$ \hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} $>$ $\ast$valid\+\_\+keys)
+\item 
+\hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \hyperlink{namespaceJson_aabe79c4d15b195a343b06825693b0a16}{write\+String} (\hyperlink{classJson_1_1StreamWriter_1_1Factory}{Stream\+Writer\+::\+Factory} const \&factory, \hyperlink{classJson_1_1Value}{Value} const \&root)
+\begin{DoxyCompactList}\small\item\em Write into stringstream, then return string, for convenience. \end{DoxyCompactList}\item 
+\hyperlink{json_8hpp_a37a25be5fca174927780caeb280094ce}{J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+S\+T\+R\+E\+AM} \& \hyperlink{namespaceJson_a845a15902e500af8eee19e729a17b863}{operator$<$$<$} (\hyperlink{json_8hpp_a37a25be5fca174927780caeb280094ce}{J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+S\+T\+R\+E\+AM} \&, const \hyperlink{classJson_1_1Value}{Value} \&root)
+\begin{DoxyCompactList}\small\item\em Output using the \hyperlink{classJson_1_1StyledStreamWriter}{Styled\+Stream\+Writer}. \end{DoxyCompactList}\item 
+bool \hyperlink{json_8hpp_a1d61ffde86ce1a18fd83194ff0d9a206}{J\+S\+O\+N\+\_\+\+A\+PI} \hyperlink{namespaceJson_aab0cf1ecf81d1aeca12be2a416a84352}{parse\+From\+Stream} (\hyperlink{classJson_1_1CharReader_1_1Factory}{Char\+Reader\+::\+Factory} const \&, \hyperlink{json_8hpp_a15f2f70b2ce0a2abd0f8112393dbc4de}{J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+E\+AM} \&, \hyperlink{classJson_1_1Value}{Value} $\ast$root, std\+::string $\ast$errs)
+\begin{DoxyCompactList}\small\item\em Consume entire stream and use its begin/end. \end{DoxyCompactList}\item 
+\hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \hyperlink{json_8hpp_a1d61ffde86ce1a18fd83194ff0d9a206}{J\+S\+O\+N\+\_\+\+A\+PI} \hyperlink{namespaceJson_a4ed9732688b3c3dcaec309c9baddeac9}{value\+To\+String} (\hyperlink{namespaceJson_a08122e8005b706d982e48cca1e2119c7}{Int} value)
+\item 
+\hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \hyperlink{json_8hpp_a1d61ffde86ce1a18fd83194ff0d9a206}{J\+S\+O\+N\+\_\+\+A\+PI} \hyperlink{namespaceJson_a99bc401be7f8a09a8439f3e7219b1f12}{value\+To\+String} (\hyperlink{namespaceJson_a800fb90eb6ee8d5d62b600c06f87f7d4}{U\+Int} value)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const unsigned char \& \hyperlink{namespaceJson_ab30055b4bbd82aecaca57ccecd63bbe6}{k\+Null\+Ref} = k\+Null\mbox{[}0\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+J\+S\+ON (Java\+Script Object Notation). 
+
+\subsection{Typedef Documentation}
+\index{Json@{Json}!Array\+Index@{Array\+Index}}
+\index{Array\+Index@{Array\+Index}!Json@{Json}}
+\subsubsection[{\texorpdfstring{Array\+Index}{ArrayIndex}}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf Json\+::\+Array\+Index}}\hypertarget{namespaceJson_a8048e741f2177c3b5d9ede4a5b8c53c2}{}\label{namespaceJson_a8048e741f2177c3b5d9ede4a5b8c53c2}
+\index{Json@{Json}!Char\+Reader\+Ptr@{Char\+Reader\+Ptr}}
+\index{Char\+Reader\+Ptr@{Char\+Reader\+Ptr}!Json@{Json}}
+\subsubsection[{\texorpdfstring{Char\+Reader\+Ptr}{CharReaderPtr}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::auto\+\_\+ptr$<${\bf Char\+Reader}$>$ {\bf Json\+::\+Char\+Reader\+Ptr}}\hypertarget{namespaceJson_a4724efb8d41614b47036cb8b54233837}{}\label{namespaceJson_a4724efb8d41614b47036cb8b54233837}
+\index{Json@{Json}!Int@{Int}}
+\index{Int@{Int}!Json@{Json}}
+\subsubsection[{\texorpdfstring{Int}{Int}}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf Json\+::\+Int}}\hypertarget{namespaceJson_a08122e8005b706d982e48cca1e2119c7}{}\label{namespaceJson_a08122e8005b706d982e48cca1e2119c7}
+\index{Json@{Json}!Int64@{Int64}}
+\index{Int64@{Int64}!Json@{Json}}
+\subsubsection[{\texorpdfstring{Int64}{Int64}}]{\setlength{\rightskip}{0pt plus 5cm}typedef long long int {\bf Json\+::\+Int64}}\hypertarget{namespaceJson_ab7b47d2905da3b4ae60e4e800ec9ae5f}{}\label{namespaceJson_ab7b47d2905da3b4ae60e4e800ec9ae5f}
+\index{Json@{Json}!Largest\+Int@{Largest\+Int}}
+\index{Largest\+Int@{Largest\+Int}!Json@{Json}}
+\subsubsection[{\texorpdfstring{Largest\+Int}{LargestInt}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Int64} {\bf Json\+::\+Largest\+Int}}\hypertarget{namespaceJson_a218d880af853ce786cd985e82571d297}{}\label{namespaceJson_a218d880af853ce786cd985e82571d297}
+\index{Json@{Json}!Largest\+U\+Int@{Largest\+U\+Int}}
+\index{Largest\+U\+Int@{Largest\+U\+Int}!Json@{Json}}
+\subsubsection[{\texorpdfstring{Largest\+U\+Int}{LargestUInt}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf U\+Int64} {\bf Json\+::\+Largest\+U\+Int}}\hypertarget{namespaceJson_ae202ecad69725e23443f465e257456d0}{}\label{namespaceJson_ae202ecad69725e23443f465e257456d0}
+\index{Json@{Json}!Stream\+Writer\+Ptr@{Stream\+Writer\+Ptr}}
+\index{Stream\+Writer\+Ptr@{Stream\+Writer\+Ptr}!Json@{Json}}
+\subsubsection[{\texorpdfstring{Stream\+Writer\+Ptr}{StreamWriterPtr}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::auto\+\_\+ptr$<${\bf Stream\+Writer}$>$ {\bf Json\+::\+Stream\+Writer\+Ptr}}\hypertarget{namespaceJson_a7132404aeebfc96d7c6ad2c66260afb5}{}\label{namespaceJson_a7132404aeebfc96d7c6ad2c66260afb5}
+\index{Json@{Json}!U\+Int@{U\+Int}}
+\index{U\+Int@{U\+Int}!Json@{Json}}
+\subsubsection[{\texorpdfstring{U\+Int}{UInt}}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf Json\+::\+U\+Int}}\hypertarget{namespaceJson_a800fb90eb6ee8d5d62b600c06f87f7d4}{}\label{namespaceJson_a800fb90eb6ee8d5d62b600c06f87f7d4}
+\index{Json@{Json}!U\+Int64@{U\+Int64}}
+\index{U\+Int64@{U\+Int64}!Json@{Json}}
+\subsubsection[{\texorpdfstring{U\+Int64}{UInt64}}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned long long int {\bf Json\+::\+U\+Int64}}\hypertarget{namespaceJson_a01f20bce8f8229f38ff890168c0e6452}{}\label{namespaceJson_a01f20bce8f8229f38ff890168c0e6452}
+\index{Json@{Json}!U\+Int\+To\+String\+Buffer@{U\+Int\+To\+String\+Buffer}}
+\index{U\+Int\+To\+String\+Buffer@{U\+Int\+To\+String\+Buffer}!Json@{Json}}
+\subsubsection[{\texorpdfstring{U\+Int\+To\+String\+Buffer}{UIntToStringBuffer}}]{\setlength{\rightskip}{0pt plus 5cm}typedef char Json\+::\+U\+Int\+To\+String\+Buffer\mbox{[}{\bf uint\+To\+String\+Buffer\+Size}\mbox{]}}\hypertarget{namespaceJson_a602bcf69c2042fb61c3b243cb16f04ca}{}\label{namespaceJson_a602bcf69c2042fb61c3b243cb16f04ca}
+
+
+\subsection{Enumeration Type Documentation}
+\subsubsection[{\texorpdfstring{anonymous enum}{anonymous enum}}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\hypertarget{namespaceJson_a0c5f614b019f20b4598dcaec09d9e820}{}\label{namespaceJson_a0c5f614b019f20b4598dcaec09d9e820}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{uint\+To\+String\+Buffer\+Size@{uint\+To\+String\+Buffer\+Size}!Json@{Json}}\index{Json@{Json}!uint\+To\+String\+Buffer\+Size@{uint\+To\+String\+Buffer\+Size}}\item[{\em 
+uint\+To\+String\+Buffer\+Size\hypertarget{namespaceJson_a0c5f614b019f20b4598dcaec09d9e820ae4f2008c7919f20d81286121d1374424}{}\label{namespaceJson_a0c5f614b019f20b4598dcaec09d9e820ae4f2008c7919f20d81286121d1374424}
+}]Constant that specify the size of the buffer that must be passed to uint\+To\+String. \end{description}
+\end{Desc}
+\index{Json@{Json}!Comment\+Placement@{Comment\+Placement}}
+\index{Comment\+Placement@{Comment\+Placement}!Json@{Json}}
+\subsubsection[{\texorpdfstring{Comment\+Placement}{CommentPlacement}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Json\+::\+Comment\+Placement}}\hypertarget{namespaceJson_a4fc417c23905b2ae9e2c47d197a45351}{}\label{namespaceJson_a4fc417c23905b2ae9e2c47d197a45351}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{comment\+Before@{comment\+Before}!Json@{Json}}\index{Json@{Json}!comment\+Before@{comment\+Before}}\item[{\em 
+comment\+Before\hypertarget{namespaceJson_a4fc417c23905b2ae9e2c47d197a45351a52f1733775460517b2ea6bedf4906d52}{}\label{namespaceJson_a4fc417c23905b2ae9e2c47d197a45351a52f1733775460517b2ea6bedf4906d52}
+}]a comment placed on the line before a value \index{comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}!Json@{Json}}\index{Json@{Json}!comment\+After\+On\+Same\+Line@{comment\+After\+On\+Same\+Line}}\item[{\em 
+comment\+After\+On\+Same\+Line\hypertarget{namespaceJson_a4fc417c23905b2ae9e2c47d197a45351a008a230a0586de54f30b76afe70fdcfa}{}\label{namespaceJson_a4fc417c23905b2ae9e2c47d197a45351a008a230a0586de54f30b76afe70fdcfa}
+}]a comment just after a value on the same line \index{comment\+After@{comment\+After}!Json@{Json}}\index{Json@{Json}!comment\+After@{comment\+After}}\item[{\em 
+comment\+After\hypertarget{namespaceJson_a4fc417c23905b2ae9e2c47d197a45351ac5784ca53b12250888ddb642b06aebef}{}\label{namespaceJson_a4fc417c23905b2ae9e2c47d197a45351ac5784ca53b12250888ddb642b06aebef}
+}]a comment on the line after a value (only make sense for \index{number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}!Json@{Json}}\index{Json@{Json}!number\+Of\+Comment\+Placement@{number\+Of\+Comment\+Placement}}\item[{\em 
+number\+Of\+Comment\+Placement\hypertarget{namespaceJson_a4fc417c23905b2ae9e2c47d197a45351abcbd3eb00417335e094e4a03379659b5}{}\label{namespaceJson_a4fc417c23905b2ae9e2c47d197a45351abcbd3eb00417335e094e4a03379659b5}
+}]root value) \end{description}
+\end{Desc}
+\index{Json@{Json}!Value\+Type@{Value\+Type}}
+\index{Value\+Type@{Value\+Type}!Json@{Json}}
+\subsubsection[{\texorpdfstring{Value\+Type}{ValueType}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Json\+::\+Value\+Type}}\hypertarget{namespaceJson_a7d654b75c16a57007925868e38212b4e}{}\label{namespaceJson_a7d654b75c16a57007925868e38212b4e}
+
+
+Type of the value held by a \hyperlink{classJson_1_1Value}{Value} object. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{null\+Value@{null\+Value}!Json@{Json}}\index{Json@{Json}!null\+Value@{null\+Value}}\item[{\em 
+null\+Value\hypertarget{namespaceJson_a7d654b75c16a57007925868e38212b4ea7d9899633b4409bd3fc107e6737f8391}{}\label{namespaceJson_a7d654b75c16a57007925868e38212b4ea7d9899633b4409bd3fc107e6737f8391}
+}]\textquotesingle{}null\textquotesingle{} value \index{int\+Value@{int\+Value}!Json@{Json}}\index{Json@{Json}!int\+Value@{int\+Value}}\item[{\em 
+int\+Value\hypertarget{namespaceJson_a7d654b75c16a57007925868e38212b4eae5a9d708d5c9e23ae9bf98898522512d}{}\label{namespaceJson_a7d654b75c16a57007925868e38212b4eae5a9d708d5c9e23ae9bf98898522512d}
+}]signed integer value \index{uint\+Value@{uint\+Value}!Json@{Json}}\index{Json@{Json}!uint\+Value@{uint\+Value}}\item[{\em 
+uint\+Value\hypertarget{namespaceJson_a7d654b75c16a57007925868e38212b4eaea788d9a3bb00adc6d68d97d43e1ccd3}{}\label{namespaceJson_a7d654b75c16a57007925868e38212b4eaea788d9a3bb00adc6d68d97d43e1ccd3}
+}]unsigned integer value \index{real\+Value@{real\+Value}!Json@{Json}}\index{Json@{Json}!real\+Value@{real\+Value}}\item[{\em 
+real\+Value\hypertarget{namespaceJson_a7d654b75c16a57007925868e38212b4eab837c7b869c14d8be712deb45c9e490e}{}\label{namespaceJson_a7d654b75c16a57007925868e38212b4eab837c7b869c14d8be712deb45c9e490e}
+}]double value \index{string\+Value@{string\+Value}!Json@{Json}}\index{Json@{Json}!string\+Value@{string\+Value}}\item[{\em 
+string\+Value\hypertarget{namespaceJson_a7d654b75c16a57007925868e38212b4ea804ef857affea2d415843c73f261c258}{}\label{namespaceJson_a7d654b75c16a57007925868e38212b4ea804ef857affea2d415843c73f261c258}
+}]U\+T\+F-\/8 string value. \index{boolean\+Value@{boolean\+Value}!Json@{Json}}\index{Json@{Json}!boolean\+Value@{boolean\+Value}}\item[{\em 
+boolean\+Value\hypertarget{namespaceJson_a7d654b75c16a57007925868e38212b4ea14c30dbf4da86f7b809be299f671f7fd}{}\label{namespaceJson_a7d654b75c16a57007925868e38212b4ea14c30dbf4da86f7b809be299f671f7fd}
+}]bool value \index{array\+Value@{array\+Value}!Json@{Json}}\index{Json@{Json}!array\+Value@{array\+Value}}\item[{\em 
+array\+Value\hypertarget{namespaceJson_a7d654b75c16a57007925868e38212b4eadc8f264f36b55b063c78126b335415f4}{}\label{namespaceJson_a7d654b75c16a57007925868e38212b4eadc8f264f36b55b063c78126b335415f4}
+}]array value (ordered list) \index{object\+Value@{object\+Value}!Json@{Json}}\index{Json@{Json}!object\+Value@{object\+Value}}\item[{\em 
+object\+Value\hypertarget{namespaceJson_a7d654b75c16a57007925868e38212b4eae8386dcfc36d1ae897745f7b4f77a1f6}{}\label{namespaceJson_a7d654b75c16a57007925868e38212b4eae8386dcfc36d1ae897745f7b4f77a1f6}
+}]object value (collection of name/value pairs). \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{Json@{Json}!A\+L\+I\+G\+N\+AS@{A\+L\+I\+G\+N\+AS}}
+\index{A\+L\+I\+G\+N\+AS@{A\+L\+I\+G\+N\+AS}!Json@{Json}}
+\subsubsection[{\texorpdfstring{A\+L\+I\+G\+N\+A\+S(8) k\+Null[sizeof(\+Value)]}{ALIGNAS(8) kNull[sizeof(Value)]}}]{\setlength{\rightskip}{0pt plus 5cm}static const unsigned char Json\+::\+A\+L\+I\+G\+N\+AS (
+\begin{DoxyParamCaption}
+\item[{8}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{namespaceJson_ad0638ab262fec34f995ca3d8a22c9cc4}{}\label{namespaceJson_ad0638ab262fec34f995ca3d8a22c9cc4}
+\index{Json@{Json}!code\+Point\+To\+U\+T\+F8@{code\+Point\+To\+U\+T\+F8}}
+\index{code\+Point\+To\+U\+T\+F8@{code\+Point\+To\+U\+T\+F8}!Json@{Json}}
+\subsubsection[{\texorpdfstring{code\+Point\+To\+U\+T\+F8(unsigned int cp)}{codePointToUTF8(unsigned int cp)}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} Json\+::code\+Point\+To\+U\+T\+F8 (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{cp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{namespaceJson_a33f8bda65a5b1fc4f5ddc39cb03dc742}{}\label{namespaceJson_a33f8bda65a5b1fc4f5ddc39cb03dc742}
+
+
+Converts a unicode code-\/point to U\+T\+F-\/8. 
+
+\index{Json@{Json}!contains\+Control\+Character@{contains\+Control\+Character}}
+\index{contains\+Control\+Character@{contains\+Control\+Character}!Json@{Json}}
+\subsubsection[{\texorpdfstring{contains\+Control\+Character(const char $\ast$str)}{containsControlCharacter(const char *str)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Json\+::contains\+Control\+Character (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{namespaceJson_aa11b210ff98a4f4dd4e2df19260f8c3a}{}\label{namespaceJson_aa11b210ff98a4f4dd4e2df19260f8c3a}
+\index{Json@{Json}!contains\+Control\+Character0@{contains\+Control\+Character0}}
+\index{contains\+Control\+Character0@{contains\+Control\+Character0}!Json@{Json}}
+\subsubsection[{\texorpdfstring{contains\+Control\+Character0(const char $\ast$str, unsigned len)}{containsControlCharacter0(const char *str, unsigned len)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Json\+::contains\+Control\+Character0 (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str, }
+\item[{unsigned}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{namespaceJson_ae8a357381f264cf28f46449e79ab1dea}{}\label{namespaceJson_ae8a357381f264cf28f46449e79ab1dea}
+\index{Json@{Json}!contains\+New\+Line@{contains\+New\+Line}}
+\index{contains\+New\+Line@{contains\+New\+Line}!Json@{Json}}
+\subsubsection[{\texorpdfstring{contains\+New\+Line(\+Reader\+::\+Location begin, Reader\+::\+Location end)}{containsNewLine(Reader::Location begin, Reader::Location end)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Json\+::contains\+New\+Line (
+\begin{DoxyParamCaption}
+\item[{{\bf Reader\+::\+Location}}]{begin, }
+\item[{{\bf Reader\+::\+Location}}]{end}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{namespaceJson_a4d6ab0f651348832e5cc49b577a854d2}{}\label{namespaceJson_a4d6ab0f651348832e5cc49b577a854d2}
+\index{Json@{Json}!decode\+Prefixed\+String@{decode\+Prefixed\+String}}
+\index{decode\+Prefixed\+String@{decode\+Prefixed\+String}!Json@{Json}}
+\subsubsection[{\texorpdfstring{decode\+Prefixed\+String(bool is\+Prefixed, char const $\ast$prefixed, unsigned $\ast$length, char const $\ast$$\ast$value)}{decodePrefixedString(bool isPrefixed, char const *prefixed, unsigned *length, char const **value)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Json\+::decode\+Prefixed\+String (
+\begin{DoxyParamCaption}
+\item[{bool}]{is\+Prefixed, }
+\item[{char const $\ast$}]{prefixed, }
+\item[{unsigned $\ast$}]{length, }
+\item[{char const $\ast$$\ast$}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{namespaceJson_aad8b4982c1acd164f541fba396ac9fb1}{}\label{namespaceJson_aad8b4982c1acd164f541fba396ac9fb1}
+\index{Json@{Json}!duplicate\+And\+Prefix\+String\+Value@{duplicate\+And\+Prefix\+String\+Value}}
+\index{duplicate\+And\+Prefix\+String\+Value@{duplicate\+And\+Prefix\+String\+Value}!Json@{Json}}
+\subsubsection[{\texorpdfstring{duplicate\+And\+Prefix\+String\+Value(const char $\ast$value, unsigned int length)}{duplicateAndPrefixStringValue(const char *value, unsigned int length)}}]{\setlength{\rightskip}{0pt plus 5cm}static char$\ast$ Json\+::duplicate\+And\+Prefix\+String\+Value (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{value, }
+\item[{unsigned int}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{namespaceJson_a9795a09a0141d1f12d307c4386aeaee6}{}\label{namespaceJson_a9795a09a0141d1f12d307c4386aeaee6}
+\index{Json@{Json}!duplicate\+String\+Value@{duplicate\+String\+Value}}
+\index{duplicate\+String\+Value@{duplicate\+String\+Value}!Json@{Json}}
+\subsubsection[{\texorpdfstring{duplicate\+String\+Value(const char $\ast$value, size\+\_\+t length)}{duplicateStringValue(const char *value, size_t length)}}]{\setlength{\rightskip}{0pt plus 5cm}static char$\ast$ Json\+::duplicate\+String\+Value (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{value, }
+\item[{size\+\_\+t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{namespaceJson_a678ac3a60cd70ec0fb4c9abfd40eb0c4}{}\label{namespaceJson_a678ac3a60cd70ec0fb4c9abfd40eb0c4}
+
+
+Duplicates the specified string value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Pointer to the string to duplicate. Must be zero-\/terminated if length is \char`\"{}unknown\char`\"{}. \\
+\hline
+{\em length} & Length of the value. if equals to unknown, then it will be computed using strlen(value). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer on the duplicate instance of string. 
+\end{DoxyReturn}
+\index{Json@{Json}!fix\+Numeric\+Locale@{fix\+Numeric\+Locale}}
+\index{fix\+Numeric\+Locale@{fix\+Numeric\+Locale}!Json@{Json}}
+\subsubsection[{\texorpdfstring{fix\+Numeric\+Locale(char $\ast$begin, char $\ast$end)}{fixNumericLocale(char *begin, char *end)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Json\+::fix\+Numeric\+Locale (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{begin, }
+\item[{char $\ast$}]{end}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{namespaceJson_aa208904144dc7b11ccc28f47c9afab9a}{}\label{namespaceJson_aa208904144dc7b11ccc28f47c9afab9a}
+
+
+Change \textquotesingle{},\textquotesingle{} to \textquotesingle{}. 
+
+\textquotesingle{} everywhere in buffer.
+
+We had a sophisticated way, but it did not work in Win\+CE. \begin{DoxySeeAlso}{See also}
+\href{https://github.com/open-source-parsers/jsoncpp/pull/9}{\tt https\+://github.\+com/open-\/source-\/parsers/jsoncpp/pull/9} 
+\end{DoxySeeAlso}
+\index{Json@{Json}!get\+Valid\+Reader\+Keys@{get\+Valid\+Reader\+Keys}}
+\index{get\+Valid\+Reader\+Keys@{get\+Valid\+Reader\+Keys}!Json@{Json}}
+\subsubsection[{\texorpdfstring{get\+Valid\+Reader\+Keys(std\+::set$<$ J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+N\+G $>$ $\ast$valid\+\_\+keys)}{getValidReaderKeys(std::set< JSONCPP_STRING > *valid_keys)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Json\+::get\+Valid\+Reader\+Keys (
+\begin{DoxyParamCaption}
+\item[{std\+::set$<$ {\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} $>$ $\ast$}]{valid\+\_\+keys}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{namespaceJson_a8c38450840f3d88e9b981ae132f7ad0a}{}\label{namespaceJson_a8c38450840f3d88e9b981ae132f7ad0a}
+\index{Json@{Json}!get\+Valid\+Writer\+Keys@{get\+Valid\+Writer\+Keys}}
+\index{get\+Valid\+Writer\+Keys@{get\+Valid\+Writer\+Keys}!Json@{Json}}
+\subsubsection[{\texorpdfstring{get\+Valid\+Writer\+Keys(std\+::set$<$ J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+N\+G $>$ $\ast$valid\+\_\+keys)}{getValidWriterKeys(std::set< JSONCPP_STRING > *valid_keys)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Json\+::get\+Valid\+Writer\+Keys (
+\begin{DoxyParamCaption}
+\item[{std\+::set$<$ {\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} $>$ $\ast$}]{valid\+\_\+keys}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{namespaceJson_a77ffcc6bb405332d84c260d304d4384e}{}\label{namespaceJson_a77ffcc6bb405332d84c260d304d4384e}
+\index{Json@{Json}!In\+Range@{In\+Range}}
+\index{In\+Range@{In\+Range}!Json@{Json}}
+\subsubsection[{\texorpdfstring{In\+Range(double d, T min, U max)}{InRange(double d, T min, U max)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename U $>$ static bool Json\+::\+In\+Range (
+\begin{DoxyParamCaption}
+\item[{double}]{d, }
+\item[{T}]{min, }
+\item[{U}]{max}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{namespaceJson_aff0180507262a244de61b961178d7443}{}\label{namespaceJson_aff0180507262a244de61b961178d7443}
+\index{Json@{Json}!is\+Control\+Character@{is\+Control\+Character}}
+\index{is\+Control\+Character@{is\+Control\+Character}!Json@{Json}}
+\subsubsection[{\texorpdfstring{is\+Control\+Character(char ch)}{isControlCharacter(char ch)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Json\+::is\+Control\+Character (
+\begin{DoxyParamCaption}
+\item[{char}]{ch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{namespaceJson_a0381e631737f51331065a388f4f59197}{}\label{namespaceJson_a0381e631737f51331065a388f4f59197}
+
+
+Returns true if ch is a control character (in range \mbox{[}1,31\mbox{]}). 
+
+\index{Json@{Json}!Is\+Integral@{Is\+Integral}}
+\index{Is\+Integral@{Is\+Integral}!Json@{Json}}
+\subsubsection[{\texorpdfstring{Is\+Integral(double d)}{IsIntegral(double d)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Json\+::\+Is\+Integral (
+\begin{DoxyParamCaption}
+\item[{double}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{namespaceJson_a1a04cc9d31e64b5912dade003c9b99b5}{}\label{namespaceJson_a1a04cc9d31e64b5912dade003c9b99b5}
+\index{Json@{Json}!normalize\+E\+OL@{normalize\+E\+OL}}
+\index{normalize\+E\+OL@{normalize\+E\+OL}!Json@{Json}}
+\subsubsection[{\texorpdfstring{normalize\+E\+O\+L(\+Reader\+::\+Location begin, Reader\+::\+Location end)}{normalizeEOL(Reader::Location begin, Reader::Location end)}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} Json\+::normalize\+E\+OL (
+\begin{DoxyParamCaption}
+\item[{{\bf Reader\+::\+Location}}]{begin, }
+\item[{{\bf Reader\+::\+Location}}]{end}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{namespaceJson_a63123f3dd63f340ac517a59f44ea7aa4}{}\label{namespaceJson_a63123f3dd63f340ac517a59f44ea7aa4}
+\index{Json@{Json}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Json@{Json}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(\+J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+S\+T\+R\+E\+A\+M \&, const Value \&root)}{operator<<(JSONCPP_OSTREAM &, const Value &root)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+S\+O\+N\+\_\+\+A\+PI} {\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+S\+T\+R\+E\+AM} \& Json\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{{\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+S\+T\+R\+E\+AM} \&}]{, }
+\item[{const {\bf Value} \&}]{root}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceJson_a845a15902e500af8eee19e729a17b863}{}\label{namespaceJson_a845a15902e500af8eee19e729a17b863}
+
+
+Output using the \hyperlink{classJson_1_1StyledStreamWriter}{Styled\+Stream\+Writer}. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{namespaceJson_a01f08004efa8a401e01ebd17be77dc71}{Json\+::operator$>$$>$()} 
+\end{DoxySeeAlso}
+\index{Json@{Json}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Json@{Json}}
+\subsubsection[{\texorpdfstring{operator$>$$>$(\+J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+E\+A\+M \&, Value \&)}{operator>>(JSONCPP_ISTREAM &, Value &)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+S\+O\+N\+\_\+\+A\+PI} {\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+E\+AM} \& Json\+::operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{{\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+E\+AM} \&}]{, }
+\item[{{\bf Value} \&}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceJson_a01f08004efa8a401e01ebd17be77dc71}{}\label{namespaceJson_a01f08004efa8a401e01ebd17be77dc71}
+
+
+Read from \textquotesingle{}sin\textquotesingle{} into \textquotesingle{}root\textquotesingle{}. 
+
+Always keep comments from the input J\+S\+ON.
+
+This can be used to read a file into a particular sub-\/object. For example\+: 
+\begin{DoxyCode}
+\hyperlink{classJson_1_1Value}{Json::Value} root;
+cin >> root[\textcolor{stringliteral}{"dir"}][\textcolor{stringliteral}{"file"}];
+cout << root;
+\end{DoxyCode}
+ Result\+: \begin{DoxyVerb}{
+"dir": {
+    "file": {
+    // The input stream JSON would be nested here.
+    }
+}
+}
+\end{DoxyVerb}
+ 
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::exception} & on parse error. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{namespaceJson_a845a15902e500af8eee19e729a17b863}{Json\+::operator$<$$<$()} 
+\end{DoxySeeAlso}
+\index{Json@{Json}!parse\+From\+Stream@{parse\+From\+Stream}}
+\index{parse\+From\+Stream@{parse\+From\+Stream}!Json@{Json}}
+\subsubsection[{\texorpdfstring{parse\+From\+Stream(\+Char\+Reader\+::\+Factory const \&, J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+E\+A\+M \&, Value $\ast$root, std\+::string $\ast$errs)}{parseFromStream(CharReader::Factory const &, JSONCPP_ISTREAM &, Value *root, std::string *errs)}}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf J\+S\+O\+N\+\_\+\+A\+PI} Json\+::parse\+From\+Stream (
+\begin{DoxyParamCaption}
+\item[{{\bf Char\+Reader\+::\+Factory} const \&}]{, }
+\item[{{\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+E\+AM} \&}]{, }
+\item[{{\bf Value} $\ast$}]{root, }
+\item[{std\+::string $\ast$}]{errs}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceJson_aab0cf1ecf81d1aeca12be2a416a84352}{}\label{namespaceJson_aab0cf1ecf81d1aeca12be2a416a84352}
+
+
+Consume entire stream and use its begin/end. 
+
+Someday we might have a real Stream\+Reader, but for now this is convenient. \index{Json@{Json}!parse\+From\+Stream@{parse\+From\+Stream}}
+\index{parse\+From\+Stream@{parse\+From\+Stream}!Json@{Json}}
+\subsubsection[{\texorpdfstring{parse\+From\+Stream(\+Char\+Reader\+::\+Factory const \&fact, J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+E\+A\+M \&sin, Value $\ast$root, J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+N\+G $\ast$errs)}{parseFromStream(CharReader::Factory const &fact, JSONCPP_ISTREAM &sin, Value *root, JSONCPP_STRING *errs)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::parse\+From\+Stream (
+\begin{DoxyParamCaption}
+\item[{{\bf Char\+Reader\+::\+Factory} const \&}]{fact, }
+\item[{{\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+E\+AM} \&}]{sin, }
+\item[{{\bf Value} $\ast$}]{root, }
+\item[{{\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} $\ast$}]{errs}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceJson_a38f903cfdb57a6c4e86a7dcc42f3712c}{}\label{namespaceJson_a38f903cfdb57a6c4e86a7dcc42f3712c}
+\index{Json@{Json}!release\+Prefixed\+String\+Value@{release\+Prefixed\+String\+Value}}
+\index{release\+Prefixed\+String\+Value@{release\+Prefixed\+String\+Value}!Json@{Json}}
+\subsubsection[{\texorpdfstring{release\+Prefixed\+String\+Value(char $\ast$value)}{releasePrefixedStringValue(char *value)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Json\+::release\+Prefixed\+String\+Value (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{namespaceJson_a48f4e3ea655e3b4a5d7f892c81f00511}{}\label{namespaceJson_a48f4e3ea655e3b4a5d7f892c81f00511}
+
+
+Free the string duplicated by \hyperlink{namespaceJson_a678ac3a60cd70ec0fb4c9abfd40eb0c4}{duplicate\+String\+Value()}/duplicate\+And\+Prefix\+String\+Value(). 
+
+\index{Json@{Json}!release\+String\+Value@{release\+String\+Value}}
+\index{release\+String\+Value@{release\+String\+Value}!Json@{Json}}
+\subsubsection[{\texorpdfstring{release\+String\+Value(char $\ast$value, unsigned)}{releaseStringValue(char *value, unsigned)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Json\+::release\+String\+Value (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{value, }
+\item[{unsigned}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{namespaceJson_a3e0d81d514d0e8bddf33b08074214abd}{}\label{namespaceJson_a3e0d81d514d0e8bddf33b08074214abd}
+\index{Json@{Json}!strnpbrk@{strnpbrk}}
+\index{strnpbrk@{strnpbrk}!Json@{Json}}
+\subsubsection[{\texorpdfstring{strnpbrk(char const $\ast$s, char const $\ast$accept, size\+\_\+t n)}{strnpbrk(char const *s, char const *accept, size_t n)}}]{\setlength{\rightskip}{0pt plus 5cm}static char const$\ast$ Json\+::strnpbrk (
+\begin{DoxyParamCaption}
+\item[{char const $\ast$}]{s, }
+\item[{char const $\ast$}]{accept, }
+\item[{size\+\_\+t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{namespaceJson_a7492156d0c7d2dd2f672acacfb240320}{}\label{namespaceJson_a7492156d0c7d2dd2f672acacfb240320}
+\index{Json@{Json}!throw\+Logic\+Error@{throw\+Logic\+Error}}
+\index{throw\+Logic\+Error@{throw\+Logic\+Error}!Json@{Json}}
+\subsubsection[{\texorpdfstring{throw\+Logic\+Error(\+J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+N\+G const \&msg)}{throwLogicError(JSONCPP_STRING const &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+N\+O\+R\+E\+T\+U\+RN} void Json\+::throw\+Logic\+Error (
+\begin{DoxyParamCaption}
+\item[{{\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} const \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceJson_a27790f21f17922fac81e7cd72a5659a5}{}\label{namespaceJson_a27790f21f17922fac81e7cd72a5659a5}
+
+
+used internally 
+
+\index{Json@{Json}!throw\+Runtime\+Error@{throw\+Runtime\+Error}}
+\index{throw\+Runtime\+Error@{throw\+Runtime\+Error}!Json@{Json}}
+\subsubsection[{\texorpdfstring{throw\+Runtime\+Error(\+J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+N\+G const \&msg)}{throwRuntimeError(JSONCPP_STRING const &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+N\+O\+R\+E\+T\+U\+RN} void Json\+::throw\+Runtime\+Error (
+\begin{DoxyParamCaption}
+\item[{{\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} const \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceJson_a0ab7ff7f99788262d92d9ff3d924e065}{}\label{namespaceJson_a0ab7ff7f99788262d92d9ff3d924e065}
+
+
+used internally 
+
+\index{Json@{Json}!uint\+To\+String@{uint\+To\+String}}
+\index{uint\+To\+String@{uint\+To\+String}!Json@{Json}}
+\subsubsection[{\texorpdfstring{uint\+To\+String(\+Largest\+U\+Int value, char $\ast$\&current)}{uintToString(LargestUInt value, char *&current)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Json\+::uint\+To\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf Largest\+U\+Int}}]{value, }
+\item[{char $\ast$\&}]{current}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{namespaceJson_ac1ffd21a9e55122014353c773ccc496e}{}\label{namespaceJson_ac1ffd21a9e55122014353c773ccc496e}
+
+
+Converts an unsigned integer to string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Unsigned interger to convert to string \\
+\hline
+{\em current} & Input/\+Output string buffer. Must have at least uint\+To\+String\+Buffer\+Size chars free. \\
+\hline
+\end{DoxyParams}
+\index{Json@{Json}!value\+To\+Quoted\+String@{value\+To\+Quoted\+String}}
+\index{value\+To\+Quoted\+String@{value\+To\+Quoted\+String}!Json@{Json}}
+\subsubsection[{\texorpdfstring{value\+To\+Quoted\+String(const char $\ast$value)}{valueToQuotedString(const char *value)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} {\bf J\+S\+O\+N\+\_\+\+A\+PI} Json\+::value\+To\+Quoted\+String (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceJson_a19a9262b788aa2754d3931e7cd01f2fc}{}\label{namespaceJson_a19a9262b788aa2754d3931e7cd01f2fc}
+\index{Json@{Json}!value\+To\+Quoted\+StringN@{value\+To\+Quoted\+StringN}}
+\index{value\+To\+Quoted\+StringN@{value\+To\+Quoted\+StringN}!Json@{Json}}
+\subsubsection[{\texorpdfstring{value\+To\+Quoted\+String\+N(const char $\ast$value, unsigned length)}{valueToQuotedStringN(const char *value, unsigned length)}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} Json\+::value\+To\+Quoted\+StringN (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{value, }
+\item[{unsigned}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{namespaceJson_a29aff81733b8fdaabf3f1acfc3ad339f}{}\label{namespaceJson_a29aff81733b8fdaabf3f1acfc3ad339f}
+\index{Json@{Json}!value\+To\+String@{value\+To\+String}}
+\index{value\+To\+String@{value\+To\+String}!Json@{Json}}
+\subsubsection[{\texorpdfstring{value\+To\+String(\+Int value)}{valueToString(Int value)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} {\bf J\+S\+O\+N\+\_\+\+A\+PI} Json\+::value\+To\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf Int}}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceJson_a4ed9732688b3c3dcaec309c9baddeac9}{}\label{namespaceJson_a4ed9732688b3c3dcaec309c9baddeac9}
+\index{Json@{Json}!value\+To\+String@{value\+To\+String}}
+\index{value\+To\+String@{value\+To\+String}!Json@{Json}}
+\subsubsection[{\texorpdfstring{value\+To\+String(\+U\+Int value)}{valueToString(UInt value)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} {\bf J\+S\+O\+N\+\_\+\+A\+PI} Json\+::value\+To\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+Int}}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceJson_a99bc401be7f8a09a8439f3e7219b1f12}{}\label{namespaceJson_a99bc401be7f8a09a8439f3e7219b1f12}
+\index{Json@{Json}!value\+To\+String@{value\+To\+String}}
+\index{value\+To\+String@{value\+To\+String}!Json@{Json}}
+\subsubsection[{\texorpdfstring{value\+To\+String(\+Largest\+Int value)}{valueToString(LargestInt value)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} {\bf J\+S\+O\+N\+\_\+\+A\+PI} Json\+::value\+To\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf Largest\+Int}}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceJson_a77501ed00903d1b183a55a5fbf6b749a}{}\label{namespaceJson_a77501ed00903d1b183a55a5fbf6b749a}
+\index{Json@{Json}!value\+To\+String@{value\+To\+String}}
+\index{value\+To\+String@{value\+To\+String}!Json@{Json}}
+\subsubsection[{\texorpdfstring{value\+To\+String(\+Largest\+U\+Int value)}{valueToString(LargestUInt value)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} {\bf J\+S\+O\+N\+\_\+\+A\+PI} Json\+::value\+To\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf Largest\+U\+Int}}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceJson_a9a0432e5ac3dd69b6c7f29db7776ef21}{}\label{namespaceJson_a9a0432e5ac3dd69b6c7f29db7776ef21}
+\index{Json@{Json}!value\+To\+String@{value\+To\+String}}
+\index{value\+To\+String@{value\+To\+String}!Json@{Json}}
+\subsubsection[{\texorpdfstring{value\+To\+String(double value, bool use\+Special\+Floats, unsigned int precision)}{valueToString(double value, bool useSpecialFloats, unsigned int precision)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} Json\+::value\+To\+String (
+\begin{DoxyParamCaption}
+\item[{double}]{value, }
+\item[{bool}]{use\+Special\+Floats, }
+\item[{unsigned int}]{precision}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceJson_a41f0a9fca69a534a8646ce0123683a8b}{}\label{namespaceJson_a41f0a9fca69a534a8646ce0123683a8b}
+\index{Json@{Json}!value\+To\+String@{value\+To\+String}}
+\index{value\+To\+String@{value\+To\+String}!Json@{Json}}
+\subsubsection[{\texorpdfstring{value\+To\+String(double value)}{valueToString(double value)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} {\bf J\+S\+O\+N\+\_\+\+A\+PI} Json\+::value\+To\+String (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceJson_aa99b8b8dc736259e5a229a4e61d7ea92}{}\label{namespaceJson_aa99b8b8dc736259e5a229a4e61d7ea92}
+\index{Json@{Json}!value\+To\+String@{value\+To\+String}}
+\index{value\+To\+String@{value\+To\+String}!Json@{Json}}
+\subsubsection[{\texorpdfstring{value\+To\+String(bool value)}{valueToString(bool value)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} {\bf J\+S\+O\+N\+\_\+\+A\+PI} Json\+::value\+To\+String (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceJson_aed05b7acd30f7442fe36b24c7abd10b9}{}\label{namespaceJson_aed05b7acd30f7442fe36b24c7abd10b9}
+\index{Json@{Json}!write\+String@{write\+String}}
+\index{write\+String@{write\+String}!Json@{Json}}
+\subsubsection[{\texorpdfstring{write\+String(\+Stream\+Writer\+::\+Factory const \&factory, Value const \&root)}{writeString(StreamWriter::Factory const &factory, Value const &root)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} {\bf J\+S\+O\+N\+\_\+\+A\+PI} Json\+::write\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf Stream\+Writer\+::\+Factory} const \&}]{factory, }
+\item[{{\bf Value} const \&}]{root}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceJson_aabe79c4d15b195a343b06825693b0a16}{}\label{namespaceJson_aabe79c4d15b195a343b06825693b0a16}
+
+
+Write into stringstream, then return string, for convenience. 
+
+A \hyperlink{classJson_1_1StreamWriter}{Stream\+Writer} will be created from the factory, used, and then deleted. 
+
+\subsection{Variable Documentation}
+\index{Json@{Json}!k\+Null\+Ref@{k\+Null\+Ref}}
+\index{k\+Null\+Ref@{k\+Null\+Ref}!Json@{Json}}
+\subsubsection[{\texorpdfstring{k\+Null\+Ref}{kNullRef}}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned char\& Json\+::k\+Null\+Ref = k\+Null\mbox{[}0\mbox{]}}\hypertarget{namespaceJson_ab30055b4bbd82aecaca57ccecd63bbe6}{}\label{namespaceJson_ab30055b4bbd82aecaca57ccecd63bbe6}

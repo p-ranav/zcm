@@ -1,0 +1,252 @@
+\hypertarget{classJson_1_1ValueIteratorBase}{}\section{Json\+:\+:Value\+Iterator\+Base Class Reference}
+\label{classJson_1_1ValueIteratorBase}\index{Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}}
+
+
+base class for \hyperlink{classJson_1_1Value}{Value} iterators.  
+
+
+
+
+{\ttfamily \#include $<$json.\+hpp$>$}
+
+Inheritance diagram for Json\+:\+:Value\+Iterator\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classJson_1_1ValueIteratorBase}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::bidirectional\+\_\+iterator\+\_\+tag \hyperlink{classJson_1_1ValueIteratorBase_a02fd11a4fbdc0007da1e8bcf5e6b83c3}{iterator\+\_\+category}
+\item 
+typedef unsigned int \hyperlink{classJson_1_1ValueIteratorBase_a9d3a3c7ce5cdefe23cb486239cf07bb5}{size\+\_\+t}
+\item 
+typedef int \hyperlink{classJson_1_1ValueIteratorBase_a4e44bf8cbd17ec8d6e2c185904a15ebd}{difference\+\_\+type}
+\item 
+typedef \hyperlink{classJson_1_1ValueIteratorBase}{Value\+Iterator\+Base} \hyperlink{classJson_1_1ValueIteratorBase_a9d2a940d03ea06d20d972f41a89149ee}{Self\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classJson_1_1ValueIteratorBase_afc656672ac28502f640ade32c38c1b56}{operator==} (const \hyperlink{classJson_1_1ValueIteratorBase_a9d2a940d03ea06d20d972f41a89149ee}{Self\+Type} \&other) const 
+\item 
+bool \hyperlink{classJson_1_1ValueIteratorBase_a18c2dd42e0bb989ace141bfe9de52792}{operator!=} (const \hyperlink{classJson_1_1ValueIteratorBase_a9d2a940d03ea06d20d972f41a89149ee}{Self\+Type} \&other) const 
+\item 
+\hyperlink{classJson_1_1ValueIteratorBase_a4e44bf8cbd17ec8d6e2c185904a15ebd}{difference\+\_\+type} \hyperlink{classJson_1_1ValueIteratorBase_ab786787fcad68ca5e8745aaf520fa17f}{operator-\/} (const \hyperlink{classJson_1_1ValueIteratorBase_a9d2a940d03ea06d20d972f41a89149ee}{Self\+Type} \&other) const 
+\item 
+\hyperlink{classJson_1_1Value}{Value} \hyperlink{classJson_1_1ValueIteratorBase_aa2ff5e79fc96acd4c3cd288e92614fc7}{key} () const 
+\begin{DoxyCompactList}\small\item\em Return either the index or the member name of the referenced value as a \hyperlink{classJson_1_1Value}{Value}. \end{DoxyCompactList}\item 
+\hyperlink{namespaceJson_a800fb90eb6ee8d5d62b600c06f87f7d4}{U\+Int} \hyperlink{classJson_1_1ValueIteratorBase_aa90591f5f7f8d2f06cc4605816b53738}{index} () const 
+\begin{DoxyCompactList}\small\item\em Return the index of the referenced \hyperlink{classJson_1_1Value}{Value}, or -\/1 if it is not an array\+Value. \end{DoxyCompactList}\item 
+\hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \hyperlink{classJson_1_1ValueIteratorBase_a99026427eb156ce007ef94df002e233f}{name} () const 
+\begin{DoxyCompactList}\small\item\em Return the member name of the referenced \hyperlink{classJson_1_1Value}{Value}, or \char`\"{}\char`\"{} if it is not an object\+Value. \end{DoxyCompactList}\item 
+char const $\ast$ \hyperlink{classJson_1_1ValueIteratorBase_ac3aa3870761342e47c6486d81f643c6c}{member\+Name} () const 
+\begin{DoxyCompactList}\small\item\em Return the member name of the referenced \hyperlink{classJson_1_1Value}{Value}. \end{DoxyCompactList}\item 
+char const $\ast$ \hyperlink{classJson_1_1ValueIteratorBase_a543d4e73e3d2d121bc287b24231386c3}{member\+Name} (char const $\ast$$\ast$end) const 
+\begin{DoxyCompactList}\small\item\em Return the member name of the referenced \hyperlink{classJson_1_1Value}{Value}, or N\+U\+LL if it is not an object\+Value. \end{DoxyCompactList}\item 
+\hyperlink{classJson_1_1ValueIteratorBase_af45b028d9ff9cbd2554a87878b42dd75}{Value\+Iterator\+Base} ()
+\item 
+\hyperlink{classJson_1_1ValueIteratorBase_a640e990e5f03a96fd650122a2906f59d}{Value\+Iterator\+Base} (const Value\+::\+Object\+Values\+::iterator \&current)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classJson_1_1Value}{Value} \& \hyperlink{classJson_1_1ValueIteratorBase_a40a20c65abc423a26e3aae68d9a0525c}{deref} () const 
+\item 
+void \hyperlink{classJson_1_1ValueIteratorBase_afe58f9534e1fd2033419fd9fe244551e}{increment} ()
+\item 
+void \hyperlink{classJson_1_1ValueIteratorBase_affc8cf5ff54a9f432cc693362c153fa6}{decrement} ()
+\item 
+\hyperlink{classJson_1_1ValueIteratorBase_a4e44bf8cbd17ec8d6e2c185904a15ebd}{difference\+\_\+type} \hyperlink{classJson_1_1ValueIteratorBase_ad6c553b249e89e3dc9933e100ccbe064}{compute\+Distance} (const \hyperlink{classJson_1_1ValueIteratorBase_a9d2a940d03ea06d20d972f41a89149ee}{Self\+Type} \&other) const 
+\item 
+bool \hyperlink{classJson_1_1ValueIteratorBase_a21820d6ee564e541bd118b21e4741962}{is\+Equal} (const \hyperlink{classJson_1_1ValueIteratorBase_a9d2a940d03ea06d20d972f41a89149ee}{Self\+Type} \&other) const 
+\item 
+void \hyperlink{classJson_1_1ValueIteratorBase_a496e6aba44808433ec5858c178be5719}{copy} (const \hyperlink{classJson_1_1ValueIteratorBase_a9d2a940d03ea06d20d972f41a89149ee}{Self\+Type} \&other)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Value\+::\+Object\+Values\+::iterator \hyperlink{classJson_1_1ValueIteratorBase_ab3138ce8af8301cca3b041ea55cb922a}{current\+\_\+}
+\item 
+bool \hyperlink{classJson_1_1ValueIteratorBase_a3e08b114a1aed9bde518c527f94a8c59}{is\+Null\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+base class for \hyperlink{classJson_1_1Value}{Value} iterators. 
+
+\subsection{Member Typedef Documentation}
+\index{Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}!difference\+\_\+type@{difference\+\_\+type}}
+\index{difference\+\_\+type@{difference\+\_\+type}!Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}}
+\subsubsection[{\texorpdfstring{difference\+\_\+type}{difference_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf Json\+::\+Value\+Iterator\+Base\+::difference\+\_\+type}}\hypertarget{classJson_1_1ValueIteratorBase_a4e44bf8cbd17ec8d6e2c185904a15ebd}{}\label{classJson_1_1ValueIteratorBase_a4e44bf8cbd17ec8d6e2c185904a15ebd}
+\index{Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}!iterator\+\_\+category@{iterator\+\_\+category}}
+\index{iterator\+\_\+category@{iterator\+\_\+category}!Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}}
+\subsubsection[{\texorpdfstring{iterator\+\_\+category}{iterator_category}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::bidirectional\+\_\+iterator\+\_\+tag {\bf Json\+::\+Value\+Iterator\+Base\+::iterator\+\_\+category}}\hypertarget{classJson_1_1ValueIteratorBase_a02fd11a4fbdc0007da1e8bcf5e6b83c3}{}\label{classJson_1_1ValueIteratorBase_a02fd11a4fbdc0007da1e8bcf5e6b83c3}
+\index{Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}!Self\+Type@{Self\+Type}}
+\index{Self\+Type@{Self\+Type}!Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}}
+\subsubsection[{\texorpdfstring{Self\+Type}{SelfType}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Value\+Iterator\+Base} {\bf Json\+::\+Value\+Iterator\+Base\+::\+Self\+Type}}\hypertarget{classJson_1_1ValueIteratorBase_a9d2a940d03ea06d20d972f41a89149ee}{}\label{classJson_1_1ValueIteratorBase_a9d2a940d03ea06d20d972f41a89149ee}
+\index{Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}!size\+\_\+t@{size\+\_\+t}}
+\index{size\+\_\+t@{size\+\_\+t}!Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}}
+\subsubsection[{\texorpdfstring{size\+\_\+t}{size_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf Json\+::\+Value\+Iterator\+Base\+::size\+\_\+t}}\hypertarget{classJson_1_1ValueIteratorBase_a9d3a3c7ce5cdefe23cb486239cf07bb5}{}\label{classJson_1_1ValueIteratorBase_a9d3a3c7ce5cdefe23cb486239cf07bb5}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}!Value\+Iterator\+Base@{Value\+Iterator\+Base}}
+\index{Value\+Iterator\+Base@{Value\+Iterator\+Base}!Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}}
+\subsubsection[{\texorpdfstring{Value\+Iterator\+Base()}{ValueIteratorBase()}}]{\setlength{\rightskip}{0pt plus 5cm}Json\+::\+Value\+Iterator\+Base\+::\+Value\+Iterator\+Base (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classJson_1_1ValueIteratorBase_af45b028d9ff9cbd2554a87878b42dd75}{}\label{classJson_1_1ValueIteratorBase_af45b028d9ff9cbd2554a87878b42dd75}
+\index{Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}!Value\+Iterator\+Base@{Value\+Iterator\+Base}}
+\index{Value\+Iterator\+Base@{Value\+Iterator\+Base}!Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}}
+\subsubsection[{\texorpdfstring{Value\+Iterator\+Base(const Value\+::\+Object\+Values\+::iterator \&current)}{ValueIteratorBase(const Value::ObjectValues::iterator &current)}}]{\setlength{\rightskip}{0pt plus 5cm}Json\+::\+Value\+Iterator\+Base\+::\+Value\+Iterator\+Base (
+\begin{DoxyParamCaption}
+\item[{const Value\+::\+Object\+Values\+::iterator \&}]{current}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classJson_1_1ValueIteratorBase_a640e990e5f03a96fd650122a2906f59d}{}\label{classJson_1_1ValueIteratorBase_a640e990e5f03a96fd650122a2906f59d}
+
+
+\subsection{Member Function Documentation}
+\index{Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}!compute\+Distance@{compute\+Distance}}
+\index{compute\+Distance@{compute\+Distance}!Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}}
+\subsubsection[{\texorpdfstring{compute\+Distance(const Self\+Type \&other) const }{computeDistance(const SelfType &other) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Value\+Iterator\+Base\+::difference\+\_\+type} Json\+::\+Value\+Iterator\+Base\+::compute\+Distance (
+\begin{DoxyParamCaption}
+\item[{const {\bf Self\+Type} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classJson_1_1ValueIteratorBase_ad6c553b249e89e3dc9933e100ccbe064}{}\label{classJson_1_1ValueIteratorBase_ad6c553b249e89e3dc9933e100ccbe064}
+\index{Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}!copy@{copy}}
+\index{copy@{copy}!Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}}
+\subsubsection[{\texorpdfstring{copy(const Self\+Type \&other)}{copy(const SelfType &other)}}]{\setlength{\rightskip}{0pt plus 5cm}void Json\+::\+Value\+Iterator\+Base\+::copy (
+\begin{DoxyParamCaption}
+\item[{const {\bf Self\+Type} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classJson_1_1ValueIteratorBase_a496e6aba44808433ec5858c178be5719}{}\label{classJson_1_1ValueIteratorBase_a496e6aba44808433ec5858c178be5719}
+\index{Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}!decrement@{decrement}}
+\index{decrement@{decrement}!Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}}
+\subsubsection[{\texorpdfstring{decrement()}{decrement()}}]{\setlength{\rightskip}{0pt plus 5cm}void Json\+::\+Value\+Iterator\+Base\+::decrement (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classJson_1_1ValueIteratorBase_affc8cf5ff54a9f432cc693362c153fa6}{}\label{classJson_1_1ValueIteratorBase_affc8cf5ff54a9f432cc693362c153fa6}
+\index{Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}!deref@{deref}}
+\index{deref@{deref}!Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}}
+\subsubsection[{\texorpdfstring{deref() const }{deref() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Value} \& Json\+::\+Value\+Iterator\+Base\+::deref (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classJson_1_1ValueIteratorBase_a40a20c65abc423a26e3aae68d9a0525c}{}\label{classJson_1_1ValueIteratorBase_a40a20c65abc423a26e3aae68d9a0525c}
+\index{Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}!increment@{increment}}
+\index{increment@{increment}!Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}}
+\subsubsection[{\texorpdfstring{increment()}{increment()}}]{\setlength{\rightskip}{0pt plus 5cm}void Json\+::\+Value\+Iterator\+Base\+::increment (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classJson_1_1ValueIteratorBase_afe58f9534e1fd2033419fd9fe244551e}{}\label{classJson_1_1ValueIteratorBase_afe58f9534e1fd2033419fd9fe244551e}
+\index{Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}!index@{index}}
+\index{index@{index}!Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}}
+\subsubsection[{\texorpdfstring{index() const }{index() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+Int} Json\+::\+Value\+Iterator\+Base\+::index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classJson_1_1ValueIteratorBase_aa90591f5f7f8d2f06cc4605816b53738}{}\label{classJson_1_1ValueIteratorBase_aa90591f5f7f8d2f06cc4605816b53738}
+
+
+Return the index of the referenced \hyperlink{classJson_1_1Value}{Value}, or -\/1 if it is not an array\+Value. 
+
+\index{Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}!is\+Equal@{is\+Equal}}
+\index{is\+Equal@{is\+Equal}!Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}}
+\subsubsection[{\texorpdfstring{is\+Equal(const Self\+Type \&other) const }{isEqual(const SelfType &other) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Value\+Iterator\+Base\+::is\+Equal (
+\begin{DoxyParamCaption}
+\item[{const {\bf Self\+Type} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classJson_1_1ValueIteratorBase_a21820d6ee564e541bd118b21e4741962}{}\label{classJson_1_1ValueIteratorBase_a21820d6ee564e541bd118b21e4741962}
+\index{Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}!key@{key}}
+\index{key@{key}!Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}}
+\subsubsection[{\texorpdfstring{key() const }{key() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Value} Json\+::\+Value\+Iterator\+Base\+::key (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classJson_1_1ValueIteratorBase_aa2ff5e79fc96acd4c3cd288e92614fc7}{}\label{classJson_1_1ValueIteratorBase_aa2ff5e79fc96acd4c3cd288e92614fc7}
+
+
+Return either the index or the member name of the referenced value as a \hyperlink{classJson_1_1Value}{Value}. 
+
+\index{Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}!member\+Name@{member\+Name}}
+\index{member\+Name@{member\+Name}!Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}}
+\subsubsection[{\texorpdfstring{member\+Name() const }{memberName() const }}]{\setlength{\rightskip}{0pt plus 5cm}char const $\ast$ Json\+::\+Value\+Iterator\+Base\+::member\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classJson_1_1ValueIteratorBase_ac3aa3870761342e47c6486d81f643c6c}{}\label{classJson_1_1ValueIteratorBase_ac3aa3870761342e47c6486d81f643c6c}
+
+
+Return the member name of the referenced \hyperlink{classJson_1_1Value}{Value}. 
+
+\char`\"{}\char`\"{} if it is not an object\+Value. \begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000004}{Deprecated}]This cannot be used for U\+T\+F-\/8 strings, since there can be embedded nulls. \end{DoxyRefDesc}
+\index{Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}!member\+Name@{member\+Name}}
+\index{member\+Name@{member\+Name}!Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}}
+\subsubsection[{\texorpdfstring{member\+Name(char const $\ast$$\ast$end) const }{memberName(char const **end) const }}]{\setlength{\rightskip}{0pt plus 5cm}char const $\ast$ Json\+::\+Value\+Iterator\+Base\+::member\+Name (
+\begin{DoxyParamCaption}
+\item[{char const $\ast$$\ast$}]{end}
+\end{DoxyParamCaption}
+) const}\hypertarget{classJson_1_1ValueIteratorBase_a543d4e73e3d2d121bc287b24231386c3}{}\label{classJson_1_1ValueIteratorBase_a543d4e73e3d2d121bc287b24231386c3}
+
+
+Return the member name of the referenced \hyperlink{classJson_1_1Value}{Value}, or N\+U\+LL if it is not an object\+Value. 
+
+\begin{DoxyNote}{Note}
+Better version than \hyperlink{classJson_1_1ValueIteratorBase_ac3aa3870761342e47c6486d81f643c6c}{member\+Name()}. Allows embedded nulls. 
+\end{DoxyNote}
+\index{Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}!name@{name}}
+\index{name@{name}!Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}}
+\subsubsection[{\texorpdfstring{name() const }{name() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} Json\+::\+Value\+Iterator\+Base\+::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classJson_1_1ValueIteratorBase_a99026427eb156ce007ef94df002e233f}{}\label{classJson_1_1ValueIteratorBase_a99026427eb156ce007ef94df002e233f}
+
+
+Return the member name of the referenced \hyperlink{classJson_1_1Value}{Value}, or \char`\"{}\char`\"{} if it is not an object\+Value. 
+
+\begin{DoxyNote}{Note}
+Avoid {\ttfamily c\+\_\+str()} on result, as embedded zeroes are possible. 
+\end{DoxyNote}
+\index{Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}}
+\subsubsection[{\texorpdfstring{operator"!=(const Self\+Type \&other) const }{operator!=(const SelfType &other) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Value\+Iterator\+Base\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Self\+Type} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classJson_1_1ValueIteratorBase_a18c2dd42e0bb989ace141bfe9de52792}{}\label{classJson_1_1ValueIteratorBase_a18c2dd42e0bb989ace141bfe9de52792}
+\index{Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}}
+\subsubsection[{\texorpdfstring{operator-\/(const Self\+Type \&other) const }{operator-(const SelfType &other) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf difference\+\_\+type} Json\+::\+Value\+Iterator\+Base\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Self\+Type} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classJson_1_1ValueIteratorBase_ab786787fcad68ca5e8745aaf520fa17f}{}\label{classJson_1_1ValueIteratorBase_ab786787fcad68ca5e8745aaf520fa17f}
+\index{Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}!operator==@{operator==}}
+\index{operator==@{operator==}!Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}}
+\subsubsection[{\texorpdfstring{operator==(const Self\+Type \&other) const }{operator==(const SelfType &other) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Value\+Iterator\+Base\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Self\+Type} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classJson_1_1ValueIteratorBase_afc656672ac28502f640ade32c38c1b56}{}\label{classJson_1_1ValueIteratorBase_afc656672ac28502f640ade32c38c1b56}
+
+
+\subsection{Member Data Documentation}
+\index{Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}!current\+\_\+@{current\+\_\+}}
+\index{current\+\_\+@{current\+\_\+}!Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}}
+\subsubsection[{\texorpdfstring{current\+\_\+}{current_}}]{\setlength{\rightskip}{0pt plus 5cm}Value\+::\+Object\+Values\+::iterator Json\+::\+Value\+Iterator\+Base\+::current\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classJson_1_1ValueIteratorBase_ab3138ce8af8301cca3b041ea55cb922a}{}\label{classJson_1_1ValueIteratorBase_ab3138ce8af8301cca3b041ea55cb922a}
+\index{Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}!is\+Null\+\_\+@{is\+Null\+\_\+}}
+\index{is\+Null\+\_\+@{is\+Null\+\_\+}!Json\+::\+Value\+Iterator\+Base@{Json\+::\+Value\+Iterator\+Base}}
+\subsubsection[{\texorpdfstring{is\+Null\+\_\+}{isNull_}}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Value\+Iterator\+Base\+::is\+Null\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classJson_1_1ValueIteratorBase_a3e08b114a1aed9bde518c527f94a8c59}{}\label{classJson_1_1ValueIteratorBase_a3e08b114a1aed9bde518c527f94a8c59}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/pranav/\+Repositories/zcm/include/\hyperlink{json_8hpp}{json.\+hpp}\item 
+/home/pranav/\+Repositories/zcm/src/\hyperlink{json_8cpp}{json.\+cpp}\end{DoxyCompactItemize}

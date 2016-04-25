@@ -1,0 +1,125 @@
+\hypertarget{classJson_1_1Features}{}\section{Json\+:\+:Features Class Reference}
+\label{classJson_1_1Features}\index{Json\+::\+Features@{Json\+::\+Features}}
+
+
+Configuration passed to reader and writer.  
+
+
+
+
+{\ttfamily \#include $<$json.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classJson_1_1Features_ad15a091cb61bb31323299a95970d2644}{Features} ()
+\begin{DoxyCompactList}\small\item\em Initialize the configuration like Json\+Config\+::all\+Features;. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classJson_1_1Features}{Features} \hyperlink{classJson_1_1Features_a63894da6e2c100b38741fa933f3d33ae}{all} ()
+\begin{DoxyCompactList}\small\item\em A configuration that allows all features and assumes all strings are U\+T\+F-\/8. \end{DoxyCompactList}\item 
+static \hyperlink{classJson_1_1Features}{Features} \hyperlink{classJson_1_1Features_ae23176c14b2e79e81fb61fb1a8ab58ee}{strict\+Mode} ()
+\begin{DoxyCompactList}\small\item\em A configuration that is strictly compatible with the J\+S\+ON specification. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classJson_1_1Features_a33afd389719624b6bdb23950b3c346c9}{allow\+Comments\+\_\+}
+\begin{DoxyCompactList}\small\item\em {\ttfamily true} if comments are allowed. Default\+: {\ttfamily true}. \end{DoxyCompactList}\item 
+bool \hyperlink{classJson_1_1Features_a1162c37a1458adc32582b585b552f9c3}{strict\+Root\+\_\+}
+\begin{DoxyCompactList}\small\item\em {\ttfamily true} if root must be either an array or an object value. \end{DoxyCompactList}\item 
+bool \hyperlink{classJson_1_1Features_a5076aa72c05c7596ac339ede36c97a6a}{allow\+Dropped\+Null\+Placeholders\+\_\+}
+\begin{DoxyCompactList}\small\item\em {\ttfamily true} if dropped null placeholders are allowed. Default\+: {\ttfamily false}. \end{DoxyCompactList}\item 
+bool \hyperlink{classJson_1_1Features_aff3cb16b79d15d3d761b11a0dd6d4d6b}{allow\+Numeric\+Keys\+\_\+}
+\begin{DoxyCompactList}\small\item\em {\ttfamily true} if numeric object key are allowed. Default\+: {\ttfamily false}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Configuration passed to reader and writer. 
+
+This configuration object can be used to force the \hyperlink{classJson_1_1Reader}{Reader} or \hyperlink{classJson_1_1Writer}{Writer} to behave in a standard conforming way. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Json\+::\+Features@{Json\+::\+Features}!Features@{Features}}
+\index{Features@{Features}!Json\+::\+Features@{Json\+::\+Features}}
+\subsubsection[{\texorpdfstring{Features()}{Features()}}]{\setlength{\rightskip}{0pt plus 5cm}Json\+::\+Features\+::\+Features (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classJson_1_1Features_ad15a091cb61bb31323299a95970d2644}{}\label{classJson_1_1Features_ad15a091cb61bb31323299a95970d2644}
+
+
+Initialize the configuration like Json\+Config\+::all\+Features;. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Json\+::\+Features@{Json\+::\+Features}!all@{all}}
+\index{all@{all}!Json\+::\+Features@{Json\+::\+Features}}
+\subsubsection[{\texorpdfstring{all()}{all()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Features} Json\+::\+Features\+::all (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classJson_1_1Features_a63894da6e2c100b38741fa933f3d33ae}{}\label{classJson_1_1Features_a63894da6e2c100b38741fa933f3d33ae}
+
+
+A configuration that allows all features and assumes all strings are U\+T\+F-\/8. 
+
+
+\begin{DoxyItemize}
+\item C \& C++ comments are allowed
+\item Root object can be any J\+S\+ON value
+\item Assumes \hyperlink{classJson_1_1Value}{Value} strings are encoded in U\+T\+F-\/8 
+\end{DoxyItemize}\index{Json\+::\+Features@{Json\+::\+Features}!strict\+Mode@{strict\+Mode}}
+\index{strict\+Mode@{strict\+Mode}!Json\+::\+Features@{Json\+::\+Features}}
+\subsubsection[{\texorpdfstring{strict\+Mode()}{strictMode()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Features} Json\+::\+Features\+::strict\+Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classJson_1_1Features_ae23176c14b2e79e81fb61fb1a8ab58ee}{}\label{classJson_1_1Features_ae23176c14b2e79e81fb61fb1a8ab58ee}
+
+
+A configuration that is strictly compatible with the J\+S\+ON specification. 
+
+
+\begin{DoxyItemize}
+\item Comments are forbidden.
+\item Root object must be either an array or an object value.
+\item Assumes \hyperlink{classJson_1_1Value}{Value} strings are encoded in U\+T\+F-\/8 
+\end{DoxyItemize}
+
+\subsection{Member Data Documentation}
+\index{Json\+::\+Features@{Json\+::\+Features}!allow\+Comments\+\_\+@{allow\+Comments\+\_\+}}
+\index{allow\+Comments\+\_\+@{allow\+Comments\+\_\+}!Json\+::\+Features@{Json\+::\+Features}}
+\subsubsection[{\texorpdfstring{allow\+Comments\+\_\+}{allowComments_}}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Features\+::allow\+Comments\+\_\+}\hypertarget{classJson_1_1Features_a33afd389719624b6bdb23950b3c346c9}{}\label{classJson_1_1Features_a33afd389719624b6bdb23950b3c346c9}
+
+
+{\ttfamily true} if comments are allowed. Default\+: {\ttfamily true}. 
+
+\index{Json\+::\+Features@{Json\+::\+Features}!allow\+Dropped\+Null\+Placeholders\+\_\+@{allow\+Dropped\+Null\+Placeholders\+\_\+}}
+\index{allow\+Dropped\+Null\+Placeholders\+\_\+@{allow\+Dropped\+Null\+Placeholders\+\_\+}!Json\+::\+Features@{Json\+::\+Features}}
+\subsubsection[{\texorpdfstring{allow\+Dropped\+Null\+Placeholders\+\_\+}{allowDroppedNullPlaceholders_}}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Features\+::allow\+Dropped\+Null\+Placeholders\+\_\+}\hypertarget{classJson_1_1Features_a5076aa72c05c7596ac339ede36c97a6a}{}\label{classJson_1_1Features_a5076aa72c05c7596ac339ede36c97a6a}
+
+
+{\ttfamily true} if dropped null placeholders are allowed. Default\+: {\ttfamily false}. 
+
+\index{Json\+::\+Features@{Json\+::\+Features}!allow\+Numeric\+Keys\+\_\+@{allow\+Numeric\+Keys\+\_\+}}
+\index{allow\+Numeric\+Keys\+\_\+@{allow\+Numeric\+Keys\+\_\+}!Json\+::\+Features@{Json\+::\+Features}}
+\subsubsection[{\texorpdfstring{allow\+Numeric\+Keys\+\_\+}{allowNumericKeys_}}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Features\+::allow\+Numeric\+Keys\+\_\+}\hypertarget{classJson_1_1Features_aff3cb16b79d15d3d761b11a0dd6d4d6b}{}\label{classJson_1_1Features_aff3cb16b79d15d3d761b11a0dd6d4d6b}
+
+
+{\ttfamily true} if numeric object key are allowed. Default\+: {\ttfamily false}. 
+
+\index{Json\+::\+Features@{Json\+::\+Features}!strict\+Root\+\_\+@{strict\+Root\+\_\+}}
+\index{strict\+Root\+\_\+@{strict\+Root\+\_\+}!Json\+::\+Features@{Json\+::\+Features}}
+\subsubsection[{\texorpdfstring{strict\+Root\+\_\+}{strictRoot_}}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Features\+::strict\+Root\+\_\+}\hypertarget{classJson_1_1Features_a1162c37a1458adc32582b585b552f9c3}{}\label{classJson_1_1Features_a1162c37a1458adc32582b585b552f9c3}
+
+
+{\ttfamily true} if root must be either an array or an object value. 
+
+Default\+: {\ttfamily false}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/pranav/\+Repositories/zcm/include/\hyperlink{json_8hpp}{json.\+hpp}\item 
+/home/pranav/\+Repositories/zcm/src/\hyperlink{json_8cpp}{json.\+cpp}\end{DoxyCompactItemize}

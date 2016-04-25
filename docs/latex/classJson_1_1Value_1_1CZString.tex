@@ -1,0 +1,186 @@
+\hypertarget{classJson_1_1Value_1_1CZString}{}\section{Json\+:\+:Value\+:\+:C\+Z\+String Class Reference}
+\label{classJson_1_1Value_1_1CZString}\index{Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structJson_1_1Value_1_1CZString_1_1StringStorage}{String\+Storage}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classJson_1_1Value_1_1CZString_a2805c46fb4a72bbaed55de6d75941b6d}{Duplication\+Policy} \{ \hyperlink{classJson_1_1Value_1_1CZString_a2805c46fb4a72bbaed55de6d75941b6da08d540450fa6c4af57eaacf063eedd20}{no\+Duplication} = 0, 
+\hyperlink{classJson_1_1Value_1_1CZString_a2805c46fb4a72bbaed55de6d75941b6dabb2134294dd8fc37dd82d18bb794fe20}{duplicate}, 
+\hyperlink{classJson_1_1Value_1_1CZString_a2805c46fb4a72bbaed55de6d75941b6da5c18c35205a3be63ad14ce659e70fe7d}{duplicate\+On\+Copy}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classJson_1_1Value_1_1CZString_a4b8aa6eaabdec78cffec96e088da996f}{C\+Z\+String} (\hyperlink{classJson_1_1Value_a184a91566cccca7b819240f0d5561c7d}{Array\+Index} \hyperlink{classJson_1_1Value_1_1CZString_a4e9f305dbc4a4700abd955fde673a01c}{index})
+\item 
+\hyperlink{classJson_1_1Value_1_1CZString_a86a86eaf0cf26d4c861d0daa359d608a}{C\+Z\+String} (char const $\ast$str, unsigned \hyperlink{classJson_1_1Value_1_1CZString_a4e697840c41fb56756be7a75efa114cb}{length}, \hyperlink{classJson_1_1Value_1_1CZString_a2805c46fb4a72bbaed55de6d75941b6d}{Duplication\+Policy} allocate)
+\item 
+\hyperlink{classJson_1_1Value_1_1CZString_a9685070d440335b55ef5c85747d25157}{C\+Z\+String} (\hyperlink{classJson_1_1Value_1_1CZString}{C\+Z\+String} const \&other)
+\item 
+\hyperlink{classJson_1_1Value_1_1CZString_add6989dc7073646b95e5ebacb3f07d51}{$\sim$\+C\+Z\+String} ()
+\item 
+\hyperlink{classJson_1_1Value_1_1CZString}{C\+Z\+String} \& \hyperlink{classJson_1_1Value_1_1CZString_a6513ff431b0593d5744868dfee739f7b}{operator=} (\hyperlink{classJson_1_1Value_1_1CZString}{C\+Z\+String} other)
+\item 
+bool \hyperlink{classJson_1_1Value_1_1CZString_a5e88edf9f7443c77d6b70e409a0b5983}{operator$<$} (\hyperlink{classJson_1_1Value_1_1CZString}{C\+Z\+String} const \&other) const 
+\item 
+bool \hyperlink{classJson_1_1Value_1_1CZString_af7a3b51ccf1bb205210c6b9a570093bc}{operator==} (\hyperlink{classJson_1_1Value_1_1CZString}{C\+Z\+String} const \&other) const 
+\item 
+\hyperlink{classJson_1_1Value_a184a91566cccca7b819240f0d5561c7d}{Array\+Index} \hyperlink{classJson_1_1Value_1_1CZString_a4e9f305dbc4a4700abd955fde673a01c}{index} () const 
+\item 
+char const $\ast$ \hyperlink{classJson_1_1Value_1_1CZString_a02482793b88b1062c4a0dd0a53f3d2a7}{data} () const 
+\item 
+unsigned \hyperlink{classJson_1_1Value_1_1CZString_a4e697840c41fb56756be7a75efa114cb}{length} () const 
+\item 
+bool \hyperlink{classJson_1_1Value_1_1CZString_af3cc02b77c2cd79d4646fcea3575c1fd}{is\+Static\+String} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classJson_1_1Value_1_1CZString_ad59f3542d2eea749a6a63409d1a02207}{swap} (\hyperlink{classJson_1_1Value_1_1CZString}{C\+Z\+String} \&other)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char const $\ast$ \hyperlink{classJson_1_1Value_1_1CZString_a5b4d28349294034d7f779c3c95d0306c}{cstr\+\_\+}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\hyperlink{classJson_1_1Value_a184a91566cccca7b819240f0d5561c7d}{ArrayIndex} \hyperlink{classJson_1_1Value_1_1CZString_aecf29982235c9c165a0971023ebbb270}{index\_}\\
+\>\hyperlink{structJson_1_1Value_1_1CZString_1_1StringStorage}{StringStorage} \hyperlink{classJson_1_1Value_1_1CZString_a17c92f0f089a4314e3b1d5695dc1a851}{storage\_}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\index{Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}!Duplication\+Policy@{Duplication\+Policy}}
+\index{Duplication\+Policy@{Duplication\+Policy}!Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}}
+\subsubsection[{\texorpdfstring{Duplication\+Policy}{DuplicationPolicy}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Json\+::\+Value\+::\+C\+Z\+String\+::\+Duplication\+Policy}}\hypertarget{classJson_1_1Value_1_1CZString_a2805c46fb4a72bbaed55de6d75941b6d}{}\label{classJson_1_1Value_1_1CZString_a2805c46fb4a72bbaed55de6d75941b6d}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{no\+Duplication@{no\+Duplication}!Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}}\index{Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}!no\+Duplication@{no\+Duplication}}\item[{\em 
+no\+Duplication\hypertarget{classJson_1_1Value_1_1CZString_a2805c46fb4a72bbaed55de6d75941b6da08d540450fa6c4af57eaacf063eedd20}{}\label{classJson_1_1Value_1_1CZString_a2805c46fb4a72bbaed55de6d75941b6da08d540450fa6c4af57eaacf063eedd20}
+}]\index{duplicate@{duplicate}!Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}}\index{Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}!duplicate@{duplicate}}\item[{\em 
+duplicate\hypertarget{classJson_1_1Value_1_1CZString_a2805c46fb4a72bbaed55de6d75941b6dabb2134294dd8fc37dd82d18bb794fe20}{}\label{classJson_1_1Value_1_1CZString_a2805c46fb4a72bbaed55de6d75941b6dabb2134294dd8fc37dd82d18bb794fe20}
+}]\index{duplicate\+On\+Copy@{duplicate\+On\+Copy}!Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}}\index{Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}!duplicate\+On\+Copy@{duplicate\+On\+Copy}}\item[{\em 
+duplicate\+On\+Copy\hypertarget{classJson_1_1Value_1_1CZString_a2805c46fb4a72bbaed55de6d75941b6da5c18c35205a3be63ad14ce659e70fe7d}{}\label{classJson_1_1Value_1_1CZString_a2805c46fb4a72bbaed55de6d75941b6da5c18c35205a3be63ad14ce659e70fe7d}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}!C\+Z\+String@{C\+Z\+String}}
+\index{C\+Z\+String@{C\+Z\+String}!Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}}
+\subsubsection[{\texorpdfstring{C\+Z\+String(\+Array\+Index index)}{CZString(ArrayIndex index)}}]{\setlength{\rightskip}{0pt plus 5cm}Json\+::\+Value\+::\+C\+Z\+String\+::\+C\+Z\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf Array\+Index}}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{classJson_1_1Value_1_1CZString_a4b8aa6eaabdec78cffec96e088da996f}{}\label{classJson_1_1Value_1_1CZString_a4b8aa6eaabdec78cffec96e088da996f}
+\index{Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}!C\+Z\+String@{C\+Z\+String}}
+\index{C\+Z\+String@{C\+Z\+String}!Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}}
+\subsubsection[{\texorpdfstring{C\+Z\+String(char const $\ast$str, unsigned length, Duplication\+Policy allocate)}{CZString(char const *str, unsigned length, DuplicationPolicy allocate)}}]{\setlength{\rightskip}{0pt plus 5cm}Json\+::\+Value\+::\+C\+Z\+String\+::\+C\+Z\+String (
+\begin{DoxyParamCaption}
+\item[{char const $\ast$}]{str, }
+\item[{unsigned}]{length, }
+\item[{{\bf Duplication\+Policy}}]{allocate}
+\end{DoxyParamCaption}
+)}\hypertarget{classJson_1_1Value_1_1CZString_a86a86eaf0cf26d4c861d0daa359d608a}{}\label{classJson_1_1Value_1_1CZString_a86a86eaf0cf26d4c861d0daa359d608a}
+\index{Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}!C\+Z\+String@{C\+Z\+String}}
+\index{C\+Z\+String@{C\+Z\+String}!Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}}
+\subsubsection[{\texorpdfstring{C\+Z\+String(\+C\+Z\+String const \&other)}{CZString(CZString const &other)}}]{\setlength{\rightskip}{0pt plus 5cm}Json\+::\+Value\+::\+C\+Z\+String\+::\+C\+Z\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+Z\+String} const \&}]{other}
+\end{DoxyParamCaption}
+)}\hypertarget{classJson_1_1Value_1_1CZString_a9685070d440335b55ef5c85747d25157}{}\label{classJson_1_1Value_1_1CZString_a9685070d440335b55ef5c85747d25157}
+\index{Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}!````~C\+Z\+String@{$\sim$\+C\+Z\+String}}
+\index{````~C\+Z\+String@{$\sim$\+C\+Z\+String}!Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}}
+\subsubsection[{\texorpdfstring{$\sim$\+C\+Z\+String()}{~CZString()}}]{\setlength{\rightskip}{0pt plus 5cm}Json\+::\+Value\+::\+C\+Z\+String\+::$\sim$\+C\+Z\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classJson_1_1Value_1_1CZString_add6989dc7073646b95e5ebacb3f07d51}{}\label{classJson_1_1Value_1_1CZString_add6989dc7073646b95e5ebacb3f07d51}
+
+
+\subsection{Member Function Documentation}
+\index{Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}!data@{data}}
+\index{data@{data}!Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}}
+\subsubsection[{\texorpdfstring{data() const }{data() const }}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Json\+::\+Value\+::\+C\+Z\+String\+::data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classJson_1_1Value_1_1CZString_a02482793b88b1062c4a0dd0a53f3d2a7}{}\label{classJson_1_1Value_1_1CZString_a02482793b88b1062c4a0dd0a53f3d2a7}
+\index{Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}!index@{index}}
+\index{index@{index}!Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}}
+\subsubsection[{\texorpdfstring{index() const }{index() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Array\+Index} Json\+::\+Value\+::\+C\+Z\+String\+::index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classJson_1_1Value_1_1CZString_a4e9f305dbc4a4700abd955fde673a01c}{}\label{classJson_1_1Value_1_1CZString_a4e9f305dbc4a4700abd955fde673a01c}
+\index{Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}!is\+Static\+String@{is\+Static\+String}}
+\index{is\+Static\+String@{is\+Static\+String}!Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}}
+\subsubsection[{\texorpdfstring{is\+Static\+String() const }{isStaticString() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Value\+::\+C\+Z\+String\+::is\+Static\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classJson_1_1Value_1_1CZString_af3cc02b77c2cd79d4646fcea3575c1fd}{}\label{classJson_1_1Value_1_1CZString_af3cc02b77c2cd79d4646fcea3575c1fd}
+\index{Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}!length@{length}}
+\index{length@{length}!Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}}
+\subsubsection[{\texorpdfstring{length() const }{length() const }}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Json\+::\+Value\+::\+C\+Z\+String\+::length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classJson_1_1Value_1_1CZString_a4e697840c41fb56756be7a75efa114cb}{}\label{classJson_1_1Value_1_1CZString_a4e697840c41fb56756be7a75efa114cb}
+\index{Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}}
+\subsubsection[{\texorpdfstring{operator$<$(\+C\+Z\+String const \&other) const }{operator<(CZString const &other) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Value\+::\+C\+Z\+String\+::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+Z\+String} const \&}]{other}
+\end{DoxyParamCaption}
+) const}\hypertarget{classJson_1_1Value_1_1CZString_a5e88edf9f7443c77d6b70e409a0b5983}{}\label{classJson_1_1Value_1_1CZString_a5e88edf9f7443c77d6b70e409a0b5983}
+\index{Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}!operator=@{operator=}}
+\index{operator=@{operator=}!Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}}
+\subsubsection[{\texorpdfstring{operator=(\+C\+Z\+String other)}{operator=(CZString other)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Value\+::\+C\+Z\+String} \& Json\+::\+Value\+::\+C\+Z\+String\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+Z\+String}}]{other}
+\end{DoxyParamCaption}
+)}\hypertarget{classJson_1_1Value_1_1CZString_a6513ff431b0593d5744868dfee739f7b}{}\label{classJson_1_1Value_1_1CZString_a6513ff431b0593d5744868dfee739f7b}
+\index{Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}!operator==@{operator==}}
+\index{operator==@{operator==}!Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}}
+\subsubsection[{\texorpdfstring{operator==(\+C\+Z\+String const \&other) const }{operator==(CZString const &other) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Value\+::\+C\+Z\+String\+::operator== (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+Z\+String} const \&}]{other}
+\end{DoxyParamCaption}
+) const}\hypertarget{classJson_1_1Value_1_1CZString_af7a3b51ccf1bb205210c6b9a570093bc}{}\label{classJson_1_1Value_1_1CZString_af7a3b51ccf1bb205210c6b9a570093bc}
+\index{Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}!swap@{swap}}
+\index{swap@{swap}!Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}}
+\subsubsection[{\texorpdfstring{swap(\+C\+Z\+String \&other)}{swap(CZString &other)}}]{\setlength{\rightskip}{0pt plus 5cm}void Json\+::\+Value\+::\+C\+Z\+String\+::swap (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+Z\+String} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classJson_1_1Value_1_1CZString_ad59f3542d2eea749a6a63409d1a02207}{}\label{classJson_1_1Value_1_1CZString_ad59f3542d2eea749a6a63409d1a02207}
+
+
+\subsection{Member Data Documentation}
+\subsubsection[{\texorpdfstring{"@2}{@2}}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \} \hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classJson_1_1Value_1_1CZString_a3309a845ee55902fd9845189182811d9}{}\label{classJson_1_1Value_1_1CZString_a3309a845ee55902fd9845189182811d9}
+\index{Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}!cstr\+\_\+@{cstr\+\_\+}}
+\index{cstr\+\_\+@{cstr\+\_\+}!Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}}
+\subsubsection[{\texorpdfstring{cstr\+\_\+}{cstr_}}]{\setlength{\rightskip}{0pt plus 5cm}char const$\ast$ Json\+::\+Value\+::\+C\+Z\+String\+::cstr\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classJson_1_1Value_1_1CZString_a5b4d28349294034d7f779c3c95d0306c}{}\label{classJson_1_1Value_1_1CZString_a5b4d28349294034d7f779c3c95d0306c}
+\index{Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}!index\+\_\+@{index\+\_\+}}
+\index{index\+\_\+@{index\+\_\+}!Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}}
+\subsubsection[{\texorpdfstring{index\+\_\+}{index_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Array\+Index} Json\+::\+Value\+::\+C\+Z\+String\+::index\+\_\+}\hypertarget{classJson_1_1Value_1_1CZString_aecf29982235c9c165a0971023ebbb270}{}\label{classJson_1_1Value_1_1CZString_aecf29982235c9c165a0971023ebbb270}
+\index{Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}!storage\+\_\+@{storage\+\_\+}}
+\index{storage\+\_\+@{storage\+\_\+}!Json\+::\+Value\+::\+C\+Z\+String@{Json\+::\+Value\+::\+C\+Z\+String}}
+\subsubsection[{\texorpdfstring{storage\+\_\+}{storage_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf String\+Storage} Json\+::\+Value\+::\+C\+Z\+String\+::storage\+\_\+}\hypertarget{classJson_1_1Value_1_1CZString_a17c92f0f089a4314e3b1d5695dc1a851}{}\label{classJson_1_1Value_1_1CZString_a17c92f0f089a4314e3b1d5695dc1a851}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/pranav/\+Repositories/zcm/include/\hyperlink{json_8hpp}{json.\+hpp}\item 
+/home/pranav/\+Repositories/zcm/src/\hyperlink{json_8cpp}{json.\+cpp}\end{DoxyCompactItemize}

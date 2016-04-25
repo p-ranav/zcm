@@ -1,0 +1,89 @@
+\hypertarget{classzcm_1_1Actor}{}\section{zcm\+:\+:Actor Class Reference}
+\label{classzcm_1_1Actor}\index{zcm\+::\+Actor@{zcm\+::\+Actor}}
+
+
+\hyperlink{classzcm_1_1Actor}{Actor} class.  
+
+
+
+
+{\ttfamily \#include $<$actor.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classzcm_1_1Actor_a28d09bc2ef3635296c988a2b32d10c0b}{configure} (std\+::string configuration\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Configure the component\+\_\+instances vector. \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Actor_a5d968074bf915f3e021cc287bff27879}{run} ()
+\begin{DoxyCompactList}\small\item\em Spawn all component instances. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classzcm_1_1Actor_ae81346a318c26d68a5b78848ead2518f}{get\+\_\+name} ()
+\begin{DoxyCompactList}\small\item\em Get actor name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classzcm_1_1Actor_a2b0816bbe28c8f96fa882b625be004ee}{name}
+\item 
+std\+::vector$<$ \hyperlink{classzcm_1_1Component}{Component} $\ast$ $>$ \hyperlink{classzcm_1_1Actor_abb7a2cdfc286c8821ac6f9ad3da40a49}{component\+\_\+instances}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classzcm_1_1Actor}{Actor} class. 
+
+\subsection{Member Function Documentation}
+\index{zcm\+::\+Actor@{zcm\+::\+Actor}!configure@{configure}}
+\index{configure@{configure}!zcm\+::\+Actor@{zcm\+::\+Actor}}
+\subsubsection[{\texorpdfstring{configure(std\+::string configuration\+\_\+file)}{configure(std::string configuration_file)}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Actor\+::configure (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{configuration\+\_\+file}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Actor_a28d09bc2ef3635296c988a2b32d10c0b}{}\label{classzcm_1_1Actor_a28d09bc2ef3635296c988a2b32d10c0b}
+
+
+Configure the component\+\_\+instances vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em configuration\+\_\+file} & J\+S\+ON configuration file to parse \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Actor@{zcm\+::\+Actor}!get\+\_\+name@{get\+\_\+name}}
+\index{get\+\_\+name@{get\+\_\+name}!zcm\+::\+Actor@{zcm\+::\+Actor}}
+\subsubsection[{\texorpdfstring{get\+\_\+name()}{get_name()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string zcm\+::\+Actor\+::get\+\_\+name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Actor_ae81346a318c26d68a5b78848ead2518f}{}\label{classzcm_1_1Actor_ae81346a318c26d68a5b78848ead2518f}
+
+
+Get actor name. 
+
+\begin{DoxyReturn}{Returns}
+Name of the actor 
+\end{DoxyReturn}
+\index{zcm\+::\+Actor@{zcm\+::\+Actor}!run@{run}}
+\index{run@{run}!zcm\+::\+Actor@{zcm\+::\+Actor}}
+\subsubsection[{\texorpdfstring{run()}{run()}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Actor\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Actor_a5d968074bf915f3e021cc287bff27879}{}\label{classzcm_1_1Actor_a5d968074bf915f3e021cc287bff27879}
+
+
+Spawn all component instances. 
+
+
+
+\subsection{Member Data Documentation}
+\index{zcm\+::\+Actor@{zcm\+::\+Actor}!component\+\_\+instances@{component\+\_\+instances}}
+\index{component\+\_\+instances@{component\+\_\+instances}!zcm\+::\+Actor@{zcm\+::\+Actor}}
+\subsubsection[{\texorpdfstring{component\+\_\+instances}{component_instances}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Component}$\ast$$>$ zcm\+::\+Actor\+::component\+\_\+instances\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Actor_abb7a2cdfc286c8821ac6f9ad3da40a49}{}\label{classzcm_1_1Actor_abb7a2cdfc286c8821ac6f9ad3da40a49}
+\index{zcm\+::\+Actor@{zcm\+::\+Actor}!name@{name}}
+\index{name@{name}!zcm\+::\+Actor@{zcm\+::\+Actor}}
+\subsubsection[{\texorpdfstring{name}{name}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string zcm\+::\+Actor\+::name\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Actor_a2b0816bbe28c8f96fa882b625be004ee}{}\label{classzcm_1_1Actor_a2b0816bbe28c8f96fa882b625be004ee}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/pranav/\+Repositories/zcm/include/\hyperlink{actor_8hpp}{actor.\+hpp}\item 
+/home/pranav/\+Repositories/zcm/src/\hyperlink{actor_8cpp}{actor.\+cpp}\end{DoxyCompactItemize}

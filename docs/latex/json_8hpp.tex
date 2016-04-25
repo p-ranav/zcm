@@ -1,0 +1,360 @@
+\hypertarget{json_8hpp}{}\section{/home/pranav/\+Repositories/zcm/include/json.hpp File Reference}
+\label{json_8hpp}\index{/home/pranav/\+Repositories/zcm/include/json.\+hpp@{/home/pranav/\+Repositories/zcm/include/json.\+hpp}}
+{\ttfamily \#include $<$stddef.\+h$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$exception$>$}\\*
+{\ttfamily \#include $<$map$>$}\\*
+{\ttfamily \#include $<$deque$>$}\\*
+{\ttfamily \#include $<$iosfwd$>$}\\*
+{\ttfamily \#include $<$stack$>$}\\*
+{\ttfamily \#include $<$istream$>$}\\*
+{\ttfamily \#include $<$ostream$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classJson_1_1Features}{Json\+::\+Features}
+\begin{DoxyCompactList}\small\item\em Configuration passed to reader and writer. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1Exception}{Json\+::\+Exception}
+\begin{DoxyCompactList}\small\item\em Base class for all exceptions we throw. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1RuntimeError}{Json\+::\+Runtime\+Error}
+\begin{DoxyCompactList}\small\item\em Exceptions which the user cannot easily avoid. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1LogicError}{Json\+::\+Logic\+Error}
+\begin{DoxyCompactList}\small\item\em Exceptions thrown by J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+R\+T/\+J\+S\+O\+N\+\_\+\+F\+A\+IL macros. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1StaticString}{Json\+::\+Static\+String}
+\begin{DoxyCompactList}\small\item\em Lightweight wrapper to tag static string. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1Value}{Json\+::\+Value}
+\begin{DoxyCompactList}\small\item\em Represents a \href{http://www.json.org}{\tt J\+S\+ON} value. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1Value_1_1CZString}{Json\+::\+Value\+::\+C\+Z\+String}
+\item 
+struct \hyperlink{structJson_1_1Value_1_1CZString_1_1StringStorage}{Json\+::\+Value\+::\+C\+Z\+String\+::\+String\+Storage}
+\item 
+struct \hyperlink{structJson_1_1Value_1_1CommentInfo}{Json\+::\+Value\+::\+Comment\+Info}
+\item 
+union \hyperlink{unionJson_1_1Value_1_1ValueHolder}{Json\+::\+Value\+::\+Value\+Holder}
+\item 
+class \hyperlink{classJson_1_1PathArgument}{Json\+::\+Path\+Argument}
+\begin{DoxyCompactList}\small\item\em Experimental and untested\+: represents an element of the \char`\"{}path\char`\"{} to access a node. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1Path}{Json\+::\+Path}
+\begin{DoxyCompactList}\small\item\em Experimental and untested\+: represents a \char`\"{}path\char`\"{} to access a node. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1ValueIteratorBase}{Json\+::\+Value\+Iterator\+Base}
+\begin{DoxyCompactList}\small\item\em base class for \hyperlink{classJson_1_1Value}{Value} iterators. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1ValueConstIterator}{Json\+::\+Value\+Const\+Iterator}
+\begin{DoxyCompactList}\small\item\em const iterator for object and array value. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1ValueIterator}{Json\+::\+Value\+Iterator}
+\begin{DoxyCompactList}\small\item\em Iterator for object and array value. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1Reader}{Json\+::\+Reader}
+\begin{DoxyCompactList}\small\item\em Unserialize a \href{http://www.json.org}{\tt J\+S\+ON} document into a \hyperlink{classJson_1_1Value}{Value}. \end{DoxyCompactList}\item 
+struct \hyperlink{structJson_1_1Reader_1_1StructuredError}{Json\+::\+Reader\+::\+Structured\+Error}
+\begin{DoxyCompactList}\small\item\em An error tagged with where in the J\+S\+ON text it was encountered. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1Reader_1_1Token}{Json\+::\+Reader\+::\+Token}
+\item 
+class \hyperlink{classJson_1_1Reader_1_1ErrorInfo}{Json\+::\+Reader\+::\+Error\+Info}
+\item 
+class \hyperlink{classJson_1_1CharReader}{Json\+::\+Char\+Reader}
+\begin{DoxyCompactList}\small\item\em Interface for reading J\+S\+ON from a char array. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1CharReader_1_1Factory}{Json\+::\+Char\+Reader\+::\+Factory}
+\item 
+class \hyperlink{classJson_1_1CharReaderBuilder}{Json\+::\+Char\+Reader\+Builder}
+\begin{DoxyCompactList}\small\item\em Build a \hyperlink{classJson_1_1CharReader}{Char\+Reader} implementation. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1StreamWriter}{Json\+::\+Stream\+Writer}
+\begin{DoxyCompactList}\small\item\em Usage\+: \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1StreamWriter_1_1Factory}{Json\+::\+Stream\+Writer\+::\+Factory}
+\begin{DoxyCompactList}\small\item\em A simple abstract factory. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1StreamWriterBuilder}{Json\+::\+Stream\+Writer\+Builder}
+\begin{DoxyCompactList}\small\item\em Build a \hyperlink{classJson_1_1StreamWriter}{Stream\+Writer} implementation. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1Writer}{Json\+::\+Writer}
+\begin{DoxyCompactList}\small\item\em Abstract class for writers. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1FastWriter}{Json\+::\+Fast\+Writer}
+\begin{DoxyCompactList}\small\item\em Outputs a \hyperlink{classJson_1_1Value}{Value} in \href{http://www.json.org}{\tt J\+S\+ON} format without formatting (not human friendly). \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1StyledWriter}{Json\+::\+Styled\+Writer}
+\begin{DoxyCompactList}\small\item\em Writes a \hyperlink{classJson_1_1Value}{Value} in \href{http://www.json.org}{\tt J\+S\+ON} format in a human friendly way. \end{DoxyCompactList}\item 
+class \hyperlink{classJson_1_1StyledStreamWriter}{Json\+::\+Styled\+Stream\+Writer}
+\begin{DoxyCompactList}\small\item\em Writes a \hyperlink{classJson_1_1Value}{Value} in \href{http://www.json.org}{\tt J\+S\+ON} format in a human friendly way, to a stream rather than to a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceJson}{Json}
+\begin{DoxyCompactList}\small\item\em J\+S\+ON (Java\+Script Object Notation). \end{DoxyCompactList}\item 
+ \hyperlink{namespacestd}{std}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{json_8hpp_a1bf16856b5e907aa83ed7bc825bc5ecf}{J\+S\+O\+N\+\_\+\+I\+S\+\_\+\+A\+M\+A\+L\+G\+A\+M\+A\+T\+I\+ON}
+\begin{DoxyCompactList}\small\item\em Json-\/cpp amalgated header (\href{http://jsoncpp.sourceforge.net/}{\tt http\+://jsoncpp.\+sourceforge.\+net/}). \end{DoxyCompactList}\item 
+\#define \hyperlink{json_8hpp_a48e81f641ee4bf786daa3fe6090aac9e}{J\+S\+O\+N\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}
+\item 
+\#define \hyperlink{json_8hpp_ac2869039a8826da9d06800ad2b39ed9c}{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+T\+R\+I\+NG}~\char`\"{}1.\+7.\+2\char`\"{}
+\item 
+\#define \hyperlink{json_8hpp_a3a512184f0bbdd531fe1298f0a490ffe}{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR}~1
+\item 
+\#define \hyperlink{json_8hpp_a8c16a078ac4151f4e9c07b04358b2550}{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR}~7
+\item 
+\#define \hyperlink{json_8hpp_aaecbbae4c271193dd5bf70aa0662e66b}{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+P\+A\+T\+CH}~2
+\item 
+\#define \hyperlink{json_8hpp_a72fa63858b73149d97ad8b3d059373ce}{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}
+\item 
+\#define \hyperlink{json_8hpp_a32ef47886b186f98d3f8225a513c3495}{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+H\+E\+XA}~((\hyperlink{json_8hpp_a3a512184f0bbdd531fe1298f0a490ffe}{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR} $<$$<$ 24) $\vert$ (\hyperlink{json_8hpp_a8c16a078ac4151f4e9c07b04358b2550}{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR} $<$$<$ 16) $\vert$ (\hyperlink{json_8hpp_aaecbbae4c271193dd5bf70aa0662e66b}{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+P\+A\+T\+CH} $<$$<$ 8))
+\item 
+\#define \hyperlink{json_8hpp_a7f997716fd76fdf4433a231df400fc84}{J\+S\+O\+N\+C\+P\+P\+\_\+\+U\+S\+I\+N\+G\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+M\+E\+M\+O\+RY}~0
+\item 
+\#define \hyperlink{json_8hpp_a71f1a94bee4773f2a6e30eeac7deb963}{J\+S\+O\+N\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}
+\item 
+\#define \hyperlink{json_8hpp_a51968e67b1462ac893f87a0fc8b791cd}{J\+S\+O\+N\+\_\+\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}~1
+\begin{DoxyCompactList}\small\item\em If defined, indicates that json library is embedded in Cpp\+TL library. \end{DoxyCompactList}\item 
+\#define \hyperlink{json_8hpp_a1d61ffde86ce1a18fd83194ff0d9a206}{J\+S\+O\+N\+\_\+\+A\+PI}
+\begin{DoxyCompactList}\small\item\em If defined, indicates that the source file is amalgated to prevent private header inclusion. \end{DoxyCompactList}\item 
+\#define \hyperlink{json_8hpp_a824d6199c91488107e443226fa6022c5}{J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+V\+E\+R\+R\+I\+DE}~override
+\item 
+\#define \hyperlink{json_8hpp_a978860f0e3983ca76a4e5af28d9bccd4}{J\+S\+O\+N\+\_\+\+H\+A\+S\+\_\+\+R\+V\+A\+L\+U\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+ES}~0
+\item 
+\#define \hyperlink{json_8hpp_a6933a4321aa03c8a29016669073f1af6}{J\+S\+O\+N\+C\+P\+P\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED}(message)
+\item 
+\#define \hyperlink{json_8hpp_a210f7d060accd6a881cd070dc7a333a4}{J\+S\+O\+N\+\_\+\+H\+A\+S\+\_\+\+I\+N\+T64}
+\item 
+\#define \hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG}~std\+::string
+\item 
+\#define \hyperlink{json_8hpp_a1d06ac2ca63c8c521f41231dfda0e6b3}{J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+S\+T\+R\+I\+N\+G\+S\+T\+R\+E\+AM}~std\+::ostringstream
+\item 
+\#define \hyperlink{json_8hpp_a37a25be5fca174927780caeb280094ce}{J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+S\+T\+R\+E\+AM}~std\+::ostream
+\item 
+\#define \hyperlink{json_8hpp_a1b5d70fe3d83273d200193177ded4c25}{J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+I\+N\+G\+S\+T\+R\+E\+AM}~std\+::istringstream
+\item 
+\#define \hyperlink{json_8hpp_a15f2f70b2ce0a2abd0f8112393dbc4de}{J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+E\+AM}~std\+::istream
+\item 
+\#define \hyperlink{json_8hpp_ac320ccec4dca293f3f50f35f7a595f3b}{J\+S\+O\+N\+\_\+\+F\+O\+R\+W\+A\+R\+D\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}
+\item 
+\#define \hyperlink{json_8hpp_a7f6fdcb52225adbb2c7c641919eedb5e}{C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+F\+E\+A\+T\+U\+R\+E\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}
+\item 
+\#define \hyperlink{json_8hpp_ace47a954331dfcdb43c7c01201b4215b}{C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}
+\item 
+\#define \hyperlink{json_8hpp_a78c5ba441d8b48f24a5095b97f01f282}{J\+S\+O\+N\+C\+P\+P\+\_\+\+N\+O\+R\+E\+T\+U\+RN}
+\item 
+\#define \hyperlink{json_8hpp_a474bdd38a6f0d733485d831d9d99faa2}{C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+R\+E\+A\+D\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}
+\item 
+\#define \hyperlink{json_8hpp_a70febbb14e183c3d2beb727cd572ae36}{J\+S\+O\+N\+\_\+\+W\+R\+I\+T\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}
+\item 
+\#define \hyperlink{json_8hpp_a79684c4b554cc59240b94eaf9a98133c}{C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}
+\item 
+\#define \hyperlink{json_8hpp_a188941dcc789ccb6539c3d6f41405582}{J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+RT}(condition)~\{if (!(condition)) \{\hyperlink{namespaceJson_a27790f21f17922fac81e7cd72a5659a5}{Json\+::throw\+Logic\+Error}( \char`\"{}assert json failed\char`\"{} );\}\}
+\begin{DoxyCompactList}\small\item\em It should not be possible for a maliciously designed file to cause an abort() or seg-\/fault, so these macros are used only for pre-\/condition violations and internal logic errors. \end{DoxyCompactList}\item 
+\#define \hyperlink{json_8hpp_a67007439f94bc6afc465923f56147ba1}{J\+S\+O\+N\+\_\+\+F\+A\+I\+L\+\_\+\+M\+E\+S\+S\+A\+GE}(message)
+\item 
+\#define \hyperlink{json_8hpp_ad7facdeeca0f495765e3b204c265eadb}{J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+M\+E\+S\+S\+A\+GE}(condition,  message)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \hyperlink{namespaceJson_a08122e8005b706d982e48cca1e2119c7}{Json\+::\+Int}
+\item 
+typedef unsigned int \hyperlink{namespaceJson_a800fb90eb6ee8d5d62b600c06f87f7d4}{Json\+::\+U\+Int}
+\item 
+typedef long long int \hyperlink{namespaceJson_ab7b47d2905da3b4ae60e4e800ec9ae5f}{Json\+::\+Int64}
+\item 
+typedef unsigned long long int \hyperlink{namespaceJson_a01f20bce8f8229f38ff890168c0e6452}{Json\+::\+U\+Int64}
+\item 
+typedef Int64 \hyperlink{namespaceJson_a218d880af853ce786cd985e82571d297}{Json\+::\+Largest\+Int}
+\item 
+typedef U\+Int64 \hyperlink{namespaceJson_ae202ecad69725e23443f465e257456d0}{Json\+::\+Largest\+U\+Int}
+\item 
+typedef unsigned int \hyperlink{namespaceJson_a8048e741f2177c3b5d9ede4a5b8c53c2}{Json\+::\+Array\+Index}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespaceJson_a7d654b75c16a57007925868e38212b4e}{Json\+::\+Value\+Type} \{ \\*
+\hyperlink{namespaceJson_a7d654b75c16a57007925868e38212b4ea7d9899633b4409bd3fc107e6737f8391}{Json\+::null\+Value} = 0, 
+\hyperlink{namespaceJson_a7d654b75c16a57007925868e38212b4eae5a9d708d5c9e23ae9bf98898522512d}{Json\+::int\+Value}, 
+\hyperlink{namespaceJson_a7d654b75c16a57007925868e38212b4eaea788d9a3bb00adc6d68d97d43e1ccd3}{Json\+::uint\+Value}, 
+\hyperlink{namespaceJson_a7d654b75c16a57007925868e38212b4eab837c7b869c14d8be712deb45c9e490e}{Json\+::real\+Value}, 
+\\*
+\hyperlink{namespaceJson_a7d654b75c16a57007925868e38212b4ea804ef857affea2d415843c73f261c258}{Json\+::string\+Value}, 
+\hyperlink{namespaceJson_a7d654b75c16a57007925868e38212b4ea14c30dbf4da86f7b809be299f671f7fd}{Json\+::boolean\+Value}, 
+\hyperlink{namespaceJson_a7d654b75c16a57007925868e38212b4eadc8f264f36b55b063c78126b335415f4}{Json\+::array\+Value}, 
+\hyperlink{namespaceJson_a7d654b75c16a57007925868e38212b4eae8386dcfc36d1ae897745f7b4f77a1f6}{Json\+::object\+Value}
+ \}\begin{DoxyCompactList}\small\item\em Type of the value held by a Value object. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespaceJson_a4fc417c23905b2ae9e2c47d197a45351}{Json\+::\+Comment\+Placement} \{ \hyperlink{namespaceJson_a4fc417c23905b2ae9e2c47d197a45351a52f1733775460517b2ea6bedf4906d52}{Json\+::comment\+Before} = 0, 
+\hyperlink{namespaceJson_a4fc417c23905b2ae9e2c47d197a45351a008a230a0586de54f30b76afe70fdcfa}{Json\+::comment\+After\+On\+Same\+Line}, 
+\hyperlink{namespaceJson_a4fc417c23905b2ae9e2c47d197a45351ac5784ca53b12250888ddb642b06aebef}{Json\+::comment\+After}, 
+\hyperlink{namespaceJson_a4fc417c23905b2ae9e2c47d197a45351abcbd3eb00417335e094e4a03379659b5}{Json\+::number\+Of\+Comment\+Placement}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{json_8hpp_a78c5ba441d8b48f24a5095b97f01f282}{J\+S\+O\+N\+C\+P\+P\+\_\+\+N\+O\+R\+E\+T\+U\+RN} void \hyperlink{namespaceJson_a0ab7ff7f99788262d92d9ff3d924e065}{Json\+::throw\+Runtime\+Error} (\hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} const \&msg)
+\begin{DoxyCompactList}\small\item\em used internally \end{DoxyCompactList}\item 
+\hyperlink{json_8hpp_a78c5ba441d8b48f24a5095b97f01f282}{J\+S\+O\+N\+C\+P\+P\+\_\+\+N\+O\+R\+E\+T\+U\+RN} void \hyperlink{namespaceJson_a27790f21f17922fac81e7cd72a5659a5}{Json\+::throw\+Logic\+Error} (\hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} const \&msg)
+\begin{DoxyCompactList}\small\item\em used internally \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{namespacestd_a22cc6fcbbb1f2f705c7888b615e43582}{std\+::swap} (\hyperlink{classJson_1_1Value}{Json\+::\+Value} \&a, \hyperlink{classJson_1_1Value}{Json\+::\+Value} \&b)
+\begin{DoxyCompactList}\small\item\em Specialize \hyperlink{namespacestd_a22cc6fcbbb1f2f705c7888b615e43582}{std\+::swap()} for \hyperlink{classJson_1_1Value}{Json\+::\+Value}. \end{DoxyCompactList}\item 
+bool \hyperlink{json_8hpp_a1d61ffde86ce1a18fd83194ff0d9a206}{J\+S\+O\+N\+\_\+\+A\+PI} \hyperlink{namespaceJson_aab0cf1ecf81d1aeca12be2a416a84352}{Json\+::parse\+From\+Stream} (Char\+Reader\+::\+Factory const \&, \hyperlink{json_8hpp_a15f2f70b2ce0a2abd0f8112393dbc4de}{J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+E\+AM} \&, Value $\ast$root, std\+::string $\ast$errs)
+\begin{DoxyCompactList}\small\item\em Consume entire stream and use its begin/end. \end{DoxyCompactList}\item 
+\hyperlink{json_8hpp_a15f2f70b2ce0a2abd0f8112393dbc4de}{J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+E\+AM} \& \hyperlink{namespaceJson_a01f08004efa8a401e01ebd17be77dc71}{Json\+::operator$>$$>$} (\hyperlink{json_8hpp_a15f2f70b2ce0a2abd0f8112393dbc4de}{J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+E\+AM} \&, Value \&)
+\begin{DoxyCompactList}\small\item\em Read from \textquotesingle{}sin\textquotesingle{} into \textquotesingle{}root\textquotesingle{}. \end{DoxyCompactList}\item 
+\hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \hyperlink{namespaceJson_aabe79c4d15b195a343b06825693b0a16}{Json\+::write\+String} (Stream\+Writer\+::\+Factory const \&factory, Value const \&root)
+\begin{DoxyCompactList}\small\item\em Write into stringstream, then return string, for convenience. \end{DoxyCompactList}\item 
+\hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \hyperlink{json_8hpp_a1d61ffde86ce1a18fd83194ff0d9a206}{J\+S\+O\+N\+\_\+\+A\+PI} \hyperlink{namespaceJson_a4ed9732688b3c3dcaec309c9baddeac9}{Json\+::value\+To\+String} (Int value)
+\item 
+\hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \hyperlink{json_8hpp_a1d61ffde86ce1a18fd83194ff0d9a206}{J\+S\+O\+N\+\_\+\+A\+PI} \hyperlink{namespaceJson_a99bc401be7f8a09a8439f3e7219b1f12}{Json\+::value\+To\+String} (U\+Int value)
+\item 
+\hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \hyperlink{namespaceJson_a77501ed00903d1b183a55a5fbf6b749a}{Json\+::value\+To\+String} (Largest\+Int value)
+\item 
+\hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \hyperlink{namespaceJson_a9a0432e5ac3dd69b6c7f29db7776ef21}{Json\+::value\+To\+String} (Largest\+U\+Int value)
+\item 
+\hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \hyperlink{namespaceJson_aa99b8b8dc736259e5a229a4e61d7ea92}{Json\+::value\+To\+String} (double value)
+\item 
+\hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \hyperlink{namespaceJson_aed05b7acd30f7442fe36b24c7abd10b9}{Json\+::value\+To\+String} (bool value)
+\item 
+\hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \hyperlink{namespaceJson_a19a9262b788aa2754d3931e7cd01f2fc}{Json\+::value\+To\+Quoted\+String} (const char $\ast$value)
+\item 
+\hyperlink{json_8hpp_a37a25be5fca174927780caeb280094ce}{J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+S\+T\+R\+E\+AM} \& \hyperlink{namespaceJson_a845a15902e500af8eee19e729a17b863}{Json\+::operator$<$$<$} (\hyperlink{json_8hpp_a37a25be5fca174927780caeb280094ce}{J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+S\+T\+R\+E\+AM} \&, const Value \&root)
+\begin{DoxyCompactList}\small\item\em Output using the \hyperlink{classJson_1_1StyledStreamWriter}{Styled\+Stream\+Writer}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{json.\+hpp@{json.\+hpp}!C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED@{C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}}
+\index{C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED@{C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}{CPPTL_JSON_ASSERTIONS_H_INCLUDED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}\hypertarget{json_8hpp_a79684c4b554cc59240b94eaf9a98133c}{}\label{json_8hpp_a79684c4b554cc59240b94eaf9a98133c}
+\index{json.\+hpp@{json.\+hpp}!C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+F\+E\+A\+T\+U\+R\+E\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED@{C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+F\+E\+A\+T\+U\+R\+E\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}}
+\index{C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+F\+E\+A\+T\+U\+R\+E\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED@{C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+F\+E\+A\+T\+U\+R\+E\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+F\+E\+A\+T\+U\+R\+E\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}{CPPTL_JSON_FEATURES_H_INCLUDED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+F\+E\+A\+T\+U\+R\+E\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}\hypertarget{json_8hpp_a7f6fdcb52225adbb2c7c641919eedb5e}{}\label{json_8hpp_a7f6fdcb52225adbb2c7c641919eedb5e}
+\index{json.\+hpp@{json.\+hpp}!C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED@{C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}}
+\index{C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED@{C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}{CPPTL_JSON_H_INCLUDED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}\hypertarget{json_8hpp_ace47a954331dfcdb43c7c01201b4215b}{}\label{json_8hpp_ace47a954331dfcdb43c7c01201b4215b}
+\index{json.\+hpp@{json.\+hpp}!C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+R\+E\+A\+D\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED@{C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+R\+E\+A\+D\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}}
+\index{C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+R\+E\+A\+D\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED@{C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+R\+E\+A\+D\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+R\+E\+A\+D\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}{CPPTL_JSON_READER_H_INCLUDED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+P\+P\+T\+L\+\_\+\+J\+S\+O\+N\+\_\+\+R\+E\+A\+D\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}\hypertarget{json_8hpp_a474bdd38a6f0d733485d831d9d99faa2}{}\label{json_8hpp_a474bdd38a6f0d733485d831d9d99faa2}
+\index{json.\+hpp@{json.\+hpp}!J\+S\+O\+N\+\_\+\+A\+PI@{J\+S\+O\+N\+\_\+\+A\+PI}}
+\index{J\+S\+O\+N\+\_\+\+A\+PI@{J\+S\+O\+N\+\_\+\+A\+PI}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{J\+S\+O\+N\+\_\+\+A\+PI}{JSON_API}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+S\+O\+N\+\_\+\+A\+PI}\hypertarget{json_8hpp_a1d61ffde86ce1a18fd83194ff0d9a206}{}\label{json_8hpp_a1d61ffde86ce1a18fd83194ff0d9a206}
+
+
+If defined, indicates that the source file is amalgated to prevent private header inclusion. 
+
+Remarks\+: it is automatically defined in the generated amalgated header. \index{json.\+hpp@{json.\+hpp}!J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+RT@{J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+RT}}
+\index{J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+RT@{J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+RT}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+RT}{JSON_ASSERT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+RT(
+\begin{DoxyParamCaption}
+\item[{}]{condition}
+\end{DoxyParamCaption}
+)~\{if (!(condition)) \{{\bf Json\+::throw\+Logic\+Error}( \char`\"{}assert json failed\char`\"{} );\}\}}\hypertarget{json_8hpp_a188941dcc789ccb6539c3d6f41405582}{}\label{json_8hpp_a188941dcc789ccb6539c3d6f41405582}
+
+
+It should not be possible for a maliciously designed file to cause an abort() or seg-\/fault, so these macros are used only for pre-\/condition violations and internal logic errors. 
+
+\index{json.\+hpp@{json.\+hpp}!J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+M\+E\+S\+S\+A\+GE@{J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+M\+E\+S\+S\+A\+GE}}
+\index{J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+M\+E\+S\+S\+A\+GE@{J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+M\+E\+S\+S\+A\+GE}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+M\+E\+S\+S\+A\+GE}{JSON_ASSERT_MESSAGE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+M\+E\+S\+S\+A\+GE(
+\begin{DoxyParamCaption}
+\item[{}]{condition, }
+\item[{}]{message}
+\end{DoxyParamCaption}
+)}\hypertarget{json_8hpp_ad7facdeeca0f495765e3b204c265eadb}{}\label{json_8hpp_ad7facdeeca0f495765e3b204c265eadb}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if} (!(condition)) \{                                                          \hyperlink{json_8hpp_a67007439f94bc6afc465923f56147ba1}{\(\backslash\)}
+\hyperlink{json_8hpp_a67007439f94bc6afc465923f56147ba1}{    JSON\_FAIL\_MESSAGE}(message);                                                \(\backslash\)
+  \}
+\end{DoxyCode}
+\index{json.\+hpp@{json.\+hpp}!J\+S\+O\+N\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED@{J\+S\+O\+N\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}}
+\index{J\+S\+O\+N\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED@{J\+S\+O\+N\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{J\+S\+O\+N\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}{JSON_CONFIG_H_INCLUDED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+S\+O\+N\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}\hypertarget{json_8hpp_a71f1a94bee4773f2a6e30eeac7deb963}{}\label{json_8hpp_a71f1a94bee4773f2a6e30eeac7deb963}
+\index{json.\+hpp@{json.\+hpp}!J\+S\+O\+N\+\_\+\+F\+A\+I\+L\+\_\+\+M\+E\+S\+S\+A\+GE@{J\+S\+O\+N\+\_\+\+F\+A\+I\+L\+\_\+\+M\+E\+S\+S\+A\+GE}}
+\index{J\+S\+O\+N\+\_\+\+F\+A\+I\+L\+\_\+\+M\+E\+S\+S\+A\+GE@{J\+S\+O\+N\+\_\+\+F\+A\+I\+L\+\_\+\+M\+E\+S\+S\+A\+GE}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{J\+S\+O\+N\+\_\+\+F\+A\+I\+L\+\_\+\+M\+E\+S\+S\+A\+GE}{JSON_FAIL_MESSAGE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+S\+O\+N\+\_\+\+F\+A\+I\+L\+\_\+\+M\+E\+S\+S\+A\+GE(
+\begin{DoxyParamCaption}
+\item[{}]{message}
+\end{DoxyParamCaption}
+)}\hypertarget{json_8hpp_a67007439f94bc6afc465923f56147ba1}{}\label{json_8hpp_a67007439f94bc6afc465923f56147ba1}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                                                            \hyperlink{json_8hpp_a1d06ac2ca63c8c521f41231dfda0e6b3}{\(\backslash\)}
+\hyperlink{json_8hpp_a1d06ac2ca63c8c521f41231dfda0e6b3}{    JSONCPP\_OSTRINGSTREAM} oss; oss << message;                                    
+      \hyperlink{namespaceJson_a27790f21f17922fac81e7cd72a5659a5}{\(\backslash\)}
+\hyperlink{namespaceJson_a27790f21f17922fac81e7cd72a5659a5}{    Json::throwLogicError}(oss.str());                                          \(\backslash\)
+    abort();                                                                   \(\backslash\)
+  \}
+\end{DoxyCode}
+\index{json.\+hpp@{json.\+hpp}!J\+S\+O\+N\+\_\+\+F\+O\+R\+W\+A\+R\+D\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED@{J\+S\+O\+N\+\_\+\+F\+O\+R\+W\+A\+R\+D\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}}
+\index{J\+S\+O\+N\+\_\+\+F\+O\+R\+W\+A\+R\+D\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED@{J\+S\+O\+N\+\_\+\+F\+O\+R\+W\+A\+R\+D\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{J\+S\+O\+N\+\_\+\+F\+O\+R\+W\+A\+R\+D\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}{JSON_FORWARDS_H_INCLUDED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+S\+O\+N\+\_\+\+F\+O\+R\+W\+A\+R\+D\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}\hypertarget{json_8hpp_ac320ccec4dca293f3f50f35f7a595f3b}{}\label{json_8hpp_ac320ccec4dca293f3f50f35f7a595f3b}
+\index{json.\+hpp@{json.\+hpp}!J\+S\+O\+N\+\_\+\+H\+A\+S\+\_\+\+I\+N\+T64@{J\+S\+O\+N\+\_\+\+H\+A\+S\+\_\+\+I\+N\+T64}}
+\index{J\+S\+O\+N\+\_\+\+H\+A\+S\+\_\+\+I\+N\+T64@{J\+S\+O\+N\+\_\+\+H\+A\+S\+\_\+\+I\+N\+T64}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{J\+S\+O\+N\+\_\+\+H\+A\+S\+\_\+\+I\+N\+T64}{JSON_HAS_INT64}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+S\+O\+N\+\_\+\+H\+A\+S\+\_\+\+I\+N\+T64}\hypertarget{json_8hpp_a210f7d060accd6a881cd070dc7a333a4}{}\label{json_8hpp_a210f7d060accd6a881cd070dc7a333a4}
+\index{json.\+hpp@{json.\+hpp}!J\+S\+O\+N\+\_\+\+H\+A\+S\+\_\+\+R\+V\+A\+L\+U\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+ES@{J\+S\+O\+N\+\_\+\+H\+A\+S\+\_\+\+R\+V\+A\+L\+U\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+ES}}
+\index{J\+S\+O\+N\+\_\+\+H\+A\+S\+\_\+\+R\+V\+A\+L\+U\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+ES@{J\+S\+O\+N\+\_\+\+H\+A\+S\+\_\+\+R\+V\+A\+L\+U\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+ES}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{J\+S\+O\+N\+\_\+\+H\+A\+S\+\_\+\+R\+V\+A\+L\+U\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+ES}{JSON_HAS_RVALUE_REFERENCES}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+S\+O\+N\+\_\+\+H\+A\+S\+\_\+\+R\+V\+A\+L\+U\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+ES~0}\hypertarget{json_8hpp_a978860f0e3983ca76a4e5af28d9bccd4}{}\label{json_8hpp_a978860f0e3983ca76a4e5af28d9bccd4}
+\index{json.\+hpp@{json.\+hpp}!J\+S\+O\+N\+\_\+\+I\+S\+\_\+\+A\+M\+A\+L\+G\+A\+M\+A\+T\+I\+ON@{J\+S\+O\+N\+\_\+\+I\+S\+\_\+\+A\+M\+A\+L\+G\+A\+M\+A\+T\+I\+ON}}
+\index{J\+S\+O\+N\+\_\+\+I\+S\+\_\+\+A\+M\+A\+L\+G\+A\+M\+A\+T\+I\+ON@{J\+S\+O\+N\+\_\+\+I\+S\+\_\+\+A\+M\+A\+L\+G\+A\+M\+A\+T\+I\+ON}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{J\+S\+O\+N\+\_\+\+I\+S\+\_\+\+A\+M\+A\+L\+G\+A\+M\+A\+T\+I\+ON}{JSON_IS_AMALGAMATION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+S\+O\+N\+\_\+\+I\+S\+\_\+\+A\+M\+A\+L\+G\+A\+M\+A\+T\+I\+ON}\hypertarget{json_8hpp_a1bf16856b5e907aa83ed7bc825bc5ecf}{}\label{json_8hpp_a1bf16856b5e907aa83ed7bc825bc5ecf}
+
+
+Json-\/cpp amalgated header (\href{http://jsoncpp.sourceforge.net/}{\tt http\+://jsoncpp.\+sourceforge.\+net/}). 
+
+It is intended to be used with \#include \char`\"{}json/json.\+h\char`\"{} If defined, indicates that the source file is amalgated to prevent private header inclusion. \index{json.\+hpp@{json.\+hpp}!J\+S\+O\+N\+\_\+\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON@{J\+S\+O\+N\+\_\+\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}}
+\index{J\+S\+O\+N\+\_\+\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON@{J\+S\+O\+N\+\_\+\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{J\+S\+O\+N\+\_\+\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}{JSON_USE_EXCEPTION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+S\+O\+N\+\_\+\+U\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON~1}\hypertarget{json_8hpp_a51968e67b1462ac893f87a0fc8b791cd}{}\label{json_8hpp_a51968e67b1462ac893f87a0fc8b791cd}
+
+
+If defined, indicates that json library is embedded in Cpp\+TL library. 
+
+If defined, indicates that json may leverage Cpp\+TL library If defined, indicates that cpptl vector based map should be used instead of std\+::map as Value container. \index{json.\+hpp@{json.\+hpp}!J\+S\+O\+N\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED@{J\+S\+O\+N\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}}
+\index{J\+S\+O\+N\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED@{J\+S\+O\+N\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{J\+S\+O\+N\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}{JSON_VERSION_H_INCLUDED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+S\+O\+N\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}\hypertarget{json_8hpp_a48e81f641ee4bf786daa3fe6090aac9e}{}\label{json_8hpp_a48e81f641ee4bf786daa3fe6090aac9e}
+\index{json.\+hpp@{json.\+hpp}!J\+S\+O\+N\+\_\+\+W\+R\+I\+T\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED@{J\+S\+O\+N\+\_\+\+W\+R\+I\+T\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}}
+\index{J\+S\+O\+N\+\_\+\+W\+R\+I\+T\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED@{J\+S\+O\+N\+\_\+\+W\+R\+I\+T\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{J\+S\+O\+N\+\_\+\+W\+R\+I\+T\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}{JSON_WRITER_H_INCLUDED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+S\+O\+N\+\_\+\+W\+R\+I\+T\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+ED}\hypertarget{json_8hpp_a70febbb14e183c3d2beb727cd572ae36}{}\label{json_8hpp_a70febbb14e183c3d2beb727cd572ae36}
+\index{json.\+hpp@{json.\+hpp}!J\+S\+O\+N\+C\+P\+P\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED@{J\+S\+O\+N\+C\+P\+P\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED}}
+\index{J\+S\+O\+N\+C\+P\+P\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED@{J\+S\+O\+N\+C\+P\+P\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{J\+S\+O\+N\+C\+P\+P\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED}{JSONCPP_DEPRECATED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+S\+O\+N\+C\+P\+P\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED(
+\begin{DoxyParamCaption}
+\item[{}]{message}
+\end{DoxyParamCaption}
+)}\hypertarget{json_8hpp_a6933a4321aa03c8a29016669073f1af6}{}\label{json_8hpp_a6933a4321aa03c8a29016669073f1af6}
+\index{json.\+hpp@{json.\+hpp}!J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+E\+AM@{J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+E\+AM}}
+\index{J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+E\+AM@{J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+E\+AM}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+E\+AM}{JSONCPP_ISTREAM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+E\+AM~std\+::istream}\hypertarget{json_8hpp_a15f2f70b2ce0a2abd0f8112393dbc4de}{}\label{json_8hpp_a15f2f70b2ce0a2abd0f8112393dbc4de}
+\index{json.\+hpp@{json.\+hpp}!J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+I\+N\+G\+S\+T\+R\+E\+AM@{J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+I\+N\+G\+S\+T\+R\+E\+AM}}
+\index{J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+I\+N\+G\+S\+T\+R\+E\+AM@{J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+I\+N\+G\+S\+T\+R\+E\+AM}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+I\+N\+G\+S\+T\+R\+E\+AM}{JSONCPP_ISTRINGSTREAM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+S\+O\+N\+C\+P\+P\+\_\+\+I\+S\+T\+R\+I\+N\+G\+S\+T\+R\+E\+AM~std\+::istringstream}\hypertarget{json_8hpp_a1b5d70fe3d83273d200193177ded4c25}{}\label{json_8hpp_a1b5d70fe3d83273d200193177ded4c25}
+\index{json.\+hpp@{json.\+hpp}!J\+S\+O\+N\+C\+P\+P\+\_\+\+N\+O\+R\+E\+T\+U\+RN@{J\+S\+O\+N\+C\+P\+P\+\_\+\+N\+O\+R\+E\+T\+U\+RN}}
+\index{J\+S\+O\+N\+C\+P\+P\+\_\+\+N\+O\+R\+E\+T\+U\+RN@{J\+S\+O\+N\+C\+P\+P\+\_\+\+N\+O\+R\+E\+T\+U\+RN}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{J\+S\+O\+N\+C\+P\+P\+\_\+\+N\+O\+R\+E\+T\+U\+RN}{JSONCPP_NORETURN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+S\+O\+N\+C\+P\+P\+\_\+\+N\+O\+R\+E\+T\+U\+RN}\hypertarget{json_8hpp_a78c5ba441d8b48f24a5095b97f01f282}{}\label{json_8hpp_a78c5ba441d8b48f24a5095b97f01f282}
+\index{json.\+hpp@{json.\+hpp}!J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+S\+T\+R\+E\+AM@{J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+S\+T\+R\+E\+AM}}
+\index{J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+S\+T\+R\+E\+AM@{J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+S\+T\+R\+E\+AM}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+S\+T\+R\+E\+AM}{JSONCPP_OSTREAM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+S\+T\+R\+E\+AM~std\+::ostream}\hypertarget{json_8hpp_a37a25be5fca174927780caeb280094ce}{}\label{json_8hpp_a37a25be5fca174927780caeb280094ce}
+\index{json.\+hpp@{json.\+hpp}!J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+S\+T\+R\+I\+N\+G\+S\+T\+R\+E\+AM@{J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+S\+T\+R\+I\+N\+G\+S\+T\+R\+E\+AM}}
+\index{J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+S\+T\+R\+I\+N\+G\+S\+T\+R\+E\+AM@{J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+S\+T\+R\+I\+N\+G\+S\+T\+R\+E\+AM}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+S\+T\+R\+I\+N\+G\+S\+T\+R\+E\+AM}{JSONCPP_OSTRINGSTREAM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+S\+T\+R\+I\+N\+G\+S\+T\+R\+E\+AM~std\+::ostringstream}\hypertarget{json_8hpp_a1d06ac2ca63c8c521f41231dfda0e6b3}{}\label{json_8hpp_a1d06ac2ca63c8c521f41231dfda0e6b3}
+\index{json.\+hpp@{json.\+hpp}!J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+V\+E\+R\+R\+I\+DE@{J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\index{J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+V\+E\+R\+R\+I\+DE@{J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+V\+E\+R\+R\+I\+DE}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{JSONCPP_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+V\+E\+R\+R\+I\+DE~override}\hypertarget{json_8hpp_a824d6199c91488107e443226fa6022c5}{}\label{json_8hpp_a824d6199c91488107e443226fa6022c5}
+\index{json.\+hpp@{json.\+hpp}!J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG@{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG}}
+\index{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG@{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG}{JSONCPP_STRING}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG~std\+::string}\hypertarget{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{}\label{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}
+\index{json.\+hpp@{json.\+hpp}!J\+S\+O\+N\+C\+P\+P\+\_\+\+U\+S\+I\+N\+G\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+M\+E\+M\+O\+RY@{J\+S\+O\+N\+C\+P\+P\+\_\+\+U\+S\+I\+N\+G\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+M\+E\+M\+O\+RY}}
+\index{J\+S\+O\+N\+C\+P\+P\+\_\+\+U\+S\+I\+N\+G\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+M\+E\+M\+O\+RY@{J\+S\+O\+N\+C\+P\+P\+\_\+\+U\+S\+I\+N\+G\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+M\+E\+M\+O\+RY}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{J\+S\+O\+N\+C\+P\+P\+\_\+\+U\+S\+I\+N\+G\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+M\+E\+M\+O\+RY}{JSONCPP_USING_SECURE_MEMORY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+S\+O\+N\+C\+P\+P\+\_\+\+U\+S\+I\+N\+G\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+M\+E\+M\+O\+RY~0}\hypertarget{json_8hpp_a7f997716fd76fdf4433a231df400fc84}{}\label{json_8hpp_a7f997716fd76fdf4433a231df400fc84}
+\index{json.\+hpp@{json.\+hpp}!J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+H\+E\+XA@{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+H\+E\+XA}}
+\index{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+H\+E\+XA@{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+H\+E\+XA}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+H\+E\+XA}{JSONCPP_VERSION_HEXA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+H\+E\+XA~(({\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR} $<$$<$ 24) $\vert$ ({\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR} $<$$<$ 16) $\vert$ ({\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+P\+A\+T\+CH} $<$$<$ 8))}\hypertarget{json_8hpp_a32ef47886b186f98d3f8225a513c3495}{}\label{json_8hpp_a32ef47886b186f98d3f8225a513c3495}
+\index{json.\+hpp@{json.\+hpp}!J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR@{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR}}
+\index{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR@{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR}{JSONCPP_VERSION_MAJOR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR~1}\hypertarget{json_8hpp_a3a512184f0bbdd531fe1298f0a490ffe}{}\label{json_8hpp_a3a512184f0bbdd531fe1298f0a490ffe}
+\index{json.\+hpp@{json.\+hpp}!J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR@{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR}}
+\index{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR@{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR}{JSONCPP_VERSION_MINOR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR~7}\hypertarget{json_8hpp_a8c16a078ac4151f4e9c07b04358b2550}{}\label{json_8hpp_a8c16a078ac4151f4e9c07b04358b2550}
+\index{json.\+hpp@{json.\+hpp}!J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+P\+A\+T\+CH@{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+P\+A\+T\+CH}}
+\index{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+P\+A\+T\+CH@{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+P\+A\+T\+CH}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+P\+A\+T\+CH}{JSONCPP_VERSION_PATCH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+P\+A\+T\+CH~2}\hypertarget{json_8hpp_aaecbbae4c271193dd5bf70aa0662e66b}{}\label{json_8hpp_aaecbbae4c271193dd5bf70aa0662e66b}
+\index{json.\+hpp@{json.\+hpp}!J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER@{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}}
+\index{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER@{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}{JSONCPP_VERSION_QUALIFIER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+Q\+U\+A\+L\+I\+F\+I\+ER}\hypertarget{json_8hpp_a72fa63858b73149d97ad8b3d059373ce}{}\label{json_8hpp_a72fa63858b73149d97ad8b3d059373ce}
+\index{json.\+hpp@{json.\+hpp}!J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+T\+R\+I\+NG@{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+T\+R\+I\+NG}}
+\index{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+T\+R\+I\+NG@{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+T\+R\+I\+NG}!json.\+hpp@{json.\+hpp}}
+\subsubsection[{\texorpdfstring{J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+T\+R\+I\+NG}{JSONCPP_VERSION_STRING}}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+S\+O\+N\+C\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+T\+R\+I\+NG~\char`\"{}1.\+7.\+2\char`\"{}}\hypertarget{json_8hpp_ac2869039a8826da9d06800ad2b39ed9c}{}\label{json_8hpp_ac2869039a8826da9d06800ad2b39ed9c}

@@ -1,0 +1,84 @@
+\hypertarget{classJson_1_1OurCharReader}{}\section{Json\+:\+:Our\+Char\+Reader Class Reference}
+\label{classJson_1_1OurCharReader}\index{Json\+::\+Our\+Char\+Reader@{Json\+::\+Our\+Char\+Reader}}
+Inheritance diagram for Json\+:\+:Our\+Char\+Reader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classJson_1_1OurCharReader}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classJson_1_1OurCharReader_a5015506620e7ba7bab417756fa1ca9fe}{Our\+Char\+Reader} (bool collect\+Comments, \hyperlink{classJson_1_1OurFeatures}{Our\+Features} const \&features)
+\item 
+bool \hyperlink{classJson_1_1OurCharReader_a547f08ec5a9951ca69e8bb2e90296c83}{parse} (char const $\ast$begin\+Doc, char const $\ast$end\+Doc, \hyperlink{classJson_1_1Value}{Value} $\ast$root, \hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} $\ast$errs) \hyperlink{json_8hpp_a824d6199c91488107e443226fa6022c5}{J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+V\+E\+R\+R\+I\+DE}
+\begin{DoxyCompactList}\small\item\em Read a \hyperlink{classJson_1_1Value}{Value} from a \href{http://www.json.org}{\tt J\+S\+ON} document. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool const \hyperlink{classJson_1_1OurCharReader_aa6afd3d0f754cadad0f6d2be38bcfee0}{collect\+Comments\+\_\+}
+\item 
+\hyperlink{classJson_1_1OurReader}{Our\+Reader} \hyperlink{classJson_1_1OurCharReader_aedd4520b8570654ed7aa0726075ee58d}{reader\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Json\+::\+Our\+Char\+Reader@{Json\+::\+Our\+Char\+Reader}!Our\+Char\+Reader@{Our\+Char\+Reader}}
+\index{Our\+Char\+Reader@{Our\+Char\+Reader}!Json\+::\+Our\+Char\+Reader@{Json\+::\+Our\+Char\+Reader}}
+\subsubsection[{\texorpdfstring{Our\+Char\+Reader(bool collect\+Comments, Our\+Features const \&features)}{OurCharReader(bool collectComments, OurFeatures const &features)}}]{\setlength{\rightskip}{0pt plus 5cm}Json\+::\+Our\+Char\+Reader\+::\+Our\+Char\+Reader (
+\begin{DoxyParamCaption}
+\item[{bool}]{collect\+Comments, }
+\item[{{\bf Our\+Features} const \&}]{features}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classJson_1_1OurCharReader_a5015506620e7ba7bab417756fa1ca9fe}{}\label{classJson_1_1OurCharReader_a5015506620e7ba7bab417756fa1ca9fe}
+
+
+\subsection{Member Function Documentation}
+\index{Json\+::\+Our\+Char\+Reader@{Json\+::\+Our\+Char\+Reader}!parse@{parse}}
+\index{parse@{parse}!Json\+::\+Our\+Char\+Reader@{Json\+::\+Our\+Char\+Reader}}
+\subsubsection[{\texorpdfstring{parse(char const $\ast$begin\+Doc, char const $\ast$end\+Doc, Value $\ast$root, J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+N\+G $\ast$errs) J\+S\+O\+N\+C\+P\+P\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{parse(char const *beginDoc, char const *endDoc, Value *root, JSONCPP_STRING *errs) JSONCPP_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}bool Json\+::\+Our\+Char\+Reader\+::parse (
+\begin{DoxyParamCaption}
+\item[{char const $\ast$}]{begin\+Doc, }
+\item[{char const $\ast$}]{end\+Doc, }
+\item[{{\bf Value} $\ast$}]{root, }
+\item[{{\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} $\ast$}]{errs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classJson_1_1OurCharReader_a547f08ec5a9951ca69e8bb2e90296c83}{}\label{classJson_1_1OurCharReader_a547f08ec5a9951ca69e8bb2e90296c83}
+
+
+Read a \hyperlink{classJson_1_1Value}{Value} from a \href{http://www.json.org}{\tt J\+S\+ON} document. 
+
+The document must be a U\+T\+F-\/8 encoded string containing the document to read.
+
+
+\begin{DoxyParams}{Parameters}
+{\em begin\+Doc} & Pointer on the beginning of the U\+T\+F-\/8 encoded string of the document to read. \\
+\hline
+{\em end\+Doc} & Pointer on the end of the U\+T\+F-\/8 encoded string of the document to read. Must be $>$= begin\+Doc. \\
+\hline
+{\em root} & \mbox{[}out\mbox{]} Contains the root value of the document if it was successfully parsed. \\
+\hline
+{\em errs} & \mbox{[}out\mbox{]} Formatted error messages (if not N\+U\+LL) a user friendly string that lists errors in the parsed document. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the document was successfully parsed, {\ttfamily false} if an error occurred. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classJson_1_1CharReader_a7983680d50fd0745f371c43b162e78e1}{Json\+::\+Char\+Reader}.
+
+
+
+\subsection{Member Data Documentation}
+\index{Json\+::\+Our\+Char\+Reader@{Json\+::\+Our\+Char\+Reader}!collect\+Comments\+\_\+@{collect\+Comments\+\_\+}}
+\index{collect\+Comments\+\_\+@{collect\+Comments\+\_\+}!Json\+::\+Our\+Char\+Reader@{Json\+::\+Our\+Char\+Reader}}
+\subsubsection[{\texorpdfstring{collect\+Comments\+\_\+}{collectComments_}}]{\setlength{\rightskip}{0pt plus 5cm}bool const Json\+::\+Our\+Char\+Reader\+::collect\+Comments\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classJson_1_1OurCharReader_aa6afd3d0f754cadad0f6d2be38bcfee0}{}\label{classJson_1_1OurCharReader_aa6afd3d0f754cadad0f6d2be38bcfee0}
+\index{Json\+::\+Our\+Char\+Reader@{Json\+::\+Our\+Char\+Reader}!reader\+\_\+@{reader\+\_\+}}
+\index{reader\+\_\+@{reader\+\_\+}!Json\+::\+Our\+Char\+Reader@{Json\+::\+Our\+Char\+Reader}}
+\subsubsection[{\texorpdfstring{reader\+\_\+}{reader_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Our\+Reader} Json\+::\+Our\+Char\+Reader\+::reader\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classJson_1_1OurCharReader_aedd4520b8570654ed7aa0726075ee58d}{}\label{classJson_1_1OurCharReader_aedd4520b8570654ed7aa0726075ee58d}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/pranav/\+Repositories/zcm/src/\hyperlink{json_8cpp}{json.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,148 @@
+\hypertarget{classJson_1_1Path}{}\section{Json\+:\+:Path Class Reference}
+\label{classJson_1_1Path}\index{Json\+::\+Path@{Json\+::\+Path}}
+
+
+Experimental and untested\+: represents a \char`\"{}path\char`\"{} to access a node.  
+
+
+
+
+{\ttfamily \#include $<$json.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classJson_1_1Path_a7356c0e9c1fc2276390fd396271c1300}{Path} (const \hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \&path, const \hyperlink{classJson_1_1PathArgument}{Path\+Argument} \&a1=\hyperlink{classJson_1_1PathArgument}{Path\+Argument}(), const \hyperlink{classJson_1_1PathArgument}{Path\+Argument} \&a2=\hyperlink{classJson_1_1PathArgument}{Path\+Argument}(), const \hyperlink{classJson_1_1PathArgument}{Path\+Argument} \&a3=\hyperlink{classJson_1_1PathArgument}{Path\+Argument}(), const \hyperlink{classJson_1_1PathArgument}{Path\+Argument} \&a4=\hyperlink{classJson_1_1PathArgument}{Path\+Argument}(), const \hyperlink{classJson_1_1PathArgument}{Path\+Argument} \&a5=\hyperlink{classJson_1_1PathArgument}{Path\+Argument}())
+\item 
+const \hyperlink{classJson_1_1Value}{Value} \& \hyperlink{classJson_1_1Path_ae1d05fa985a6ee3c57f2b8ed186b5982}{resolve} (const \hyperlink{classJson_1_1Value}{Value} \&root) const 
+\item 
+\hyperlink{classJson_1_1Value}{Value} \hyperlink{classJson_1_1Path_a33d1749770a4cf74e9a3de419bc7febe}{resolve} (const \hyperlink{classJson_1_1Value}{Value} \&root, const \hyperlink{classJson_1_1Value}{Value} \&default\+Value) const 
+\item 
+\hyperlink{classJson_1_1Value}{Value} \& \hyperlink{classJson_1_1Path_a5289901fc58ad1fdca1de7fb5a0b620c}{make} (\hyperlink{classJson_1_1Value}{Value} \&root) const 
+\begin{DoxyCompactList}\small\item\em Creates the \char`\"{}path\char`\"{} to access the specified node and returns a reference on the node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ const \hyperlink{classJson_1_1PathArgument}{Path\+Argument} $\ast$ $>$ \hyperlink{classJson_1_1Path_ab29d7b2fc896c7d3c5ed4609af3a3f23}{In\+Args}
+\item 
+typedef std\+::vector$<$ \hyperlink{classJson_1_1PathArgument}{Path\+Argument} $>$ \hyperlink{classJson_1_1Path_a27d96232d034d7a78286468676f9cb3e}{Args}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classJson_1_1Path_a362a420a47acb1a1f9c79173cbfef94d}{make\+Path} (const \hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \&path, const \hyperlink{classJson_1_1Path_ab29d7b2fc896c7d3c5ed4609af3a3f23}{In\+Args} \&in)
+\item 
+void \hyperlink{classJson_1_1Path_ae65717a5fbc35b1336cbf783b15aad2e}{add\+Path\+In\+Arg} (const \hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \&path, const \hyperlink{classJson_1_1Path_ab29d7b2fc896c7d3c5ed4609af3a3f23}{In\+Args} \&in, In\+Args\+::const\+\_\+iterator \&it\+In\+Arg, \hyperlink{classJson_1_1PathArgument_a2420bbad778573c147e578701b84d9b9}{Path\+Argument\+::\+Kind} kind)
+\item 
+void \hyperlink{classJson_1_1Path_a0fa77fc0cefefcfcf2f1242c79009dd9}{invalid\+Path} (const \hyperlink{json_8hpp_a1e723f95759de062585bc4a8fd3fa4be}{J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \&path, int location)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classJson_1_1Path_a27d96232d034d7a78286468676f9cb3e}{Args} \hyperlink{classJson_1_1Path_af33d0de7ee9f99d3e361bdf504dc2bc7}{args\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Experimental and untested\+: represents a \char`\"{}path\char`\"{} to access a node. 
+
+Syntax\+:
+\begin{DoxyItemize}
+\item \char`\"{}.\char`\"{} =$>$ root node
+\item \char`\"{}.\mbox{[}n\mbox{]}\char`\"{} =$>$ elements at index \textquotesingle{}n\textquotesingle{} of root node (an array value)
+\item \char`\"{}.\+name\char`\"{} =$>$ member named \textquotesingle{}name\textquotesingle{} of root node (an object value)
+\item \char`\"{}.\+name1.\+name2.\+name3\char`\"{}
+\item \char`\"{}.\mbox{[}0\mbox{]}\mbox{[}1\mbox{]}\mbox{[}2\mbox{]}.\+name1\mbox{[}3\mbox{]}\char`\"{}
+\item \char`\"{}.\%\char`\"{} =$>$ member name is provided as parameter
+\item \char`\"{}.\mbox{[}\%\mbox{]}\char`\"{} =$>$ index is provied as parameter 
+\end{DoxyItemize}
+
+\subsection{Member Typedef Documentation}
+\index{Json\+::\+Path@{Json\+::\+Path}!Args@{Args}}
+\index{Args@{Args}!Json\+::\+Path@{Json\+::\+Path}}
+\subsubsection[{\texorpdfstring{Args}{Args}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::vector$<${\bf Path\+Argument}$>$ {\bf Json\+::\+Path\+::\+Args}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classJson_1_1Path_a27d96232d034d7a78286468676f9cb3e}{}\label{classJson_1_1Path_a27d96232d034d7a78286468676f9cb3e}
+\index{Json\+::\+Path@{Json\+::\+Path}!In\+Args@{In\+Args}}
+\index{In\+Args@{In\+Args}!Json\+::\+Path@{Json\+::\+Path}}
+\subsubsection[{\texorpdfstring{In\+Args}{InArgs}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::vector$<$const {\bf Path\+Argument}$\ast$$>$ {\bf Json\+::\+Path\+::\+In\+Args}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classJson_1_1Path_ab29d7b2fc896c7d3c5ed4609af3a3f23}{}\label{classJson_1_1Path_ab29d7b2fc896c7d3c5ed4609af3a3f23}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Json\+::\+Path@{Json\+::\+Path}!Path@{Path}}
+\index{Path@{Path}!Json\+::\+Path@{Json\+::\+Path}}
+\subsubsection[{\texorpdfstring{Path(const J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+N\+G \&path, const Path\+Argument \&a1=\+Path\+Argument(), const Path\+Argument \&a2=\+Path\+Argument(), const Path\+Argument \&a3=\+Path\+Argument(), const Path\+Argument \&a4=\+Path\+Argument(), const Path\+Argument \&a5=\+Path\+Argument())}{Path(const JSONCPP_STRING &path, const PathArgument &a1=PathArgument(), const PathArgument &a2=PathArgument(), const PathArgument &a3=PathArgument(), const PathArgument &a4=PathArgument(), const PathArgument &a5=PathArgument())}}]{\setlength{\rightskip}{0pt plus 5cm}Json\+::\+Path\+::\+Path (
+\begin{DoxyParamCaption}
+\item[{const {\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \&}]{path, }
+\item[{const {\bf Path\+Argument} \&}]{a1 = {\ttfamily {\bf Path\+Argument}()}, }
+\item[{const {\bf Path\+Argument} \&}]{a2 = {\ttfamily {\bf Path\+Argument}()}, }
+\item[{const {\bf Path\+Argument} \&}]{a3 = {\ttfamily {\bf Path\+Argument}()}, }
+\item[{const {\bf Path\+Argument} \&}]{a4 = {\ttfamily {\bf Path\+Argument}()}, }
+\item[{const {\bf Path\+Argument} \&}]{a5 = {\ttfamily {\bf Path\+Argument}()}}
+\end{DoxyParamCaption}
+)}\hypertarget{classJson_1_1Path_a7356c0e9c1fc2276390fd396271c1300}{}\label{classJson_1_1Path_a7356c0e9c1fc2276390fd396271c1300}
+
+
+\subsection{Member Function Documentation}
+\index{Json\+::\+Path@{Json\+::\+Path}!add\+Path\+In\+Arg@{add\+Path\+In\+Arg}}
+\index{add\+Path\+In\+Arg@{add\+Path\+In\+Arg}!Json\+::\+Path@{Json\+::\+Path}}
+\subsubsection[{\texorpdfstring{add\+Path\+In\+Arg(const J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+N\+G \&path, const In\+Args \&in, In\+Args\+::const\+\_\+iterator \&it\+In\+Arg, Path\+Argument\+::\+Kind kind)}{addPathInArg(const JSONCPP_STRING &path, const InArgs &in, InArgs::const_iterator &itInArg, PathArgument::Kind kind)}}]{\setlength{\rightskip}{0pt plus 5cm}void Json\+::\+Path\+::add\+Path\+In\+Arg (
+\begin{DoxyParamCaption}
+\item[{const {\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \&}]{path, }
+\item[{const {\bf In\+Args} \&}]{in, }
+\item[{In\+Args\+::const\+\_\+iterator \&}]{it\+In\+Arg, }
+\item[{{\bf Path\+Argument\+::\+Kind}}]{kind}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classJson_1_1Path_ae65717a5fbc35b1336cbf783b15aad2e}{}\label{classJson_1_1Path_ae65717a5fbc35b1336cbf783b15aad2e}
+\index{Json\+::\+Path@{Json\+::\+Path}!invalid\+Path@{invalid\+Path}}
+\index{invalid\+Path@{invalid\+Path}!Json\+::\+Path@{Json\+::\+Path}}
+\subsubsection[{\texorpdfstring{invalid\+Path(const J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+N\+G \&path, int location)}{invalidPath(const JSONCPP_STRING &path, int location)}}]{\setlength{\rightskip}{0pt plus 5cm}void Json\+::\+Path\+::invalid\+Path (
+\begin{DoxyParamCaption}
+\item[{const {\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \&}]{path, }
+\item[{int}]{location}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classJson_1_1Path_a0fa77fc0cefefcfcf2f1242c79009dd9}{}\label{classJson_1_1Path_a0fa77fc0cefefcfcf2f1242c79009dd9}
+\index{Json\+::\+Path@{Json\+::\+Path}!make@{make}}
+\index{make@{make}!Json\+::\+Path@{Json\+::\+Path}}
+\subsubsection[{\texorpdfstring{make(\+Value \&root) const }{make(Value &root) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Value} \& Json\+::\+Path\+::make (
+\begin{DoxyParamCaption}
+\item[{{\bf Value} \&}]{root}
+\end{DoxyParamCaption}
+) const}\hypertarget{classJson_1_1Path_a5289901fc58ad1fdca1de7fb5a0b620c}{}\label{classJson_1_1Path_a5289901fc58ad1fdca1de7fb5a0b620c}
+
+
+Creates the \char`\"{}path\char`\"{} to access the specified node and returns a reference on the node. 
+
+\index{Json\+::\+Path@{Json\+::\+Path}!make\+Path@{make\+Path}}
+\index{make\+Path@{make\+Path}!Json\+::\+Path@{Json\+::\+Path}}
+\subsubsection[{\texorpdfstring{make\+Path(const J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+N\+G \&path, const In\+Args \&in)}{makePath(const JSONCPP_STRING &path, const InArgs &in)}}]{\setlength{\rightskip}{0pt plus 5cm}void Json\+::\+Path\+::make\+Path (
+\begin{DoxyParamCaption}
+\item[{const {\bf J\+S\+O\+N\+C\+P\+P\+\_\+\+S\+T\+R\+I\+NG} \&}]{path, }
+\item[{const {\bf In\+Args} \&}]{in}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classJson_1_1Path_a362a420a47acb1a1f9c79173cbfef94d}{}\label{classJson_1_1Path_a362a420a47acb1a1f9c79173cbfef94d}
+\index{Json\+::\+Path@{Json\+::\+Path}!resolve@{resolve}}
+\index{resolve@{resolve}!Json\+::\+Path@{Json\+::\+Path}}
+\subsubsection[{\texorpdfstring{resolve(const Value \&root) const }{resolve(const Value &root) const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Value} \& Json\+::\+Path\+::resolve (
+\begin{DoxyParamCaption}
+\item[{const {\bf Value} \&}]{root}
+\end{DoxyParamCaption}
+) const}\hypertarget{classJson_1_1Path_ae1d05fa985a6ee3c57f2b8ed186b5982}{}\label{classJson_1_1Path_ae1d05fa985a6ee3c57f2b8ed186b5982}
+\index{Json\+::\+Path@{Json\+::\+Path}!resolve@{resolve}}
+\index{resolve@{resolve}!Json\+::\+Path@{Json\+::\+Path}}
+\subsubsection[{\texorpdfstring{resolve(const Value \&root, const Value \&default\+Value) const }{resolve(const Value &root, const Value &defaultValue) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Value} Json\+::\+Path\+::resolve (
+\begin{DoxyParamCaption}
+\item[{const {\bf Value} \&}]{root, }
+\item[{const {\bf Value} \&}]{default\+Value}
+\end{DoxyParamCaption}
+) const}\hypertarget{classJson_1_1Path_a33d1749770a4cf74e9a3de419bc7febe}{}\label{classJson_1_1Path_a33d1749770a4cf74e9a3de419bc7febe}
+
+
+\subsection{Member Data Documentation}
+\index{Json\+::\+Path@{Json\+::\+Path}!args\+\_\+@{args\+\_\+}}
+\index{args\+\_\+@{args\+\_\+}!Json\+::\+Path@{Json\+::\+Path}}
+\subsubsection[{\texorpdfstring{args\+\_\+}{args_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Args} Json\+::\+Path\+::args\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classJson_1_1Path_af33d0de7ee9f99d3e361bdf504dc2bc7}{}\label{classJson_1_1Path_af33d0de7ee9f99d3e361bdf504dc2bc7}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/pranav/\+Repositories/zcm/include/\hyperlink{json_8hpp}{json.\+hpp}\item 
+/home/pranav/\+Repositories/zcm/src/\hyperlink{json_8cpp}{json.\+cpp}\end{DoxyCompactItemize}
