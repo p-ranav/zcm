@@ -20,10 +20,9 @@ namespace zcm {
 		      1000000000, 
 		      std::bind(&Component_2::timer_function, this), 
 		      operation_queue);
-    publisher = new Publisher("Name_Publisher", {"tcp://*:5556"});
+    publisher = new Publisher("Name_Publisher");
     server = new Server("server",
 			60,
-			{"tcp://*:5510"},
 			std::bind(&Component_2::server_function,
 				  this,
 				  std::placeholders::_1),

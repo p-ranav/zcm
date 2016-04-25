@@ -20,12 +20,10 @@ namespace zcm {
 		      500000000, // 500 msec 
 		      std::bind(&Component_1::timer_1_function, this), 
 		      operation_queue);
-    publisher = new Publisher("Name_Publisher", {"tcp://*:5555"});
-    subscriber = new Subscriber("subscriber_operation", 
+    publisher = new Publisher("Name_Publisher");
+    subscriber = new Subscriber("Name_Subscriber", 
 				60, 
 				"",
-				{"tcp://127.0.0.1:5555",
-				    "tcp://127.0.0.1:5556"},
 				std::bind(&Component_1::subscriber_function, 
 					  this,
 					  std::placeholders::_1), 

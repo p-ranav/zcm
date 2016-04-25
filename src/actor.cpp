@@ -22,7 +22,54 @@ namespace zcm {
       else {
 	Component * (*create)();
 	create = (Component * (*)())dlsym(handle, "create_component");
-	component_instances.push_back((Component*)create());
+	Component * component_instance = (Component*)create();
+
+	std::map<std::string, std::vector<std::string>> publishers_config_map;
+	std::map<std::string, std::vector<std::string>> subscribers_config_map;
+	std::map<std::string, std::vector<std::string>> clients_config_map;
+	std::map<std::string, std::vector<std::string>> servers_config_map;	
+
+	// Configure all component instance publishers
+	for (unsigned int j = 0; j < root["Component Instances"][i]["Publishers"].size(); j++) {
+	  Json::Value publisher_config = root["Component Instances"][i]["Publishers"][j];
+	  std::string publisher_name = publisher_config["Name"].asString();
+	  for (unsigned int k = 0; k < publisher_config["Endpoints"].size(); k++) {
+	    publishers_config_map[publisher_name].push_back(publisher_config["Endpoints"][k].asString());
+	  }
+	}
+
+	// Configure all component instance subscribers
+	for (unsigned int j = 0; j < root["Component Instances"][i]["Subscribers"].size(); j++) {
+	  Json::Value subscriber_config = root["Component Instances"][i]["Subscribers"][j];
+	  std::string subscriber_name = subscriber_config["Name"].asString();
+	  for (unsigned int k = 0; k < subscriber_config["Endpoints"].size(); k++) {
+	    subscribers_config_map[subscriber_name].push_back(subscriber_config["Endpoints"][k].asString());
+	  }
+	}
+
+	// Configure all component instance clients
+	for (unsigned int j = 0; j < root["Component Instances"][i]["Clients"].size(); j++) {
+	  Json::Value client_config = root["Component Instances"][i]["Clients"][j];
+	  std::string client_name = client_config["Name"].asString();
+	  for (unsigned int k = 0; k < client_config["Endpoints"].size(); k++) {
+	    clients_config_map[client_name].push_back(client_config["Endpoints"][k].asString());
+	  }
+	}
+
+	// Configure all component instance servers
+	for (unsigned int j = 0; j < root["Component Instances"][i]["Servers"].size(); j++) {
+	  Json::Value server_config = root["Component Instances"][i]["Servers"][j];
+	  std::string server_name = server_config["Name"].asString();
+	  for (unsigned int k = 0; k < server_config["Endpoints"].size(); k++) {
+	    servers_config_map[server_name].push_back(server_config["Endpoints"][k].asString());
+	  }
+	}	
+	
+	component_instance->configure_publishers(publishers_config_map);
+	component_instance->configure_subscribers(subscribers_config_map);
+	component_instance->configure_clients(clients_config_map);
+	component_instance->configure_servers(servers_config_map);
+	component_instances.push_back(component_instance);
       }
     }
   }

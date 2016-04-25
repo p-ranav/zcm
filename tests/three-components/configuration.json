@@ -1,13 +1,58 @@
 {
-  "Component Instances": [
-    {
-      "Definition": "component_1.so"
-    },
-    {
-      "Definition": "component_2.so"
-    },
-    {
-      "Definition": "component_3.so"
-    }
-  ]
+    "Component Instances": [
+	// INSTANCE OF COMPONENT_1
+	{
+	    "Name" : "component_1_instance",
+	    "Definition" : "component_1.so",
+
+	    "Publishers" : [
+		{
+		    "Name" : "Name_Publisher",
+		    "Endpoints" : ["tcp://*:5555"]
+		}
+	    ],
+
+	    "Subscribers" : [
+		{
+		    "Name" : "Name_Subscriber",
+		    "Endpoints" : ["tcp://127.0.0.1:5555",
+				   "tcp://127.0.0.1:5556"]
+		}
+	    ]
+	},
+
+	// INSTANCE OF COMPONENT_2	
+	{
+	    "Name" : "component_2_instance",	  
+	    "Definition" : "component_2.so",
+
+	    "Publishers" : [
+		{
+		    "Name" : "Name_Publisher",
+		    "Endpoints" : ["tcp://*:5556"]
+		}
+	    ],
+
+	    "Servers" : [
+		{
+		    "Name" : "server",
+		    "Endpoints" : ["tcp://*:5510"]
+		}
+	    ] 
+	},
+
+	// INSTANCE OF COMPONENT_3
+	{
+	    "Name" : "component_3_instance",	  
+	    "Definition" : "component_3.so",
+
+	    "Clients" : [
+		{
+		    "Name" : "client",
+		    "Endpoints" : ["tcp://127.0.0.1:5510"]
+		}
+	    ] 
+	    
+	}
+    ]
 }
