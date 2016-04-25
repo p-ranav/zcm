@@ -42,6 +42,12 @@ $ sudo make install
 $ sudo ldconfig
 ```
 
+* Install boost (used in tests)
+
+```bash
+$ sudo apt-get install libboost-all-dev
+```
+
 Install ZCM
 ------------
 
