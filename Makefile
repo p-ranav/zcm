@@ -22,11 +22,9 @@ all:
 	src/subscriber.cpp \
 	src/client.cpp \
 	src/server.cpp \
-	src/tinyxml2.cpp \
-	src/xml_parser.cpp
 
-	g++ -shared -o build/libzcm.so timer.o component.o operation_types.o operation_queue.o publisher.o subscriber.o client.o server.o tinyxml2.o xml_parser.o
-	rm timer.o component.o operation_types.o operation_queue.o publisher.o subscriber.o client.o server.o tinyxml2.o xml_parser.o
+	g++ -shared -o build/libzcm.so timer.o component.o operation_types.o operation_queue.o publisher.o subscriber.o client.o server.o
+	rm timer.o component.o operation_types.o operation_queue.o publisher.o subscriber.o client.o server.o
 install:
 	mkdir -p $(LIBZCM_LIBDIR)
 	cp build/libzcm.so $(LIBZCM_LIBDIR)
