@@ -20,7 +20,6 @@ namespace zcm {
 		      1000000000, 
 		      std::bind(&Component_2::timer_function, this), 
 		      operation_queue);
-    timer->start();
     publisher = new Publisher("Name_Publisher", {"tcp://*:5556"});
     server = new Server("server",
 			60,
@@ -29,7 +28,9 @@ namespace zcm {
 				  this,
 				  std::placeholders::_1),
 			operation_queue);
-    server->start();
+    add_timer(timer);
+    add_publisher(publisher);
+    add_server(server);
   }
 
   void Component_2::timer_function() {

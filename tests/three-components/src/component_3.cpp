@@ -20,8 +20,9 @@ namespace zcm {
 		      2000000000, 
 		      std::bind(&Component_3::timer_function, this), 
 		      operation_queue);
-    timer->start();
     client = new Client("client", {"tcp://127.0.0.1:5510"});
+    add_timer(timer);
+    add_client(client);
   }
 
   void Component_3::timer_function() {

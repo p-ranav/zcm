@@ -1,13 +1,13 @@
 {
   "Component Instances": [
     {
-      "Definition": "component_1.so",
+      "Definition": "component_1.so"
     },
     {
-      "Definition": "component_2.so",
+      "Definition": "component_2.so"
     },
     {
-      "Definition": "component_3.so",
+      "Definition": "component_3.so"
     }
   ]
 }
