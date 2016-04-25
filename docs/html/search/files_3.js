@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['server_2ecpp',['server.cpp',['../server_8cpp.html',1,'']]],
-  ['server_2ehpp',['server.hpp',['../server_8hpp.html',1,'']]],
-  ['subscriber_2ecpp',['subscriber.cpp',['../subscriber_8cpp.html',1,'']]],
-  ['subscriber_2ehpp',['subscriber.hpp',['../subscriber_8hpp.html',1,'']]]
+  ['operation_5fqueue_2ecpp',['operation_queue.cpp',['../operation__queue_8cpp.html',1,'']]],
+  ['operation_5fqueue_2ehpp',['operation_queue.hpp',['../operation__queue_8hpp.html',1,'']]],
+  ['operation_5ftypes_2ecpp',['operation_types.cpp',['../operation__types_8cpp.html',1,'']]],
+  ['operation_5ftypes_2ehpp',['operation_types.hpp',['../operation__types_8hpp.html',1,'']]]
 ];
