@@ -22,9 +22,10 @@ all:
 	src/subscriber.cpp \
 	src/client.cpp \
 	src/server.cpp \
+	src/json.cpp \
 
-	g++ -shared -o build/libzcm.so timer.o component.o operation_types.o operation_queue.o publisher.o subscriber.o client.o server.o
-	rm timer.o component.o operation_types.o operation_queue.o publisher.o subscriber.o client.o server.o
+	g++ -shared -o build/libzcm.so timer.o component.o operation_types.o operation_queue.o publisher.o subscriber.o client.o server.o json.o
+	rm timer.o component.o operation_types.o operation_queue.o publisher.o subscriber.o client.o server.o json.o
 install:
 	mkdir -p $(LIBZCM_LIBDIR)
 	cp build/libzcm.so $(LIBZCM_LIBDIR)
