@@ -1,6 +1,5 @@
 {
     "Component Instances": [
-	// INSTANCE OF COMPONENT_1
 	{
 	    "Name" : "component_1_instance",
 	    "Definition" : "component_1.so",
@@ -21,7 +20,6 @@
 	    ]
 	},
 
-	// INSTANCE OF COMPONENT_2	
 	{
 	    "Name" : "component_2_instance",	  
 	    "Definition" : "component_2.so",
@@ -41,7 +39,6 @@
 	    ] 
 	},
 
-	// INSTANCE OF COMPONENT_3
 	{
 	    "Name" : "component_3_instance",	  
 	    "Definition" : "component_3.so",
