@@ -1,9 +1,6 @@
 #include <iostream>
 #include <dlfcn.h>
 #include "actor.hpp"
-#include "component_1.hpp"
-#include "component_2.hpp"
-#include "component_3.hpp"
 
 int main() {
 
