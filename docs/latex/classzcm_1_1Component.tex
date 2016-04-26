@@ -16,15 +16,17 @@
 \begin{DoxyCompactList}\small\item\em Construct a component Prepare the component operation queue. \end{DoxyCompactList}\item 
 \hyperlink{classzcm_1_1Component_a0bab6bb89e49affa281179f5d6aeff6a}{$\sim$\+Component} ()
 \begin{DoxyCompactList}\small\item\em Destroy the component. \end{DoxyCompactList}\item 
-\hyperlink{classzcm_1_1Timer}{Timer} $\ast$ \hyperlink{classzcm_1_1Component_a9fe1a846945403f152e069917f2f49b2}{get\+\_\+timer} (std\+::string timer\+\_\+name)
+\hyperlink{classzcm_1_1Operation__Queue}{Operation\+\_\+\+Queue} $\ast$ \hyperlink{classzcm_1_1Component_a1180421a4287752b04db9dc00399605d}{get\+\_\+operation\+\_\+queue} ()
+\begin{DoxyCompactList}\small\item\em Get pointer to operation\+\_\+queue. \end{DoxyCompactList}\item 
+\hyperlink{classzcm_1_1Timer}{Timer} $\ast$ \hyperlink{classzcm_1_1Component_ade89bc05fd836ccb7951047cc35c277d}{timer} (std\+::string timer\+\_\+name)
 \begin{DoxyCompactList}\small\item\em Get a component timer by name. \end{DoxyCompactList}\item 
-\hyperlink{classzcm_1_1Publisher}{Publisher} $\ast$ \hyperlink{classzcm_1_1Component_a9bbbc50ea3f1a278bf74848f784df493}{get\+\_\+publisher} (std\+::string publisher\+\_\+name)
+\hyperlink{classzcm_1_1Publisher}{Publisher} $\ast$ \hyperlink{classzcm_1_1Component_a706edac99bd6b40210fba3e8253acef3}{publisher} (std\+::string publisher\+\_\+name)
 \begin{DoxyCompactList}\small\item\em Get a component publisher by name. \end{DoxyCompactList}\item 
-\hyperlink{classzcm_1_1Subscriber}{Subscriber} $\ast$ \hyperlink{classzcm_1_1Component_a4865551765c7d0ead713ad65571aa8dc}{get\+\_\+subscriber} (std\+::string subscriber\+\_\+name)
+\hyperlink{classzcm_1_1Subscriber}{Subscriber} $\ast$ \hyperlink{classzcm_1_1Component_a1a7a463512fbac9e88d04d62ff5fc244}{subscriber} (std\+::string subscriber\+\_\+name)
 \begin{DoxyCompactList}\small\item\em Get a component subscriber by name. \end{DoxyCompactList}\item 
-\hyperlink{classzcm_1_1Client}{Client} $\ast$ \hyperlink{classzcm_1_1Component_a89e3f610505b007767f10235b4ea8c20}{get\+\_\+client} (std\+::string client\+\_\+name)
+\hyperlink{classzcm_1_1Client}{Client} $\ast$ \hyperlink{classzcm_1_1Component_af3be7d967a1fb16cf98adfe0b5b9e4ac}{client} (std\+::string client\+\_\+name)
 \begin{DoxyCompactList}\small\item\em Get a component client by name. \end{DoxyCompactList}\item 
-\hyperlink{classzcm_1_1Server}{Server} $\ast$ \hyperlink{classzcm_1_1Component_a80e221012442119feb53740510242117}{get\+\_\+server} (std\+::string server\+\_\+name)
+\hyperlink{classzcm_1_1Server}{Server} $\ast$ \hyperlink{classzcm_1_1Component_ae4501077c33b5f86e384e15f2b6bbc50}{server} (std\+::string server\+\_\+name)
 \begin{DoxyCompactList}\small\item\em Get a component server by name. \end{DoxyCompactList}\item 
 void \hyperlink{classzcm_1_1Component_ac9b656236674930c58f7dbfebb063da9}{add\+\_\+timer} (\hyperlink{classzcm_1_1Timer}{Timer} $\ast$new\+\_\+timer)
 \begin{DoxyCompactList}\small\item\em Add a timer to this component. \end{DoxyCompactList}\item 
@@ -44,8 +46,23 @@ void \hyperlink{classzcm_1_1Component_ad3ed49fb7e936de3fd66ac4e37974735}{configu
 \begin{DoxyCompactList}\small\item\em Configure all component clients. \end{DoxyCompactList}\item 
 void \hyperlink{classzcm_1_1Component_a9a8df5c1a899ec4470dd5bbcd90e9e79}{configure\+\_\+servers} (std\+::map$<$ std\+::string, std\+::vector$<$ std\+::string $>$$>$ server\+\_\+endpoints)
 \begin{DoxyCompactList}\small\item\em Configure all component servers. \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Component_a64cab31bccfdd710f217e6a576113ce7}{register\+\_\+timer\+\_\+operation} (std\+::string operation\+\_\+name, std\+::function$<$ void()$>$ operation\+\_\+function)
+\begin{DoxyCompactList}\small\item\em Register a timer operation. \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Component_af0396ef5ac1da1119e645d0e30ca07c8}{register\+\_\+subscriber\+\_\+operation} (std\+::string operation\+\_\+name, std\+::function$<$ void(const std\+::string \&)$>$ operation\+\_\+function)
+\begin{DoxyCompactList}\small\item\em Register a subscriber operation. \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Component_a7701fdcd7e012b9cf372aa1755ee6d6c}{register\+\_\+server\+\_\+operation} (std\+::string operation\+\_\+name, std\+::function$<$ std\+::string(const std\+::string \&)$>$ operation\+\_\+function)
+\begin{DoxyCompactList}\small\item\em Register a server operation. \end{DoxyCompactList}\item 
 std\+::thread $\ast$ \hyperlink{classzcm_1_1Component_a328d6f79aab5455e96a2badfdb6bb451}{spawn} ()
 \begin{DoxyCompactList}\small\item\em Spawn the component executor thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, std\+::function$<$ void()$>$ $>$ \hyperlink{classzcm_1_1Component_a9769fc36758ee1f5a667ed23b814dc4b}{timer\+\_\+functions}
+\begin{DoxyCompactList}\small\item\em A map of timer operations. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, std\+::function$<$ void(const std\+::string \&)$>$ $>$ \hyperlink{classzcm_1_1Component_a1895703be210f0bd6558360575695147}{subscriber\+\_\+functions}
+\begin{DoxyCompactList}\small\item\em A map of subscriber operations. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, std\+::function$<$ std\+::string(const std\+::string \&)$>$ $>$ \hyperlink{classzcm_1_1Component_abae0d67e53de7447a2ade59f3ae40295}{server\+\_\+functions}
+\begin{DoxyCompactList}\small\item\em A map of server operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -174,6 +191,22 @@ Add a timer to this component.
 \mbox{\tt in}  & {\em new\+\_\+timer} & Pointer to a timer object \\
 \hline
 \end{DoxyParams}
+\index{zcm\+::\+Component@{zcm\+::\+Component}!client@{client}}
+\index{client@{client}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{client(std\+::string client\+\_\+name)}{client(std::string client_name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Client} $\ast$ zcm\+::\+Component\+::client (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{client\+\_\+name}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Component_af3be7d967a1fb16cf98adfe0b5b9e4ac}{}\label{classzcm_1_1Component_af3be7d967a1fb16cf98adfe0b5b9e4ac}
+
+
+Get a component client by name. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em client\+\_\+name} & Name of the client \\
+\hline
+\end{DoxyParams}
 \index{zcm\+::\+Component@{zcm\+::\+Component}!configure\+\_\+clients@{configure\+\_\+clients}}
 \index{configure\+\_\+clients@{configure\+\_\+clients}!zcm\+::\+Component@{zcm\+::\+Component}}
 \subsubsection[{\texorpdfstring{configure\+\_\+clients(std\+::map$<$ std\+::string, std\+::vector$<$ std\+::string $>$$>$ client\+\_\+endpoints)}{configure_clients(std::map< std::string, std::vector< std::string >> client_endpoints)}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Component\+::configure\+\_\+clients (
@@ -238,29 +271,27 @@ Configure all component subscribers.
 \mbox{\tt in}  & {\em subscriber\+\_\+endpoints} & A map of endpoints for all subscribers \\
 \hline
 \end{DoxyParams}
-\index{zcm\+::\+Component@{zcm\+::\+Component}!get\+\_\+client@{get\+\_\+client}}
-\index{get\+\_\+client@{get\+\_\+client}!zcm\+::\+Component@{zcm\+::\+Component}}
-\subsubsection[{\texorpdfstring{get\+\_\+client(std\+::string client\+\_\+name)}{get_client(std::string client_name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Client} $\ast$ zcm\+::\+Component\+::get\+\_\+client (
+\index{zcm\+::\+Component@{zcm\+::\+Component}!get\+\_\+operation\+\_\+queue@{get\+\_\+operation\+\_\+queue}}
+\index{get\+\_\+operation\+\_\+queue@{get\+\_\+operation\+\_\+queue}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{get\+\_\+operation\+\_\+queue()}{get_operation_queue()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Operation\+\_\+\+Queue} $\ast$ zcm\+::\+Component\+::get\+\_\+operation\+\_\+queue (
 \begin{DoxyParamCaption}
-\item[{std\+::string}]{client\+\_\+name}
+{}
 \end{DoxyParamCaption}
-)}\hypertarget{classzcm_1_1Component_a89e3f610505b007767f10235b4ea8c20}{}\label{classzcm_1_1Component_a89e3f610505b007767f10235b4ea8c20}
+)}\hypertarget{classzcm_1_1Component_a1180421a4287752b04db9dc00399605d}{}\label{classzcm_1_1Component_a1180421a4287752b04db9dc00399605d}
 
 
-Get a component client by name. 
+Get pointer to operation\+\_\+queue. 
 
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em client\+\_\+name} & Name of the client \\
-\hline
-\end{DoxyParams}
-\index{zcm\+::\+Component@{zcm\+::\+Component}!get\+\_\+publisher@{get\+\_\+publisher}}
-\index{get\+\_\+publisher@{get\+\_\+publisher}!zcm\+::\+Component@{zcm\+::\+Component}}
-\subsubsection[{\texorpdfstring{get\+\_\+publisher(std\+::string publisher\+\_\+name)}{get_publisher(std::string publisher_name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Publisher} $\ast$ zcm\+::\+Component\+::get\+\_\+publisher (
+\begin{DoxyReturn}{Returns}
+Operation Queue pointer 
+\end{DoxyReturn}
+\index{zcm\+::\+Component@{zcm\+::\+Component}!publisher@{publisher}}
+\index{publisher@{publisher}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{publisher(std\+::string publisher\+\_\+name)}{publisher(std::string publisher_name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Publisher} $\ast$ zcm\+::\+Component\+::publisher (
 \begin{DoxyParamCaption}
 \item[{std\+::string}]{publisher\+\_\+name}
 \end{DoxyParamCaption}
-)}\hypertarget{classzcm_1_1Component_a9bbbc50ea3f1a278bf74848f784df493}{}\label{classzcm_1_1Component_a9bbbc50ea3f1a278bf74848f784df493}
+)}\hypertarget{classzcm_1_1Component_a706edac99bd6b40210fba3e8253acef3}{}\label{classzcm_1_1Component_a706edac99bd6b40210fba3e8253acef3}
 
 
 Get a component publisher by name. 
@@ -270,13 +301,70 @@ Get a component publisher by name.
 \mbox{\tt in}  & {\em publisher\+\_\+name} & Name of the publisher \\
 \hline
 \end{DoxyParams}
-\index{zcm\+::\+Component@{zcm\+::\+Component}!get\+\_\+server@{get\+\_\+server}}
-\index{get\+\_\+server@{get\+\_\+server}!zcm\+::\+Component@{zcm\+::\+Component}}
-\subsubsection[{\texorpdfstring{get\+\_\+server(std\+::string server\+\_\+name)}{get_server(std::string server_name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Server} $\ast$ zcm\+::\+Component\+::get\+\_\+server (
+\index{zcm\+::\+Component@{zcm\+::\+Component}!register\+\_\+server\+\_\+operation@{register\+\_\+server\+\_\+operation}}
+\index{register\+\_\+server\+\_\+operation@{register\+\_\+server\+\_\+operation}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{register\+\_\+server\+\_\+operation(std\+::string operation\+\_\+name, std\+::function$<$ std\+::string(const std\+::string \&)$>$ operation\+\_\+function)}{register_server_operation(std::string operation_name, std::function< std::string(const std::string &)> operation_function)}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Component\+::register\+\_\+server\+\_\+operation (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{operation\+\_\+name, }
+\item[{std\+::function$<$ std\+::string(const std\+::string \&)$>$}]{operation\+\_\+function}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Component_a7701fdcd7e012b9cf372aa1755ee6d6c}{}\label{classzcm_1_1Component_a7701fdcd7e012b9cf372aa1755ee6d6c}
+
+
+Register a server operation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em operation\+\_\+name} & Name of the server operation \\
+\hline
+\mbox{\tt in}  & {\em operation\+\_\+function} & The actual server operation function \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Component@{zcm\+::\+Component}!register\+\_\+subscriber\+\_\+operation@{register\+\_\+subscriber\+\_\+operation}}
+\index{register\+\_\+subscriber\+\_\+operation@{register\+\_\+subscriber\+\_\+operation}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{register\+\_\+subscriber\+\_\+operation(std\+::string operation\+\_\+name, std\+::function$<$ void(const std\+::string \&)$>$ operation\+\_\+function)}{register_subscriber_operation(std::string operation_name, std::function< void(const std::string &)> operation_function)}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Component\+::register\+\_\+subscriber\+\_\+operation (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{operation\+\_\+name, }
+\item[{std\+::function$<$ void(const std\+::string \&)$>$}]{operation\+\_\+function}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Component_af0396ef5ac1da1119e645d0e30ca07c8}{}\label{classzcm_1_1Component_af0396ef5ac1da1119e645d0e30ca07c8}
+
+
+Register a subscriber operation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em operation\+\_\+name} & Name of the subscriber operation \\
+\hline
+\mbox{\tt in}  & {\em operation\+\_\+function} & The actual subscriber operation function \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Component@{zcm\+::\+Component}!register\+\_\+timer\+\_\+operation@{register\+\_\+timer\+\_\+operation}}
+\index{register\+\_\+timer\+\_\+operation@{register\+\_\+timer\+\_\+operation}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{register\+\_\+timer\+\_\+operation(std\+::string operation\+\_\+name, std\+::function$<$ void()$>$ operation\+\_\+function)}{register_timer_operation(std::string operation_name, std::function< void()> operation_function)}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Component\+::register\+\_\+timer\+\_\+operation (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{operation\+\_\+name, }
+\item[{std\+::function$<$ void()$>$}]{operation\+\_\+function}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Component_a64cab31bccfdd710f217e6a576113ce7}{}\label{classzcm_1_1Component_a64cab31bccfdd710f217e6a576113ce7}
+
+
+Register a timer operation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em operation\+\_\+name} & Name of the timer operation \\
+\hline
+\mbox{\tt in}  & {\em operation\+\_\+function} & The actual timer operation function \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Component@{zcm\+::\+Component}!server@{server}}
+\index{server@{server}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{server(std\+::string server\+\_\+name)}{server(std::string server_name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Server} $\ast$ zcm\+::\+Component\+::server (
 \begin{DoxyParamCaption}
 \item[{std\+::string}]{server\+\_\+name}
 \end{DoxyParamCaption}
-)}\hypertarget{classzcm_1_1Component_a80e221012442119feb53740510242117}{}\label{classzcm_1_1Component_a80e221012442119feb53740510242117}
+)}\hypertarget{classzcm_1_1Component_ae4501077c33b5f86e384e15f2b6bbc50}{}\label{classzcm_1_1Component_ae4501077c33b5f86e384e15f2b6bbc50}
 
 
 Get a component server by name. 
@@ -284,38 +372,6 @@ Get a component server by name.
 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\tt in}  & {\em server\+\_\+name} & Name of the server \\
-\hline
-\end{DoxyParams}
-\index{zcm\+::\+Component@{zcm\+::\+Component}!get\+\_\+subscriber@{get\+\_\+subscriber}}
-\index{get\+\_\+subscriber@{get\+\_\+subscriber}!zcm\+::\+Component@{zcm\+::\+Component}}
-\subsubsection[{\texorpdfstring{get\+\_\+subscriber(std\+::string subscriber\+\_\+name)}{get_subscriber(std::string subscriber_name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Subscriber} $\ast$ zcm\+::\+Component\+::get\+\_\+subscriber (
-\begin{DoxyParamCaption}
-\item[{std\+::string}]{subscriber\+\_\+name}
-\end{DoxyParamCaption}
-)}\hypertarget{classzcm_1_1Component_a4865551765c7d0ead713ad65571aa8dc}{}\label{classzcm_1_1Component_a4865551765c7d0ead713ad65571aa8dc}
-
-
-Get a component subscriber by name. 
-
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em subscriber\+\_\+name} & Name of the subscriber \\
-\hline
-\end{DoxyParams}
-\index{zcm\+::\+Component@{zcm\+::\+Component}!get\+\_\+timer@{get\+\_\+timer}}
-\index{get\+\_\+timer@{get\+\_\+timer}!zcm\+::\+Component@{zcm\+::\+Component}}
-\subsubsection[{\texorpdfstring{get\+\_\+timer(std\+::string timer\+\_\+name)}{get_timer(std::string timer_name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Timer} $\ast$ zcm\+::\+Component\+::get\+\_\+timer (
-\begin{DoxyParamCaption}
-\item[{std\+::string}]{timer\+\_\+name}
-\end{DoxyParamCaption}
-)}\hypertarget{classzcm_1_1Component_a9fe1a846945403f152e069917f2f49b2}{}\label{classzcm_1_1Component_a9fe1a846945403f152e069917f2f49b2}
-
-
-Get a component timer by name. 
-
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em timer\+\_\+name} & Name of the timer \\
 \hline
 \end{DoxyParams}
 \index{zcm\+::\+Component@{zcm\+::\+Component}!spawn@{spawn}}
@@ -332,6 +388,38 @@ Spawn the component executor thread.
 \begin{DoxyReturn}{Returns}
 Return a pointer to the executor thread 
 \end{DoxyReturn}
+\index{zcm\+::\+Component@{zcm\+::\+Component}!subscriber@{subscriber}}
+\index{subscriber@{subscriber}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{subscriber(std\+::string subscriber\+\_\+name)}{subscriber(std::string subscriber_name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Subscriber} $\ast$ zcm\+::\+Component\+::subscriber (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{subscriber\+\_\+name}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Component_a1a7a463512fbac9e88d04d62ff5fc244}{}\label{classzcm_1_1Component_a1a7a463512fbac9e88d04d62ff5fc244}
+
+
+Get a component subscriber by name. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em subscriber\+\_\+name} & Name of the subscriber \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Component@{zcm\+::\+Component}!timer@{timer}}
+\index{timer@{timer}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{timer(std\+::string timer\+\_\+name)}{timer(std::string timer_name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Timer} $\ast$ zcm\+::\+Component\+::timer (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{timer\+\_\+name}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Component_ade89bc05fd836ccb7951047cc35c277d}{}\label{classzcm_1_1Component_ade89bc05fd836ccb7951047cc35c277d}
+
+
+Get a component timer by name. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em timer\+\_\+name} & Name of the timer \\
+\hline
+\end{DoxyParams}
 
 
 \subsection{Member Data Documentation}
@@ -363,6 +451,13 @@ Pointer to the \hyperlink{classzcm_1_1Component}{Component} Operation Queue.
 
 A vector of component publishers. 
 
+\index{zcm\+::\+Component@{zcm\+::\+Component}!server\+\_\+functions@{server\+\_\+functions}}
+\index{server\+\_\+functions@{server\+\_\+functions}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{server\+\_\+functions}{server_functions}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$std\+::string, std\+::function$<$std\+::string(const std\+::string\&)$>$ $>$ zcm\+::\+Component\+::server\+\_\+functions}\hypertarget{classzcm_1_1Component_abae0d67e53de7447a2ade59f3ae40295}{}\label{classzcm_1_1Component_abae0d67e53de7447a2ade59f3ae40295}
+
+
+A map of server operations. 
+
 \index{zcm\+::\+Component@{zcm\+::\+Component}!servers@{servers}}
 \index{servers@{servers}!zcm\+::\+Component@{zcm\+::\+Component}}
 \subsubsection[{\texorpdfstring{servers}{servers}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Server}$\ast$$>$ zcm\+::\+Component\+::servers\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classzcm_1_1Component_a1d99508f165f7014b190d2fbe4ad2271}{}\label{classzcm_1_1Component_a1d99508f165f7014b190d2fbe4ad2271}
@@ -370,12 +465,26 @@ A vector of component publishers.
 
 A vector of component servers. 
 
+\index{zcm\+::\+Component@{zcm\+::\+Component}!subscriber\+\_\+functions@{subscriber\+\_\+functions}}
+\index{subscriber\+\_\+functions@{subscriber\+\_\+functions}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{subscriber\+\_\+functions}{subscriber_functions}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$std\+::string, std\+::function$<$void(const std\+::string\&)$>$ $>$ zcm\+::\+Component\+::subscriber\+\_\+functions}\hypertarget{classzcm_1_1Component_a1895703be210f0bd6558360575695147}{}\label{classzcm_1_1Component_a1895703be210f0bd6558360575695147}
+
+
+A map of subscriber operations. 
+
 \index{zcm\+::\+Component@{zcm\+::\+Component}!subscribers@{subscribers}}
 \index{subscribers@{subscribers}!zcm\+::\+Component@{zcm\+::\+Component}}
 \subsubsection[{\texorpdfstring{subscribers}{subscribers}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Subscriber}$\ast$$>$ zcm\+::\+Component\+::subscribers\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classzcm_1_1Component_a9f9e58fb5d2189b183ffd22ce905d620}{}\label{classzcm_1_1Component_a9f9e58fb5d2189b183ffd22ce905d620}
 
 
 A vector of component subscribers. 
+
+\index{zcm\+::\+Component@{zcm\+::\+Component}!timer\+\_\+functions@{timer\+\_\+functions}}
+\index{timer\+\_\+functions@{timer\+\_\+functions}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{timer\+\_\+functions}{timer_functions}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$std\+::string, std\+::function$<$void()$>$ $>$ zcm\+::\+Component\+::timer\+\_\+functions}\hypertarget{classzcm_1_1Component_a9769fc36758ee1f5a667ed23b814dc4b}{}\label{classzcm_1_1Component_a9769fc36758ee1f5a667ed23b814dc4b}
+
+
+A map of timer operations. 
 
 \index{zcm\+::\+Component@{zcm\+::\+Component}!timers@{timers}}
 \index{timers@{timers}!zcm\+::\+Component@{zcm\+::\+Component}}

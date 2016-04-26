@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.22)  25 APR 2016 17:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.22)  26 APR 2016 09:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1213,21 +1213,21 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
  [3
 
 ]
-Underfull \hbox (badness 783) in paragraph at lines 58--58
+Underfull \hbox (badness 783) in paragraph at lines 59--59
  [][] [][][]\T1/phv/m/n/10 configure[]_[]clients(std[]::map$\OML/cmm/m/it/10 <$
  \T1/phv/m/n/10 std[]::string, std[]::vector$\OML/cmm/m/it/10 <$ \T1/phv/m/n/10
  std[]::string $\OML/cmm/m/it/10 >$$>$ \T1/phv/m/n/10 client[]_[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
  [][] [][][]\T1/phv/m/n/10 configure[]_[]publishers(std[]::map$\OML/cmm/m/it/10
  <$ \T1/phv/m/n/10 std[]::string, std[]::vector$\OML/cmm/m/it/10 <$ \T1/phv/m/n
 /10 std[]::string $\OML/cmm/m/it/10 >$$>$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--61
+Underfull \hbox (badness 10000) in paragraph at lines 62--62
  [][] [][][]\T1/phv/m/n/10 configure[]_[]subscribers(std[]::map$\OML/cmm/m/it/1
 0 <$ \T1/phv/m/n/10 std[]::string, std[]::vector$\OML/cmm/m/it/10 <$ \T1/phv/m/
 n/10 std[]::string $\OML/cmm/m/it/10 >$$>$ 
@@ -1237,27 +1237,46 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <7> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 63.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 6.29996pt on input line 63.
-[4] [5]
-Underfull \hbox (badness 5637) in paragraph at lines 111--111
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 65--65
+ [][] [][][]\T1/phv/m/n/10 register[]_[]server[]_[]operation(std[]::string oper
+ation[]_[]name, std[]::function$\OML/cmm/m/it/10 <$ \T1/phv/m/n/10 std[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+ [][] [][][]\T1/phv/m/n/10 register[]_[]subscriber[]_[]operation(std[]::string 
+operation[]_[]name, std[]::function$\OML/cmm/m/it/10 <$ 
+ []
+
+
+Underfull \hbox (badness 7576) in paragraph at lines 67--67
+ [][] [][][]\T1/phv/m/n/10 register[]_[]timer[]_[]operation(std[]::string opera
+tion[]_[]name, std[]::function$\OML/cmm/m/it/10 <$ \T1/phv/m/n/10 void()$\OML/c
+mm/m/it/10 >$ 
+ []
+
+[5]
+Underfull \hbox (badness 5637) in paragraph at lines 118--118
  \T1/phv/m/n/10 points, std[]::function$\OML/cmm/m/it/10 <$ \T1/phv/m/n/10 std[
 ]::string(const std[]::string &)$\OML/cmm/m/it/10 >$ \T1/phv/m/n/10 operation[]
 _[]function, 
  []
 
 [6] [7]
-Underfull \hbox (badness 4341) in paragraph at lines 157--157
+Underfull \hbox (badness 4341) in paragraph at lines 164--164
  [][] [][][]\T1/phv/m/n/10 rebind[]_[]operation[]_[]function(std[]::function$\O
 ML/cmm/m/it/10 <$ \T1/phv/m/n/10 void(const std[]::string &)$\OML/cmm/m/it/10 >
 $ \T1/phv/m/n/10 new[]_[] 
  []
 
-
-Underfull \hbox (badness 2189) in paragraph at lines 174--174
+[8]
+Underfull \hbox (badness 2189) in paragraph at lines 181--181
  [][] [][][]\T1/phv/m/n/10 Subscriber[]_[][]Operation(std[]::string name, un-si
 gned int pri-or-ity, std[]::function$\OML/cmm/m/it/10 <$ 
  []
 
-[8] [9] [10])
+[9] [10])
 \tf@toc=\write5
 \openout5 = `refman.toc'.
 
@@ -1369,7 +1388,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 80.
 
 ) (./classzcm_1_1Base__Operation.tex
-<classzcm_1_1Base__Operation.pdf, id=1521, 501.875pt x 77.35901pt>
+<classzcm_1_1Base__Operation.pdf, id=1559, 501.875pt x 77.35901pt>
 File: classzcm_1_1Base__Operation.pdf Graphic file (type pdf)
 
 <use classzcm_1_1Base__Operation.pdf>
@@ -1421,133 +1440,197 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 ) (./classzcm_1_1Component.tex [16] [17]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 103.
+(hyperref)                removing `subscript' on input line 120.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 103.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 119.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 119.
+(hyperref)                removing `subscript' on input line 120.
 
 [18]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 135.
+(hyperref)                removing `subscript' on input line 136.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 135.
+(hyperref)                removing `subscript' on input line 136.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 151.
+(hyperref)                removing `subscript' on input line 152.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 151.
+(hyperref)                removing `subscript' on input line 152.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 167.
+(hyperref)                removing `subscript' on input line 168.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 167.
+(hyperref)                removing `subscript' on input line 168.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 183.
+(hyperref)                removing `subscript' on input line 184.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 183.
+(hyperref)                removing `subscript' on input line 184.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 199.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 199.
+(hyperref)                removing `subscript' on input line 200.
 
 [19]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 215.
+(hyperref)                removing `subscript' on input line 216.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 215.
+(hyperref)                removing `subscript' on input line 216.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 231.
+(hyperref)                removing `subscript' on input line 232.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 231.
+(hyperref)                removing `subscript' on input line 232.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 247.
+(hyperref)                removing `subscript' on input line 248.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 247.
+(hyperref)                removing `subscript' on input line 248.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 263.
+(hyperref)                removing `subscript' on input line 264.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 263.
+(hyperref)                removing `subscript' on input line 264.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 279.
+(hyperref)                removing `subscript' on input line 280.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 279.
+(hyperref)                removing `subscript' on input line 280.
 
 [20]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 295.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 295.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 311.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 311.
-
-
-Underfull \hbox (badness 10000) detected at line 332
+Underfull \hbox (badness 10000) detected at line 285
 [][][]
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 347.
+(hyperref)                removing `subscript' on input line 294.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 354.
+(hyperref)                removing `subscript' on input line 311.
 
-[21]) (./classzcm_1_1Operation__Queue.tex [22]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 311.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 311.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `alignment tab' on input line 311.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 311.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 330.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 330.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 330.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `alignment tab' on input line 330.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 330.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 349.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 349.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 349.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 349.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 367.
+
+
+Underfull \vbox (badness 2790) has occurred while \output is active []
+
+ [21]
+Underfull \hbox (badness 10000) detected at line 388
+[][][]
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 397.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 413.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 435.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 442.
+
+[22]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 456.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 470.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 484.
+
+) (./classzcm_1_1Operation__Queue.tex [23]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 65.
@@ -1564,7 +1647,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 99.
 
-) (./structzcm_1_1Operation__Queue_1_1PriorityOrdering.tex
+) (./structzcm_1_1Operation__Queue_1_1PriorityOrdering.tex [24]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 22.
@@ -1573,7 +1656,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 22.
 
-) (./classzcm_1_1Publisher.tex [23] [24]
+) (./classzcm_1_1Publisher.tex [25]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 101.
@@ -1582,6 +1665,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 101.
 
+[26]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 117.
@@ -1595,12 +1679,11 @@ Underfull \hbox (badness 10000) detected at line 138
 [][][]
  []
 
-[25]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 183.
 
-) (./classzcm_1_1Server.tex [26]
+[27]) (./classzcm_1_1Server.tex [28]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `alignment tab' on input line 73.
@@ -1621,7 +1704,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 73.
 
-[27]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `alignment tab' on input line 99.
@@ -1642,6 +1724,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 99.
 
+[29]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 137.
@@ -1650,10 +1733,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 137.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [28]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 153.
@@ -1686,7 +1765,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 186.
 
-
+[30]
 Underfull \hbox (badness 10000) detected at line 218
 [][][]
  []
@@ -1695,7 +1774,6 @@ Underfull \hbox (badness 10000) detected at line 218
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 251.
 
-[29]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 265.
@@ -1712,15 +1790,15 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 293.
 
-) (./classzcm_1_1Server__Operation.tex
-<classzcm_1_1Server__Operation.pdf, id=1919, 501.875pt x 267.67003pt>
+[31]) (./classzcm_1_1Server__Operation.tex
+<classzcm_1_1Server__Operation.pdf, id=1985, 501.875pt x 267.67003pt>
 File: classzcm_1_1Server__Operation.pdf Graphic file (type pdf)
 
 <use classzcm_1_1Server__Operation.pdf>
 Package pdftex.def Info: classzcm_1_1Server__Operation.pdf used on input line 1
 5.
 (pdftex.def)             Requested size: 106.69106pt x 56.9055pt.
- [30]
+ [32 <./classzcm_1_1Server__Operation.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 58.
@@ -1741,7 +1819,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 58.
 
-[31 <./classzcm_1_1Server__Operation.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 100.
@@ -1769,7 +1846,7 @@ cate ignored
                    \relax 
 l.114 ...tion_a3b15b35c31ed173d2abb193e9fba32ef}{}
                                                   \label{classzcm_1_1Base__O...
-
+[33]
 Underfull \hbox (badness 10000) detected at line 119
 [][][]
  []
@@ -1798,7 +1875,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 163.
 
-[32]) (./classzcm_1_1Subscriber.tex [33]
+) (./classzcm_1_1Subscriber.tex [34]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `alignment tab' on input line 74.
@@ -1819,6 +1896,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 74.
 
+[35]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `alignment tab' on input line 103.
@@ -1839,7 +1917,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 103.
 
-[34]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 143.
@@ -1848,6 +1925,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 143.
 
+[36]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 159.
@@ -1881,14 +1959,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 192.
 
 
-Overfull \vbox (5.39801pt too high) has occurred while \output is active []
-
-
-[35]
 Underfull \hbox (badness 10000) detected at line 224
 [][][]
  []
 
+[37]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 264.
@@ -1909,24 +1984,27 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 299.
 
-[36]) (./classzcm_1_1Subscriber__Operation.tex
-<classzcm_1_1Subscriber__Operation.pdf, id=2078, 501.875pt x 232.07704pt>
+) (./classzcm_1_1Subscriber__Operation.tex
+<classzcm_1_1Subscriber__Operation.pdf, id=2140, 501.875pt x 232.07704pt>
 File: classzcm_1_1Subscriber__Operation.pdf Graphic file (type pdf)
 
 <use classzcm_1_1Subscriber__Operation.pdf>
 Package pdftex.def Info: classzcm_1_1Subscriber__Operation.pdf used on input li
 ne 15.
 (pdftex.def)             Requested size: 123.05617pt x 56.9055pt.
+ [38]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 48.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 48.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 48.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[37 <./classzcm_1_1Subscriber__Operation.pdf>]
+ [39 <./classzcm_1_1Subscriber__Operation.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 86.
@@ -1963,7 +2041,7 @@ Underfull \hbox (badness 10000) detected at line 105
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 113.
 
-) (./classzcm_1_1Timer.tex [38] [39]
+) (./classzcm_1_1Timer.tex [40]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 64.
@@ -1980,6 +2058,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 64.
 
+[41]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 91.
@@ -2006,7 +2085,6 @@ Underfull \hbox (badness 10000) detected at line 126
 [][][]
  []
 
-[40]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 146.
@@ -2023,7 +2101,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 146.
 
-
+[42]
 Underfull \hbox (badness 10000) detected at line 167
 [][][]
  []
@@ -2048,8 +2126,8 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 221.
 
-[41]) (./classzcm_1_1Timer__Operation.tex
-<classzcm_1_1Timer__Operation.pdf, id=2185, 501.875pt x 282.74634pt>
+) (./classzcm_1_1Timer__Operation.tex [43]
+<classzcm_1_1Timer__Operation.pdf, id=2251, 501.875pt x 282.74634pt>
 File: classzcm_1_1Timer__Operation.pdf Graphic file (type pdf)
 
 <use classzcm_1_1Timer__Operation.pdf>
@@ -2065,7 +2143,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 48.
 
-[42 <./classzcm_1_1Timer__Operation.pdf>]
+[44 <./classzcm_1_1Timer__Operation.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 86.
@@ -2102,7 +2180,7 @@ Underfull \hbox (badness 10000) detected at line 105
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 113.
 
-) [43] [44
+) [45] [46
 
 ]
 Chapter 7.
@@ -2126,7 +2204,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
  []
 
-[45]
+[47]
 Underfull \hbox (badness 10000) detected at line 25
 [][][]
  []
@@ -2146,7 +2224,7 @@ Underfull \hbox (badness 10000) detected at line 28
 [][][]
  []
 
-[46]
+[48]
 Underfull \hbox (badness 10000) detected at line 31
 [][][]
  []
@@ -2171,7 +2249,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--11
 
  []
 
-[47]
+[49]
 Underfull \hbox (badness 10000) detected at line 32
 [][][]
  []
@@ -2186,7 +2264,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
  []
 
-[48]
+[50]
 Underfull \hbox (badness 10000) detected at line 25
 [][][]
  []
@@ -2216,7 +2294,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--14
 
  []
 
-[49]
+[51]
 Underfull \hbox (badness 10000) detected at line 29
 [][][]
  []
@@ -2231,7 +2309,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--14
 
  []
 
-[50]
+[52]
 Underfull \hbox (badness 10000) detected at line 29
 [][][]
  []
@@ -2266,7 +2344,7 @@ Underfull \hbox (badness 10000) detected at line 19
 [][][]
  []
 
-[51]
+[53]
 Underfull \hbox (badness 10000) detected at line 22
 [][][]
  []
@@ -2296,7 +2374,7 @@ Underfull \hbox (badness 10000) detected at line 19
 [][][]
  []
 
-[52]
+[54]
 Underfull \hbox (badness 10000) detected at line 22
 [][][]
  []
@@ -2326,7 +2404,7 @@ Underfull \hbox (badness 10000) detected at line 19
 [][][]
  []
 
-[53]
+[55]
 Underfull \hbox (badness 10000) detected at line 22
 [][][]
  []
@@ -2356,7 +2434,7 @@ Underfull \hbox (badness 10000) detected at line 19
 [][][]
  []
 
-[54]
+[56]
 Underfull \hbox (badness 10000) detected at line 22
 [][][]
  []
@@ -2376,7 +2454,7 @@ Underfull \hbox (badness 10000) detected at line 22
 [][][]
  []
 
-) [55] [56
+) [57] [58
 
 ]
 No file refman.ind.
@@ -2386,7 +2464,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 193.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 193.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 193.
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 33A0D45FBD2EC75960DB7A6A1AFE3DC0;64320.
+(rerunfilecheck)             Checksum: 5232BA314A5C88514C8938296DFA05FB;67122.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2397,13 +2475,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 193.
  ) 
 Here is how much of TeX's memory you used:
- 15850 strings out of 493029
- 237995 string characters out of 6136234
- 340722 words of memory out of 5000000
- 18507 multiletter control sequences out of 15000+600000
+ 15887 strings out of 493029
+ 239170 string characters out of 6136234
+ 343034 words of memory out of 5000000
+ 18524 multiletter control sequences out of 15000+600000
  63279 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,16n,92p,2057b,634s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,16n,92p,2057b,644s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/
@@ -2414,10 +2492,10 @@ hvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8ac.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (68 pages, 244636 bytes).
+Output written on refman.pdf (70 pages, 249204 bytes).
 PDF statistics:
- 2507 PDF objects out of 2984 (max. 8388607)
- 2365 compressed objects within 24 object streams
- 567 named destinations out of 1000 (max. 500000)
- 1997 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2577 PDF objects out of 2984 (max. 8388607)
+ 2432 compressed objects within 25 object streams
+ 587 named destinations out of 1000 (max. 500000)
+ 2053 words of extra memory for PDF output out of 10000 (max. 10000000)
 
