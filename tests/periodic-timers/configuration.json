@@ -1,0 +1,8 @@
+{
+    "Component Instances": [
+	{
+	    "Name" : "periodic_timers",
+	    "Definition" : "periodic_timers.so"	    
+	}
+    ]
+}
