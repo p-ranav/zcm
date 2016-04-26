@@ -1,7 +1,7 @@
-/*
- * Client Component
- * Author: Pranav Srinivas Kumar
- * Date: 2016.04.23
+/** @file    client_component.hpp 
+ *  @author  Pranav Srinivas Kumar
+ *  @date    2016.04.24
+ *  @brief   This file declares the Client_Component class
  */
 
 #ifndef CLIENT_COMPONENT
@@ -11,14 +11,22 @@
 
 namespace zcm {
 
+  /**
+   * @brief Client_Component class
+   */  
   class Client_Component : public Component {
   public:
-    Client_Component();    
+
+    /**
+     * @brief Construct a client component & register all exposed functionality
+     */    
+    Client_Component();
+
+    /**
+     * @brief A timer operation that can be triggered by some periodic timer
+     */      
     void timer_function();
-  
-  private:
-    Timer * component_timer;
-    Client * component_client;
+
   };
 
 }

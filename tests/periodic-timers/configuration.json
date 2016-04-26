@@ -2,7 +2,41 @@
     "Component Instances": [
 	{
 	    "Name" : "periodic_timers",
-	    "Definition" : "periodic_timers.so"	    
+	    "Definition" : "periodic_timers.so",
+
+	    "Timers" : [
+		{
+		    "Name" : "timer_1",
+		    "Priority" : 50,
+		    "Period" : 1000000000,
+		    "Function" : "timer_1_function"
+		},
+		{
+		    "Name" : "timer_2",
+		    "Priority" : 50,
+		    "Period" : 500000000,
+		    "Function" : "timer_2_function"
+		},
+		{
+		    "Name" : "timer_3",
+		    "Priority" : 50,
+		    "Period" : 250000000,
+		    "Function" : "timer_3_function"
+		},
+		{
+		    "Name" : "timer_4",
+		    "Priority" : 50,
+		    "Period" : 100000000,
+		    "Function" : "timer_4_function"
+		},
+		{
+		    "Name" : "timer_5",
+		    "Priority" : 50,
+		    "Period" : 500000000,
+		    "Function" : "timer_5_function"
+		}
+		
+	    ]	    
 	}
     ]
 }

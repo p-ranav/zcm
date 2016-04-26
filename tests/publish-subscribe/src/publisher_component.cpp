@@ -1,30 +1,36 @@
-/*
- * Publisher Component
- * Author: Pranav Srinivas Kumar
- * Date: 2016.04.25
+/** @file    publisher_component.cpp 
+ *  @author  Pranav Srinivas Kumar
+ *  @date    2016.04.24
+ *  @brief   This file contains definitions for the Publisher_Component class
  */
 
 #include "publisher_component.hpp"
 
 namespace zcm {
 
+  /**
+   * @brief Function required to dynamically load publisher_component.so
+   */  
   extern "C" {
     Component* create_component() {
       return new Publisher_Component();
     }
   }      
 
+  /**
+   * @brief Construct a publisher component
+   * Register all operations exposed by this component
+   */   
   Publisher_Component::Publisher_Component() {
-    component_timer = new Timer("timer_1",
-				50, 
-				500000000, 
-				std::bind(&Publisher_Component::timer_1_function, this), 
-				operation_queue);
-    component_publisher = new Publisher("timer_pub_1");
-    add_timer(component_timer);
-    add_publisher(component_publisher);
+    register_timer_operation("timer_1_function",
+			     std::bind(&Publisher_Component::timer_1_function, this));
   }
 
+  /**
+   * @brief A timer operation
+   * This operation can be triggered by a periodic timer
+   * Bind this operation to a periodic timer in the JSON configuration
+   */    
   void Publisher_Component::timer_1_function() {
     // Create new message
     TestMessage new_message;
@@ -36,7 +42,7 @@ namespace zcm {
     new_message.SerializeToString(message_string);
 
     // Publish message
-    component_publisher->send(*message_string);
+    publisher("timer_pub_1")->send(*message_string);
   }
 
 }

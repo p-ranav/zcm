@@ -1,7 +1,7 @@
-/*
- * Server Component
- * Author: Pranav Srinivas Kumar
- * Date: 2016.04.23
+/** @file    server_component.hpp 
+ *  @author  Pranav Srinivas Kumar
+ *  @date    2016.04.24
+ *  @brief   This file declares the Server_Component class
  */
 
 #ifndef SERVER_COMPONENT
@@ -11,13 +11,22 @@
 
 namespace zcm {
 
+  /**
+   * @brief Server_Component class
+   */    
   class Server_Component : public Component {
   public:
+
+    /**
+     * @brief Construct a server component & register all exposed functionality
+     */      
     Server_Component();
+
+    /**
+     * @brief A server operation that can be requested by some client
+     */      
     std::string server_function(std::string request);
 
-  private:
-    Server * component_server;
   };
 
 }

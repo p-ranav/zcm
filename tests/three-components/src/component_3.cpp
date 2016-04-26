@@ -8,23 +8,28 @@
 
 namespace zcm {
 
+  /**
+   * @brief Function required to dynamically load component_3.so
+   */     
   extern "C" {
     Component* create_component() {
       return new Component_3();
     }
   }  
 
+  /**
+   * @brief Construct component_3
+   * Register all operations exposed by this component
+   */   
   Component_3::Component_3() {
-    timer = new Timer("Timer_3",
-		      50, 
-		      2000000000, 
-		      std::bind(&Component_3::timer_function, this), 
-		      operation_queue);
-    client = new Client("client");
-    add_timer(timer);
-    add_client(client);
+    register_timer_operation("timer_function", std::bind(&Component_3::timer_function, this));
   }
 
+  /**
+   * @brief A timer operation
+   * This operation can be triggered by a periodic timer
+   * Bind this operation to a periodic timer in the JSON configuration
+   */    
   void Component_3::timer_function() {
     boost::random::mt19937 rng;
     boost::random::uniform_int_distribution<> loop_iteration_random(500000 * 0.6, 500000);
@@ -37,7 +42,7 @@ namespace zcm {
       double y = 562056205.1515;
       result = x*y;
     }
-    std::string response = client->call("Component_3");
+    std::string response = client("client_port")->call("Component_3");
     std::cout << "Component 3 : Timer : Called Component_2::Server : " << "Received: " << response << std::endl;
   }  
 }

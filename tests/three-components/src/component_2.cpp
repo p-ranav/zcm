@@ -3,35 +3,37 @@
  *  @date    2016.04.24
  *  @brief   This file contains definitions of the Component_2 class
  */
-
 #include "component_2.hpp"
 
 namespace zcm {
 
+  /**
+   * @brief Function required to dynamically load component_2.so
+   */     
   extern "C" {
     Component* create_component() {
       return new Component_2();
     }
   }  
 
+  /**
+   * @brief Construct component_2
+   * Register all operations exposed by this component
+   */    
   Component_2::Component_2() {
-    timer = new Timer("Timer_2",
-		      50, 
-		      1000000000, 
-		      std::bind(&Component_2::timer_function, this), 
-		      operation_queue);
-    publisher = new Publisher("Name_Publisher");
-    server = new Server("server",
-			60,
-			std::bind(&Component_2::server_function,
-				  this,
-				  std::placeholders::_1),
-			operation_queue);
-    add_timer(timer);
-    add_publisher(publisher);
-    add_server(server);
+    register_timer_operation("timer_function",
+			     std::bind(&Component_2::timer_function, this));
+    register_server_operation("server_function",
+			      std::bind(&Component_2::server_function,
+					this,
+					std::placeholders::_1));
   }
 
+  /**
+   * @brief A timer operation
+   * This operation can be triggered by a periodic timer
+   * Bind this operation to a periodic timer in the JSON configuration
+   */   
   void Component_2::timer_function() {
     boost::random::mt19937 rng;
     boost::random::uniform_int_distribution<> loop_iteration_random(800000 * 0.6, 800000);
@@ -44,10 +46,15 @@ namespace zcm {
       double y = 562056205.1515;
       result = x*y;
     } 
-    publisher->send("Component_2");
+    publisher("publisher_port")->send("Component_2");
     std::cout << "Component 2 : Timer : Published message: Component_2" << std::endl;    
   }
 
+  /**
+   * @brief A server operation
+   * This operation can be bound to a server and requested by some client
+   * Bind this operation to a server in the JSON configuration
+   */   
   std::string Component_2::server_function(std::string request) {
     std::cout << "Component 2 : Server : Received request: " << request << std::endl;
     boost::random::mt19937 rng;
@@ -61,7 +68,7 @@ namespace zcm {
       double y = 562056205.1515;
       result = x*y;
     }
-    publisher->send("Component_2");
+    publisher("publisher_port")->send("Component_2");
     std::cout << "Component 2 : Server : Published message: Component_2" << std::endl;     
     return "Component_2";
   }

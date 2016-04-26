@@ -4,9 +4,18 @@
 	    "Name" : "client_component",
 	    "Definition" : "client_component.so",
 
+	    "Timers" : [
+		{
+		    "Name" : "timer_1",
+		    "Priority" : 50,
+		    "Period" : 1000000000,
+		    "Function" : "timer_function"
+		}
+	    ],
+
 	    "Clients" : [
 		{
-		    "Name" : "client",
+		    "Name" : "client_port",
 		    "Endpoints" : ["tcp://127.0.0.1:5510"]
 		}
 	    ] 
@@ -19,8 +28,10 @@
 
 	    "Servers" : [
 		{
-		    "Name" : "server",
-		    "Endpoints" : ["tcp://*:5510"]
+		    "Name" : "server_port",
+		    "Priority" : 60,
+		    "Function" : "server_function",
+ 		    "Endpoints" : ["tcp://*:5510"]
 		}
 	    ] 
 	}

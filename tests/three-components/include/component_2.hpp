@@ -1,7 +1,7 @@
-/*
- * Component 2
- * Author: Pranav Srinivas Kumar
- * Date: 2016.04.23
+/** @file    component_2.hpp 
+ *  @author  Pranav Srinivas Kumar
+ *  @date    2016.04.24
+ *  @brief   This file declares the Component_2 class
  */
 
 #ifndef COMPONENT_2
@@ -16,17 +16,27 @@
 
 namespace zcm {
 
+  /**
+   * @brief Component_2 class
+   */    
   class Component_2 : public Component {
   public:
 
+    /**
+     * @brief Construct component_2 & register all exposed functionality
+     */     
     Component_2();
+
+    /**
+     * @brief A timer operation that can be triggered by some periodic timer
+     */         
     void timer_function();
+
+    /**
+     * @brief A server operation that can be requested by some client
+     */         
     std::string server_function(std::string request);
 
-  private:
-    Timer * timer;
-    Publisher * publisher;
-    Server * server;
   };
 
 }

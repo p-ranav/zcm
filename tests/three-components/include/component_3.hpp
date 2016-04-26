@@ -1,7 +1,7 @@
-/*
- * Component 3
- * Author: Pranav Srinivas Kumar
- * Date: 2016.04.23
+/** @file    component_3.hpp 
+ *  @author  Pranav Srinivas Kumar
+ *  @date    2016.04.24
+ *  @brief   This file declares the Component_3 class
  */
 
 #ifndef COMPONENT_3
@@ -16,15 +16,22 @@
 
 namespace zcm {
 
+  /**
+   * @brief Component_3 class
+   */    
   class Component_3 : public Component {
   public:
-    
+
+    /**
+     * @brief Construct component_3 & register all exposed functionality
+     */     
     Component_3();
+
+    /**
+     * @brief A timer operation that can be triggered by some periodic timer
+     */      
     void timer_function();
 
-  private:
-    Timer * timer;
-    Client * client;
   };
 
 }

@@ -8,31 +8,33 @@
 
 namespace zcm {
 
+  /**
+   * @brief Function required to dynamically load component_1.so
+   */   
   extern "C" {
     Component* create_component() {
       return new Component_1();
     }
   }
 
+  /**
+   * @brief Construct component_1
+   * Register all operations exposed by this component
+   */    
   Component_1::Component_1() {
-    timer = new Timer("Timer_1",
-		      50, 
-		      500000000, // 500 msec 
-		      std::bind(&Component_1::timer_1_function, this), 
-		      operation_queue);
-    publisher = new Publisher("Name_Publisher");
-    subscriber = new Subscriber("Name_Subscriber", 
-				60, 
-				"",
-				std::bind(&Component_1::subscriber_function, 
-					  this,
-					  std::placeholders::_1), 
-				operation_queue);
-    add_timer(timer);
-    add_publisher(publisher);
-    add_subscriber(subscriber);
+    register_timer_operation("timer_1_function",
+			     std::bind(&Component_1::timer_1_function, this));
+    register_subscriber_operation("subscriber_function",
+				  std::bind(&Component_1::subscriber_function, 
+					    this,
+					    std::placeholders::_1));
   }
 
+  /**
+   * @brief A timer operation
+   * This operation can be triggered by a periodic timer
+   * Bind this operation to a periodic timer in the JSON configuration
+   */     
   void Component_1::timer_1_function() {
     boost::random::mt19937 rng;
     boost::random::uniform_int_distribution<> loop_iteration_random(500000 * 0.6, 500000);
@@ -45,10 +47,15 @@ namespace zcm {
       double y = 562056205.1515;
       result = x*y;
     }
-    publisher->send("Component_1");
+    publisher("publisher_port")->send("Component_1");
     std::cout << "Component 1 : Timer : Published message: Component_1" << std::endl;    
   }
 
+  /**
+   * @brief A subscriber operation
+   * This operation can be bound to a subscriber
+   * Bind this operation to a subscriber in the JSON configuration
+   */     
   void Component_1::subscriber_function(std::string received_message) {
     boost::random::mt19937 rng;
     boost::random::uniform_int_distribution<> loop_iteration_random(700000 * 0.6, 700000);

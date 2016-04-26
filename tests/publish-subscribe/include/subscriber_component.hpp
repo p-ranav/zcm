@@ -1,7 +1,7 @@
-/*
- * Subscriber Component
- * Author: Pranav Srinivas Kumar
- * Date: 2016.04.16
+/** @file    subscriber_component.hpp 
+ *  @author  Pranav Srinivas Kumar
+ *  @date    2016.04.24
+ *  @brief   This file declares the Subscriber_Component class
  */
 
 #ifndef SUBSCRIBER_COMPONENT
@@ -11,13 +11,22 @@
 
 namespace zcm {
 
+  /**
+   * @brief Subscriber_Component class
+   */    
   class Subscriber_Component : public Component {
   public:
+
+    /**
+     * @brief Construct a subscriber component & register all exposed functionality
+     */        
     Subscriber_Component();
+
+    /**
+     * @brief A subscriber operation that can be bound to a subscriber port
+     */      
     void subscriber_function(std::string received_message);
-  
-  private:
-    Subscriber * component_subscriber;
+
   };
 
 }

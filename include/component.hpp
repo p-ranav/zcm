@@ -32,34 +32,40 @@ namespace zcm {
     ~Component();
 
     /**
+     * @brief Get pointer to operation_queue
+     * @return Operation Queue pointer
+     */
+    Operation_Queue * get_operation_queue();
+
+    /**
      * @brief Get a component timer by name
      * @param[in] timer_name Name of the timer
      */  
-    Timer * get_timer(std::string timer_name);
+    Timer * timer(std::string timer_name);
 
     /**
      * @brief Get a component publisher by name
      * @param[in] publisher_name Name of the publisher
      */      
-    Publisher * get_publisher(std::string publisher_name);
+    Publisher * publisher(std::string publisher_name);
 
     /**
      * @brief Get a component subscriber by name
      * @param[in] subscriber_name Name of the subscriber
      */        
-    Subscriber * get_subscriber(std::string subscriber_name);
+    Subscriber * subscriber(std::string subscriber_name);
 
     /**
      * @brief Get a component client by name
      * @param[in] client_name Name of the client
      */            
-    Client * get_client(std::string client_name);
+    Client * client(std::string client_name);
 
     /**
      * @brief Get a component server by name
      * @param[in] server_name Name of the server
      */      
-    Server * get_server(std::string server_name);
+    Server * server(std::string server_name);
     
     /**
      * @brief Add a timer to this component
@@ -116,10 +122,43 @@ namespace zcm {
     void configure_servers(std::map<std::string, std::vector<std::string>> server_endpoints);
 
     /**
+     * @brief Register a timer operation
+     * @param[in] operation_name Name of the timer operation
+     * @param[in] operation_function The actual timer operation function
+     */        
+    void register_timer_operation(std::string operation_name,
+				  std::function<void()> operation_function);
+
+    /**
+     * @brief Register a subscriber operation
+     * @param[in] operation_name Name of the subscriber operation
+     * @param[in] operation_function The actual subscriber operation function
+     */        
+    void register_subscriber_operation(std::string operation_name,
+				       std::function<void(const std::string &)> operation_function);
+
+    /**
+     * @brief Register a server operation
+     * @param[in] operation_name Name of the server operation
+     * @param[in] operation_function The actual server operation function
+     */        
+    void register_server_operation(std::string operation_name,
+				   std::function<std::string(const std::string &)> operation_function);    
+
+    /**
      * @brief Spawn the component executor thread
      * @return Return a pointer to the executor thread
      */    
     std::thread * spawn();
+
+    /** @brief A map of timer operations */
+    std::map<std::string, std::function<void()>> timer_functions;
+
+    /** @brief A map of subscriber operations */    
+    std::map<std::string, std::function<void(const std::string&)>> subscriber_functions;
+
+    /** @brief A map of server operations */    
+    std::map<std::string, std::function<std::string(const std::string&)>> server_functions;      
 
   protected:
 
@@ -142,7 +181,7 @@ namespace zcm {
     std::vector<Client*> clients;
 
     /** @brief A vector of component servers */
-    std::vector<Server*> servers;    
+    std::vector<Server*> servers;      
   };
 
 }

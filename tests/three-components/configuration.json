@@ -4,9 +4,18 @@
 	    "Name" : "component_1_instance",
 	    "Definition" : "component_1.so",
 
+	    "Timers" : [
+		{
+		    "Name" : "timer_1",
+		    "Period" : 500000000,
+		    "Priority" : 50,
+		    "Function" : "timer_1_function"
+		}
+	    ],	    
+
 	    "Publishers" : [
 		{
-		    "Name" : "Name_Publisher",
+		    "Name" : "publisher_port",
 		    "Endpoints" : ["tcp://*:5555"]
 		}
 	    ],
@@ -14,6 +23,9 @@
 	    "Subscribers" : [
 		{
 		    "Name" : "Name_Subscriber",
+		    "Priority" : 60,
+		    "Filter" : "",
+		    "Function" : "subscriber_function",
 		    "Endpoints" : ["tcp://127.0.0.1:5555",
 				   "tcp://127.0.0.1:5556"]
 		}
@@ -24,9 +36,18 @@
 	    "Name" : "component_2_instance",	  
 	    "Definition" : "component_2.so",
 
+	    "Timers" : [
+		{
+		    "Name" : "timer_2",
+		    "Period" : 1000000000,
+		    "Priority" : 50,
+		    "Function" : "timer_function"
+		}
+	    ],	    	    
+
 	    "Publishers" : [
 		{
-		    "Name" : "Name_Publisher",
+		    "Name" : "publisher_port",
 		    "Endpoints" : ["tcp://*:5556"]
 		}
 	    ],
@@ -34,6 +55,8 @@
 	    "Servers" : [
 		{
 		    "Name" : "server",
+		    "Priority" : 60,
+		    "Function" : "server_function",
 		    "Endpoints" : ["tcp://*:5510"]
 		}
 	    ] 
@@ -43,9 +66,18 @@
 	    "Name" : "component_3_instance",	  
 	    "Definition" : "component_3.so",
 
+	    "Timers" : [
+		{
+		    "Name" : "timer_3",
+		    "Period" : 2000000000,
+		    "Priority" : 50,
+		    "Function" : "timer_function"
+		}
+	    ],	 	    
+
 	    "Clients" : [
 		{
-		    "Name" : "client",
+		    "Name" : "client_port",
 		    "Endpoints" : ["tcp://127.0.0.1:5510"]
 		}
 	    ] 

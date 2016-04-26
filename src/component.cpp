@@ -27,8 +27,13 @@ namespace zcm {
       delete server;    
   }
 
+  // Get Operation Queue
+  Operation_Queue * Component::get_operation_queue() {
+    return operation_queue;
+  }
+
   // Find timer by name
-  Timer * Component::get_timer(std::string timer_name) {
+  Timer * Component::timer(std::string timer_name) {
     for (auto timer : timers) 
       if(timer->get_name().compare(timer_name) == 0)
 	return timer;
@@ -36,7 +41,7 @@ namespace zcm {
   }
 
   // Find publisher by name
-  Publisher * Component::get_publisher(std::string publisher_name) {
+  Publisher * Component::publisher(std::string publisher_name) {
     for (auto publisher : publishers) 
       if(publisher->get_name().compare(publisher_name) == 0)
 	return publisher;
@@ -44,7 +49,7 @@ namespace zcm {
   }
 
   // Find subscriber by name
-  Subscriber * Component::get_subscriber(std::string subscriber_name) {
+  Subscriber * Component::subscriber(std::string subscriber_name) {
     for (auto subscriber : subscribers) 
       if(subscriber->get_name().compare(subscriber_name) == 0)
 	return subscriber;
@@ -52,7 +57,7 @@ namespace zcm {
   }
 
   // Find client by name
-  Client * Component::get_client(std::string client_name) {
+  Client * Component::client(std::string client_name) {
     for (auto client : clients) 
       if(client->get_name().compare(client_name) == 0)
 	return client;
@@ -60,7 +65,7 @@ namespace zcm {
   }
 
   // Find server by name
-  Server * Component::get_server(std::string server_name) {
+  Server * Component::server(std::string server_name) {
     for (auto server : servers) 
       if(server->get_name().compare(server_name) == 0)
 	return server;
@@ -95,7 +100,7 @@ namespace zcm {
   // Configure publisher bindings
   void Component::configure_publishers(std::map<std::string, std::vector<std::string>> publisher_endpoints) {
     for (auto pub_map : publisher_endpoints) {
-      Publisher * pub_ptr = get_publisher(pub_map.first);
+      Publisher * pub_ptr = publisher(pub_map.first);
       if (pub_ptr)
 	pub_ptr->bind(pub_map.second);
       else
@@ -106,7 +111,7 @@ namespace zcm {
   // Configure subscriber connections
   void Component::configure_subscribers(std::map<std::string, std::vector<std::string>> subscriber_endpoints) {
     for (auto sub_map : subscriber_endpoints) {
-      Subscriber * sub_ptr = get_subscriber(sub_map.first);
+      Subscriber * sub_ptr = subscriber(sub_map.first);
       if (sub_ptr)
 	sub_ptr->connect(sub_map.second);
       else
@@ -117,7 +122,7 @@ namespace zcm {
   // Configure client connections
   void Component::configure_clients(std::map<std::string, std::vector<std::string>> client_endpoints) {
     for (auto client_map : client_endpoints) {
-      Client * client_ptr = get_client(client_map.first);
+      Client * client_ptr = client(client_map.first);
       if (client_ptr)
 	client_ptr->connect(client_map.second);
       else
@@ -128,12 +133,30 @@ namespace zcm {
   // Configure server bindings
   void Component::configure_servers(std::map<std::string, std::vector<std::string>> server_endpoints) {
     for (auto server_map : server_endpoints) {
-      Server * server_ptr = get_server(server_map.first);
+      Server * server_ptr = server(server_map.first);
       if (server_ptr)
 	server_ptr->bind(server_map.second);
       else
 	std::cout << "ERROR::Unable to find server \"" << server_map.first << "\"" << std::endl;
     }      
+  }
+
+  // Register a timer operation
+  void Component::register_timer_operation(std::string operation_name,
+					   std::function<void(void)> operation_function) {
+    timer_functions[operation_name] = operation_function;
+  }
+
+  // Register a subscriber operation
+  void Component::register_subscriber_operation(std::string operation_name,
+						std::function<void(const std::string&)> operation_function) {
+    subscriber_functions[operation_name] = operation_function;
+  }
+
+  // Register a timer operation
+  void Component::register_server_operation(std::string operation_name,
+					    std::function<std::string(const std::string&)> operation_function) {
+    server_functions[operation_name] = operation_function;
   }  
 
   // Spawn the component executor thread

@@ -1,7 +1,7 @@
-/*
- * Publisher Component
- * Author: Pranav Srinivas Kumar
- * Date: 2016.04.25
+/** @file    publisher_component.hpp 
+ *  @author  Pranav Srinivas Kumar
+ *  @date    2016.04.24
+ *  @brief   This file declares the Publisher_Component class
  */
 
 #ifndef PUBLISHER_COMPONENT
@@ -11,14 +11,22 @@
 
 namespace zcm {
 
+  /**
+   * @brief Publisher_Component class
+   */   
   class Publisher_Component : public Component {
   public:
+
+    /**
+     * @brief Construct a publisher component & register all exposed functionality
+     */       
     Publisher_Component();
+
+    /**
+     * @brief A timer operation that can be triggered by some periodic timer
+     */     
     void timer_1_function();
 
-  private:
-    Timer * component_timer;
-    Publisher * component_publisher;
   };
 
 }
