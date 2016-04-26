@@ -27,7 +27,7 @@ namespace zcm {
 	std::map<std::string, std::vector<std::string>> publishers_config_map;
 	std::map<std::string, std::vector<std::string>> subscribers_config_map;
 	std::map<std::string, std::vector<std::string>> clients_config_map;
-	std::map<std::string, std::vector<std::string>> servers_config_map;	
+	std::map<std::string, std::vector<std::string>> servers_config_map;
 
 	// Configure all component instance publishers
 	for (unsigned int j = 0; j < root["Component Instances"][i]["Publishers"].size(); j++) {
@@ -63,8 +63,8 @@ namespace zcm {
 	  for (unsigned int k = 0; k < server_config["Endpoints"].size(); k++) {
 	    servers_config_map[server_name].push_back(server_config["Endpoints"][k].asString());
 	  }
-	}	
-	
+	}
+
 	component_instance->configure_publishers(publishers_config_map);
 	component_instance->configure_subscribers(subscribers_config_map);
 	component_instance->configure_clients(clients_config_map);
