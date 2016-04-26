@@ -3,7 +3,7 @@ ZeroMQ Component Model
 
 A lightweight component model using ZeroMQ and Google Protobuf
 
-ZMC Dependencies
+ZCM Dependencies
 -----------------
 
 * Install library dependencies
