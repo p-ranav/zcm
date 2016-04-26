@@ -1,0 +1,29 @@
+{
+    "Component Instances": [
+	{
+	    "Name" : "publisher_component",
+	    "Definition" : "publisher_component.so",
+
+	    "Publishers" : [
+		{
+		    "Name" : "timer_pub_1",
+		    "Endpoints" : ["tcp://*:5555"]
+		}
+	    ] 
+	    
+	},
+
+	{
+	    "Name" : "subscriber_component",	  
+	    "Definition" : "subscriber_component.so",
+
+	    "Subscribers" : [
+		{
+		    "Name" : "subscriber_operation",
+		    "Endpoints" : ["tcp://127.0.0.1:5555",
+				   "tcp://127.0.0.1:5556"]
+		}
+	    ] 
+	}
+    ]
+}

@@ -3,8 +3,8 @@ ZeroMQ Component Model
 
 A lightweight component model using ZeroMQ and Google Protobuf
 
-Dependencies
-------------
+ZMC Dependencies
+-----------------
 
 * Install library dependencies
 
@@ -27,6 +27,17 @@ $ make check && sudo make install && sudo ldconfig
 $ git clone https://github.com/zeromq/cppzmq
 $ cd cppzmq
 $ sudo cp *.hpp /usr/local/include/.
+```
+
+Install ZCM
+------------
+
+```bash
+$ git clone https://github.com/pranav-srinivas-kumar/zcm
+$ cd zcm
+$ make
+$ sudo make install
+$ sudo ldconfig
 ```
 
 Optional (Used in tests)
@@ -52,13 +63,3 @@ $ sudo ldconfig
 $ sudo apt-get install libboost-all-dev
 ```
 
-Install ZCM
-------------
-
-```bash
-$ git clone https://github.com/pranav-srinivas-kumar/zcm
-$ cd zcm
-$ make
-$ sudo make install
-$ sudo ldconfig
-```
