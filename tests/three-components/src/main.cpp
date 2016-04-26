@@ -1,5 +1,3 @@
-#include <iostream>
-#include <dlfcn.h>
 #include "actor.hpp"
 
 int main() {
