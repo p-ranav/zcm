@@ -17,6 +17,7 @@ all:
 	g++ -fPIC -shared $(TEST_SOURCE_DIR)/subscriber_component.cpp $(TEST_PROTO_DIR)/test_message.pb.cc -o $(TEST_BUILD_DIR)/subscriber_component.so -I$(TEST_INCLUDE_DIR) -std=c++11 -pthread -I$(TEST_PROTO_DIR) -I$(ZCM_HEADERS) -L$(ZCM_LIBRARY) -lzcm -lzmq -Wl,-Bstatic -lprotobuf -Wl,-Bdynamic
 
 	g++ $(TEST_SOURCE_DIR)/main.cpp -o $(TEST_BUILD_DIR)/actor -I$(TEST_INCLUDE_DIR) -I$(TEST_PROTO_DIR) -std=c++11 -ldl -pthread -I$(ZCM_HEADERS) -L$(ZCM_LIBRARY) -lzcm -lzmq
-
+run:
+	cd $(TEST_BUILD_DIR) && export LD_LIBRARY_PATH=$(PWD):$(LD_LIBRARY_PATH) && ./actor
 clean:
 	rm -rf $(TEST_BUILD_DIR)
