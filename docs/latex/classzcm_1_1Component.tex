@@ -16,6 +16,34 @@
 \begin{DoxyCompactList}\small\item\em Construct a component Prepare the component operation queue. \end{DoxyCompactList}\item 
 \hyperlink{classzcm_1_1Component_a0bab6bb89e49affa281179f5d6aeff6a}{$\sim$\+Component} ()
 \begin{DoxyCompactList}\small\item\em Destroy the component. \end{DoxyCompactList}\item 
+\hyperlink{classzcm_1_1Timer}{Timer} $\ast$ \hyperlink{classzcm_1_1Component_a9fe1a846945403f152e069917f2f49b2}{get\+\_\+timer} (std\+::string timer\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Get a component timer by name. \end{DoxyCompactList}\item 
+\hyperlink{classzcm_1_1Publisher}{Publisher} $\ast$ \hyperlink{classzcm_1_1Component_a9bbbc50ea3f1a278bf74848f784df493}{get\+\_\+publisher} (std\+::string publisher\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Get a component publisher by name. \end{DoxyCompactList}\item 
+\hyperlink{classzcm_1_1Subscriber}{Subscriber} $\ast$ \hyperlink{classzcm_1_1Component_a4865551765c7d0ead713ad65571aa8dc}{get\+\_\+subscriber} (std\+::string subscriber\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Get a component subscriber by name. \end{DoxyCompactList}\item 
+\hyperlink{classzcm_1_1Client}{Client} $\ast$ \hyperlink{classzcm_1_1Component_a89e3f610505b007767f10235b4ea8c20}{get\+\_\+client} (std\+::string client\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Get a component client by name. \end{DoxyCompactList}\item 
+\hyperlink{classzcm_1_1Server}{Server} $\ast$ \hyperlink{classzcm_1_1Component_a80e221012442119feb53740510242117}{get\+\_\+server} (std\+::string server\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Get a component server by name. \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Component_ac9b656236674930c58f7dbfebb063da9}{add\+\_\+timer} (\hyperlink{classzcm_1_1Timer}{Timer} $\ast$new\+\_\+timer)
+\begin{DoxyCompactList}\small\item\em Add a timer to this component. \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Component_a3d70420843fc7e0ff2d3d2edc422e992}{add\+\_\+publisher} (\hyperlink{classzcm_1_1Publisher}{Publisher} $\ast$new\+\_\+publisher)
+\begin{DoxyCompactList}\small\item\em Add a publisher to this component. \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Component_ac07614093c36e61704d166f00f14c22e}{add\+\_\+subscriber} (\hyperlink{classzcm_1_1Subscriber}{Subscriber} $\ast$new\+\_\+subscriber)
+\begin{DoxyCompactList}\small\item\em Add a subscriber to this component. \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Component_ad71bf4cebc218089642d16f697a493fa}{add\+\_\+client} (\hyperlink{classzcm_1_1Client}{Client} $\ast$new\+\_\+client)
+\begin{DoxyCompactList}\small\item\em Add a client to this component. \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Component_a31989e75d9de6093cb712148cd94da71}{add\+\_\+server} (\hyperlink{classzcm_1_1Server}{Server} $\ast$new\+\_\+server)
+\begin{DoxyCompactList}\small\item\em Add a server to this component. \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Component_a64674700fb1edd7c84a64ce78aa5b2f4}{configure\+\_\+publishers} (std\+::map$<$ std\+::string, std\+::vector$<$ std\+::string $>$$>$ publisher\+\_\+endpoints)
+\begin{DoxyCompactList}\small\item\em Configure all component publishers. \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Component_a25c31193982bb317186f4f3b4d8d790c}{configure\+\_\+subscribers} (std\+::map$<$ std\+::string, std\+::vector$<$ std\+::string $>$$>$ subscriber\+\_\+endpoints)
+\begin{DoxyCompactList}\small\item\em Configure all component subscribers. \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Component_ad3ed49fb7e936de3fd66ac4e37974735}{configure\+\_\+clients} (std\+::map$<$ std\+::string, std\+::vector$<$ std\+::string $>$$>$ client\+\_\+endpoints)
+\begin{DoxyCompactList}\small\item\em Configure all component clients. \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Component_a9a8df5c1a899ec4470dd5bbcd90e9e79}{configure\+\_\+servers} (std\+::map$<$ std\+::string, std\+::vector$<$ std\+::string $>$$>$ server\+\_\+endpoints)
+\begin{DoxyCompactList}\small\item\em Configure all component servers. \end{DoxyCompactList}\item 
 std\+::thread $\ast$ \hyperlink{classzcm_1_1Component_a328d6f79aab5455e96a2badfdb6bb451}{spawn} ()
 \begin{DoxyCompactList}\small\item\em Spawn the component executor thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
@@ -24,7 +52,17 @@ std\+::thread $\ast$ \hyperlink{classzcm_1_1Component_a328d6f79aab5455e96a2badfd
 \hyperlink{classzcm_1_1Operation__Queue}{Operation\+\_\+\+Queue} $\ast$ \hyperlink{classzcm_1_1Component_a4c9f3591c18dde89bc3c2af7717c6692}{operation\+\_\+queue}
 \begin{DoxyCompactList}\small\item\em Pointer to the \hyperlink{classzcm_1_1Component}{Component} Operation Queue. \end{DoxyCompactList}\item 
 std\+::thread $\ast$ \hyperlink{classzcm_1_1Component_a392ca3b6cd537cd7aa1d4db31dacdf4d}{executor\+\_\+thread}
-\begin{DoxyCompactList}\small\item\em Pointer to the \hyperlink{classzcm_1_1Component}{Component} Executor Thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Pointer to the \hyperlink{classzcm_1_1Component}{Component} Executor Thread. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{classzcm_1_1Timer}{Timer} $\ast$ $>$ \hyperlink{classzcm_1_1Component_a506eac4aebc9e02f0df246afbbac7d75}{timers}
+\begin{DoxyCompactList}\small\item\em A vector of component timers. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{classzcm_1_1Publisher}{Publisher} $\ast$ $>$ \hyperlink{classzcm_1_1Component_a4dcce63b0b5495bc15bd18e5dce86094}{publishers}
+\begin{DoxyCompactList}\small\item\em A vector of component publishers. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{classzcm_1_1Subscriber}{Subscriber} $\ast$ $>$ \hyperlink{classzcm_1_1Component_a9f9e58fb5d2189b183ffd22ce905d620}{subscribers}
+\begin{DoxyCompactList}\small\item\em A vector of component subscribers. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{classzcm_1_1Client}{Client} $\ast$ $>$ \hyperlink{classzcm_1_1Component_a940e1b9755cd9f2bea95bda880999626}{clients}
+\begin{DoxyCompactList}\small\item\em A vector of component clients. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{classzcm_1_1Server}{Server} $\ast$ $>$ \hyperlink{classzcm_1_1Component_a1d99508f165f7014b190d2fbe4ad2271}{servers}
+\begin{DoxyCompactList}\small\item\em A vector of component servers. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -56,6 +94,230 @@ Destroy the component.
 
 
 \subsection{Member Function Documentation}
+\index{zcm\+::\+Component@{zcm\+::\+Component}!add\+\_\+client@{add\+\_\+client}}
+\index{add\+\_\+client@{add\+\_\+client}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{add\+\_\+client(\+Client $\ast$new\+\_\+client)}{add_client(Client *new_client)}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Component\+::add\+\_\+client (
+\begin{DoxyParamCaption}
+\item[{{\bf Client} $\ast$}]{new\+\_\+client}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Component_ad71bf4cebc218089642d16f697a493fa}{}\label{classzcm_1_1Component_ad71bf4cebc218089642d16f697a493fa}
+
+
+Add a client to this component. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new\+\_\+client} & Pointer to a client object \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Component@{zcm\+::\+Component}!add\+\_\+publisher@{add\+\_\+publisher}}
+\index{add\+\_\+publisher@{add\+\_\+publisher}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{add\+\_\+publisher(\+Publisher $\ast$new\+\_\+publisher)}{add_publisher(Publisher *new_publisher)}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Component\+::add\+\_\+publisher (
+\begin{DoxyParamCaption}
+\item[{{\bf Publisher} $\ast$}]{new\+\_\+publisher}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Component_a3d70420843fc7e0ff2d3d2edc422e992}{}\label{classzcm_1_1Component_a3d70420843fc7e0ff2d3d2edc422e992}
+
+
+Add a publisher to this component. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new\+\_\+publisher} & Pointer to a publisher object \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Component@{zcm\+::\+Component}!add\+\_\+server@{add\+\_\+server}}
+\index{add\+\_\+server@{add\+\_\+server}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{add\+\_\+server(\+Server $\ast$new\+\_\+server)}{add_server(Server *new_server)}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Component\+::add\+\_\+server (
+\begin{DoxyParamCaption}
+\item[{{\bf Server} $\ast$}]{new\+\_\+server}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Component_a31989e75d9de6093cb712148cd94da71}{}\label{classzcm_1_1Component_a31989e75d9de6093cb712148cd94da71}
+
+
+Add a server to this component. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new\+\_\+server} & Pointer to a server object \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Component@{zcm\+::\+Component}!add\+\_\+subscriber@{add\+\_\+subscriber}}
+\index{add\+\_\+subscriber@{add\+\_\+subscriber}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{add\+\_\+subscriber(\+Subscriber $\ast$new\+\_\+subscriber)}{add_subscriber(Subscriber *new_subscriber)}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Component\+::add\+\_\+subscriber (
+\begin{DoxyParamCaption}
+\item[{{\bf Subscriber} $\ast$}]{new\+\_\+subscriber}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Component_ac07614093c36e61704d166f00f14c22e}{}\label{classzcm_1_1Component_ac07614093c36e61704d166f00f14c22e}
+
+
+Add a subscriber to this component. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new\+\_\+subscriber} & Pointer to a subscriber object \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Component@{zcm\+::\+Component}!add\+\_\+timer@{add\+\_\+timer}}
+\index{add\+\_\+timer@{add\+\_\+timer}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{add\+\_\+timer(\+Timer $\ast$new\+\_\+timer)}{add_timer(Timer *new_timer)}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Component\+::add\+\_\+timer (
+\begin{DoxyParamCaption}
+\item[{{\bf Timer} $\ast$}]{new\+\_\+timer}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Component_ac9b656236674930c58f7dbfebb063da9}{}\label{classzcm_1_1Component_ac9b656236674930c58f7dbfebb063da9}
+
+
+Add a timer to this component. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new\+\_\+timer} & Pointer to a timer object \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Component@{zcm\+::\+Component}!configure\+\_\+clients@{configure\+\_\+clients}}
+\index{configure\+\_\+clients@{configure\+\_\+clients}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{configure\+\_\+clients(std\+::map$<$ std\+::string, std\+::vector$<$ std\+::string $>$$>$ client\+\_\+endpoints)}{configure_clients(std::map< std::string, std::vector< std::string >> client_endpoints)}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Component\+::configure\+\_\+clients (
+\begin{DoxyParamCaption}
+\item[{std\+::map$<$ std\+::string, std\+::vector$<$ std\+::string $>$$>$}]{client\+\_\+endpoints}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Component_ad3ed49fb7e936de3fd66ac4e37974735}{}\label{classzcm_1_1Component_ad3ed49fb7e936de3fd66ac4e37974735}
+
+
+Configure all component clients. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em client\+\_\+endpoints} & A map of endpoints for all clients \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Component@{zcm\+::\+Component}!configure\+\_\+publishers@{configure\+\_\+publishers}}
+\index{configure\+\_\+publishers@{configure\+\_\+publishers}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{configure\+\_\+publishers(std\+::map$<$ std\+::string, std\+::vector$<$ std\+::string $>$$>$ publisher\+\_\+endpoints)}{configure_publishers(std::map< std::string, std::vector< std::string >> publisher_endpoints)}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Component\+::configure\+\_\+publishers (
+\begin{DoxyParamCaption}
+\item[{std\+::map$<$ std\+::string, std\+::vector$<$ std\+::string $>$$>$}]{publisher\+\_\+endpoints}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Component_a64674700fb1edd7c84a64ce78aa5b2f4}{}\label{classzcm_1_1Component_a64674700fb1edd7c84a64ce78aa5b2f4}
+
+
+Configure all component publishers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em publisher\+\_\+endpoints} & A map of endpoints for all publishers \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Component@{zcm\+::\+Component}!configure\+\_\+servers@{configure\+\_\+servers}}
+\index{configure\+\_\+servers@{configure\+\_\+servers}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{configure\+\_\+servers(std\+::map$<$ std\+::string, std\+::vector$<$ std\+::string $>$$>$ server\+\_\+endpoints)}{configure_servers(std::map< std::string, std::vector< std::string >> server_endpoints)}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Component\+::configure\+\_\+servers (
+\begin{DoxyParamCaption}
+\item[{std\+::map$<$ std\+::string, std\+::vector$<$ std\+::string $>$$>$}]{server\+\_\+endpoints}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Component_a9a8df5c1a899ec4470dd5bbcd90e9e79}{}\label{classzcm_1_1Component_a9a8df5c1a899ec4470dd5bbcd90e9e79}
+
+
+Configure all component servers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em server\+\_\+endpoints} & A map of endpoints for all servers \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Component@{zcm\+::\+Component}!configure\+\_\+subscribers@{configure\+\_\+subscribers}}
+\index{configure\+\_\+subscribers@{configure\+\_\+subscribers}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{configure\+\_\+subscribers(std\+::map$<$ std\+::string, std\+::vector$<$ std\+::string $>$$>$ subscriber\+\_\+endpoints)}{configure_subscribers(std::map< std::string, std::vector< std::string >> subscriber_endpoints)}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Component\+::configure\+\_\+subscribers (
+\begin{DoxyParamCaption}
+\item[{std\+::map$<$ std\+::string, std\+::vector$<$ std\+::string $>$$>$}]{subscriber\+\_\+endpoints}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Component_a25c31193982bb317186f4f3b4d8d790c}{}\label{classzcm_1_1Component_a25c31193982bb317186f4f3b4d8d790c}
+
+
+Configure all component subscribers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em subscriber\+\_\+endpoints} & A map of endpoints for all subscribers \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Component@{zcm\+::\+Component}!get\+\_\+client@{get\+\_\+client}}
+\index{get\+\_\+client@{get\+\_\+client}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{get\+\_\+client(std\+::string client\+\_\+name)}{get_client(std::string client_name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Client} $\ast$ zcm\+::\+Component\+::get\+\_\+client (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{client\+\_\+name}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Component_a89e3f610505b007767f10235b4ea8c20}{}\label{classzcm_1_1Component_a89e3f610505b007767f10235b4ea8c20}
+
+
+Get a component client by name. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em client\+\_\+name} & Name of the client \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Component@{zcm\+::\+Component}!get\+\_\+publisher@{get\+\_\+publisher}}
+\index{get\+\_\+publisher@{get\+\_\+publisher}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{get\+\_\+publisher(std\+::string publisher\+\_\+name)}{get_publisher(std::string publisher_name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Publisher} $\ast$ zcm\+::\+Component\+::get\+\_\+publisher (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{publisher\+\_\+name}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Component_a9bbbc50ea3f1a278bf74848f784df493}{}\label{classzcm_1_1Component_a9bbbc50ea3f1a278bf74848f784df493}
+
+
+Get a component publisher by name. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em publisher\+\_\+name} & Name of the publisher \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Component@{zcm\+::\+Component}!get\+\_\+server@{get\+\_\+server}}
+\index{get\+\_\+server@{get\+\_\+server}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{get\+\_\+server(std\+::string server\+\_\+name)}{get_server(std::string server_name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Server} $\ast$ zcm\+::\+Component\+::get\+\_\+server (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{server\+\_\+name}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Component_a80e221012442119feb53740510242117}{}\label{classzcm_1_1Component_a80e221012442119feb53740510242117}
+
+
+Get a component server by name. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em server\+\_\+name} & Name of the server \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Component@{zcm\+::\+Component}!get\+\_\+subscriber@{get\+\_\+subscriber}}
+\index{get\+\_\+subscriber@{get\+\_\+subscriber}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{get\+\_\+subscriber(std\+::string subscriber\+\_\+name)}{get_subscriber(std::string subscriber_name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Subscriber} $\ast$ zcm\+::\+Component\+::get\+\_\+subscriber (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{subscriber\+\_\+name}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Component_a4865551765c7d0ead713ad65571aa8dc}{}\label{classzcm_1_1Component_a4865551765c7d0ead713ad65571aa8dc}
+
+
+Get a component subscriber by name. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em subscriber\+\_\+name} & Name of the subscriber \\
+\hline
+\end{DoxyParams}
+\index{zcm\+::\+Component@{zcm\+::\+Component}!get\+\_\+timer@{get\+\_\+timer}}
+\index{get\+\_\+timer@{get\+\_\+timer}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{get\+\_\+timer(std\+::string timer\+\_\+name)}{get_timer(std::string timer_name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Timer} $\ast$ zcm\+::\+Component\+::get\+\_\+timer (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{timer\+\_\+name}
+\end{DoxyParamCaption}
+)}\hypertarget{classzcm_1_1Component_a9fe1a846945403f152e069917f2f49b2}{}\label{classzcm_1_1Component_a9fe1a846945403f152e069917f2f49b2}
+
+
+Get a component timer by name. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em timer\+\_\+name} & Name of the timer \\
+\hline
+\end{DoxyParams}
 \index{zcm\+::\+Component@{zcm\+::\+Component}!spawn@{spawn}}
 \index{spawn@{spawn}!zcm\+::\+Component@{zcm\+::\+Component}}
 \subsubsection[{\texorpdfstring{spawn()}{spawn()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::thread $\ast$ zcm\+::\+Component\+::spawn (
@@ -73,6 +335,13 @@ Return a pointer to the executor thread
 
 
 \subsection{Member Data Documentation}
+\index{zcm\+::\+Component@{zcm\+::\+Component}!clients@{clients}}
+\index{clients@{clients}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{clients}{clients}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Client}$\ast$$>$ zcm\+::\+Component\+::clients\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classzcm_1_1Component_a940e1b9755cd9f2bea95bda880999626}{}\label{classzcm_1_1Component_a940e1b9755cd9f2bea95bda880999626}
+
+
+A vector of component clients. 
+
 \index{zcm\+::\+Component@{zcm\+::\+Component}!executor\+\_\+thread@{executor\+\_\+thread}}
 \index{executor\+\_\+thread@{executor\+\_\+thread}!zcm\+::\+Component@{zcm\+::\+Component}}
 \subsubsection[{\texorpdfstring{executor\+\_\+thread}{executor_thread}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::thread$\ast$ zcm\+::\+Component\+::executor\+\_\+thread\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classzcm_1_1Component_a392ca3b6cd537cd7aa1d4db31dacdf4d}{}\label{classzcm_1_1Component_a392ca3b6cd537cd7aa1d4db31dacdf4d}
@@ -86,6 +355,34 @@ Pointer to the \hyperlink{classzcm_1_1Component}{Component} Executor Thread.
 
 
 Pointer to the \hyperlink{classzcm_1_1Component}{Component} Operation Queue. 
+
+\index{zcm\+::\+Component@{zcm\+::\+Component}!publishers@{publishers}}
+\index{publishers@{publishers}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{publishers}{publishers}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Publisher}$\ast$$>$ zcm\+::\+Component\+::publishers\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classzcm_1_1Component_a4dcce63b0b5495bc15bd18e5dce86094}{}\label{classzcm_1_1Component_a4dcce63b0b5495bc15bd18e5dce86094}
+
+
+A vector of component publishers. 
+
+\index{zcm\+::\+Component@{zcm\+::\+Component}!servers@{servers}}
+\index{servers@{servers}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{servers}{servers}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Server}$\ast$$>$ zcm\+::\+Component\+::servers\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classzcm_1_1Component_a1d99508f165f7014b190d2fbe4ad2271}{}\label{classzcm_1_1Component_a1d99508f165f7014b190d2fbe4ad2271}
+
+
+A vector of component servers. 
+
+\index{zcm\+::\+Component@{zcm\+::\+Component}!subscribers@{subscribers}}
+\index{subscribers@{subscribers}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{subscribers}{subscribers}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Subscriber}$\ast$$>$ zcm\+::\+Component\+::subscribers\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classzcm_1_1Component_a9f9e58fb5d2189b183ffd22ce905d620}{}\label{classzcm_1_1Component_a9f9e58fb5d2189b183ffd22ce905d620}
+
+
+A vector of component subscribers. 
+
+\index{zcm\+::\+Component@{zcm\+::\+Component}!timers@{timers}}
+\index{timers@{timers}!zcm\+::\+Component@{zcm\+::\+Component}}
+\subsubsection[{\texorpdfstring{timers}{timers}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Timer}$\ast$$>$ zcm\+::\+Component\+::timers\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classzcm_1_1Component_a506eac4aebc9e02f0df246afbbac7d75}{}\label{classzcm_1_1Component_a506eac4aebc9e02f0df246afbbac7d75}
+
+
+A vector of component timers. 
 
 
 
