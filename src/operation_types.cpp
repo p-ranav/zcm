@@ -30,9 +30,9 @@ namespace zcm {
 
   // Execute the server operation and respond to the client
   void Server_Operation::execute() {
-    std::string response = operation_function();
-    zmq::message_t reply(response.length());
-    memcpy(reply.data(), response.c_str(), response.length());
+    operation_function();
+    zmq::message_t reply(response_ptr->length());
+    memcpy(reply.data(), response_ptr->c_str(), response_ptr->length());
     socket_ptr->send(reply);
     set_ready();
   }
@@ -40,6 +40,10 @@ namespace zcm {
   // Return the ZMQ server socket pointer
   zmq::socket_t * Server_Operation::get_socket_ptr() {
     return socket_ptr;
+  }
+
+  std::string * Server_Operation::get_response_ptr() {
+    return response_ptr;
   }
 
   // Set the server as "ready" to receive new request from client

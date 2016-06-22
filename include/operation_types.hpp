@@ -128,13 +128,15 @@ namespace zcm {
      */   
     Server_Operation(std::string name,
 		     unsigned int priority,
-		     std::function<std::string()> operation_function,
+		     std::function<void()> operation_function,
 		     zmq::socket_t * socket_ptr,
-		     bool * recv_ready) :
+		     bool * recv_ready,
+		     std::string * response) :
       Base_Operation(name, priority),
       operation_function(operation_function),
       socket_ptr(socket_ptr),
-      recv_ready(recv_ready) {}
+      recv_ready(recv_ready),
+      response_ptr(response) {}
 
     /**
      * @brief Server operation function 
@@ -147,6 +149,11 @@ namespace zcm {
     zmq::socket_t * get_socket_ptr();
 
     /**
+     * @brief Get the response string pointer
+     */
+    std::string * get_response_ptr();
+
+    /**
      * @brief Get the ZMQ server "ready" variable 
      */  
     void set_ready();
@@ -154,13 +161,16 @@ namespace zcm {
   private:
 
     /** @brief Server Operation Function */        
-    std::function<std::string()> operation_function;
+    std::function<void()> operation_function;
 
     /** @brief Pointer to the Server ZMQ socket */        
     zmq::socket_t * socket_ptr;
 
     /** @brief Pointer to the Server "ready" variable */        
     bool * recv_ready;
+    
+    /** @brief Pointer to the response string */
+    std::string * response_ptr;
   };
 
 }

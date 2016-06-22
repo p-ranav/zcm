@@ -25,7 +25,7 @@ namespace zcm {
     /**
      * @brief A server operation that can be requested by some client
      */      
-    std::string server_function(std::string request);
+    void server_function();
 
   };
 

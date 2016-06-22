@@ -143,7 +143,7 @@ namespace zcm {
      * @param[in] operation_function The actual server operation function
      */        
     void register_server_operation(std::string operation_name,
-				   std::function<std::string(const std::string &)> operation_function);  
+				   std::function<void()> operation_function);  
 
     /**
      * @brief Register component functionality
@@ -166,7 +166,7 @@ namespace zcm {
     std::map<std::string, std::function<void()>> subscriber_functions;
 
     /** @brief A map of server operations */    
-    std::map<std::string, std::function<std::string(const std::string&)>> server_functions;      
+    std::map<std::string, std::function<void()>> server_functions;      
 
   protected:
 

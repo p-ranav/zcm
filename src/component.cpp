@@ -155,7 +155,7 @@ namespace zcm {
 
   // Register a timer operation
   void Component::register_server_operation(std::string operation_name,
-					    std::function<std::string(const std::string&)> operation_function) {
+					    std::function<void()> operation_function) {
     server_functions[operation_name] = operation_function;
   }  
 

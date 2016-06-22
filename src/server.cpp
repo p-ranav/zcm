@@ -11,7 +11,7 @@ namespace zcm {
   Server::Server(std::string name,
 		 unsigned int priority,
 		 std::vector<std::string> endpoints,
-		 std::function<std::string(const std::string&)> operation_function,
+		 std::function<void()> operation_function,
 		 Operation_Queue * operation_queue_ptr) :
     name(name),
     priority(priority),
@@ -20,6 +20,7 @@ namespace zcm {
     operation_queue_ptr(operation_queue_ptr) {
     context = new zmq::context_t(2);
     server_socket = new zmq::socket_t(*context, ZMQ_REP);
+    response = new std::string("");
     for (auto endpoint : endpoints)
       server_socket->bind(endpoint);
     ready = true;
@@ -35,6 +36,7 @@ namespace zcm {
     endpoints = new_endpoints;
     context = new zmq::context_t(2);
     server_socket = new zmq::socket_t(*context, ZMQ_REP);
+    response = new std::string("");
     for (auto endpoint : endpoints)
       server_socket->bind(endpoint);
     ready = true;
@@ -62,18 +64,18 @@ namespace zcm {
       ready = false;
       if (request.length() > 0) {
 	func_mutex.lock();
+	buffer.push(request);
 	// Create a new operation & bind the request as the first argument
 	Server_Operation * new_operation
-	  = new Server_Operation(name, priority, std::bind(operation_function, request),
-				 server_socket, &ready);
+	  = new Server_Operation(name, priority, operation_function,
+				 server_socket, &ready, response);
 	operation_queue_ptr->enqueue(new_operation);
 	func_mutex.unlock();
       }
     }
   }
 
-  void Server::rebind_operation_function(std::function<std::string(const std::string&)>
-					 new_operation_function) {
+  void Server::rebind_operation_function(std::function<void()> new_operation_function) {
     func_mutex.lock();
     operation_function = new_operation_function;
     func_mutex.unlock();
@@ -86,6 +88,26 @@ namespace zcm {
   void Server::start() {
     std::thread server_thread = spawn();
     server_thread.detach();
+  }
+
+  bool Server::is_buffer_empty() {
+    if (buffer.empty())
+      return true;
+    else
+      return false;
+  }
+
+  std::string Server::message() {
+    std::string first_message = "";
+    if (!is_buffer_empty()) {
+      first_message = buffer.front();
+      buffer.pop();
+    }
+    return first_message;
+  }
+
+  void Server::set_response(std::string new_response) {
+    *response = new_response;
   }
 
 }
