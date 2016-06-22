@@ -30,7 +30,7 @@ namespace zcm {
      */    
     Server(std::string name,
 	   unsigned int priority,
-	   std::function<std::string(const std::string&)> operation_function,
+	   std::function<void()> operation_function,
 	   Operation_Queue * operation_queue_ptr) :
       name(name),
       priority(priority),
@@ -48,7 +48,7 @@ namespace zcm {
     Server(std::string name,
 	   unsigned int priority,
 	   std::vector<std::string> endpoints,
-	   std::function<std::string(const std::string&)> operation_function,
+	   std::function<void()> operation_function,
 	   Operation_Queue * operation_queue_ptr);
 
     /**
@@ -92,7 +92,7 @@ namespace zcm {
      * @brief Rebind the server operation function
      * @param[in] new_operation_function New server function to be handled upon recv() 
      */  
-    void rebind_operation_function(std::function<std::string(const std::string&)> new_operation_function);
+    void rebind_operation_function(std::function<void()> new_operation_function);
 
     /**
      * @brief Spawn a new thread for the server
@@ -104,6 +104,21 @@ namespace zcm {
      * @brief Start the server thread
      */  
     void start();
+
+    /**
+     * @brief Is the message buffer empty?
+     */
+    bool is_buffer_empty();
+
+    /**
+     * @brief Is the message buffer empty?
+     */
+    std::string message();
+
+    /**
+     * @brief Set the response string 
+     */
+    void set_response(std::string new_response);
 
   private:
 
@@ -117,7 +132,7 @@ namespace zcm {
     std::vector<std::string> endpoints;
 
     /** @brief Operation function bound to the server - Component method that handles received requests */
-    std::function<std::string(const std::string&)> operation_function;
+    std::function<void()> operation_function;
 
     /** @brief Pointer to the operation_queue */
     Operation_Queue * operation_queue_ptr;
@@ -133,6 +148,12 @@ namespace zcm {
 
     /** @brief Mutex used when changing operation_function at runtime */
     std::mutex func_mutex;
+
+    /** @brief Buffer of received messages */
+    std::queue<std::string> buffer;
+
+    /** @brief response string to send to client */
+    std::string * response;
   };
 
 }

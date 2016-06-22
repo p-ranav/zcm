@@ -24,8 +24,7 @@ namespace zcm {
   Server_Component::Server_Component() {
     register_server_operation("server_function",
 			      std::bind(&Server_Component::server_function,
-					this,
-					std::placeholders::_1));
+					this));
   }
 
   /**
@@ -33,13 +32,14 @@ namespace zcm {
    * This operation can be requested by some client
    * Bind this operation to a server in the JSON configuration
    */    
-  std::string Server_Component::server_function(std::string request) {
+  void Server_Component::server_function() {
+    std::string request = server("server_port")->message();
     TestMessage received_request_obj;
     received_request_obj.ParseFromString(request);
     std::cout << "Server Operation : Received Request: " 
 	      << received_request_obj.message() 
 	      << " ID : " << received_request_obj.id() << std::endl;
-    return "ACK";
+    server("server_port")->set_response("ACK");
   }  
 
 }

@@ -25,8 +25,7 @@ namespace zcm {
 			     std::bind(&Component_2::timer_function, this));
     register_server_operation("server_function",
 			      std::bind(&Component_2::server_function,
-					this,
-					std::placeholders::_1));
+					this));
   }
 
   /**
@@ -55,7 +54,8 @@ namespace zcm {
    * This operation can be bound to a server and requested by some client
    * Bind this operation to a server in the JSON configuration
    */   
-  std::string Component_2::server_function(std::string request) {
+  void Component_2::server_function() {
+    std::string request = server("server")->message();
     std::cout << "Component 2 : Server : Received request: " << request << std::endl;
     boost::random::mt19937 rng;
     boost::random::uniform_int_distribution<> loop_iteration_random(600000 * 0.6, 600000);
@@ -69,8 +69,8 @@ namespace zcm {
       result = x*y;
     }
     publisher("publisher_port")->send("Component_2");
-    std::cout << "Component 2 : Server : Published message: Component_2" << std::endl;     
-    return "Component_2";
+    std::cout << "Component 2 : Server : Published message: Component_2" << std::endl;
+    server("server")->set_response("Component_2");
   }
 
 }
