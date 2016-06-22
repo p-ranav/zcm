@@ -32,7 +32,7 @@ namespace zcm {
     Subscriber(std::string name,
 	       unsigned int priority, 
 	       std::string filter,
-	       std::function<void(const std::string&)> operation_function, 
+	       std::function<void()> operation_function, 
 	       Operation_Queue * operation_queue_ptr) : 
       name(name),
       priority(priority),
@@ -53,7 +53,7 @@ namespace zcm {
 	       unsigned int priority, 
 	       std::string filter,
 	       std::vector<std::string> endpoints, 
-	       std::function<void(const std::string&)> operation_function, 
+	       std::function<void()> operation_function, 
 	       Operation_Queue * operation_queue_ptr);
 
     /**
@@ -97,7 +97,7 @@ namespace zcm {
      * @brief Rebind the subscriber operation function
      * @param[in] new_operation_function New subscriber function to be handled upon recv() 
      */     
-    void rebind_operation_function(std::function<void(const std::string&)> new_operation_function);
+    void rebind_operation_function(std::function<void()> new_operation_function);
 
     /**
      * @brief Spawn a new thread for the subscriber
@@ -109,6 +109,16 @@ namespace zcm {
      * @brief Start the subscriber thread
      */
     void start();
+
+    /**
+     * @brief Is the message buffer empty?
+     */
+    bool is_buffer_empty();
+
+    /**
+     * @brief Is the message buffer empty?
+     */
+    std::string message();
 
   private:
 
@@ -124,8 +134,8 @@ namespace zcm {
     /** @brief Vector of connection endpoints */  
     std::vector<std::string> endpoints;
 
-    /** @brief Operation function bound to the subscriber - Component method that handles received message */
-    std::function<void(const std::string&)> operation_function;
+    /** @brief Operation function bound to the subscriber */
+    std::function<void()> operation_function;
 
     /** @brief Pointer to the operation queue */  
     Operation_Queue * operation_queue_ptr;
@@ -138,6 +148,9 @@ namespace zcm {
 
     /** @brief Mutex used to change operation_function at runtime */  
     std::mutex func_mutex; 
+
+    /** @brief Buffer of messages received by the subscriber */
+    std::queue<std::string> buffer;
   };
 
 }

@@ -32,17 +32,8 @@ namespace zcm {
    * Bind this operation to a periodic timer in the JSON configuration
    */    
   void Publisher_Component::timer_1_function() {
-    // Create new message
-    TestMessage new_message;
-    new_message.set_message("timer_1_message");
-    new_message.set_id(0);
-
-    // Prepare string to publish
-    std::string * message_string = new std::string; 
-    new_message.SerializeToString(message_string);
-
     // Publish message
-    publisher("timer_pub_1")->send(*message_string);
+    publisher("timer_pub_1")->send("timer_1_message");
   }
 
 }

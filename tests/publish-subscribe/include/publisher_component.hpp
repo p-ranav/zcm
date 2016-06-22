@@ -7,7 +7,6 @@
 #ifndef PUBLISHER_COMPONENT
 #define PUBLISHER_COMPONENT
 #include "component.hpp"
-#include "test_message.pb.h"
 
 namespace zcm {
 

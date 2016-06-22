@@ -149,7 +149,7 @@ namespace zcm {
 
   // Register a subscriber operation
   void Component::register_subscriber_operation(std::string operation_name,
-						std::function<void(const std::string&)> operation_function) {
+						std::function<void()> operation_function) {
     subscriber_functions[operation_name] = operation_function;
   }
 
@@ -158,6 +158,11 @@ namespace zcm {
 					    std::function<std::string(const std::string&)> operation_function) {
     server_functions[operation_name] = operation_function;
   }  
+
+  void Component::register_functionality(std::string operation_name,
+					 std::function<void()> operation_function) {
+
+  } 
 
   // Spawn the component executor thread
   std::thread * Component::spawn() {

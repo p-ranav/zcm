@@ -30,7 +30,7 @@
 
 	    "Subscribers" : [
 		{
-		    "Name" : "subscriber_operation",
+		    "Name" : "subscriber_port",
 		    "Priority" : 60,
 		    "Filter" : "",
 		    "Function" : "subscriber_function",

@@ -26,8 +26,7 @@ namespace zcm {
 			     std::bind(&Component_1::timer_1_function, this));
     register_subscriber_operation("subscriber_function",
 				  std::bind(&Component_1::subscriber_function, 
-					    this,
-					    std::placeholders::_1));
+					    this));
   }
 
   /**
@@ -56,7 +55,7 @@ namespace zcm {
    * This operation can be bound to a subscriber
    * Bind this operation to a subscriber in the JSON configuration
    */     
-  void Component_1::subscriber_function(std::string received_message) {
+  void Component_1::subscriber_function() {
     boost::random::mt19937 rng;
     boost::random::uniform_int_distribution<> loop_iteration_random(700000 * 0.6, 700000);
     int loop_max = loop_iteration_random(rng);  
@@ -68,6 +67,7 @@ namespace zcm {
       double y = 562056205.1515;
       result = x*y;
     }
+    std::string received_message = subscriber("Name_Subscriber")->message();
     std::cout << "Component 1 : Subscriber : Received message: " << received_message << std::endl;
   }    
     

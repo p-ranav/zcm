@@ -135,7 +135,7 @@ namespace zcm {
      * @param[in] operation_function The actual subscriber operation function
      */        
     void register_subscriber_operation(std::string operation_name,
-				       std::function<void(const std::string &)> operation_function);
+				       std::function<void()> operation_function);
 
     /**
      * @brief Register a server operation
@@ -143,7 +143,15 @@ namespace zcm {
      * @param[in] operation_function The actual server operation function
      */        
     void register_server_operation(std::string operation_name,
-				   std::function<std::string(const std::string &)> operation_function);    
+				   std::function<std::string(const std::string &)> operation_function);  
+
+    /**
+     * @brief Register component functionality
+     * @param[in] operation_name Name of the operation
+     * @param[in] operation_function The actual operation function
+     */        
+    void register_functionality(std::string operation_name,
+				std::function<void()> operation_function);   
 
     /**
      * @brief Spawn the component executor thread
@@ -155,7 +163,7 @@ namespace zcm {
     std::map<std::string, std::function<void()>> timer_functions;
 
     /** @brief A map of subscriber operations */    
-    std::map<std::string, std::function<void(const std::string&)>> subscriber_functions;
+    std::map<std::string, std::function<void()>> subscriber_functions;
 
     /** @brief A map of server operations */    
     std::map<std::string, std::function<std::string(const std::string&)>> server_functions;      
