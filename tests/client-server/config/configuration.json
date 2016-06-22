@@ -16,6 +16,7 @@
 	    "Clients" : [
 		{
 		    "Name" : "client_port",
+		    "Timeout" : 0.5,
 		    "Endpoints" : ["tcp://127.0.0.1:5510"]
 		}
 	    ] 
