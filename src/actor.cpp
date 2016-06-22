@@ -78,10 +78,11 @@ namespace zcm {
 	for (unsigned int j = 0; j < root["Component Instances"][i]["Clients"].size(); j++) {
 	  Json::Value client_config = root["Component Instances"][i]["Clients"][j];
 	  std::string client_name = client_config["Name"].asString();
+	  int client_timeout = (int)(1000 * client_config["Timeout"].asFloat());
 	  for (unsigned int k = 0; k < client_config["Endpoints"].size(); k++) {
 	    clients_config_map[client_name].push_back(client_config["Endpoints"][k].asString());
 	  }
-	  Client * new_client = new Client(client_name);
+	  Client * new_client = new Client(client_name, client_timeout);
 	  component_instance->add_client(new_client);
 	}
 

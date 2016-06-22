@@ -7,6 +7,7 @@
 #ifndef CLIENT
 #define CLIENT
 #include <iostream>
+#include <cerrno>
 #include <zmq.hpp>
 
 namespace zcm {
@@ -20,15 +21,17 @@ namespace zcm {
     /**
      * @brief Construct a client object
      * @param[in] name Client name
+     * @param[in] timeout Client socket timeout
      */   
-    Client(std::string name);
+    Client(std::string name, int timeout);
 
     /**
      * @brief Construct a client object with known endpoints
      * @param[in] name Client name
      * @param[in] endpoints A vector of endpoint strings
+     * @param[in] timeout Client socket timeout
      */   
-    Client(std::string name, std::vector<std::string> endpoints);
+    Client(std::string name, std::vector<std::string> endpoints, int timeout);
 
     /**
      * @brief Close the client ZMQ socket and destroy the context
@@ -46,6 +49,12 @@ namespace zcm {
      * @return Client name
      */    
     std::string get_name();
+
+    /**
+     * @brief Set timeout on the client to prevent endless blocking
+     * @param[in] timeout New timeout value
+     */
+    void set_timeout(int timeout);
 
     /**
      * @brief Call the server
@@ -66,6 +75,10 @@ namespace zcm {
 
     /** @brief ZMQ Socket of the client */  
     zmq::socket_t * client_socket;
+
+    /** @brief Timeout of the client socket */
+    int client_socket_timeout;
+
   };
 
 }
