@@ -28,7 +28,8 @@ namespace zcm {
       period_mutex.unlock();
 
       func_mutex.lock();
-      Timer_Operation * new_operation = new Timer_Operation(name, priority, operation_function);
+      Timer_Operation * new_operation = new Timer_Operation(name, priority, 
+							    operation_function);
       operation_queue_ptr->enqueue(new_operation);
       func_mutex.unlock();
     }  

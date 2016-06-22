@@ -7,7 +7,6 @@
 #ifndef SUBSCRIBER_COMPONENT
 #define SUBSCRIBER_COMPONENT
 #include "component.hpp"
-#include "test_message.pb.h"
 
 namespace zcm {
 
@@ -25,7 +24,7 @@ namespace zcm {
     /**
      * @brief A subscriber operation that can be bound to a subscriber port
      */      
-    void subscriber_function(std::string received_message);
+    void subscriber_function();
 
   };
 

@@ -24,19 +24,17 @@ namespace zcm {
   Subscriber_Component::Subscriber_Component() {
     register_subscriber_operation("subscriber_function",
 				  std::bind(&Subscriber_Component::subscriber_function, 
-					    this,
-					    std::placeholders::_1));
+					    this));
   }
 
   /**
    * @brief A subscriber operation that can be bound to a subscriber port
    */   
-  void Subscriber_Component::subscriber_function(std::string received_message) {
-    TestMessage received_message_obj;
-    received_message_obj.ParseFromString(received_message);
+  void Subscriber_Component::subscriber_function() {
+
+    std::string received_message = subscriber("subscriber_port")->message();
     std::cout << "Subscriber Operation : Received Message: " 
-	      << received_message_obj.message() 
-	      << " ID : " << received_message_obj.id() << std::endl;  
+	      << received_message << std::endl; 
   }
 
 }

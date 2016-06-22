@@ -35,7 +35,7 @@ namespace zcm {
     /**
      * @brief A subscriber operation that can be bound to some subscriber
      */         
-    void subscriber_function(std::string received_message);
+    void subscriber_function();
 
   };
 

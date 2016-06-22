@@ -12,7 +12,7 @@ namespace zcm {
 			 unsigned int priority, 
 			 std::string filter,
 			 std::vector<std::string> endpoints, 
-			 std::function<void(const std::string&)> operation_function, 
+			 std::function<void()> operation_function, 
 			 Operation_Queue * operation_queue_ptr) : 
     name(name),
     priority(priority),
@@ -61,16 +61,17 @@ namespace zcm {
       std::string message = std::string(static_cast<char*>(received_message.data()), 
 					received_message.size());
       if (message.length() > 0) {
-	func_mutex.lock();      
+	func_mutex.lock();   
+	buffer.push(message);
 	Subscriber_Operation * new_operation
-	  = new Subscriber_Operation(name, priority, std::bind(operation_function, message));
+	  = new Subscriber_Operation(name, priority, operation_function);
 	operation_queue_ptr->enqueue(new_operation);
 	func_mutex.unlock();      
       }
     }
   }
 
-  void Subscriber::rebind_operation_function(std::function<void(const std::string&)> 
+  void Subscriber::rebind_operation_function(std::function<void()> 
 					     new_operation_function) {
     func_mutex.lock();
     operation_function = new_operation_function;
@@ -84,6 +85,22 @@ namespace zcm {
   void Subscriber::start() {
     std::thread subscriber_thread = spawn();
     subscriber_thread.detach();
+  }
+
+  bool Subscriber::is_buffer_empty() {
+    if (buffer.empty())
+      return true;
+    else
+      return false;
+  }
+
+  std::string Subscriber::message() {
+    std::string first_message = "";
+    if (!is_buffer_empty()) {
+      first_message = buffer.front();
+      buffer.pop();
+    }
+    return first_message;
   }
 
 }
