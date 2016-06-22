@@ -9,14 +9,22 @@
 namespace zcm {
 
   // Construct a simple client
-  Client::Client(std::string name) : name(name) {}
+  Client::Client(std::string name, 
+		 int timeout = 500) : 
+    name(name), 
+    client_socket_timeout(timeout) {}
 
   // Construct a client with known endpoints
-  Client::Client(std::string name, std::vector<std::string> endpoints) :
+  Client::Client(std::string name, 
+		 std::vector<std::string> endpoints, 
+		 int timeout = 500) :
     name(name),
-    endpoints(endpoints) {
+    endpoints(endpoints),
+    client_socket_timeout(timeout) {
     context = new zmq::context_t(1);
     client_socket = new zmq::socket_t(*context, ZMQ_REQ);
+    client_socket->setsockopt(ZMQ_RCVTIMEO, client_socket_timeout); // milliseconds
+
     for (auto endpoint : endpoints) {
       try {
 	client_socket->connect(endpoint);
@@ -38,6 +46,7 @@ namespace zcm {
     endpoints = new_endpoints;
     context = new zmq::context_t(1);
     client_socket = new zmq::socket_t(*context, ZMQ_REQ);
+    client_socket->setsockopt(ZMQ_RCVTIMEO, client_socket_timeout); // milliseconds
     for (auto endpoint : endpoints) {
       try {
 	client_socket->connect(endpoint);
@@ -52,11 +61,21 @@ namespace zcm {
     return name;
   }
 
+  void Client::set_timeout(int timeout) {
+    client_socket_timeout = timeout;
+    if (client_socket != NULL)
+      client_socket->setsockopt(ZMQ_RCVTIMEO, client_socket_timeout);
+  }
+
   std::string Client::call(std::string message) {
     zmq::message_t request(message.length());
     memcpy(request.data(), message.c_str(), message.length());
-    client_socket->send(request);
-
+    try {
+      client_socket->send(request);  
+    }
+    catch (zmq::error_t &e) {
+      throw std::runtime_error(e.what());
+    }
     // Wait for response
     zmq::message_t reply;
     client_socket->recv(&reply);
