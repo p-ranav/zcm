@@ -191,6 +191,7 @@ inline ::std::string* TestMessage::mutable_message() {
   return message_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* TestMessage::release_message() {
+  // @@protoc_insertion_point(field_release:TestMessage.message)
   clear_has_message();
   return message_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }

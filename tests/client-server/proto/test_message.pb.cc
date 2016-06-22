@@ -173,6 +173,7 @@ TestMessage* TestMessage::New(::google::protobuf::Arena* arena) const {
 }
 
 void TestMessage::Clear() {
+// @@protoc_insertion_point(message_clear_start:TestMessage)
   if (_has_bits_[0 / 32] & 3u) {
     if (has_message()) {
       message_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
@@ -187,7 +188,7 @@ void TestMessage::Clear() {
 
 bool TestMessage::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:TestMessage)
   for (;;) {
@@ -301,6 +302,7 @@ void TestMessage::SerializeWithCachedSizes(
 }
 
 int TestMessage::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:TestMessage)
   int total_size = 0;
 
   if (has_message()) {
@@ -320,6 +322,7 @@ int TestMessage::RequiredFieldsByteSizeFallback() const {
   return total_size;
 }
 int TestMessage::ByteSize() const {
+// @@protoc_insertion_point(message_byte_size_start:TestMessage)
   int total_size = 0;
 
   if (((_has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
@@ -348,18 +351,22 @@ int TestMessage::ByteSize() const {
 }
 
 void TestMessage::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:TestMessage)
   if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
   const TestMessage* source = 
       ::google::protobuf::internal::DynamicCastToGenerated<const TestMessage>(
           &from);
   if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:TestMessage)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:TestMessage)
     MergeFrom(*source);
   }
 }
 
 void TestMessage::MergeFrom(const TestMessage& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:TestMessage)
   if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
   if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     if (from.has_message()) {
@@ -376,12 +383,14 @@ void TestMessage::MergeFrom(const TestMessage& from) {
 }
 
 void TestMessage::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:TestMessage)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void TestMessage::CopyFrom(const TestMessage& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:TestMessage)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -456,6 +465,7 @@ void TestMessage::clear_message() {
   return message_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
  ::std::string* TestMessage::release_message() {
+  // @@protoc_insertion_point(field_release:TestMessage.message)
   clear_has_message();
   return message_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
