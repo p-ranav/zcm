@@ -22,9 +22,8 @@ namespace zcm {
    * Register all operations exposed by this component
    */   
   Server_Component::Server_Component() {
-    register_server_operation("server_function",
-			      std::bind(&Server_Component::server_function,
-					this));
+    register_functionality("server_function",
+			   std::bind(&Server_Component::server_function, this));
   }
 
   /**

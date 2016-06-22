@@ -21,11 +21,11 @@ namespace zcm {
    * Register all operations exposed by this component
    */    
   Component_2::Component_2() {
-    register_timer_operation("timer_function",
-			     std::bind(&Component_2::timer_function, this));
-    register_server_operation("server_function",
-			      std::bind(&Component_2::server_function,
-					this));
+    register_functionality("timer_function",
+			   std::bind(&Component_2::timer_function, this));
+    register_functionality("server_function",
+			   std::bind(&Component_2::server_function,
+				     this));
   }
 
   /**

@@ -22,9 +22,9 @@ namespace zcm {
    * Register all operations exposed by this component
    */  
   Subscriber_Component::Subscriber_Component() {
-    register_subscriber_operation("subscriber_function",
-				  std::bind(&Subscriber_Component::subscriber_function, 
-					    this));
+    register_functionality("subscriber_function",
+			   std::bind(&Subscriber_Component::subscriber_function, 
+				     this));
   }
 
   /**

@@ -22,8 +22,8 @@ namespace zcm {
    * Register all operations exposed by this component
    */     
   Client_Component::Client_Component() {
-    register_timer_operation("timer_function",
-			     std::bind(&Client_Component::timer_function, this));
+    register_functionality("timer_function",
+			   std::bind(&Client_Component::timer_function, this));
   }
 
   /**

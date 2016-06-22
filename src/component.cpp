@@ -141,27 +141,10 @@ namespace zcm {
     }      
   }
 
-  // Register a timer operation
-  void Component::register_timer_operation(std::string operation_name,
-					   std::function<void(void)> operation_function) {
-    timer_functions[operation_name] = operation_function;
-  }
-
-  // Register a subscriber operation
-  void Component::register_subscriber_operation(std::string operation_name,
-						std::function<void()> operation_function) {
-    subscriber_functions[operation_name] = operation_function;
-  }
-
-  // Register a timer operation
-  void Component::register_server_operation(std::string operation_name,
-					    std::function<void()> operation_function) {
-    server_functions[operation_name] = operation_function;
-  }  
-
+  // Register a functionality
   void Component::register_functionality(std::string operation_name,
 					 std::function<void()> operation_function) {
-
+    functionality[operation_name] = operation_function;
   } 
 
   // Spawn the component executor thread

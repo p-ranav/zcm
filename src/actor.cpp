@@ -39,7 +39,7 @@ namespace zcm {
 	  Timer * new_timer = new Timer(timer_name,
 					timer_priority,
 					timer_period,
-					component_instance->timer_functions[timer_operation],
+					component_instance->functionality[timer_operation],
 					component_instance->get_operation_queue());
 	  component_instance->add_timer(new_timer);
 	}	
@@ -69,7 +69,7 @@ namespace zcm {
 						       subscriber_priority,
 						       subscriber_filter,
 						       component_instance->
-						       subscriber_functions[subscriber_operation],
+						       functionality[subscriber_operation],
 						       component_instance->get_operation_queue());
 	  component_instance->add_subscriber(new_subscriber);
 	}
@@ -97,7 +97,7 @@ namespace zcm {
 	  }
 	  Server * new_server = new Server(server_name,
 					   server_priority,
-					   component_instance->server_functions[server_operation],
+					   component_instance->functionality[server_operation],
 					   component_instance->get_operation_queue());
 	  component_instance->add_server(new_server);	  
 	}
