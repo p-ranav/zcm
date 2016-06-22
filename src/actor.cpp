@@ -34,7 +34,7 @@ namespace zcm {
 	  Json::Value timer_config = root["Component Instances"][i]["Timers"][j];
 	  std::string timer_name = timer_config["Name"].asString();
 	  unsigned int timer_priority = timer_config["Priority"].asUInt();
-	  long long timer_period = (long long)timer_config["Period"].asInt();
+	  long long timer_period = (long long)(1000000000 * timer_config["Period"].asFloat());
 	  std::string timer_operation = timer_config["Function"].asString();
 	  Timer * new_timer = new Timer(timer_name,
 					timer_priority,
