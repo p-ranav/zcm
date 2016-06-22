@@ -22,11 +22,11 @@ namespace zcm {
    * Register all operations exposed by this component
    */    
   Component_1::Component_1() {
-    register_timer_operation("timer_1_function",
+    register_functionality("timer_1_function",
 			     std::bind(&Component_1::timer_1_function, this));
-    register_subscriber_operation("subscriber_function",
-				  std::bind(&Component_1::subscriber_function, 
-					    this));
+    register_functionality("subscriber_function",
+			   std::bind(&Component_1::subscriber_function, 
+				     this));
   }
 
   /**

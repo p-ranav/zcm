@@ -22,8 +22,8 @@ namespace zcm {
    * Register all operations exposed by this component
    */   
   Publisher_Component::Publisher_Component() {
-    register_timer_operation("timer_1_function",
-			     std::bind(&Publisher_Component::timer_1_function, this));
+    register_functionality("timer_1_function",
+			   std::bind(&Publisher_Component::timer_1_function, this));
   }
 
   /**

@@ -22,7 +22,7 @@ namespace zcm {
    * Register all operations exposed by this component
    */   
   Component_3::Component_3() {
-    register_timer_operation("timer_function", std::bind(&Component_3::timer_function, this));
+    register_functionality("timer_function", std::bind(&Component_3::timer_function, this));
   }
 
   /**

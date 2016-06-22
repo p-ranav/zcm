@@ -101,49 +101,29 @@ namespace zcm {
      * @brief Configure all component publishers
      * @param[in] publisher_endpoints A map of endpoints for all publishers
      */    
-    void configure_publishers(std::map<std::string, std::vector<std::string>> publisher_endpoints);
+    void configure_publishers(std::map<std::string, 
+			      std::vector<std::string>> publisher_endpoints);
 
     /**
      * @brief Configure all component subscribers
      * @param[in] subscriber_endpoints A map of endpoints for all subscribers
      */        
-    void configure_subscribers(std::map<std::string, std::vector<std::string>> subscriber_endpoints);
+    void configure_subscribers(std::map<std::string, 
+			       std::vector<std::string>> subscriber_endpoints);
 
     /**
      * @brief Configure all component clients
      * @param[in] client_endpoints A map of endpoints for all clients
      */        
-    void configure_clients(std::map<std::string, std::vector<std::string>> client_endpoints);
+    void configure_clients(std::map<std::string, 
+			   std::vector<std::string>> client_endpoints);
 
     /**
      * @brief Configure all component servers
      * @param[in] server_endpoints A map of endpoints for all servers
      */        
-    void configure_servers(std::map<std::string, std::vector<std::string>> server_endpoints);
-
-    /**
-     * @brief Register a timer operation
-     * @param[in] operation_name Name of the timer operation
-     * @param[in] operation_function The actual timer operation function
-     */        
-    void register_timer_operation(std::string operation_name,
-				  std::function<void()> operation_function);
-
-    /**
-     * @brief Register a subscriber operation
-     * @param[in] operation_name Name of the subscriber operation
-     * @param[in] operation_function The actual subscriber operation function
-     */        
-    void register_subscriber_operation(std::string operation_name,
-				       std::function<void()> operation_function);
-
-    /**
-     * @brief Register a server operation
-     * @param[in] operation_name Name of the server operation
-     * @param[in] operation_function The actual server operation function
-     */        
-    void register_server_operation(std::string operation_name,
-				   std::function<void()> operation_function);  
+    void configure_servers(std::map<std::string, 
+			   std::vector<std::string>> server_endpoints);
 
     /**
      * @brief Register component functionality
@@ -159,14 +139,8 @@ namespace zcm {
      */    
     std::thread * spawn();
 
-    /** @brief A map of timer operations */
-    std::map<std::string, std::function<void()>> timer_functions;
-
-    /** @brief A map of subscriber operations */    
-    std::map<std::string, std::function<void()>> subscriber_functions;
-
-    /** @brief A map of server operations */    
-    std::map<std::string, std::function<void()>> server_functions;      
+    /** @brief A map of all component operations */    
+    std::map<std::string, std::function<void()>> functionality;      
 
   protected:
 

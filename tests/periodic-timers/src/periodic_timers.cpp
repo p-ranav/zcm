@@ -23,16 +23,16 @@ namespace zcm {
    * Register all operations exposed by this component
    */     
   Timers_Component::Timers_Component() {
-    register_timer_operation("timer_1_function",
-			     std::bind(&Timers_Component::timer_1_function, this));
-    register_timer_operation("timer_2_function",
-			     std::bind(&Timers_Component::timer_2_function, this));
-    register_timer_operation("timer_3_function",
-			     std::bind(&Timers_Component::timer_3_function, this));
-    register_timer_operation("timer_4_function",
-			     std::bind(&Timers_Component::timer_4_function, this));
-    register_timer_operation("timer_5_function",
-			     std::bind(&Timers_Component::timer_5_function, this));    
+    register_functionality("timer_1_function",
+			   std::bind(&Timers_Component::timer_1_function, this));
+    register_functionality("timer_2_function",
+			   std::bind(&Timers_Component::timer_2_function, this));
+    register_functionality("timer_3_function",
+			   std::bind(&Timers_Component::timer_3_function, this));
+    register_functionality("timer_4_function",
+			   std::bind(&Timers_Component::timer_4_function, this));
+    register_functionality("timer_5_function",
+			   std::bind(&Timers_Component::timer_5_function, this));    
   }
 
   /**
