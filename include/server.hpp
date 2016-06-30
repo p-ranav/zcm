@@ -25,15 +25,18 @@ namespace zcm {
      * @brief Construct a server object
      * @param[in] name Server name
      * @param[in] priority Priority of the server
+     * @param[in] ZMQ Context of the Actor Process
      * @param[in] operation_function Operation function of the server
      * @param[in] operation_queue_ptr Pointer to the operation queue
      */    
     Server(std::string name,
 	   unsigned int priority,
+	   zmq::context_t * actor_context,
 	   std::function<void()> operation_function,
 	   Operation_Queue * operation_queue_ptr) :
       name(name),
       priority(priority),
+      context(actor_context),
       operation_function(operation_function),
       operation_queue_ptr(operation_queue_ptr) {}
 
@@ -41,12 +44,14 @@ namespace zcm {
      * @brief Construct a server object with known endpoints
      * @param[in] name Server name
      * @param[in] priority Priority of the server
+     * @param[in] ZMQ Context of the Actor Process
      * @param[in] endpoints A vector of endpoints to bind to
      * @param[in] operation_function Operation function of the server
      * @param[in] operation_queue_ptr Pointer to the operation queue
      */      
     Server(std::string name,
 	   unsigned int priority,
+	   zmq::context_t * actor_context,
 	   std::vector<std::string> endpoints,
 	   std::function<void()> operation_function,
 	   Operation_Queue * operation_queue_ptr);
@@ -128,6 +133,9 @@ namespace zcm {
     /** @brief Priority of the server */
     unsigned int priority;
 
+    /** @brief Pointer to the server ZMQ context */
+    zmq::context_t * context;
+
     /** @brief Vector of connection endpoints */
     std::vector<std::string> endpoints;
 
@@ -136,9 +144,6 @@ namespace zcm {
 
     /** @brief Pointer to the operation_queue */
     Operation_Queue * operation_queue_ptr;
-
-    /** @brief Pointer to the server ZMQ context */
-    zmq::context_t * context;
 
     /** @brief Pointer to the server ZMQ socket */
     zmq::socket_t * server_socket;

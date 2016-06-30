@@ -10,18 +10,22 @@ namespace zcm {
 
   // Construct a simple client
   Client::Client(std::string name, 
+		 zmq::context_t * actor_context,
 		 int timeout = 500) : 
     name(name), 
+    context(actor_context),
     client_socket_timeout(timeout) {}
 
   // Construct a client with known endpoints
   Client::Client(std::string name, 
+		 zmq::context_t * actor_context,
 		 std::vector<std::string> endpoints, 
 		 int timeout = 500) :
     name(name),
     endpoints(endpoints),
     client_socket_timeout(timeout) {
-    context = new zmq::context_t(1);
+    context = actor_context;
+    //context = new zmq::context_t(1);
     client_socket = new zmq::socket_t(*context, ZMQ_REQ);
     client_socket->setsockopt(ZMQ_RCVTIMEO, client_socket_timeout); // milliseconds
 
@@ -44,7 +48,7 @@ namespace zcm {
 
   void Client::connect(std::vector<std::string> new_endpoints) {
     endpoints = new_endpoints;
-    context = new zmq::context_t(1);
+    // context = new zmq::context_t(1);
     client_socket = new zmq::socket_t(*context, ZMQ_REQ);
     client_socket->setsockopt(ZMQ_RCVTIMEO, client_socket_timeout); // milliseconds
     for (auto endpoint : endpoints) {

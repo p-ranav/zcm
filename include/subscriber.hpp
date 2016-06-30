@@ -25,17 +25,20 @@ namespace zcm {
      * @brief Construct a subscriber object
      * @param[in] name Subscriber name
      * @param[in] priority Priority of the subscriber
+     * @param[in] ZMQ Context of the Actor Process
      * @param[in] filter ZMQ filter for the subscriber
      * @param[in] operation_function Operation function of the subscriber
      * @param[in] operation_queue_ptr Pointer to the operation queue
      */  
     Subscriber(std::string name,
 	       unsigned int priority, 
+	       zmq::context_t * actor_context,
 	       std::string filter,
 	       std::function<void()> operation_function, 
 	       Operation_Queue * operation_queue_ptr) : 
       name(name),
       priority(priority),
+      context(actor_context),
       filter(filter),
       operation_function(operation_function),
       operation_queue_ptr(operation_queue_ptr) {}    
@@ -44,6 +47,7 @@ namespace zcm {
      * @brief Construct a subscriber object with known endpoints
      * @param[in] name Subscriber name
      * @param[in] priority Priority of the subscriber
+     * @param[in] ZMQ Context of the Actor Process
      * @param[in] filter ZMQ filter for the subscriber
      * @param[in] endpoints A vector of endpoints to connect to
      * @param[in] operation_function Operation function of the subscriber
@@ -51,6 +55,7 @@ namespace zcm {
      */    
     Subscriber(std::string name, 
 	       unsigned int priority, 
+	       zmq::context_t * actor_context,
 	       std::string filter,
 	       std::vector<std::string> endpoints, 
 	       std::function<void()> operation_function, 
@@ -128,6 +133,9 @@ namespace zcm {
     /** @brief Priority of the subscriber */  
     unsigned int priority;
 
+    /** @brief Pointer to the subscriber ZMQ context */  
+    zmq::context_t * context;
+
     /** @brief Reception filter enforced on all received messages */  
     std::string filter;
 
@@ -139,9 +147,6 @@ namespace zcm {
 
     /** @brief Pointer to the operation queue */  
     Operation_Queue * operation_queue_ptr;
-
-    /** @brief Pointer to the subscriber ZMQ context */  
-    zmq::context_t * context;
 
     /** @brief Pointer to the subscriber ZMQ socket */  
     zmq::socket_t * subscriber_socket;

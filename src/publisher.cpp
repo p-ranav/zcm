@@ -9,13 +9,17 @@
 namespace zcm {
 
   // Construct a simple publisher
-  Publisher::Publisher(std::string name) : name(name) {}
+  Publisher::Publisher(std::string name, 
+		       zmq::context_t * actor_context) : 
+    name(name),
+    context(actor_context) {}
 
   // Construct a publisher with known endpoints
-  Publisher::Publisher(std::string name, std::vector<std::string> endpoints) : 
+  Publisher::Publisher(std::string name, zmq::context_t * actor_context, 
+		       std::vector<std::string> endpoints) : 
     name(name),
     endpoints(endpoints) {
-    context = new zmq::context_t(1);
+    context = actor_context;
     publisher_socket = new zmq::socket_t(*context, ZMQ_PUB);
     for (auto endpoint : endpoints) {
       try {
@@ -37,7 +41,6 @@ namespace zcm {
   // Bind a publisher to a new set of endpoints
   void Publisher::bind(std::vector<std::string> new_endpoints) {
     endpoints = new_endpoints;
-    context = new zmq::context_t(1);
     publisher_socket = new zmq::socket_t(*context, ZMQ_PUB);
     for (auto endpoint : endpoints) {
       try {

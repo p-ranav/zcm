@@ -21,17 +21,20 @@ namespace zcm {
     /**
      * @brief Construct a client object
      * @param[in] name Client name
+     * @param[in] ZMQ Context of the Actor Process
      * @param[in] timeout Client socket timeout
      */   
-    Client(std::string name, int timeout);
+    Client(std::string name, zmq::context_t * actor_context, int timeout);
 
     /**
      * @brief Construct a client object with known endpoints
      * @param[in] name Client name
+     * @param[in] ZMQ Context of the Actor Process
      * @param[in] endpoints A vector of endpoint strings
      * @param[in] timeout Client socket timeout
      */   
-    Client(std::string name, std::vector<std::string> endpoints, int timeout);
+    Client(std::string name, zmq::context_t * actor_context, 
+	   std::vector<std::string> endpoints, int timeout);
 
     /**
      * @brief Close the client ZMQ socket and destroy the context
