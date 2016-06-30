@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name',['name',['../classzcm_1_1Actor.html#a2b0816bbe28c8f96fa882b625be004ee',1,'zcm::Actor::name()'],['../classzcm_1_1Client.html#ae972b951134774fd2246d802e2bc6fc0',1,'zcm::Client::name()'],['../classzcm_1_1Base__Operation.html#a2e2192550818d8f063fc7b2c76c5e21c',1,'zcm::Base_Operation::name()'],['../classzcm_1_1Publisher.html#a2e3902339b55647dc6a7d2f3de64d8fe',1,'zcm::Publisher::name()'],['../classzcm_1_1Server.html#a9d59737b196a7abb3a891dc8723e0dcf',1,'zcm::Server::name()'],['../classzcm_1_1Subscriber.html#a2ec3b22204d0f3f72e996b19b086910b',1,'zcm::Subscriber::name()'],['../classzcm_1_1Timer.html#abfd2bb014b496ce2eda5a5837e9275f1',1,'zcm::Timer::name()']]]
+  ['is_5fbuffer_5fempty',['is_buffer_empty',['../classzcm_1_1Server.html#a9b11ed1a79a2f11ee6ff747937b428b0',1,'zcm::Server::is_buffer_empty()'],['../classzcm_1_1Subscriber.html#adabba1785e367df820f011fbdb2a52c2',1,'zcm::Subscriber::is_buffer_empty()']]]
 ];

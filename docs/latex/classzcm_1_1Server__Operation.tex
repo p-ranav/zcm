@@ -1,5 +1,6 @@
-\hypertarget{classzcm_1_1Server__Operation}{}\section{zcm\+:\+:Server\+\_\+\+Operation Class Reference}
-\label{classzcm_1_1Server__Operation}\index{zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}}
+\hypertarget{classzcm_1_1Server__Operation}{\section{zcm\-:\-:Server\-\_\-\-Operation Class Reference}
+\label{classzcm_1_1Server__Operation}\index{zcm\-::\-Server\-\_\-\-Operation@{zcm\-::\-Server\-\_\-\-Operation}}
+}
 
 
 \hyperlink{classzcm_1_1Server}{Server} Operation class.  
@@ -7,9 +8,9 @@
 
 
 
-{\ttfamily \#include $<$operation\+\_\+types.\+hpp$>$}
+{\ttfamily \#include $<$operation\-\_\-types.\-hpp$>$}
 
-Inheritance diagram for zcm\+:\+:Server\+\_\+\+Operation\+:\begin{figure}[H]
+Inheritance diagram for zcm\-:\-:Server\-\_\-\-Operation\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.000000cm]{classzcm_1_1Server__Operation}
@@ -18,44 +19,49 @@ Inheritance diagram for zcm\+:\+:Server\+\_\+\+Operation\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classzcm_1_1Server__Operation_a8457695fe5f8f3416106596597695406}{Server\+\_\+\+Operation} (std\+::string \hyperlink{classzcm_1_1Base__Operation_a2e2192550818d8f063fc7b2c76c5e21c}{name}, unsigned int \hyperlink{classzcm_1_1Base__Operation_a38af3bcc2578ef215772d595bf3fa358}{priority}, std\+::function$<$ std\+::string()$>$ \hyperlink{classzcm_1_1Server__Operation_a9fe0d75b858647a21323293746df6c9e}{operation\+\_\+function}, zmq\+::socket\+\_\+t $\ast$\hyperlink{classzcm_1_1Server__Operation_a07efad79c512d03a54fe2bb99166d52f}{socket\+\_\+ptr}, bool $\ast$\hyperlink{classzcm_1_1Server__Operation_a2b71778be842aedf6d122b531e186ca8}{recv\+\_\+ready})
+\hyperlink{classzcm_1_1Server__Operation_a79909424f8e316212190e0802183945b}{Server\-\_\-\-Operation} (std\-::string \hyperlink{classzcm_1_1Base__Operation_a2e2192550818d8f063fc7b2c76c5e21c}{name}, unsigned int \hyperlink{classzcm_1_1Base__Operation_a38af3bcc2578ef215772d595bf3fa358}{priority}, std\-::function$<$ void()$>$ \hyperlink{classzcm_1_1Server__Operation_af6df162db0b1f42248b52c8925dcc64d}{operation\-\_\-function}, zmq\-::socket\-\_\-t $\ast$\hyperlink{classzcm_1_1Server__Operation_a07efad79c512d03a54fe2bb99166d52f}{socket\-\_\-ptr}, bool $\ast$\hyperlink{classzcm_1_1Server__Operation_a2b71778be842aedf6d122b531e186ca8}{recv\-\_\-ready}, std\-::string $\ast$response)
 \begin{DoxyCompactList}\small\item\em Construct a server operation. \end{DoxyCompactList}\item 
 void \hyperlink{classzcm_1_1Server__Operation_acd6b89c42aad3df5dc78674770326498}{execute} ()
 \begin{DoxyCompactList}\small\item\em \hyperlink{classzcm_1_1Server}{Server} operation function. \end{DoxyCompactList}\item 
-zmq\+::socket\+\_\+t $\ast$ \hyperlink{classzcm_1_1Server__Operation_a17d90d76a8cfa0dc25792144e155e7c0}{get\+\_\+socket\+\_\+ptr} ()
-\begin{DoxyCompactList}\small\item\em Get the Z\+MQ server socket pointer. \end{DoxyCompactList}\item 
-void \hyperlink{classzcm_1_1Server__Operation_a1477e76e1639bdebc6b855d3be4e9fb2}{set\+\_\+ready} ()
-\begin{DoxyCompactList}\small\item\em Get the Z\+MQ server \char`\"{}ready\char`\"{} variable. \end{DoxyCompactList}\item 
-std\+::string \hyperlink{classzcm_1_1Base__Operation_a46b6a3f23e18bc35425ec2dab80c849f}{get\+\_\+name} ()
+zmq\-::socket\-\_\-t $\ast$ \hyperlink{classzcm_1_1Server__Operation_a17d90d76a8cfa0dc25792144e155e7c0}{get\-\_\-socket\-\_\-ptr} ()
+\begin{DoxyCompactList}\small\item\em Get the Z\-M\-Q server socket pointer. \end{DoxyCompactList}\item 
+std\-::string $\ast$ \hyperlink{classzcm_1_1Server__Operation_a53e4318fbb1fcc7ec2f2382d401f9c81}{get\-\_\-response\-\_\-ptr} ()
+\begin{DoxyCompactList}\small\item\em Get the response string pointer. \end{DoxyCompactList}\item 
+void \hyperlink{classzcm_1_1Server__Operation_a1477e76e1639bdebc6b855d3be4e9fb2}{set\-\_\-ready} ()
+\begin{DoxyCompactList}\small\item\em Get the Z\-M\-Q server \char`\"{}ready\char`\"{} variable. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{classzcm_1_1Base__Operation_a46b6a3f23e18bc35425ec2dab80c849f}{get\-\_\-name} ()
 \begin{DoxyCompactList}\small\item\em Return the operation name. \end{DoxyCompactList}\item 
-unsigned int \hyperlink{classzcm_1_1Base__Operation_a3b15b35c31ed173d2abb193e9fba32ef}{get\+\_\+priority} () const 
+unsigned int \hyperlink{classzcm_1_1Base__Operation_a3b15b35c31ed173d2abb193e9fba32ef}{get\-\_\-priority} () const 
 \begin{DoxyCompactList}\small\item\em Return the operation priority. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-std\+::function$<$ std\+::string()$>$ \hyperlink{classzcm_1_1Server__Operation_a9fe0d75b858647a21323293746df6c9e}{operation\+\_\+function}
+std\-::function$<$ void()$>$ \hyperlink{classzcm_1_1Server__Operation_af6df162db0b1f42248b52c8925dcc64d}{operation\-\_\-function}
 \begin{DoxyCompactList}\small\item\em \hyperlink{classzcm_1_1Server}{Server} Operation Function. \end{DoxyCompactList}\item 
-zmq\+::socket\+\_\+t $\ast$ \hyperlink{classzcm_1_1Server__Operation_a07efad79c512d03a54fe2bb99166d52f}{socket\+\_\+ptr}
-\begin{DoxyCompactList}\small\item\em Pointer to the \hyperlink{classzcm_1_1Server}{Server} Z\+MQ socket. \end{DoxyCompactList}\item 
-bool $\ast$ \hyperlink{classzcm_1_1Server__Operation_a2b71778be842aedf6d122b531e186ca8}{recv\+\_\+ready}
-\begin{DoxyCompactList}\small\item\em Pointer to the \hyperlink{classzcm_1_1Server}{Server} \char`\"{}ready\char`\"{} variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+zmq\-::socket\-\_\-t $\ast$ \hyperlink{classzcm_1_1Server__Operation_a07efad79c512d03a54fe2bb99166d52f}{socket\-\_\-ptr}
+\begin{DoxyCompactList}\small\item\em Pointer to the \hyperlink{classzcm_1_1Server}{Server} Z\-M\-Q socket. \end{DoxyCompactList}\item 
+bool $\ast$ \hyperlink{classzcm_1_1Server__Operation_a2b71778be842aedf6d122b531e186ca8}{recv\-\_\-ready}
+\begin{DoxyCompactList}\small\item\em Pointer to the \hyperlink{classzcm_1_1Server}{Server} \char`\"{}ready\char`\"{} variable. \end{DoxyCompactList}\item 
+std\-::string $\ast$ \hyperlink{classzcm_1_1Server__Operation_add538216fe0c56f8edd74c12d9b5f224}{response\-\_\-ptr}
+\begin{DoxyCompactList}\small\item\em Pointer to the response string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 \hyperlink{classzcm_1_1Server}{Server} Operation class. 
 
 \subsection{Constructor \& Destructor Documentation}
-\index{zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}!Server\+\_\+\+Operation@{Server\+\_\+\+Operation}}
-\index{Server\+\_\+\+Operation@{Server\+\_\+\+Operation}!zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}}
-\subsubsection[{\texorpdfstring{Server\+\_\+\+Operation(std\+::string name, unsigned int priority, std\+::function$<$ std\+::string()$>$ operation\+\_\+function, zmq\+::socket\+\_\+t $\ast$socket\+\_\+ptr, bool $\ast$recv\+\_\+ready)}{Server_Operation(std::string name, unsigned int priority, std::function< std::string()> operation_function, zmq::socket_t *socket_ptr, bool *recv_ready)}}]{\setlength{\rightskip}{0pt plus 5cm}zcm\+::\+Server\+\_\+\+Operation\+::\+Server\+\_\+\+Operation (
+\hypertarget{classzcm_1_1Server__Operation_a79909424f8e316212190e0802183945b}{\index{zcm\-::\-Server\-\_\-\-Operation@{zcm\-::\-Server\-\_\-\-Operation}!Server\-\_\-\-Operation@{Server\-\_\-\-Operation}}
+\index{Server\-\_\-\-Operation@{Server\-\_\-\-Operation}!zcm::Server_Operation@{zcm\-::\-Server\-\_\-\-Operation}}
+\subsubsection[{Server\-\_\-\-Operation}]{\setlength{\rightskip}{0pt plus 5cm}zcm\-::\-Server\-\_\-\-Operation\-::\-Server\-\_\-\-Operation (
 \begin{DoxyParamCaption}
-\item[{std\+::string}]{name, }
+\item[{std\-::string}]{name, }
 \item[{unsigned int}]{priority, }
-\item[{std\+::function$<$ std\+::string()$>$}]{operation\+\_\+function, }
-\item[{zmq\+::socket\+\_\+t $\ast$}]{socket\+\_\+ptr, }
-\item[{bool $\ast$}]{recv\+\_\+ready}
+\item[{std\-::function$<$ void()$>$}]{operation\-\_\-function, }
+\item[{zmq\-::socket\-\_\-t $\ast$}]{socket\-\_\-ptr, }
+\item[{bool $\ast$}]{recv\-\_\-ready, }
+\item[{std\-::string $\ast$}]{response}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classzcm_1_1Server__Operation_a8457695fe5f8f3416106596597695406}{}\label{classzcm_1_1Server__Operation_a8457695fe5f8f3416106596597695406}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classzcm_1_1Server__Operation_a79909424f8e316212190e0802183945b}
 
 
 Construct a server operation. 
@@ -66,38 +72,38 @@ Construct a server operation.
 \hline
 \mbox{\tt in}  & {\em priority} & Priority of the operation \\
 \hline
-\mbox{\tt in}  & {\em operation\+\_\+function} & \hyperlink{classzcm_1_1Server}{Server} function \\
+\mbox{\tt in}  & {\em operation\-\_\-function} & \hyperlink{classzcm_1_1Server}{Server} function \\
 \hline
-\mbox{\tt in}  & {\em socket\+\_\+ptr} & Pointer to the \hyperlink{classzcm_1_1Server}{Server} Z\+MQ socket \\
+\mbox{\tt in}  & {\em socket\-\_\-ptr} & Pointer to the \hyperlink{classzcm_1_1Server}{Server} Z\-M\-Q socket \\
 \hline
-\mbox{\tt in}  & {\em recv\+\_\+ready} & Pointer to the \hyperlink{classzcm_1_1Server}{Server} ready variable \\
+\mbox{\tt in}  & {\em recv\-\_\-ready} & Pointer to the \hyperlink{classzcm_1_1Server}{Server} ready variable \\
 \hline
 \end{DoxyParams}
 
 
 \subsection{Member Function Documentation}
-\index{zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}!execute@{execute}}
-\index{execute@{execute}!zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}}
-\subsubsection[{\texorpdfstring{execute()}{execute()}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Server\+\_\+\+Operation\+::execute (
+\hypertarget{classzcm_1_1Server__Operation_acd6b89c42aad3df5dc78674770326498}{\index{zcm\-::\-Server\-\_\-\-Operation@{zcm\-::\-Server\-\_\-\-Operation}!execute@{execute}}
+\index{execute@{execute}!zcm::Server_Operation@{zcm\-::\-Server\-\_\-\-Operation}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\-::\-Server\-\_\-\-Operation\-::execute (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classzcm_1_1Server__Operation_acd6b89c42aad3df5dc78674770326498}{}\label{classzcm_1_1Server__Operation_acd6b89c42aad3df5dc78674770326498}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classzcm_1_1Server__Operation_acd6b89c42aad3df5dc78674770326498}
 
 
 \hyperlink{classzcm_1_1Server}{Server} operation function. 
 
 
 
-Reimplemented from \hyperlink{classzcm_1_1Base__Operation_a58cb533edd6e6f220d2d1c260fbddca4}{zcm\+::\+Base\+\_\+\+Operation}.
+Reimplemented from \hyperlink{classzcm_1_1Base__Operation_a58cb533edd6e6f220d2d1c260fbddca4}{zcm\-::\-Base\-\_\-\-Operation}.
 
-\index{zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}!get\+\_\+name@{get\+\_\+name}}
-\index{get\+\_\+name@{get\+\_\+name}!zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}}
-\subsubsection[{\texorpdfstring{get\+\_\+name()}{get_name()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string zcm\+::\+Base\+\_\+\+Operation\+::get\+\_\+name (
+\hypertarget{classzcm_1_1Base__Operation_a46b6a3f23e18bc35425ec2dab80c849f}{\index{zcm\-::\-Server\-\_\-\-Operation@{zcm\-::\-Server\-\_\-\-Operation}!get\-\_\-name@{get\-\_\-name}}
+\index{get\-\_\-name@{get\-\_\-name}!zcm::Server_Operation@{zcm\-::\-Server\-\_\-\-Operation}}
+\subsubsection[{get\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string zcm\-::\-Base\-\_\-\-Operation\-::get\-\_\-name (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inherited]}}\hypertarget{classzcm_1_1Base__Operation_a46b6a3f23e18bc35425ec2dab80c849f}{}\label{classzcm_1_1Base__Operation_a46b6a3f23e18bc35425ec2dab80c849f}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classzcm_1_1Base__Operation_a46b6a3f23e18bc35425ec2dab80c849f}
 
 
 Return the operation name. 
@@ -105,13 +111,13 @@ Return the operation name.
 \begin{DoxyReturn}{Returns}
 Name of the operation 
 \end{DoxyReturn}
-\index{zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}!get\+\_\+priority@{get\+\_\+priority}}
-\index{get\+\_\+priority@{get\+\_\+priority}!zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}}
-\subsubsection[{\texorpdfstring{get\+\_\+priority() const }{get_priority() const }}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int zcm\+::\+Base\+\_\+\+Operation\+::get\+\_\+priority (
+\hypertarget{classzcm_1_1Base__Operation_a3b15b35c31ed173d2abb193e9fba32ef}{\index{zcm\-::\-Server\-\_\-\-Operation@{zcm\-::\-Server\-\_\-\-Operation}!get\-\_\-priority@{get\-\_\-priority}}
+\index{get\-\_\-priority@{get\-\_\-priority}!zcm::Server_Operation@{zcm\-::\-Server\-\_\-\-Operation}}
+\subsubsection[{get\-\_\-priority}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int zcm\-::\-Base\-\_\-\-Operation\-::get\-\_\-priority (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inherited]}}\hypertarget{classzcm_1_1Base__Operation_a3b15b35c31ed173d2abb193e9fba32ef}{}\label{classzcm_1_1Base__Operation_a3b15b35c31ed173d2abb193e9fba32ef}
+) const\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classzcm_1_1Base__Operation_a3b15b35c31ed173d2abb193e9fba32ef}
 
 
 Return the operation priority. 
@@ -119,55 +125,73 @@ Return the operation priority.
 \begin{DoxyReturn}{Returns}
 Priority of the operation 
 \end{DoxyReturn}
-\index{zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}!get\+\_\+socket\+\_\+ptr@{get\+\_\+socket\+\_\+ptr}}
-\index{get\+\_\+socket\+\_\+ptr@{get\+\_\+socket\+\_\+ptr}!zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}}
-\subsubsection[{\texorpdfstring{get\+\_\+socket\+\_\+ptr()}{get_socket_ptr()}}]{\setlength{\rightskip}{0pt plus 5cm}zmq\+::socket\+\_\+t $\ast$ zcm\+::\+Server\+\_\+\+Operation\+::get\+\_\+socket\+\_\+ptr (
+\hypertarget{classzcm_1_1Server__Operation_a53e4318fbb1fcc7ec2f2382d401f9c81}{\index{zcm\-::\-Server\-\_\-\-Operation@{zcm\-::\-Server\-\_\-\-Operation}!get\-\_\-response\-\_\-ptr@{get\-\_\-response\-\_\-ptr}}
+\index{get\-\_\-response\-\_\-ptr@{get\-\_\-response\-\_\-ptr}!zcm::Server_Operation@{zcm\-::\-Server\-\_\-\-Operation}}
+\subsubsection[{get\-\_\-response\-\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string $\ast$ zcm\-::\-Server\-\_\-\-Operation\-::get\-\_\-response\-\_\-ptr (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{classzcm_1_1Server__Operation_a17d90d76a8cfa0dc25792144e155e7c0}{}\label{classzcm_1_1Server__Operation_a17d90d76a8cfa0dc25792144e155e7c0}
+)}}\label{classzcm_1_1Server__Operation_a53e4318fbb1fcc7ec2f2382d401f9c81}
 
 
-Get the Z\+MQ server socket pointer. 
+Get the response string pointer. 
 
-\index{zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}!set\+\_\+ready@{set\+\_\+ready}}
-\index{set\+\_\+ready@{set\+\_\+ready}!zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}}
-\subsubsection[{\texorpdfstring{set\+\_\+ready()}{set_ready()}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Server\+\_\+\+Operation\+::set\+\_\+ready (
+\hypertarget{classzcm_1_1Server__Operation_a17d90d76a8cfa0dc25792144e155e7c0}{\index{zcm\-::\-Server\-\_\-\-Operation@{zcm\-::\-Server\-\_\-\-Operation}!get\-\_\-socket\-\_\-ptr@{get\-\_\-socket\-\_\-ptr}}
+\index{get\-\_\-socket\-\_\-ptr@{get\-\_\-socket\-\_\-ptr}!zcm::Server_Operation@{zcm\-::\-Server\-\_\-\-Operation}}
+\subsubsection[{get\-\_\-socket\-\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}zmq\-::socket\-\_\-t $\ast$ zcm\-::\-Server\-\_\-\-Operation\-::get\-\_\-socket\-\_\-ptr (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{classzcm_1_1Server__Operation_a1477e76e1639bdebc6b855d3be4e9fb2}{}\label{classzcm_1_1Server__Operation_a1477e76e1639bdebc6b855d3be4e9fb2}
+)}}\label{classzcm_1_1Server__Operation_a17d90d76a8cfa0dc25792144e155e7c0}
 
 
-Get the Z\+MQ server \char`\"{}ready\char`\"{} variable. 
+Get the Z\-M\-Q server socket pointer. 
+
+\hypertarget{classzcm_1_1Server__Operation_a1477e76e1639bdebc6b855d3be4e9fb2}{\index{zcm\-::\-Server\-\_\-\-Operation@{zcm\-::\-Server\-\_\-\-Operation}!set\-\_\-ready@{set\-\_\-ready}}
+\index{set\-\_\-ready@{set\-\_\-ready}!zcm::Server_Operation@{zcm\-::\-Server\-\_\-\-Operation}}
+\subsubsection[{set\-\_\-ready}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\-::\-Server\-\_\-\-Operation\-::set\-\_\-ready (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classzcm_1_1Server__Operation_a1477e76e1639bdebc6b855d3be4e9fb2}
+
+
+Get the Z\-M\-Q server \char`\"{}ready\char`\"{} variable. 
 
 
 
 \subsection{Member Data Documentation}
-\index{zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}!operation\+\_\+function@{operation\+\_\+function}}
-\index{operation\+\_\+function@{operation\+\_\+function}!zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}}
-\subsubsection[{\texorpdfstring{operation\+\_\+function}{operation_function}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::function$<$std\+::string()$>$ zcm\+::\+Server\+\_\+\+Operation\+::operation\+\_\+function\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Server__Operation_a9fe0d75b858647a21323293746df6c9e}{}\label{classzcm_1_1Server__Operation_a9fe0d75b858647a21323293746df6c9e}
+\hypertarget{classzcm_1_1Server__Operation_af6df162db0b1f42248b52c8925dcc64d}{\index{zcm\-::\-Server\-\_\-\-Operation@{zcm\-::\-Server\-\_\-\-Operation}!operation\-\_\-function@{operation\-\_\-function}}
+\index{operation\-\_\-function@{operation\-\_\-function}!zcm::Server_Operation@{zcm\-::\-Server\-\_\-\-Operation}}
+\subsubsection[{operation\-\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}std\-::function$<$void()$>$ zcm\-::\-Server\-\_\-\-Operation\-::operation\-\_\-function\hspace{0.3cm}{\ttfamily [private]}}}\label{classzcm_1_1Server__Operation_af6df162db0b1f42248b52c8925dcc64d}
 
 
 \hyperlink{classzcm_1_1Server}{Server} Operation Function. 
 
-\index{zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}!recv\+\_\+ready@{recv\+\_\+ready}}
-\index{recv\+\_\+ready@{recv\+\_\+ready}!zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}}
-\subsubsection[{\texorpdfstring{recv\+\_\+ready}{recv_ready}}]{\setlength{\rightskip}{0pt plus 5cm}bool$\ast$ zcm\+::\+Server\+\_\+\+Operation\+::recv\+\_\+ready\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Server__Operation_a2b71778be842aedf6d122b531e186ca8}{}\label{classzcm_1_1Server__Operation_a2b71778be842aedf6d122b531e186ca8}
+\hypertarget{classzcm_1_1Server__Operation_a2b71778be842aedf6d122b531e186ca8}{\index{zcm\-::\-Server\-\_\-\-Operation@{zcm\-::\-Server\-\_\-\-Operation}!recv\-\_\-ready@{recv\-\_\-ready}}
+\index{recv\-\_\-ready@{recv\-\_\-ready}!zcm::Server_Operation@{zcm\-::\-Server\-\_\-\-Operation}}
+\subsubsection[{recv\-\_\-ready}]{\setlength{\rightskip}{0pt plus 5cm}bool$\ast$ zcm\-::\-Server\-\_\-\-Operation\-::recv\-\_\-ready\hspace{0.3cm}{\ttfamily [private]}}}\label{classzcm_1_1Server__Operation_a2b71778be842aedf6d122b531e186ca8}
 
 
 Pointer to the \hyperlink{classzcm_1_1Server}{Server} \char`\"{}ready\char`\"{} variable. 
 
-\index{zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}!socket\+\_\+ptr@{socket\+\_\+ptr}}
-\index{socket\+\_\+ptr@{socket\+\_\+ptr}!zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}}
-\subsubsection[{\texorpdfstring{socket\+\_\+ptr}{socket_ptr}}]{\setlength{\rightskip}{0pt plus 5cm}zmq\+::socket\+\_\+t$\ast$ zcm\+::\+Server\+\_\+\+Operation\+::socket\+\_\+ptr\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Server__Operation_a07efad79c512d03a54fe2bb99166d52f}{}\label{classzcm_1_1Server__Operation_a07efad79c512d03a54fe2bb99166d52f}
+\hypertarget{classzcm_1_1Server__Operation_add538216fe0c56f8edd74c12d9b5f224}{\index{zcm\-::\-Server\-\_\-\-Operation@{zcm\-::\-Server\-\_\-\-Operation}!response\-\_\-ptr@{response\-\_\-ptr}}
+\index{response\-\_\-ptr@{response\-\_\-ptr}!zcm::Server_Operation@{zcm\-::\-Server\-\_\-\-Operation}}
+\subsubsection[{response\-\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string$\ast$ zcm\-::\-Server\-\_\-\-Operation\-::response\-\_\-ptr\hspace{0.3cm}{\ttfamily [private]}}}\label{classzcm_1_1Server__Operation_add538216fe0c56f8edd74c12d9b5f224}
 
 
-Pointer to the \hyperlink{classzcm_1_1Server}{Server} Z\+MQ socket. 
+Pointer to the response string. 
+
+\hypertarget{classzcm_1_1Server__Operation_a07efad79c512d03a54fe2bb99166d52f}{\index{zcm\-::\-Server\-\_\-\-Operation@{zcm\-::\-Server\-\_\-\-Operation}!socket\-\_\-ptr@{socket\-\_\-ptr}}
+\index{socket\-\_\-ptr@{socket\-\_\-ptr}!zcm::Server_Operation@{zcm\-::\-Server\-\_\-\-Operation}}
+\subsubsection[{socket\-\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}zmq\-::socket\-\_\-t$\ast$ zcm\-::\-Server\-\_\-\-Operation\-::socket\-\_\-ptr\hspace{0.3cm}{\ttfamily [private]}}}\label{classzcm_1_1Server__Operation_a07efad79c512d03a54fe2bb99166d52f}
+
+
+Pointer to the \hyperlink{classzcm_1_1Server}{Server} Z\-M\-Q socket. 
 
 
 
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-/home/pranav/\+Repositories/zcm/include/\hyperlink{operation__types_8hpp}{operation\+\_\+types.\+hpp}\item 
-/home/pranav/\+Repositories/zcm/src/\hyperlink{operation__types_8cpp}{operation\+\_\+types.\+cpp}\end{DoxyCompactItemize}
+/home/kelsier/\-Git\-Hub/zcm/include/\hyperlink{operation__types_8hpp}{operation\-\_\-types.\-hpp}\item 
+/home/kelsier/\-Git\-Hub/zcm/src/\hyperlink{operation__types_8cpp}{operation\-\_\-types.\-cpp}\end{DoxyCompactItemize}

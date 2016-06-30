@@ -1,5 +1,6 @@
-\hypertarget{classzcm_1_1Timer}{}\section{zcm\+:\+:Timer Class Reference}
-\label{classzcm_1_1Timer}\index{zcm\+::\+Timer@{zcm\+::\+Timer}}
+\hypertarget{classzcm_1_1Timer}{\section{zcm\-:\-:Timer Class Reference}
+\label{classzcm_1_1Timer}\index{zcm\-::\-Timer@{zcm\-::\-Timer}}
+}
 
 
 \hyperlink{classzcm_1_1Timer}{Timer} class.  
@@ -7,61 +8,62 @@
 
 
 
-{\ttfamily \#include $<$timer.\+hpp$>$}
+{\ttfamily \#include $<$timer.\-hpp$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classzcm_1_1Timer_a1283d5045e825f0f07c1cf3117eb1904}{Timer} (std\+::string \hyperlink{classzcm_1_1Timer_abfd2bb014b496ce2eda5a5837e9275f1}{name}, unsigned int \hyperlink{classzcm_1_1Timer_a722f6390254d106117d8e1545b6092ab}{priority}, long long \hyperlink{classzcm_1_1Timer_a36c7498a7ad5706ceca83429e6c1759c}{period}, std\+::function$<$ void()$>$ \hyperlink{classzcm_1_1Timer_a07f820c2d67029b83547bbfd77fc3690}{operation\+\_\+function}, \hyperlink{classzcm_1_1Operation__Queue}{Operation\+\_\+\+Queue} $\ast$\hyperlink{classzcm_1_1Timer_a9f2ce34fb9230c4251355fde956b7220}{operation\+\_\+queue\+\_\+ptr})
+\hyperlink{classzcm_1_1Timer_a1283d5045e825f0f07c1cf3117eb1904}{Timer} (std\-::string \hyperlink{classzcm_1_1Timer_abfd2bb014b496ce2eda5a5837e9275f1}{name}, unsigned int \hyperlink{classzcm_1_1Timer_a722f6390254d106117d8e1545b6092ab}{priority}, long long \hyperlink{classzcm_1_1Timer_a36c7498a7ad5706ceca83429e6c1759c}{period}, std\-::function$<$ void()$>$ \hyperlink{classzcm_1_1Timer_a07f820c2d67029b83547bbfd77fc3690}{operation\-\_\-function}, \hyperlink{classzcm_1_1Operation__Queue}{Operation\-\_\-\-Queue} $\ast$\hyperlink{classzcm_1_1Timer_a9f2ce34fb9230c4251355fde956b7220}{operation\-\_\-queue\-\_\-ptr})
 \begin{DoxyCompactList}\small\item\em Construct a timer. \end{DoxyCompactList}\item 
 void \hyperlink{classzcm_1_1Timer_a4baed4e019656ed2612aaa0374cc0fa9}{operation} ()
-\begin{DoxyCompactList}\small\item\em \hyperlink{classzcm_1_1Timer}{Timer} thread function Behavior\+: (1) Wait for timer expiry (2) Create a \hyperlink{classzcm_1_1Timer__Operation}{Timer\+\_\+\+Operation} (3) Enqueue onto operation\+\_\+queue (4) Goto step (1) \end{DoxyCompactList}\item 
-std\+::string \hyperlink{classzcm_1_1Timer_a4a4aaf655539dec8ca7e747e230f8655}{get\+\_\+name} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classzcm_1_1Timer}{Timer} thread function Behavior\-: (1) Wait for timer expiry (2) Create a \hyperlink{classzcm_1_1Timer__Operation}{Timer\-\_\-\-Operation} (3) Enqueue onto operation\-\_\-queue (4) Goto step (1) \end{DoxyCompactList}\item 
+std\-::string \hyperlink{classzcm_1_1Timer_a4a4aaf655539dec8ca7e747e230f8655}{get\-\_\-name} ()
 \begin{DoxyCompactList}\small\item\em Get the timer name. \end{DoxyCompactList}\item 
-unsigned int \hyperlink{classzcm_1_1Timer_a468548503d67c3e3872cf85d86cb26ba}{get\+\_\+priority} ()
+unsigned int \hyperlink{classzcm_1_1Timer_a468548503d67c3e3872cf85d86cb26ba}{get\-\_\-priority} ()
 \begin{DoxyCompactList}\small\item\em Get the timer priority. \end{DoxyCompactList}\item 
-void \hyperlink{classzcm_1_1Timer_a70d8498a7fcfacc90a4510baa55682ef}{change\+\_\+period} (long long new\+\_\+period)
+void \hyperlink{classzcm_1_1Timer_a70d8498a7fcfacc90a4510baa55682ef}{change\-\_\-period} (long long new\-\_\-period)
 \begin{DoxyCompactList}\small\item\em Change the timer period. \end{DoxyCompactList}\item 
-void \hyperlink{classzcm_1_1Timer_ace30a8e8155fcacf5ea8b7eee796b02b}{rebind\+\_\+operation\+\_\+function} (std\+::function$<$ void()$>$ new\+\_\+operation\+\_\+function)
+void \hyperlink{classzcm_1_1Timer_ace30a8e8155fcacf5ea8b7eee796b02b}{rebind\-\_\-operation\-\_\-function} (std\-::function$<$ void()$>$ new\-\_\-operation\-\_\-function)
 \begin{DoxyCompactList}\small\item\em Rebind the timer operation function. \end{DoxyCompactList}\item 
-std\+::thread \hyperlink{classzcm_1_1Timer_a05e22ac74661a4891f610e0c0d364ca7}{spawn} ()
+std\-::thread \hyperlink{classzcm_1_1Timer_a05e22ac74661a4891f610e0c0d364ca7}{spawn} ()
 \begin{DoxyCompactList}\small\item\em Spawn a new thread for the timer. \end{DoxyCompactList}\item 
 void \hyperlink{classzcm_1_1Timer_a2a7ba9c6294a1a726844c71db962a280}{start} ()
 \begin{DoxyCompactList}\small\item\em Start the timer thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-std\+::string \hyperlink{classzcm_1_1Timer_abfd2bb014b496ce2eda5a5837e9275f1}{name}
+std\-::string \hyperlink{classzcm_1_1Timer_abfd2bb014b496ce2eda5a5837e9275f1}{name}
 \begin{DoxyCompactList}\small\item\em Name of the timer. \end{DoxyCompactList}\item 
 unsigned int \hyperlink{classzcm_1_1Timer_a722f6390254d106117d8e1545b6092ab}{priority}
 \begin{DoxyCompactList}\small\item\em Priority of the timer. \end{DoxyCompactList}\item 
-std\+::chrono\+::duration$<$ long long, std\+::ratio$<$ 1, 1000000000 $>$ $>$ \hyperlink{classzcm_1_1Timer_a36c7498a7ad5706ceca83429e6c1759c}{period}
+std\-::chrono\-::duration$<$ long \\*
+long, std\-::ratio$<$ 1, 1000000000 $>$ $>$ \hyperlink{classzcm_1_1Timer_a36c7498a7ad5706ceca83429e6c1759c}{period}
 \begin{DoxyCompactList}\small\item\em Period of the timer. \end{DoxyCompactList}\item 
-std\+::function$<$ void()$>$ \hyperlink{classzcm_1_1Timer_a07f820c2d67029b83547bbfd77fc3690}{operation\+\_\+function}
+std\-::function$<$ void()$>$ \hyperlink{classzcm_1_1Timer_a07f820c2d67029b83547bbfd77fc3690}{operation\-\_\-function}
 \begin{DoxyCompactList}\small\item\em Operation function bound to the timer. \end{DoxyCompactList}\item 
-\hyperlink{classzcm_1_1Operation__Queue}{Operation\+\_\+\+Queue} $\ast$ \hyperlink{classzcm_1_1Timer_a9f2ce34fb9230c4251355fde956b7220}{operation\+\_\+queue\+\_\+ptr}
+\hyperlink{classzcm_1_1Operation__Queue}{Operation\-\_\-\-Queue} $\ast$ \hyperlink{classzcm_1_1Timer_a9f2ce34fb9230c4251355fde956b7220}{operation\-\_\-queue\-\_\-ptr}
 \begin{DoxyCompactList}\small\item\em Pointer to the operation queue. \end{DoxyCompactList}\item 
-std\+::mutex \hyperlink{classzcm_1_1Timer_af9d6ce4df403e44b543241926ddcf41f}{period\+\_\+mutex}
+std\-::mutex \hyperlink{classzcm_1_1Timer_af9d6ce4df403e44b543241926ddcf41f}{period\-\_\-mutex}
 \begin{DoxyCompactList}\small\item\em Mutex used to change the timer period at runtime. \end{DoxyCompactList}\item 
-std\+::mutex \hyperlink{classzcm_1_1Timer_a987e7fd6128be8eac6a6a3d60c7ef9b3}{func\+\_\+mutex}
-\begin{DoxyCompactList}\small\item\em Mutex used to change the operation\+\_\+function at runtime. \end{DoxyCompactList}\end{DoxyCompactItemize}
+std\-::mutex \hyperlink{classzcm_1_1Timer_a987e7fd6128be8eac6a6a3d60c7ef9b3}{func\-\_\-mutex}
+\begin{DoxyCompactList}\small\item\em Mutex used to change the operation\-\_\-function at runtime. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 \hyperlink{classzcm_1_1Timer}{Timer} class. 
 
 \subsection{Constructor \& Destructor Documentation}
-\index{zcm\+::\+Timer@{zcm\+::\+Timer}!Timer@{Timer}}
-\index{Timer@{Timer}!zcm\+::\+Timer@{zcm\+::\+Timer}}
-\subsubsection[{\texorpdfstring{Timer(std\+::string name, unsigned int priority, long long period, std\+::function$<$ void()$>$ operation\+\_\+function, Operation\+\_\+\+Queue $\ast$operation\+\_\+queue\+\_\+ptr)}{Timer(std::string name, unsigned int priority, long long period, std::function< void()> operation_function, Operation_Queue *operation_queue_ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}zcm\+::\+Timer\+::\+Timer (
+\hypertarget{classzcm_1_1Timer_a1283d5045e825f0f07c1cf3117eb1904}{\index{zcm\-::\-Timer@{zcm\-::\-Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!zcm::Timer@{zcm\-::\-Timer}}
+\subsubsection[{Timer}]{\setlength{\rightskip}{0pt plus 5cm}zcm\-::\-Timer\-::\-Timer (
 \begin{DoxyParamCaption}
-\item[{std\+::string}]{name, }
+\item[{std\-::string}]{name, }
 \item[{unsigned int}]{priority, }
 \item[{long long}]{period, }
-\item[{std\+::function$<$ void()$>$}]{operation\+\_\+function, }
-\item[{{\bf Operation\+\_\+\+Queue} $\ast$}]{operation\+\_\+queue\+\_\+ptr}
+\item[{std\-::function$<$ void()$>$}]{operation\-\_\-function, }
+\item[{{\bf Operation\-\_\-\-Queue} $\ast$}]{operation\-\_\-queue\-\_\-ptr}
 \end{DoxyParamCaption}
-)}\hypertarget{classzcm_1_1Timer_a1283d5045e825f0f07c1cf3117eb1904}{}\label{classzcm_1_1Timer_a1283d5045e825f0f07c1cf3117eb1904}
+)}}\label{classzcm_1_1Timer_a1283d5045e825f0f07c1cf3117eb1904}
 
 
 Construct a timer. 
@@ -74,37 +76,37 @@ Construct a timer.
 \hline
 \mbox{\tt in}  & {\em period} & Period of the timer in nanoseconds \\
 \hline
-\mbox{\tt in}  & {\em operation\+\_\+function} & Operation to which the timer is bound \\
+\mbox{\tt in}  & {\em operation\-\_\-function} & Operation to which the timer is bound \\
 \hline
-\mbox{\tt in}  & {\em operation\+\_\+queue\+\_\+ptr} & Pointer to the operation\+\_\+queue \\
+\mbox{\tt in}  & {\em operation\-\_\-queue\-\_\-ptr} & Pointer to the operation\-\_\-queue \\
 \hline
 \end{DoxyParams}
 
 
 \subsection{Member Function Documentation}
-\index{zcm\+::\+Timer@{zcm\+::\+Timer}!change\+\_\+period@{change\+\_\+period}}
-\index{change\+\_\+period@{change\+\_\+period}!zcm\+::\+Timer@{zcm\+::\+Timer}}
-\subsubsection[{\texorpdfstring{change\+\_\+period(long long new\+\_\+period)}{change_period(long long new_period)}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Timer\+::change\+\_\+period (
+\hypertarget{classzcm_1_1Timer_a70d8498a7fcfacc90a4510baa55682ef}{\index{zcm\-::\-Timer@{zcm\-::\-Timer}!change\-\_\-period@{change\-\_\-period}}
+\index{change\-\_\-period@{change\-\_\-period}!zcm::Timer@{zcm\-::\-Timer}}
+\subsubsection[{change\-\_\-period}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\-::\-Timer\-::change\-\_\-period (
 \begin{DoxyParamCaption}
-\item[{long long}]{new\+\_\+period}
+\item[{long long}]{new\-\_\-period}
 \end{DoxyParamCaption}
-)}\hypertarget{classzcm_1_1Timer_a70d8498a7fcfacc90a4510baa55682ef}{}\label{classzcm_1_1Timer_a70d8498a7fcfacc90a4510baa55682ef}
+)}}\label{classzcm_1_1Timer_a70d8498a7fcfacc90a4510baa55682ef}
 
 
 Change the timer period. 
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em new\+\_\+period} & New timer period in nanoseconds \\
+\mbox{\tt in}  & {\em new\-\_\-period} & New timer period in nanoseconds \\
 \hline
 \end{DoxyParams}
-\index{zcm\+::\+Timer@{zcm\+::\+Timer}!get\+\_\+name@{get\+\_\+name}}
-\index{get\+\_\+name@{get\+\_\+name}!zcm\+::\+Timer@{zcm\+::\+Timer}}
-\subsubsection[{\texorpdfstring{get\+\_\+name()}{get_name()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string zcm\+::\+Timer\+::get\+\_\+name (
+\hypertarget{classzcm_1_1Timer_a4a4aaf655539dec8ca7e747e230f8655}{\index{zcm\-::\-Timer@{zcm\-::\-Timer}!get\-\_\-name@{get\-\_\-name}}
+\index{get\-\_\-name@{get\-\_\-name}!zcm::Timer@{zcm\-::\-Timer}}
+\subsubsection[{get\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string zcm\-::\-Timer\-::get\-\_\-name (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{classzcm_1_1Timer_a4a4aaf655539dec8ca7e747e230f8655}{}\label{classzcm_1_1Timer_a4a4aaf655539dec8ca7e747e230f8655}
+)}}\label{classzcm_1_1Timer_a4a4aaf655539dec8ca7e747e230f8655}
 
 
 Get the timer name. 
@@ -112,13 +114,13 @@ Get the timer name.
 \begin{DoxyReturn}{Returns}
 \hyperlink{classzcm_1_1Timer}{Timer} name 
 \end{DoxyReturn}
-\index{zcm\+::\+Timer@{zcm\+::\+Timer}!get\+\_\+priority@{get\+\_\+priority}}
-\index{get\+\_\+priority@{get\+\_\+priority}!zcm\+::\+Timer@{zcm\+::\+Timer}}
-\subsubsection[{\texorpdfstring{get\+\_\+priority()}{get_priority()}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int zcm\+::\+Timer\+::get\+\_\+priority (
+\hypertarget{classzcm_1_1Timer_a468548503d67c3e3872cf85d86cb26ba}{\index{zcm\-::\-Timer@{zcm\-::\-Timer}!get\-\_\-priority@{get\-\_\-priority}}
+\index{get\-\_\-priority@{get\-\_\-priority}!zcm::Timer@{zcm\-::\-Timer}}
+\subsubsection[{get\-\_\-priority}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int zcm\-::\-Timer\-::get\-\_\-priority (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{classzcm_1_1Timer_a468548503d67c3e3872cf85d86cb26ba}{}\label{classzcm_1_1Timer_a468548503d67c3e3872cf85d86cb26ba}
+)}}\label{classzcm_1_1Timer_a468548503d67c3e3872cf85d86cb26ba}
 
 
 Get the timer priority. 
@@ -126,40 +128,40 @@ Get the timer priority.
 \begin{DoxyReturn}{Returns}
 \hyperlink{classzcm_1_1Timer}{Timer} priority 
 \end{DoxyReturn}
-\index{zcm\+::\+Timer@{zcm\+::\+Timer}!operation@{operation}}
-\index{operation@{operation}!zcm\+::\+Timer@{zcm\+::\+Timer}}
-\subsubsection[{\texorpdfstring{operation()}{operation()}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Timer\+::operation (
+\hypertarget{classzcm_1_1Timer_a4baed4e019656ed2612aaa0374cc0fa9}{\index{zcm\-::\-Timer@{zcm\-::\-Timer}!operation@{operation}}
+\index{operation@{operation}!zcm::Timer@{zcm\-::\-Timer}}
+\subsubsection[{operation}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\-::\-Timer\-::operation (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{classzcm_1_1Timer_a4baed4e019656ed2612aaa0374cc0fa9}{}\label{classzcm_1_1Timer_a4baed4e019656ed2612aaa0374cc0fa9}
+)}}\label{classzcm_1_1Timer_a4baed4e019656ed2612aaa0374cc0fa9}
 
 
-\hyperlink{classzcm_1_1Timer}{Timer} thread function Behavior\+: (1) Wait for timer expiry (2) Create a \hyperlink{classzcm_1_1Timer__Operation}{Timer\+\_\+\+Operation} (3) Enqueue onto operation\+\_\+queue (4) Goto step (1) 
+\hyperlink{classzcm_1_1Timer}{Timer} thread function Behavior\-: (1) Wait for timer expiry (2) Create a \hyperlink{classzcm_1_1Timer__Operation}{Timer\-\_\-\-Operation} (3) Enqueue onto operation\-\_\-queue (4) Goto step (1) 
 
-\index{zcm\+::\+Timer@{zcm\+::\+Timer}!rebind\+\_\+operation\+\_\+function@{rebind\+\_\+operation\+\_\+function}}
-\index{rebind\+\_\+operation\+\_\+function@{rebind\+\_\+operation\+\_\+function}!zcm\+::\+Timer@{zcm\+::\+Timer}}
-\subsubsection[{\texorpdfstring{rebind\+\_\+operation\+\_\+function(std\+::function$<$ void()$>$ new\+\_\+operation\+\_\+function)}{rebind_operation_function(std::function< void()> new_operation_function)}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Timer\+::rebind\+\_\+operation\+\_\+function (
+\hypertarget{classzcm_1_1Timer_ace30a8e8155fcacf5ea8b7eee796b02b}{\index{zcm\-::\-Timer@{zcm\-::\-Timer}!rebind\-\_\-operation\-\_\-function@{rebind\-\_\-operation\-\_\-function}}
+\index{rebind\-\_\-operation\-\_\-function@{rebind\-\_\-operation\-\_\-function}!zcm::Timer@{zcm\-::\-Timer}}
+\subsubsection[{rebind\-\_\-operation\-\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\-::\-Timer\-::rebind\-\_\-operation\-\_\-function (
 \begin{DoxyParamCaption}
-\item[{std\+::function$<$ void()$>$}]{new\+\_\+operation\+\_\+function}
+\item[{std\-::function$<$ void()$>$}]{new\-\_\-operation\-\_\-function}
 \end{DoxyParamCaption}
-)}\hypertarget{classzcm_1_1Timer_ace30a8e8155fcacf5ea8b7eee796b02b}{}\label{classzcm_1_1Timer_ace30a8e8155fcacf5ea8b7eee796b02b}
+)}}\label{classzcm_1_1Timer_ace30a8e8155fcacf5ea8b7eee796b02b}
 
 
 Rebind the timer operation function. 
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em new\+\_\+operation\+\_\+function} & New timer function to be handled upon expiry \\
+\mbox{\tt in}  & {\em new\-\_\-operation\-\_\-function} & New timer function to be handled upon expiry \\
 \hline
 \end{DoxyParams}
-\index{zcm\+::\+Timer@{zcm\+::\+Timer}!spawn@{spawn}}
-\index{spawn@{spawn}!zcm\+::\+Timer@{zcm\+::\+Timer}}
-\subsubsection[{\texorpdfstring{spawn()}{spawn()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::thread zcm\+::\+Timer\+::spawn (
+\hypertarget{classzcm_1_1Timer_a05e22ac74661a4891f610e0c0d364ca7}{\index{zcm\-::\-Timer@{zcm\-::\-Timer}!spawn@{spawn}}
+\index{spawn@{spawn}!zcm::Timer@{zcm\-::\-Timer}}
+\subsubsection[{spawn}]{\setlength{\rightskip}{0pt plus 5cm}std\-::thread zcm\-::\-Timer\-::spawn (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{classzcm_1_1Timer_a05e22ac74661a4891f610e0c0d364ca7}{}\label{classzcm_1_1Timer_a05e22ac74661a4891f610e0c0d364ca7}
+)}}\label{classzcm_1_1Timer_a05e22ac74661a4891f610e0c0d364ca7}
 
 
 Spawn a new thread for the timer. 
@@ -167,13 +169,13 @@ Spawn a new thread for the timer.
 \begin{DoxyReturn}{Returns}
 \hyperlink{classzcm_1_1Timer}{Timer} thread 
 \end{DoxyReturn}
-\index{zcm\+::\+Timer@{zcm\+::\+Timer}!start@{start}}
-\index{start@{start}!zcm\+::\+Timer@{zcm\+::\+Timer}}
-\subsubsection[{\texorpdfstring{start()}{start()}}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\+::\+Timer\+::start (
+\hypertarget{classzcm_1_1Timer_a2a7ba9c6294a1a726844c71db962a280}{\index{zcm\-::\-Timer@{zcm\-::\-Timer}!start@{start}}
+\index{start@{start}!zcm::Timer@{zcm\-::\-Timer}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void zcm\-::\-Timer\-::start (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{classzcm_1_1Timer_a2a7ba9c6294a1a726844c71db962a280}{}\label{classzcm_1_1Timer_a2a7ba9c6294a1a726844c71db962a280}
+)}}\label{classzcm_1_1Timer_a2a7ba9c6294a1a726844c71db962a280}
 
 
 Start the timer thread. 
@@ -181,58 +183,58 @@ Start the timer thread.
 
 
 \subsection{Member Data Documentation}
-\index{zcm\+::\+Timer@{zcm\+::\+Timer}!func\+\_\+mutex@{func\+\_\+mutex}}
-\index{func\+\_\+mutex@{func\+\_\+mutex}!zcm\+::\+Timer@{zcm\+::\+Timer}}
-\subsubsection[{\texorpdfstring{func\+\_\+mutex}{func_mutex}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::mutex zcm\+::\+Timer\+::func\+\_\+mutex\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Timer_a987e7fd6128be8eac6a6a3d60c7ef9b3}{}\label{classzcm_1_1Timer_a987e7fd6128be8eac6a6a3d60c7ef9b3}
+\hypertarget{classzcm_1_1Timer_a987e7fd6128be8eac6a6a3d60c7ef9b3}{\index{zcm\-::\-Timer@{zcm\-::\-Timer}!func\-\_\-mutex@{func\-\_\-mutex}}
+\index{func\-\_\-mutex@{func\-\_\-mutex}!zcm::Timer@{zcm\-::\-Timer}}
+\subsubsection[{func\-\_\-mutex}]{\setlength{\rightskip}{0pt plus 5cm}std\-::mutex zcm\-::\-Timer\-::func\-\_\-mutex\hspace{0.3cm}{\ttfamily [private]}}}\label{classzcm_1_1Timer_a987e7fd6128be8eac6a6a3d60c7ef9b3}
 
 
-Mutex used to change the operation\+\_\+function at runtime. 
+Mutex used to change the operation\-\_\-function at runtime. 
 
-\index{zcm\+::\+Timer@{zcm\+::\+Timer}!name@{name}}
-\index{name@{name}!zcm\+::\+Timer@{zcm\+::\+Timer}}
-\subsubsection[{\texorpdfstring{name}{name}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string zcm\+::\+Timer\+::name\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Timer_abfd2bb014b496ce2eda5a5837e9275f1}{}\label{classzcm_1_1Timer_abfd2bb014b496ce2eda5a5837e9275f1}
+\hypertarget{classzcm_1_1Timer_abfd2bb014b496ce2eda5a5837e9275f1}{\index{zcm\-::\-Timer@{zcm\-::\-Timer}!name@{name}}
+\index{name@{name}!zcm::Timer@{zcm\-::\-Timer}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string zcm\-::\-Timer\-::name\hspace{0.3cm}{\ttfamily [private]}}}\label{classzcm_1_1Timer_abfd2bb014b496ce2eda5a5837e9275f1}
 
 
 Name of the timer. 
 
-\index{zcm\+::\+Timer@{zcm\+::\+Timer}!operation\+\_\+function@{operation\+\_\+function}}
-\index{operation\+\_\+function@{operation\+\_\+function}!zcm\+::\+Timer@{zcm\+::\+Timer}}
-\subsubsection[{\texorpdfstring{operation\+\_\+function}{operation_function}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::function$<$void()$>$ zcm\+::\+Timer\+::operation\+\_\+function\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Timer_a07f820c2d67029b83547bbfd77fc3690}{}\label{classzcm_1_1Timer_a07f820c2d67029b83547bbfd77fc3690}
+\hypertarget{classzcm_1_1Timer_a07f820c2d67029b83547bbfd77fc3690}{\index{zcm\-::\-Timer@{zcm\-::\-Timer}!operation\-\_\-function@{operation\-\_\-function}}
+\index{operation\-\_\-function@{operation\-\_\-function}!zcm::Timer@{zcm\-::\-Timer}}
+\subsubsection[{operation\-\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}std\-::function$<$void()$>$ zcm\-::\-Timer\-::operation\-\_\-function\hspace{0.3cm}{\ttfamily [private]}}}\label{classzcm_1_1Timer_a07f820c2d67029b83547bbfd77fc3690}
 
 
 Operation function bound to the timer. 
 
-\index{zcm\+::\+Timer@{zcm\+::\+Timer}!operation\+\_\+queue\+\_\+ptr@{operation\+\_\+queue\+\_\+ptr}}
-\index{operation\+\_\+queue\+\_\+ptr@{operation\+\_\+queue\+\_\+ptr}!zcm\+::\+Timer@{zcm\+::\+Timer}}
-\subsubsection[{\texorpdfstring{operation\+\_\+queue\+\_\+ptr}{operation_queue_ptr}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Operation\+\_\+\+Queue}$\ast$ zcm\+::\+Timer\+::operation\+\_\+queue\+\_\+ptr\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Timer_a9f2ce34fb9230c4251355fde956b7220}{}\label{classzcm_1_1Timer_a9f2ce34fb9230c4251355fde956b7220}
+\hypertarget{classzcm_1_1Timer_a9f2ce34fb9230c4251355fde956b7220}{\index{zcm\-::\-Timer@{zcm\-::\-Timer}!operation\-\_\-queue\-\_\-ptr@{operation\-\_\-queue\-\_\-ptr}}
+\index{operation\-\_\-queue\-\_\-ptr@{operation\-\_\-queue\-\_\-ptr}!zcm::Timer@{zcm\-::\-Timer}}
+\subsubsection[{operation\-\_\-queue\-\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Operation\-\_\-\-Queue}$\ast$ zcm\-::\-Timer\-::operation\-\_\-queue\-\_\-ptr\hspace{0.3cm}{\ttfamily [private]}}}\label{classzcm_1_1Timer_a9f2ce34fb9230c4251355fde956b7220}
 
 
 Pointer to the operation queue. 
 
-\index{zcm\+::\+Timer@{zcm\+::\+Timer}!period@{period}}
-\index{period@{period}!zcm\+::\+Timer@{zcm\+::\+Timer}}
-\subsubsection[{\texorpdfstring{period}{period}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::chrono\+::duration$<$long long, std\+::ratio$<$1, 1000000000$>$ $>$ zcm\+::\+Timer\+::period\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Timer_a36c7498a7ad5706ceca83429e6c1759c}{}\label{classzcm_1_1Timer_a36c7498a7ad5706ceca83429e6c1759c}
+\hypertarget{classzcm_1_1Timer_a36c7498a7ad5706ceca83429e6c1759c}{\index{zcm\-::\-Timer@{zcm\-::\-Timer}!period@{period}}
+\index{period@{period}!zcm::Timer@{zcm\-::\-Timer}}
+\subsubsection[{period}]{\setlength{\rightskip}{0pt plus 5cm}std\-::chrono\-::duration$<$long long, std\-::ratio$<$1, 1000000000$>$ $>$ zcm\-::\-Timer\-::period\hspace{0.3cm}{\ttfamily [private]}}}\label{classzcm_1_1Timer_a36c7498a7ad5706ceca83429e6c1759c}
 
 
 Period of the timer. 
 
-\index{zcm\+::\+Timer@{zcm\+::\+Timer}!period\+\_\+mutex@{period\+\_\+mutex}}
-\index{period\+\_\+mutex@{period\+\_\+mutex}!zcm\+::\+Timer@{zcm\+::\+Timer}}
-\subsubsection[{\texorpdfstring{period\+\_\+mutex}{period_mutex}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::mutex zcm\+::\+Timer\+::period\+\_\+mutex\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Timer_af9d6ce4df403e44b543241926ddcf41f}{}\label{classzcm_1_1Timer_af9d6ce4df403e44b543241926ddcf41f}
+\hypertarget{classzcm_1_1Timer_af9d6ce4df403e44b543241926ddcf41f}{\index{zcm\-::\-Timer@{zcm\-::\-Timer}!period\-\_\-mutex@{period\-\_\-mutex}}
+\index{period\-\_\-mutex@{period\-\_\-mutex}!zcm::Timer@{zcm\-::\-Timer}}
+\subsubsection[{period\-\_\-mutex}]{\setlength{\rightskip}{0pt plus 5cm}std\-::mutex zcm\-::\-Timer\-::period\-\_\-mutex\hspace{0.3cm}{\ttfamily [private]}}}\label{classzcm_1_1Timer_af9d6ce4df403e44b543241926ddcf41f}
 
 
 Mutex used to change the timer period at runtime. 
 
-\index{zcm\+::\+Timer@{zcm\+::\+Timer}!priority@{priority}}
-\index{priority@{priority}!zcm\+::\+Timer@{zcm\+::\+Timer}}
-\subsubsection[{\texorpdfstring{priority}{priority}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int zcm\+::\+Timer\+::priority\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classzcm_1_1Timer_a722f6390254d106117d8e1545b6092ab}{}\label{classzcm_1_1Timer_a722f6390254d106117d8e1545b6092ab}
+\hypertarget{classzcm_1_1Timer_a722f6390254d106117d8e1545b6092ab}{\index{zcm\-::\-Timer@{zcm\-::\-Timer}!priority@{priority}}
+\index{priority@{priority}!zcm::Timer@{zcm\-::\-Timer}}
+\subsubsection[{priority}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int zcm\-::\-Timer\-::priority\hspace{0.3cm}{\ttfamily [private]}}}\label{classzcm_1_1Timer_a722f6390254d106117d8e1545b6092ab}
 
 
 Priority of the timer. 
 
 
 
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-/home/pranav/\+Repositories/zcm/include/\hyperlink{timer_8hpp}{timer.\+hpp}\item 
-/home/pranav/\+Repositories/zcm/src/\hyperlink{timer_8cpp}{timer.\+cpp}\end{DoxyCompactItemize}
+/home/kelsier/\-Git\-Hub/zcm/include/\hyperlink{timer_8hpp}{timer.\-hpp}\item 
+/home/kelsier/\-Git\-Hub/zcm/src/\hyperlink{timer_8cpp}{timer.\-cpp}\end{DoxyCompactItemize}

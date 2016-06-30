@@ -2,11 +2,12 @@ var searchData=
 [
   ['call',['call',['../classzcm_1_1Client.html#a9f62555765181c2feee4631a4b50786d',1,'zcm::Client']]],
   ['change_5fperiod',['change_period',['../classzcm_1_1Timer.html#a70d8498a7fcfacc90a4510baa55682ef',1,'zcm::Timer']]],
-  ['client',['Client',['../classzcm_1_1Client.html#a5da343b18178f50c0ab24b852af7f349',1,'zcm::Client::Client(std::string name)'],['../classzcm_1_1Client.html#a070dd5b851fe5f5c0a679bcb23d085b3',1,'zcm::Client::Client(std::string name, std::vector&lt; std::string &gt; endpoints)'],['../classzcm_1_1Component.html#af3be7d967a1fb16cf98adfe0b5b9e4ac',1,'zcm::Component::client()']]],
+  ['client',['Client',['../classzcm_1_1Client.html#aeea4b7db3574a527009edc3f41310bcc',1,'zcm::Client::Client(std::string name, zmq::context_t *actor_context, int timeout)'],['../classzcm_1_1Client.html#a6002478c33c7c876de6b1b001121ff87',1,'zcm::Client::Client(std::string name, zmq::context_t *actor_context, std::vector&lt; std::string &gt; endpoints, int timeout)'],['../classzcm_1_1Component.html#af3be7d967a1fb16cf98adfe0b5b9e4ac',1,'zcm::Component::client()']]],
   ['client',['Client',['../classzcm_1_1Client.html',1,'zcm']]],
   ['client_2ecpp',['client.cpp',['../client_8cpp.html',1,'']]],
   ['client_2ehpp',['client.hpp',['../client_8hpp.html',1,'']]],
   ['client_5fsocket',['client_socket',['../classzcm_1_1Client.html#a022f5e131d58cea7f6cc49b4580940a0',1,'zcm::Client']]],
+  ['client_5fsocket_5ftimeout',['client_socket_timeout',['../classzcm_1_1Client.html#a25fa4ff78b8e962ca8436a8815bf7924',1,'zcm::Client']]],
   ['clients',['clients',['../classzcm_1_1Component.html#a940e1b9755cd9f2bea95bda880999626',1,'zcm::Component']]],
   ['component',['Component',['../classzcm_1_1Component.html',1,'zcm']]],
   ['component',['Component',['../classzcm_1_1Component.html#a6fd6b1f309a6b464a14c22a94d18f040',1,'zcm::Component']]],
