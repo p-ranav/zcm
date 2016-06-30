@@ -1,324 +1,340 @@
 \indexentry{zcm@{zcm}|hyperpage}{9}
-\indexentry{zcm\+::\+Actor@{zcm\+::\+Actor}|hyperpage}{11}
-\indexentry{zcm\+::\+Actor@{zcm\+::\+Actor}!configure@{configure}|hyperpage}{11}
-\indexentry{configure@{configure}!zcm\+::\+Actor@{zcm\+::\+Actor}|hyperpage}{11}
-\indexentry{zcm\+::\+Actor@{zcm\+::\+Actor}!get\+\_\+name@{get\+\_\+name}|hyperpage}{12}
-\indexentry{get\+\_\+name@{get\+\_\+name}!zcm\+::\+Actor@{zcm\+::\+Actor}|hyperpage}{12}
-\indexentry{zcm\+::\+Actor@{zcm\+::\+Actor}!run@{run}|hyperpage}{12}
-\indexentry{run@{run}!zcm\+::\+Actor@{zcm\+::\+Actor}|hyperpage}{12}
-\indexentry{zcm\+::\+Actor@{zcm\+::\+Actor}!component\+\_\+instances@{component\+\_\+instances}|hyperpage}{12}
-\indexentry{component\+\_\+instances@{component\+\_\+instances}!zcm\+::\+Actor@{zcm\+::\+Actor}|hyperpage}{12}
-\indexentry{zcm\+::\+Actor@{zcm\+::\+Actor}!name@{name}|hyperpage}{12}
-\indexentry{name@{name}!zcm\+::\+Actor@{zcm\+::\+Actor}|hyperpage}{12}
-\indexentry{zcm\+::\+Base\+\_\+\+Operation@{zcm\+::\+Base\+\_\+\+Operation}|hyperpage}{12}
-\indexentry{zcm\+::\+Base\+\_\+\+Operation@{zcm\+::\+Base\+\_\+\+Operation}!Base\+\_\+\+Operation@{Base\+\_\+\+Operation}|hyperpage}{13}
-\indexentry{Base\+\_\+\+Operation@{Base\+\_\+\+Operation}!zcm\+::\+Base\+\_\+\+Operation@{zcm\+::\+Base\+\_\+\+Operation}|hyperpage}{13}
-\indexentry{zcm\+::\+Base\+\_\+\+Operation@{zcm\+::\+Base\+\_\+\+Operation}!execute@{execute}|hyperpage}{13}
-\indexentry{execute@{execute}!zcm\+::\+Base\+\_\+\+Operation@{zcm\+::\+Base\+\_\+\+Operation}|hyperpage}{13}
-\indexentry{zcm\+::\+Base\+\_\+\+Operation@{zcm\+::\+Base\+\_\+\+Operation}!get\+\_\+name@{get\+\_\+name}|hyperpage}{13}
-\indexentry{get\+\_\+name@{get\+\_\+name}!zcm\+::\+Base\+\_\+\+Operation@{zcm\+::\+Base\+\_\+\+Operation}|hyperpage}{13}
-\indexentry{zcm\+::\+Base\+\_\+\+Operation@{zcm\+::\+Base\+\_\+\+Operation}!get\+\_\+priority@{get\+\_\+priority}|hyperpage}{13}
-\indexentry{get\+\_\+priority@{get\+\_\+priority}!zcm\+::\+Base\+\_\+\+Operation@{zcm\+::\+Base\+\_\+\+Operation}|hyperpage}{13}
-\indexentry{zcm\+::\+Base\+\_\+\+Operation@{zcm\+::\+Base\+\_\+\+Operation}!name@{name}|hyperpage}{14}
-\indexentry{name@{name}!zcm\+::\+Base\+\_\+\+Operation@{zcm\+::\+Base\+\_\+\+Operation}|hyperpage}{14}
-\indexentry{zcm\+::\+Base\+\_\+\+Operation@{zcm\+::\+Base\+\_\+\+Operation}!priority@{priority}|hyperpage}{14}
-\indexentry{priority@{priority}!zcm\+::\+Base\+\_\+\+Operation@{zcm\+::\+Base\+\_\+\+Operation}|hyperpage}{14}
-\indexentry{zcm\+::\+Client@{zcm\+::\+Client}|hyperpage}{14}
-\indexentry{zcm\+::\+Client@{zcm\+::\+Client}!Client@{Client}|hyperpage}{15}
-\indexentry{Client@{Client}!zcm\+::\+Client@{zcm\+::\+Client}|hyperpage}{15}
-\indexentry{zcm\+::\+Client@{zcm\+::\+Client}!Client@{Client}|hyperpage}{15}
-\indexentry{Client@{Client}!zcm\+::\+Client@{zcm\+::\+Client}|hyperpage}{15}
-\indexentry{zcm\+::\+Client@{zcm\+::\+Client}!````~Client@{$\sim$\+Client}|hyperpage}{15}
-\indexentry{````~Client@{$\sim$\+Client}!zcm\+::\+Client@{zcm\+::\+Client}|hyperpage}{15}
-\indexentry{zcm\+::\+Client@{zcm\+::\+Client}!call@{call}|hyperpage}{15}
-\indexentry{call@{call}!zcm\+::\+Client@{zcm\+::\+Client}|hyperpage}{15}
-\indexentry{zcm\+::\+Client@{zcm\+::\+Client}!connect@{connect}|hyperpage}{16}
-\indexentry{connect@{connect}!zcm\+::\+Client@{zcm\+::\+Client}|hyperpage}{16}
-\indexentry{zcm\+::\+Client@{zcm\+::\+Client}!get\+\_\+name@{get\+\_\+name}|hyperpage}{16}
-\indexentry{get\+\_\+name@{get\+\_\+name}!zcm\+::\+Client@{zcm\+::\+Client}|hyperpage}{16}
-\indexentry{zcm\+::\+Client@{zcm\+::\+Client}!client\+\_\+socket@{client\+\_\+socket}|hyperpage}{16}
-\indexentry{client\+\_\+socket@{client\+\_\+socket}!zcm\+::\+Client@{zcm\+::\+Client}|hyperpage}{16}
-\indexentry{zcm\+::\+Client@{zcm\+::\+Client}!context@{context}|hyperpage}{16}
-\indexentry{context@{context}!zcm\+::\+Client@{zcm\+::\+Client}|hyperpage}{16}
-\indexentry{zcm\+::\+Client@{zcm\+::\+Client}!endpoints@{endpoints}|hyperpage}{16}
-\indexentry{endpoints@{endpoints}!zcm\+::\+Client@{zcm\+::\+Client}|hyperpage}{16}
-\indexentry{zcm\+::\+Client@{zcm\+::\+Client}!name@{name}|hyperpage}{16}
-\indexentry{name@{name}!zcm\+::\+Client@{zcm\+::\+Client}|hyperpage}{16}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{17}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!Component@{Component}|hyperpage}{18}
-\indexentry{Component@{Component}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{18}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!````~Component@{$\sim$\+Component}|hyperpage}{18}
-\indexentry{````~Component@{$\sim$\+Component}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{18}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!add\+\_\+client@{add\+\_\+client}|hyperpage}{18}
-\indexentry{add\+\_\+client@{add\+\_\+client}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{18}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!add\+\_\+publisher@{add\+\_\+publisher}|hyperpage}{19}
-\indexentry{add\+\_\+publisher@{add\+\_\+publisher}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{19}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!add\+\_\+server@{add\+\_\+server}|hyperpage}{19}
-\indexentry{add\+\_\+server@{add\+\_\+server}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{19}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!add\+\_\+subscriber@{add\+\_\+subscriber}|hyperpage}{19}
-\indexentry{add\+\_\+subscriber@{add\+\_\+subscriber}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{19}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!add\+\_\+timer@{add\+\_\+timer}|hyperpage}{19}
-\indexentry{add\+\_\+timer@{add\+\_\+timer}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{19}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!client@{client}|hyperpage}{19}
-\indexentry{client@{client}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{19}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!configure\+\_\+clients@{configure\+\_\+clients}|hyperpage}{20}
-\indexentry{configure\+\_\+clients@{configure\+\_\+clients}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{20}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!configure\+\_\+publishers@{configure\+\_\+publishers}|hyperpage}{20}
-\indexentry{configure\+\_\+publishers@{configure\+\_\+publishers}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{20}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!configure\+\_\+servers@{configure\+\_\+servers}|hyperpage}{20}
-\indexentry{configure\+\_\+servers@{configure\+\_\+servers}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{20}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!configure\+\_\+subscribers@{configure\+\_\+subscribers}|hyperpage}{20}
-\indexentry{configure\+\_\+subscribers@{configure\+\_\+subscribers}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{20}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!get\+\_\+operation\+\_\+queue@{get\+\_\+operation\+\_\+queue}|hyperpage}{20}
-\indexentry{get\+\_\+operation\+\_\+queue@{get\+\_\+operation\+\_\+queue}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{20}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!publisher@{publisher}|hyperpage}{21}
-\indexentry{publisher@{publisher}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{21}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!register\+\_\+server\+\_\+operation@{register\+\_\+server\+\_\+operation}|hyperpage}{21}
-\indexentry{register\+\_\+server\+\_\+operation@{register\+\_\+server\+\_\+operation}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{21}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!register\+\_\+subscriber\+\_\+operation@{register\+\_\+subscriber\+\_\+operation}|hyperpage}{21}
-\indexentry{register\+\_\+subscriber\+\_\+operation@{register\+\_\+subscriber\+\_\+operation}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{21}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!register\+\_\+timer\+\_\+operation@{register\+\_\+timer\+\_\+operation}|hyperpage}{21}
-\indexentry{register\+\_\+timer\+\_\+operation@{register\+\_\+timer\+\_\+operation}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{21}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!server@{server}|hyperpage}{21}
-\indexentry{server@{server}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{21}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!spawn@{spawn}|hyperpage}{22}
-\indexentry{spawn@{spawn}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{22}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!subscriber@{subscriber}|hyperpage}{22}
-\indexentry{subscriber@{subscriber}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{22}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!timer@{timer}|hyperpage}{22}
-\indexentry{timer@{timer}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{22}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!clients@{clients}|hyperpage}{22}
-\indexentry{clients@{clients}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{22}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!executor\+\_\+thread@{executor\+\_\+thread}|hyperpage}{22}
-\indexentry{executor\+\_\+thread@{executor\+\_\+thread}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{22}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!operation\+\_\+queue@{operation\+\_\+queue}|hyperpage}{22}
-\indexentry{operation\+\_\+queue@{operation\+\_\+queue}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{22}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!publishers@{publishers}|hyperpage}{23}
-\indexentry{publishers@{publishers}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{23}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!server\+\_\+functions@{server\+\_\+functions}|hyperpage}{23}
-\indexentry{server\+\_\+functions@{server\+\_\+functions}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{23}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!servers@{servers}|hyperpage}{23}
-\indexentry{servers@{servers}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{23}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!subscriber\+\_\+functions@{subscriber\+\_\+functions}|hyperpage}{23}
-\indexentry{subscriber\+\_\+functions@{subscriber\+\_\+functions}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{23}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!subscribers@{subscribers}|hyperpage}{23}
-\indexentry{subscribers@{subscribers}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{23}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!timer\+\_\+functions@{timer\+\_\+functions}|hyperpage}{23}
-\indexentry{timer\+\_\+functions@{timer\+\_\+functions}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{23}
-\indexentry{zcm\+::\+Component@{zcm\+::\+Component}!timers@{timers}|hyperpage}{23}
-\indexentry{timers@{timers}!zcm\+::\+Component@{zcm\+::\+Component}|hyperpage}{23}
-\indexentry{zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}|hyperpage}{23}
-\indexentry{zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}!dequeue@{dequeue}|hyperpage}{24}
-\indexentry{dequeue@{dequeue}!zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}|hyperpage}{24}
-\indexentry{zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}!empty@{empty}|hyperpage}{24}
-\indexentry{empty@{empty}!zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}|hyperpage}{24}
-\indexentry{zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}!enqueue@{enqueue}|hyperpage}{24}
-\indexentry{enqueue@{enqueue}!zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}|hyperpage}{24}
-\indexentry{zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}!process@{process}|hyperpage}{24}
-\indexentry{process@{process}!zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}|hyperpage}{24}
-\indexentry{zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}!spawn@{spawn}|hyperpage}{24}
-\indexentry{spawn@{spawn}!zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}|hyperpage}{24}
-\indexentry{zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}!top@{top}|hyperpage}{24}
-\indexentry{top@{top}!zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}|hyperpage}{24}
-\indexentry{zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}!operation\+\_\+queue@{operation\+\_\+queue}|hyperpage}{24}
-\indexentry{operation\+\_\+queue@{operation\+\_\+queue}!zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}|hyperpage}{24}
-\indexentry{zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}!queue\+\_\+mutex@{queue\+\_\+mutex}|hyperpage}{24}
-\indexentry{queue\+\_\+mutex@{queue\+\_\+mutex}!zcm\+::\+Operation\+\_\+\+Queue@{zcm\+::\+Operation\+\_\+\+Queue}|hyperpage}{24}
-\indexentry{zcm\+::\+Operation\+\_\+\+Queue\+::\+Priority\+Ordering@{zcm\+::\+Operation\+\_\+\+Queue\+::\+Priority\+Ordering}|hyperpage}{25}
-\indexentry{zcm\+::\+Operation\+\_\+\+Queue\+::\+Priority\+Ordering@{zcm\+::\+Operation\+\_\+\+Queue\+::\+Priority\+Ordering}!operator()@{operator()}|hyperpage}{25}
-\indexentry{operator()@{operator()}!zcm\+::\+Operation\+\_\+\+Queue\+::\+Priority\+Ordering@{zcm\+::\+Operation\+\_\+\+Queue\+::\+Priority\+Ordering}|hyperpage}{25}
-\indexentry{zcm\+::\+Publisher@{zcm\+::\+Publisher}|hyperpage}{25}
-\indexentry{zcm\+::\+Publisher@{zcm\+::\+Publisher}!Publisher@{Publisher}|hyperpage}{26}
-\indexentry{Publisher@{Publisher}!zcm\+::\+Publisher@{zcm\+::\+Publisher}|hyperpage}{26}
-\indexentry{zcm\+::\+Publisher@{zcm\+::\+Publisher}!Publisher@{Publisher}|hyperpage}{26}
-\indexentry{Publisher@{Publisher}!zcm\+::\+Publisher@{zcm\+::\+Publisher}|hyperpage}{26}
-\indexentry{zcm\+::\+Publisher@{zcm\+::\+Publisher}!````~Publisher@{$\sim$\+Publisher}|hyperpage}{26}
-\indexentry{````~Publisher@{$\sim$\+Publisher}!zcm\+::\+Publisher@{zcm\+::\+Publisher}|hyperpage}{26}
-\indexentry{zcm\+::\+Publisher@{zcm\+::\+Publisher}!add\+\_\+connection@{add\+\_\+connection}|hyperpage}{26}
-\indexentry{add\+\_\+connection@{add\+\_\+connection}!zcm\+::\+Publisher@{zcm\+::\+Publisher}|hyperpage}{26}
-\indexentry{zcm\+::\+Publisher@{zcm\+::\+Publisher}!bind@{bind}|hyperpage}{27}
-\indexentry{bind@{bind}!zcm\+::\+Publisher@{zcm\+::\+Publisher}|hyperpage}{27}
-\indexentry{zcm\+::\+Publisher@{zcm\+::\+Publisher}!get\+\_\+name@{get\+\_\+name}|hyperpage}{27}
-\indexentry{get\+\_\+name@{get\+\_\+name}!zcm\+::\+Publisher@{zcm\+::\+Publisher}|hyperpage}{27}
-\indexentry{zcm\+::\+Publisher@{zcm\+::\+Publisher}!send@{send}|hyperpage}{27}
-\indexentry{send@{send}!zcm\+::\+Publisher@{zcm\+::\+Publisher}|hyperpage}{27}
-\indexentry{zcm\+::\+Publisher@{zcm\+::\+Publisher}!context@{context}|hyperpage}{27}
-\indexentry{context@{context}!zcm\+::\+Publisher@{zcm\+::\+Publisher}|hyperpage}{27}
-\indexentry{zcm\+::\+Publisher@{zcm\+::\+Publisher}!endpoints@{endpoints}|hyperpage}{27}
-\indexentry{endpoints@{endpoints}!zcm\+::\+Publisher@{zcm\+::\+Publisher}|hyperpage}{27}
-\indexentry{zcm\+::\+Publisher@{zcm\+::\+Publisher}!name@{name}|hyperpage}{27}
-\indexentry{name@{name}!zcm\+::\+Publisher@{zcm\+::\+Publisher}|hyperpage}{27}
-\indexentry{zcm\+::\+Publisher@{zcm\+::\+Publisher}!publisher\+\_\+socket@{publisher\+\_\+socket}|hyperpage}{27}
-\indexentry{publisher\+\_\+socket@{publisher\+\_\+socket}!zcm\+::\+Publisher@{zcm\+::\+Publisher}|hyperpage}{27}
-\indexentry{zcm\+::\+Server@{zcm\+::\+Server}|hyperpage}{28}
-\indexentry{zcm\+::\+Server@{zcm\+::\+Server}!Server@{Server}|hyperpage}{29}
-\indexentry{Server@{Server}!zcm\+::\+Server@{zcm\+::\+Server}|hyperpage}{29}
-\indexentry{zcm\+::\+Server@{zcm\+::\+Server}!Server@{Server}|hyperpage}{29}
-\indexentry{Server@{Server}!zcm\+::\+Server@{zcm\+::\+Server}|hyperpage}{29}
-\indexentry{zcm\+::\+Server@{zcm\+::\+Server}!````~Server@{$\sim$\+Server}|hyperpage}{30}
-\indexentry{````~Server@{$\sim$\+Server}!zcm\+::\+Server@{zcm\+::\+Server}|hyperpage}{30}
-\indexentry{zcm\+::\+Server@{zcm\+::\+Server}!add\+\_\+connection@{add\+\_\+connection}|hyperpage}{30}
-\indexentry{add\+\_\+connection@{add\+\_\+connection}!zcm\+::\+Server@{zcm\+::\+Server}|hyperpage}{30}
-\indexentry{zcm\+::\+Server@{zcm\+::\+Server}!bind@{bind}|hyperpage}{30}
-\indexentry{bind@{bind}!zcm\+::\+Server@{zcm\+::\+Server}|hyperpage}{30}
-\indexentry{zcm\+::\+Server@{zcm\+::\+Server}!get\+\_\+name@{get\+\_\+name}|hyperpage}{30}
-\indexentry{get\+\_\+name@{get\+\_\+name}!zcm\+::\+Server@{zcm\+::\+Server}|hyperpage}{30}
-\indexentry{zcm\+::\+Server@{zcm\+::\+Server}!get\+\_\+priority@{get\+\_\+priority}|hyperpage}{30}
-\indexentry{get\+\_\+priority@{get\+\_\+priority}!zcm\+::\+Server@{zcm\+::\+Server}|hyperpage}{30}
-\indexentry{zcm\+::\+Server@{zcm\+::\+Server}!rebind\+\_\+operation\+\_\+function@{rebind\+\_\+operation\+\_\+function}|hyperpage}{30}
-\indexentry{rebind\+\_\+operation\+\_\+function@{rebind\+\_\+operation\+\_\+function}!zcm\+::\+Server@{zcm\+::\+Server}|hyperpage}{30}
-\indexentry{zcm\+::\+Server@{zcm\+::\+Server}!recv@{recv}|hyperpage}{30}
-\indexentry{recv@{recv}!zcm\+::\+Server@{zcm\+::\+Server}|hyperpage}{30}
-\indexentry{zcm\+::\+Server@{zcm\+::\+Server}!spawn@{spawn}|hyperpage}{31}
-\indexentry{spawn@{spawn}!zcm\+::\+Server@{zcm\+::\+Server}|hyperpage}{31}
-\indexentry{zcm\+::\+Server@{zcm\+::\+Server}!start@{start}|hyperpage}{31}
-\indexentry{start@{start}!zcm\+::\+Server@{zcm\+::\+Server}|hyperpage}{31}
-\indexentry{zcm\+::\+Server@{zcm\+::\+Server}!context@{context}|hyperpage}{31}
-\indexentry{context@{context}!zcm\+::\+Server@{zcm\+::\+Server}|hyperpage}{31}
-\indexentry{zcm\+::\+Server@{zcm\+::\+Server}!endpoints@{endpoints}|hyperpage}{31}
-\indexentry{endpoints@{endpoints}!zcm\+::\+Server@{zcm\+::\+Server}|hyperpage}{31}
-\indexentry{zcm\+::\+Server@{zcm\+::\+Server}!func\+\_\+mutex@{func\+\_\+mutex}|hyperpage}{31}
-\indexentry{func\+\_\+mutex@{func\+\_\+mutex}!zcm\+::\+Server@{zcm\+::\+Server}|hyperpage}{31}
-\indexentry{zcm\+::\+Server@{zcm\+::\+Server}!name@{name}|hyperpage}{31}
-\indexentry{name@{name}!zcm\+::\+Server@{zcm\+::\+Server}|hyperpage}{31}
-\indexentry{zcm\+::\+Server@{zcm\+::\+Server}!operation\+\_\+function@{operation\+\_\+function}|hyperpage}{31}
-\indexentry{operation\+\_\+function@{operation\+\_\+function}!zcm\+::\+Server@{zcm\+::\+Server}|hyperpage}{31}
-\indexentry{zcm\+::\+Server@{zcm\+::\+Server}!operation\+\_\+queue\+\_\+ptr@{operation\+\_\+queue\+\_\+ptr}|hyperpage}{31}
-\indexentry{operation\+\_\+queue\+\_\+ptr@{operation\+\_\+queue\+\_\+ptr}!zcm\+::\+Server@{zcm\+::\+Server}|hyperpage}{31}
-\indexentry{zcm\+::\+Server@{zcm\+::\+Server}!priority@{priority}|hyperpage}{31}
-\indexentry{priority@{priority}!zcm\+::\+Server@{zcm\+::\+Server}|hyperpage}{31}
-\indexentry{zcm\+::\+Server@{zcm\+::\+Server}!ready@{ready}|hyperpage}{32}
-\indexentry{ready@{ready}!zcm\+::\+Server@{zcm\+::\+Server}|hyperpage}{32}
-\indexentry{zcm\+::\+Server@{zcm\+::\+Server}!server\+\_\+socket@{server\+\_\+socket}|hyperpage}{32}
-\indexentry{server\+\_\+socket@{server\+\_\+socket}!zcm\+::\+Server@{zcm\+::\+Server}|hyperpage}{32}
-\indexentry{zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}|hyperpage}{32}
-\indexentry{zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}!Server\+\_\+\+Operation@{Server\+\_\+\+Operation}|hyperpage}{33}
-\indexentry{Server\+\_\+\+Operation@{Server\+\_\+\+Operation}!zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}|hyperpage}{33}
-\indexentry{zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}!execute@{execute}|hyperpage}{33}
-\indexentry{execute@{execute}!zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}|hyperpage}{33}
-\indexentry{zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}!get\+\_\+name@{get\+\_\+name}|hyperpage}{33}
-\indexentry{get\+\_\+name@{get\+\_\+name}!zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}|hyperpage}{33}
-\indexentry{zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}!get\+\_\+priority@{get\+\_\+priority}|hyperpage}{33}
-\indexentry{get\+\_\+priority@{get\+\_\+priority}!zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}|hyperpage}{33}
-\indexentry{zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}!get\+\_\+socket\+\_\+ptr@{get\+\_\+socket\+\_\+ptr}|hyperpage}{34}
-\indexentry{get\+\_\+socket\+\_\+ptr@{get\+\_\+socket\+\_\+ptr}!zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}|hyperpage}{34}
-\indexentry{zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}!set\+\_\+ready@{set\+\_\+ready}|hyperpage}{34}
-\indexentry{set\+\_\+ready@{set\+\_\+ready}!zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}|hyperpage}{34}
-\indexentry{zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}!operation\+\_\+function@{operation\+\_\+function}|hyperpage}{34}
-\indexentry{operation\+\_\+function@{operation\+\_\+function}!zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}|hyperpage}{34}
-\indexentry{zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}!recv\+\_\+ready@{recv\+\_\+ready}|hyperpage}{34}
-\indexentry{recv\+\_\+ready@{recv\+\_\+ready}!zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}|hyperpage}{34}
-\indexentry{zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}!socket\+\_\+ptr@{socket\+\_\+ptr}|hyperpage}{34}
-\indexentry{socket\+\_\+ptr@{socket\+\_\+ptr}!zcm\+::\+Server\+\_\+\+Operation@{zcm\+::\+Server\+\_\+\+Operation}|hyperpage}{34}
-\indexentry{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}|hyperpage}{34}
-\indexentry{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!Subscriber@{Subscriber}|hyperpage}{36}
-\indexentry{Subscriber@{Subscriber}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}|hyperpage}{36}
-\indexentry{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!Subscriber@{Subscriber}|hyperpage}{36}
-\indexentry{Subscriber@{Subscriber}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}|hyperpage}{36}
-\indexentry{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!````~Subscriber@{$\sim$\+Subscriber}|hyperpage}{36}
-\indexentry{````~Subscriber@{$\sim$\+Subscriber}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}|hyperpage}{36}
-\indexentry{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!add\+\_\+connection@{add\+\_\+connection}|hyperpage}{36}
-\indexentry{add\+\_\+connection@{add\+\_\+connection}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}|hyperpage}{36}
-\indexentry{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!connect@{connect}|hyperpage}{37}
-\indexentry{connect@{connect}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}|hyperpage}{37}
-\indexentry{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!get\+\_\+name@{get\+\_\+name}|hyperpage}{37}
-\indexentry{get\+\_\+name@{get\+\_\+name}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}|hyperpage}{37}
-\indexentry{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!get\+\_\+priority@{get\+\_\+priority}|hyperpage}{37}
-\indexentry{get\+\_\+priority@{get\+\_\+priority}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}|hyperpage}{37}
-\indexentry{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!rebind\+\_\+operation\+\_\+function@{rebind\+\_\+operation\+\_\+function}|hyperpage}{37}
-\indexentry{rebind\+\_\+operation\+\_\+function@{rebind\+\_\+operation\+\_\+function}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}|hyperpage}{37}
-\indexentry{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!recv@{recv}|hyperpage}{37}
-\indexentry{recv@{recv}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}|hyperpage}{37}
-\indexentry{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!spawn@{spawn}|hyperpage}{37}
-\indexentry{spawn@{spawn}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}|hyperpage}{37}
-\indexentry{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!start@{start}|hyperpage}{37}
-\indexentry{start@{start}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}|hyperpage}{37}
-\indexentry{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!context@{context}|hyperpage}{38}
-\indexentry{context@{context}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}|hyperpage}{38}
-\indexentry{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!endpoints@{endpoints}|hyperpage}{38}
-\indexentry{endpoints@{endpoints}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}|hyperpage}{38}
-\indexentry{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!filter@{filter}|hyperpage}{38}
-\indexentry{filter@{filter}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}|hyperpage}{38}
-\indexentry{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!func\+\_\+mutex@{func\+\_\+mutex}|hyperpage}{38}
-\indexentry{func\+\_\+mutex@{func\+\_\+mutex}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}|hyperpage}{38}
-\indexentry{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!name@{name}|hyperpage}{38}
-\indexentry{name@{name}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}|hyperpage}{38}
-\indexentry{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!operation\+\_\+function@{operation\+\_\+function}|hyperpage}{38}
-\indexentry{operation\+\_\+function@{operation\+\_\+function}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}|hyperpage}{38}
-\indexentry{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!operation\+\_\+queue\+\_\+ptr@{operation\+\_\+queue\+\_\+ptr}|hyperpage}{38}
-\indexentry{operation\+\_\+queue\+\_\+ptr@{operation\+\_\+queue\+\_\+ptr}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}|hyperpage}{38}
-\indexentry{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!priority@{priority}|hyperpage}{38}
-\indexentry{priority@{priority}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}|hyperpage}{38}
-\indexentry{zcm\+::\+Subscriber@{zcm\+::\+Subscriber}!subscriber\+\_\+socket@{subscriber\+\_\+socket}|hyperpage}{38}
-\indexentry{subscriber\+\_\+socket@{subscriber\+\_\+socket}!zcm\+::\+Subscriber@{zcm\+::\+Subscriber}|hyperpage}{38}
-\indexentry{zcm\+::\+Subscriber\+\_\+\+Operation@{zcm\+::\+Subscriber\+\_\+\+Operation}|hyperpage}{39}
-\indexentry{zcm\+::\+Subscriber\+\_\+\+Operation@{zcm\+::\+Subscriber\+\_\+\+Operation}!Subscriber\+\_\+\+Operation@{Subscriber\+\_\+\+Operation}|hyperpage}{39}
-\indexentry{Subscriber\+\_\+\+Operation@{Subscriber\+\_\+\+Operation}!zcm\+::\+Subscriber\+\_\+\+Operation@{zcm\+::\+Subscriber\+\_\+\+Operation}|hyperpage}{39}
-\indexentry{zcm\+::\+Subscriber\+\_\+\+Operation@{zcm\+::\+Subscriber\+\_\+\+Operation}!execute@{execute}|hyperpage}{40}
-\indexentry{execute@{execute}!zcm\+::\+Subscriber\+\_\+\+Operation@{zcm\+::\+Subscriber\+\_\+\+Operation}|hyperpage}{40}
-\indexentry{zcm\+::\+Subscriber\+\_\+\+Operation@{zcm\+::\+Subscriber\+\_\+\+Operation}!get\+\_\+name@{get\+\_\+name}|hyperpage}{40}
-\indexentry{get\+\_\+name@{get\+\_\+name}!zcm\+::\+Subscriber\+\_\+\+Operation@{zcm\+::\+Subscriber\+\_\+\+Operation}|hyperpage}{40}
-\indexentry{zcm\+::\+Subscriber\+\_\+\+Operation@{zcm\+::\+Subscriber\+\_\+\+Operation}!get\+\_\+priority@{get\+\_\+priority}|hyperpage}{40}
-\indexentry{get\+\_\+priority@{get\+\_\+priority}!zcm\+::\+Subscriber\+\_\+\+Operation@{zcm\+::\+Subscriber\+\_\+\+Operation}|hyperpage}{40}
-\indexentry{zcm\+::\+Subscriber\+\_\+\+Operation@{zcm\+::\+Subscriber\+\_\+\+Operation}!operation\+\_\+function@{operation\+\_\+function}|hyperpage}{40}
-\indexentry{operation\+\_\+function@{operation\+\_\+function}!zcm\+::\+Subscriber\+\_\+\+Operation@{zcm\+::\+Subscriber\+\_\+\+Operation}|hyperpage}{40}
-\indexentry{zcm\+::\+Timer@{zcm\+::\+Timer}|hyperpage}{40}
-\indexentry{zcm\+::\+Timer@{zcm\+::\+Timer}!Timer@{Timer}|hyperpage}{41}
-\indexentry{Timer@{Timer}!zcm\+::\+Timer@{zcm\+::\+Timer}|hyperpage}{41}
-\indexentry{zcm\+::\+Timer@{zcm\+::\+Timer}!change\+\_\+period@{change\+\_\+period}|hyperpage}{42}
-\indexentry{change\+\_\+period@{change\+\_\+period}!zcm\+::\+Timer@{zcm\+::\+Timer}|hyperpage}{42}
-\indexentry{zcm\+::\+Timer@{zcm\+::\+Timer}!get\+\_\+name@{get\+\_\+name}|hyperpage}{42}
-\indexentry{get\+\_\+name@{get\+\_\+name}!zcm\+::\+Timer@{zcm\+::\+Timer}|hyperpage}{42}
-\indexentry{zcm\+::\+Timer@{zcm\+::\+Timer}!get\+\_\+priority@{get\+\_\+priority}|hyperpage}{42}
-\indexentry{get\+\_\+priority@{get\+\_\+priority}!zcm\+::\+Timer@{zcm\+::\+Timer}|hyperpage}{42}
-\indexentry{zcm\+::\+Timer@{zcm\+::\+Timer}!operation@{operation}|hyperpage}{42}
-\indexentry{operation@{operation}!zcm\+::\+Timer@{zcm\+::\+Timer}|hyperpage}{42}
-\indexentry{zcm\+::\+Timer@{zcm\+::\+Timer}!rebind\+\_\+operation\+\_\+function@{rebind\+\_\+operation\+\_\+function}|hyperpage}{42}
-\indexentry{rebind\+\_\+operation\+\_\+function@{rebind\+\_\+operation\+\_\+function}!zcm\+::\+Timer@{zcm\+::\+Timer}|hyperpage}{42}
-\indexentry{zcm\+::\+Timer@{zcm\+::\+Timer}!spawn@{spawn}|hyperpage}{43}
-\indexentry{spawn@{spawn}!zcm\+::\+Timer@{zcm\+::\+Timer}|hyperpage}{43}
-\indexentry{zcm\+::\+Timer@{zcm\+::\+Timer}!start@{start}|hyperpage}{43}
-\indexentry{start@{start}!zcm\+::\+Timer@{zcm\+::\+Timer}|hyperpage}{43}
-\indexentry{zcm\+::\+Timer@{zcm\+::\+Timer}!func\+\_\+mutex@{func\+\_\+mutex}|hyperpage}{43}
-\indexentry{func\+\_\+mutex@{func\+\_\+mutex}!zcm\+::\+Timer@{zcm\+::\+Timer}|hyperpage}{43}
-\indexentry{zcm\+::\+Timer@{zcm\+::\+Timer}!name@{name}|hyperpage}{43}
-\indexentry{name@{name}!zcm\+::\+Timer@{zcm\+::\+Timer}|hyperpage}{43}
-\indexentry{zcm\+::\+Timer@{zcm\+::\+Timer}!operation\+\_\+function@{operation\+\_\+function}|hyperpage}{43}
-\indexentry{operation\+\_\+function@{operation\+\_\+function}!zcm\+::\+Timer@{zcm\+::\+Timer}|hyperpage}{43}
-\indexentry{zcm\+::\+Timer@{zcm\+::\+Timer}!operation\+\_\+queue\+\_\+ptr@{operation\+\_\+queue\+\_\+ptr}|hyperpage}{43}
-\indexentry{operation\+\_\+queue\+\_\+ptr@{operation\+\_\+queue\+\_\+ptr}!zcm\+::\+Timer@{zcm\+::\+Timer}|hyperpage}{43}
-\indexentry{zcm\+::\+Timer@{zcm\+::\+Timer}!period@{period}|hyperpage}{43}
-\indexentry{period@{period}!zcm\+::\+Timer@{zcm\+::\+Timer}|hyperpage}{43}
-\indexentry{zcm\+::\+Timer@{zcm\+::\+Timer}!period\+\_\+mutex@{period\+\_\+mutex}|hyperpage}{43}
-\indexentry{period\+\_\+mutex@{period\+\_\+mutex}!zcm\+::\+Timer@{zcm\+::\+Timer}|hyperpage}{43}
-\indexentry{zcm\+::\+Timer@{zcm\+::\+Timer}!priority@{priority}|hyperpage}{43}
-\indexentry{priority@{priority}!zcm\+::\+Timer@{zcm\+::\+Timer}|hyperpage}{43}
-\indexentry{zcm\+::\+Timer\+\_\+\+Operation@{zcm\+::\+Timer\+\_\+\+Operation}|hyperpage}{44}
-\indexentry{zcm\+::\+Timer\+\_\+\+Operation@{zcm\+::\+Timer\+\_\+\+Operation}!Timer\+\_\+\+Operation@{Timer\+\_\+\+Operation}|hyperpage}{44}
-\indexentry{Timer\+\_\+\+Operation@{Timer\+\_\+\+Operation}!zcm\+::\+Timer\+\_\+\+Operation@{zcm\+::\+Timer\+\_\+\+Operation}|hyperpage}{44}
-\indexentry{zcm\+::\+Timer\+\_\+\+Operation@{zcm\+::\+Timer\+\_\+\+Operation}!execute@{execute}|hyperpage}{45}
-\indexentry{execute@{execute}!zcm\+::\+Timer\+\_\+\+Operation@{zcm\+::\+Timer\+\_\+\+Operation}|hyperpage}{45}
-\indexentry{zcm\+::\+Timer\+\_\+\+Operation@{zcm\+::\+Timer\+\_\+\+Operation}!get\+\_\+name@{get\+\_\+name}|hyperpage}{45}
-\indexentry{get\+\_\+name@{get\+\_\+name}!zcm\+::\+Timer\+\_\+\+Operation@{zcm\+::\+Timer\+\_\+\+Operation}|hyperpage}{45}
-\indexentry{zcm\+::\+Timer\+\_\+\+Operation@{zcm\+::\+Timer\+\_\+\+Operation}!get\+\_\+priority@{get\+\_\+priority}|hyperpage}{45}
-\indexentry{get\+\_\+priority@{get\+\_\+priority}!zcm\+::\+Timer\+\_\+\+Operation@{zcm\+::\+Timer\+\_\+\+Operation}|hyperpage}{45}
-\indexentry{zcm\+::\+Timer\+\_\+\+Operation@{zcm\+::\+Timer\+\_\+\+Operation}!operation\+\_\+function@{operation\+\_\+function}|hyperpage}{45}
-\indexentry{operation\+\_\+function@{operation\+\_\+function}!zcm\+::\+Timer\+\_\+\+Operation@{zcm\+::\+Timer\+\_\+\+Operation}|hyperpage}{45}
-\indexentry{/home/pranav/\+Repositories/zcm/include/actor.\+hpp@{/home/pranav/\+Repositories/zcm/include/actor.\+hpp}|hyperpage}{47}
-\indexentry{/home/pranav/\+Repositories/zcm/include/client.\+hpp@{/home/pranav/\+Repositories/zcm/include/client.\+hpp}|hyperpage}{48}
-\indexentry{/home/pranav/\+Repositories/zcm/include/component.\+hpp@{/home/pranav/\+Repositories/zcm/include/component.\+hpp}|hyperpage}{48}
-\indexentry{/home/pranav/\+Repositories/zcm/include/operation\+\_\+queue.\+hpp@{/home/pranav/\+Repositories/zcm/include/operation\+\_\+queue.\+hpp}|hyperpage}{49}
-\indexentry{/home/pranav/\+Repositories/zcm/include/operation\+\_\+types.\+hpp@{/home/pranav/\+Repositories/zcm/include/operation\+\_\+types.\+hpp}|hyperpage}{50}
-\indexentry{/home/pranav/\+Repositories/zcm/include/publisher.\+hpp@{/home/pranav/\+Repositories/zcm/include/publisher.\+hpp}|hyperpage}{50}
-\indexentry{/home/pranav/\+Repositories/zcm/include/server.\+hpp@{/home/pranav/\+Repositories/zcm/include/server.\+hpp}|hyperpage}{51}
-\indexentry{/home/pranav/\+Repositories/zcm/include/subscriber.\+hpp@{/home/pranav/\+Repositories/zcm/include/subscriber.\+hpp}|hyperpage}{52}
-\indexentry{/home/pranav/\+Repositories/zcm/include/timer.\+hpp@{/home/pranav/\+Repositories/zcm/include/timer.\+hpp}|hyperpage}{52}
-\indexentry{/home/pranav/\+Repositories/zcm/src/actor.\+cpp@{/home/pranav/\+Repositories/zcm/src/actor.\+cpp}|hyperpage}{53}
-\indexentry{/home/pranav/\+Repositories/zcm/src/client.\+cpp@{/home/pranav/\+Repositories/zcm/src/client.\+cpp}|hyperpage}{53}
-\indexentry{/home/pranav/\+Repositories/zcm/src/component.\+cpp@{/home/pranav/\+Repositories/zcm/src/component.\+cpp}|hyperpage}{54}
-\indexentry{/home/pranav/\+Repositories/zcm/src/operation\+\_\+queue.\+cpp@{/home/pranav/\+Repositories/zcm/src/operation\+\_\+queue.\+cpp}|hyperpage}{54}
-\indexentry{/home/pranav/\+Repositories/zcm/src/operation\+\_\+types.\+cpp@{/home/pranav/\+Repositories/zcm/src/operation\+\_\+types.\+cpp}|hyperpage}{55}
-\indexentry{/home/pranav/\+Repositories/zcm/src/publisher.\+cpp@{/home/pranav/\+Repositories/zcm/src/publisher.\+cpp}|hyperpage}{55}
-\indexentry{/home/pranav/\+Repositories/zcm/src/server.\+cpp@{/home/pranav/\+Repositories/zcm/src/server.\+cpp}|hyperpage}{56}
-\indexentry{/home/pranav/\+Repositories/zcm/src/subscriber.\+cpp@{/home/pranav/\+Repositories/zcm/src/subscriber.\+cpp}|hyperpage}{56}
-\indexentry{/home/pranav/\+Repositories/zcm/src/timer.\+cpp@{/home/pranav/\+Repositories/zcm/src/timer.\+cpp}|hyperpage}{57}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Actor@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Actor}|hyperpage}{11}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Actor@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Actor}!configure@{configure}|hyperpage}{11}
+\indexentry{configure@{configure}!zcm::Actor@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Actor}|hyperpage}{11}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Actor@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Actor}!get\discretionary {-}{}{}\_\discretionary {-}{}{}name@{get\discretionary {-}{}{}\_\discretionary {-}{}{}name}|hyperpage}{11}
+\indexentry{get\discretionary {-}{}{}\_\discretionary {-}{}{}name@{get\discretionary {-}{}{}\_\discretionary {-}{}{}name}!zcm::Actor@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Actor}|hyperpage}{11}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Actor@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Actor}!run@{run}|hyperpage}{12}
+\indexentry{run@{run}!zcm::Actor@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Actor}|hyperpage}{12}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Actor@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Actor}!component\discretionary {-}{}{}\_\discretionary {-}{}{}instances@{component\discretionary {-}{}{}\_\discretionary {-}{}{}instances}|hyperpage}{12}
+\indexentry{component\discretionary {-}{}{}\_\discretionary {-}{}{}instances@{component\discretionary {-}{}{}\_\discretionary {-}{}{}instances}!zcm::Actor@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Actor}|hyperpage}{12}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Actor@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Actor}!name@{name}|hyperpage}{12}
+\indexentry{name@{name}!zcm::Actor@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Actor}|hyperpage}{12}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Base\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Base\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{12}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Base\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Base\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!Base\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{Base\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{13}
+\indexentry{Base\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{Base\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!zcm::Base_Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Base\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{13}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Base\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Base\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!execute@{execute}|hyperpage}{13}
+\indexentry{execute@{execute}!zcm::Base_Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Base\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{13}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Base\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Base\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!get\discretionary {-}{}{}\_\discretionary {-}{}{}name@{get\discretionary {-}{}{}\_\discretionary {-}{}{}name}|hyperpage}{13}
+\indexentry{get\discretionary {-}{}{}\_\discretionary {-}{}{}name@{get\discretionary {-}{}{}\_\discretionary {-}{}{}name}!zcm::Base_Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Base\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{13}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Base\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Base\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!get\discretionary {-}{}{}\_\discretionary {-}{}{}priority@{get\discretionary {-}{}{}\_\discretionary {-}{}{}priority}|hyperpage}{13}
+\indexentry{get\discretionary {-}{}{}\_\discretionary {-}{}{}priority@{get\discretionary {-}{}{}\_\discretionary {-}{}{}priority}!zcm::Base_Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Base\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{13}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Base\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Base\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!name@{name}|hyperpage}{13}
+\indexentry{name@{name}!zcm::Base_Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Base\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{13}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Base\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Base\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!priority@{priority}|hyperpage}{13}
+\indexentry{priority@{priority}!zcm::Base_Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Base\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{13}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client}|hyperpage}{14}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client}!Client@{Client}|hyperpage}{14}
+\indexentry{Client@{Client}!zcm::Client@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client}|hyperpage}{14}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client}!Client@{Client}|hyperpage}{15}
+\indexentry{Client@{Client}!zcm::Client@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client}|hyperpage}{15}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client}!$\sim $\discretionary {-}{}{}Client@{$\sim $\discretionary {-}{}{}Client}|hyperpage}{15}
+\indexentry{$\sim $\discretionary {-}{}{}Client@{$\sim $\discretionary {-}{}{}Client}!zcm::Client@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client}|hyperpage}{15}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client}!call@{call}|hyperpage}{15}
+\indexentry{call@{call}!zcm::Client@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client}|hyperpage}{15}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client}!connect@{connect}|hyperpage}{15}
+\indexentry{connect@{connect}!zcm::Client@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client}|hyperpage}{15}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client}!get\discretionary {-}{}{}\_\discretionary {-}{}{}name@{get\discretionary {-}{}{}\_\discretionary {-}{}{}name}|hyperpage}{15}
+\indexentry{get\discretionary {-}{}{}\_\discretionary {-}{}{}name@{get\discretionary {-}{}{}\_\discretionary {-}{}{}name}!zcm::Client@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client}|hyperpage}{15}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client}!set\discretionary {-}{}{}\_\discretionary {-}{}{}timeout@{set\discretionary {-}{}{}\_\discretionary {-}{}{}timeout}|hyperpage}{15}
+\indexentry{set\discretionary {-}{}{}\_\discretionary {-}{}{}timeout@{set\discretionary {-}{}{}\_\discretionary {-}{}{}timeout}!zcm::Client@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client}|hyperpage}{15}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client}!client\discretionary {-}{}{}\_\discretionary {-}{}{}socket@{client\discretionary {-}{}{}\_\discretionary {-}{}{}socket}|hyperpage}{16}
+\indexentry{client\discretionary {-}{}{}\_\discretionary {-}{}{}socket@{client\discretionary {-}{}{}\_\discretionary {-}{}{}socket}!zcm::Client@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client}|hyperpage}{16}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client}!client\discretionary {-}{}{}\_\discretionary {-}{}{}socket\discretionary {-}{}{}\_\discretionary {-}{}{}timeout@{client\discretionary {-}{}{}\_\discretionary {-}{}{}socket\discretionary {-}{}{}\_\discretionary {-}{}{}timeout}|hyperpage}{16}
+\indexentry{client\discretionary {-}{}{}\_\discretionary {-}{}{}socket\discretionary {-}{}{}\_\discretionary {-}{}{}timeout@{client\discretionary {-}{}{}\_\discretionary {-}{}{}socket\discretionary {-}{}{}\_\discretionary {-}{}{}timeout}!zcm::Client@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client}|hyperpage}{16}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client}!context@{context}|hyperpage}{16}
+\indexentry{context@{context}!zcm::Client@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client}|hyperpage}{16}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client}!endpoints@{endpoints}|hyperpage}{16}
+\indexentry{endpoints@{endpoints}!zcm::Client@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client}|hyperpage}{16}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client}!name@{name}|hyperpage}{16}
+\indexentry{name@{name}!zcm::Client@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Client}|hyperpage}{16}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{16}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}!Component@{Component}|hyperpage}{18}
+\indexentry{Component@{Component}!zcm::Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{18}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}!$\sim $\discretionary {-}{}{}Component@{$\sim $\discretionary {-}{}{}Component}|hyperpage}{18}
+\indexentry{$\sim $\discretionary {-}{}{}Component@{$\sim $\discretionary {-}{}{}Component}!zcm::Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{18}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}!add\discretionary {-}{}{}\_\discretionary {-}{}{}client@{add\discretionary {-}{}{}\_\discretionary {-}{}{}client}|hyperpage}{18}
+\indexentry{add\discretionary {-}{}{}\_\discretionary {-}{}{}client@{add\discretionary {-}{}{}\_\discretionary {-}{}{}client}!zcm::Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{18}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}!add\discretionary {-}{}{}\_\discretionary {-}{}{}publisher@{add\discretionary {-}{}{}\_\discretionary {-}{}{}publisher}|hyperpage}{18}
+\indexentry{add\discretionary {-}{}{}\_\discretionary {-}{}{}publisher@{add\discretionary {-}{}{}\_\discretionary {-}{}{}publisher}!zcm::Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{18}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}!add\discretionary {-}{}{}\_\discretionary {-}{}{}server@{add\discretionary {-}{}{}\_\discretionary {-}{}{}server}|hyperpage}{18}
+\indexentry{add\discretionary {-}{}{}\_\discretionary {-}{}{}server@{add\discretionary {-}{}{}\_\discretionary {-}{}{}server}!zcm::Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{18}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}!add\discretionary {-}{}{}\_\discretionary {-}{}{}subscriber@{add\discretionary {-}{}{}\_\discretionary {-}{}{}subscriber}|hyperpage}{18}
+\indexentry{add\discretionary {-}{}{}\_\discretionary {-}{}{}subscriber@{add\discretionary {-}{}{}\_\discretionary {-}{}{}subscriber}!zcm::Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{18}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}!add\discretionary {-}{}{}\_\discretionary {-}{}{}timer@{add\discretionary {-}{}{}\_\discretionary {-}{}{}timer}|hyperpage}{18}
+\indexentry{add\discretionary {-}{}{}\_\discretionary {-}{}{}timer@{add\discretionary {-}{}{}\_\discretionary {-}{}{}timer}!zcm::Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{18}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}!client@{client}|hyperpage}{19}
+\indexentry{client@{client}!zcm::Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{19}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}!configure\discretionary {-}{}{}\_\discretionary {-}{}{}clients@{configure\discretionary {-}{}{}\_\discretionary {-}{}{}clients}|hyperpage}{19}
+\indexentry{configure\discretionary {-}{}{}\_\discretionary {-}{}{}clients@{configure\discretionary {-}{}{}\_\discretionary {-}{}{}clients}!zcm::Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{19}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}!configure\discretionary {-}{}{}\_\discretionary {-}{}{}publishers@{configure\discretionary {-}{}{}\_\discretionary {-}{}{}publishers}|hyperpage}{19}
+\indexentry{configure\discretionary {-}{}{}\_\discretionary {-}{}{}publishers@{configure\discretionary {-}{}{}\_\discretionary {-}{}{}publishers}!zcm::Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{19}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}!configure\discretionary {-}{}{}\_\discretionary {-}{}{}servers@{configure\discretionary {-}{}{}\_\discretionary {-}{}{}servers}|hyperpage}{19}
+\indexentry{configure\discretionary {-}{}{}\_\discretionary {-}{}{}servers@{configure\discretionary {-}{}{}\_\discretionary {-}{}{}servers}!zcm::Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{19}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}!configure\discretionary {-}{}{}\_\discretionary {-}{}{}subscribers@{configure\discretionary {-}{}{}\_\discretionary {-}{}{}subscribers}|hyperpage}{19}
+\indexentry{configure\discretionary {-}{}{}\_\discretionary {-}{}{}subscribers@{configure\discretionary {-}{}{}\_\discretionary {-}{}{}subscribers}!zcm::Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{19}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}!get\discretionary {-}{}{}\_\discretionary {-}{}{}operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue@{get\discretionary {-}{}{}\_\discretionary {-}{}{}operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue}|hyperpage}{19}
+\indexentry{get\discretionary {-}{}{}\_\discretionary {-}{}{}operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue@{get\discretionary {-}{}{}\_\discretionary {-}{}{}operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue}!zcm::Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{19}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}!publisher@{publisher}|hyperpage}{20}
+\indexentry{publisher@{publisher}!zcm::Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{20}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}!register\discretionary {-}{}{}\_\discretionary {-}{}{}functionality@{register\discretionary {-}{}{}\_\discretionary {-}{}{}functionality}|hyperpage}{20}
+\indexentry{register\discretionary {-}{}{}\_\discretionary {-}{}{}functionality@{register\discretionary {-}{}{}\_\discretionary {-}{}{}functionality}!zcm::Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{20}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}!server@{server}|hyperpage}{20}
+\indexentry{server@{server}!zcm::Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{20}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}!spawn@{spawn}|hyperpage}{20}
+\indexentry{spawn@{spawn}!zcm::Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{20}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}!subscriber@{subscriber}|hyperpage}{20}
+\indexentry{subscriber@{subscriber}!zcm::Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{20}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}!timer@{timer}|hyperpage}{20}
+\indexentry{timer@{timer}!zcm::Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{20}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}!clients@{clients}|hyperpage}{21}
+\indexentry{clients@{clients}!zcm::Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{21}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}!executor\discretionary {-}{}{}\_\discretionary {-}{}{}thread@{executor\discretionary {-}{}{}\_\discretionary {-}{}{}thread}|hyperpage}{21}
+\indexentry{executor\discretionary {-}{}{}\_\discretionary {-}{}{}thread@{executor\discretionary {-}{}{}\_\discretionary {-}{}{}thread}!zcm::Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{21}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}!functionality@{functionality}|hyperpage}{21}
+\indexentry{functionality@{functionality}!zcm::Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{21}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}!operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue@{operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue}|hyperpage}{21}
+\indexentry{operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue@{operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue}!zcm::Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{21}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}!publishers@{publishers}|hyperpage}{21}
+\indexentry{publishers@{publishers}!zcm::Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{21}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}!servers@{servers}|hyperpage}{21}
+\indexentry{servers@{servers}!zcm::Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{21}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}!subscribers@{subscribers}|hyperpage}{21}
+\indexentry{subscribers@{subscribers}!zcm::Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{21}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}!timers@{timers}|hyperpage}{21}
+\indexentry{timers@{timers}!zcm::Component@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Component}|hyperpage}{21}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue}|hyperpage}{21}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue}!dequeue@{dequeue}|hyperpage}{22}
+\indexentry{dequeue@{dequeue}!zcm::Operation_Queue@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue}|hyperpage}{22}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue}!empty@{empty}|hyperpage}{22}
+\indexentry{empty@{empty}!zcm::Operation_Queue@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue}|hyperpage}{22}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue}!enqueue@{enqueue}|hyperpage}{22}
+\indexentry{enqueue@{enqueue}!zcm::Operation_Queue@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue}|hyperpage}{22}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue}!process@{process}|hyperpage}{22}
+\indexentry{process@{process}!zcm::Operation_Queue@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue}|hyperpage}{22}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue}!spawn@{spawn}|hyperpage}{22}
+\indexentry{spawn@{spawn}!zcm::Operation_Queue@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue}|hyperpage}{22}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue}!top@{top}|hyperpage}{22}
+\indexentry{top@{top}!zcm::Operation_Queue@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue}|hyperpage}{22}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue}!operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue@{operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue}|hyperpage}{22}
+\indexentry{operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue@{operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue}!zcm::Operation_Queue@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue}|hyperpage}{22}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue}!queue\discretionary {-}{}{}\_\discretionary {-}{}{}mutex@{queue\discretionary {-}{}{}\_\discretionary {-}{}{}mutex}|hyperpage}{22}
+\indexentry{queue\discretionary {-}{}{}\_\discretionary {-}{}{}mutex@{queue\discretionary {-}{}{}\_\discretionary {-}{}{}mutex}!zcm::Operation_Queue@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue}|hyperpage}{22}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue\discretionary {-}{}{}::\discretionary {-}{}{}Priority\discretionary {-}{}{}Ordering@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue\discretionary {-}{}{}::\discretionary {-}{}{}Priority\discretionary {-}{}{}Ordering}|hyperpage}{23}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue\discretionary {-}{}{}::\discretionary {-}{}{}Priority\discretionary {-}{}{}Ordering@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue\discretionary {-}{}{}::\discretionary {-}{}{}Priority\discretionary {-}{}{}Ordering}!operator()@{operator()}|hyperpage}{23}
+\indexentry{operator()@{operator()}!zcm::Operation_Queue::PriorityOrdering@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Operation\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Queue\discretionary {-}{}{}::\discretionary {-}{}{}Priority\discretionary {-}{}{}Ordering}|hyperpage}{23}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher}|hyperpage}{23}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher}!Publisher@{Publisher}|hyperpage}{24}
+\indexentry{Publisher@{Publisher}!zcm::Publisher@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher}|hyperpage}{24}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher}!Publisher@{Publisher}|hyperpage}{24}
+\indexentry{Publisher@{Publisher}!zcm::Publisher@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher}|hyperpage}{24}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher}!$\sim $\discretionary {-}{}{}Publisher@{$\sim $\discretionary {-}{}{}Publisher}|hyperpage}{24}
+\indexentry{$\sim $\discretionary {-}{}{}Publisher@{$\sim $\discretionary {-}{}{}Publisher}!zcm::Publisher@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher}|hyperpage}{24}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher}!add\discretionary {-}{}{}\_\discretionary {-}{}{}connection@{add\discretionary {-}{}{}\_\discretionary {-}{}{}connection}|hyperpage}{24}
+\indexentry{add\discretionary {-}{}{}\_\discretionary {-}{}{}connection@{add\discretionary {-}{}{}\_\discretionary {-}{}{}connection}!zcm::Publisher@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher}|hyperpage}{24}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher}!bind@{bind}|hyperpage}{24}
+\indexentry{bind@{bind}!zcm::Publisher@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher}|hyperpage}{24}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher}!get\discretionary {-}{}{}\_\discretionary {-}{}{}name@{get\discretionary {-}{}{}\_\discretionary {-}{}{}name}|hyperpage}{25}
+\indexentry{get\discretionary {-}{}{}\_\discretionary {-}{}{}name@{get\discretionary {-}{}{}\_\discretionary {-}{}{}name}!zcm::Publisher@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher}|hyperpage}{25}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher}!send@{send}|hyperpage}{25}
+\indexentry{send@{send}!zcm::Publisher@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher}|hyperpage}{25}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher}!context@{context}|hyperpage}{25}
+\indexentry{context@{context}!zcm::Publisher@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher}|hyperpage}{25}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher}!endpoints@{endpoints}|hyperpage}{25}
+\indexentry{endpoints@{endpoints}!zcm::Publisher@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher}|hyperpage}{25}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher}!name@{name}|hyperpage}{25}
+\indexentry{name@{name}!zcm::Publisher@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher}|hyperpage}{25}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher}!publisher\discretionary {-}{}{}\_\discretionary {-}{}{}socket@{publisher\discretionary {-}{}{}\_\discretionary {-}{}{}socket}|hyperpage}{25}
+\indexentry{publisher\discretionary {-}{}{}\_\discretionary {-}{}{}socket@{publisher\discretionary {-}{}{}\_\discretionary {-}{}{}socket}!zcm::Publisher@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Publisher}|hyperpage}{25}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}|hyperpage}{25}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}!Server@{Server}|hyperpage}{27}
+\indexentry{Server@{Server}!zcm::Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}|hyperpage}{27}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}!Server@{Server}|hyperpage}{27}
+\indexentry{Server@{Server}!zcm::Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}|hyperpage}{27}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}!$\sim $\discretionary {-}{}{}Server@{$\sim $\discretionary {-}{}{}Server}|hyperpage}{27}
+\indexentry{$\sim $\discretionary {-}{}{}Server@{$\sim $\discretionary {-}{}{}Server}!zcm::Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}|hyperpage}{27}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}!add\discretionary {-}{}{}\_\discretionary {-}{}{}connection@{add\discretionary {-}{}{}\_\discretionary {-}{}{}connection}|hyperpage}{27}
+\indexentry{add\discretionary {-}{}{}\_\discretionary {-}{}{}connection@{add\discretionary {-}{}{}\_\discretionary {-}{}{}connection}!zcm::Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}|hyperpage}{27}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}!bind@{bind}|hyperpage}{28}
+\indexentry{bind@{bind}!zcm::Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}|hyperpage}{28}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}!get\discretionary {-}{}{}\_\discretionary {-}{}{}name@{get\discretionary {-}{}{}\_\discretionary {-}{}{}name}|hyperpage}{28}
+\indexentry{get\discretionary {-}{}{}\_\discretionary {-}{}{}name@{get\discretionary {-}{}{}\_\discretionary {-}{}{}name}!zcm::Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}|hyperpage}{28}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}!get\discretionary {-}{}{}\_\discretionary {-}{}{}priority@{get\discretionary {-}{}{}\_\discretionary {-}{}{}priority}|hyperpage}{28}
+\indexentry{get\discretionary {-}{}{}\_\discretionary {-}{}{}priority@{get\discretionary {-}{}{}\_\discretionary {-}{}{}priority}!zcm::Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}|hyperpage}{28}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}!is\discretionary {-}{}{}\_\discretionary {-}{}{}buffer\discretionary {-}{}{}\_\discretionary {-}{}{}empty@{is\discretionary {-}{}{}\_\discretionary {-}{}{}buffer\discretionary {-}{}{}\_\discretionary {-}{}{}empty}|hyperpage}{28}
+\indexentry{is\discretionary {-}{}{}\_\discretionary {-}{}{}buffer\discretionary {-}{}{}\_\discretionary {-}{}{}empty@{is\discretionary {-}{}{}\_\discretionary {-}{}{}buffer\discretionary {-}{}{}\_\discretionary {-}{}{}empty}!zcm::Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}|hyperpage}{28}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}!message@{message}|hyperpage}{28}
+\indexentry{message@{message}!zcm::Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}|hyperpage}{28}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}!rebind\discretionary {-}{}{}\_\discretionary {-}{}{}operation\discretionary {-}{}{}\_\discretionary {-}{}{}function@{rebind\discretionary {-}{}{}\_\discretionary {-}{}{}operation\discretionary {-}{}{}\_\discretionary {-}{}{}function}|hyperpage}{28}
+\indexentry{rebind\discretionary {-}{}{}\_\discretionary {-}{}{}operation\discretionary {-}{}{}\_\discretionary {-}{}{}function@{rebind\discretionary {-}{}{}\_\discretionary {-}{}{}operation\discretionary {-}{}{}\_\discretionary {-}{}{}function}!zcm::Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}|hyperpage}{28}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}!recv@{recv}|hyperpage}{28}
+\indexentry{recv@{recv}!zcm::Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}|hyperpage}{28}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}!set\discretionary {-}{}{}\_\discretionary {-}{}{}response@{set\discretionary {-}{}{}\_\discretionary {-}{}{}response}|hyperpage}{28}
+\indexentry{set\discretionary {-}{}{}\_\discretionary {-}{}{}response@{set\discretionary {-}{}{}\_\discretionary {-}{}{}response}!zcm::Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}|hyperpage}{28}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}!spawn@{spawn}|hyperpage}{28}
+\indexentry{spawn@{spawn}!zcm::Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}|hyperpage}{28}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}!start@{start}|hyperpage}{28}
+\indexentry{start@{start}!zcm::Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}|hyperpage}{28}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}!buffer@{buffer}|hyperpage}{29}
+\indexentry{buffer@{buffer}!zcm::Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}|hyperpage}{29}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}!context@{context}|hyperpage}{29}
+\indexentry{context@{context}!zcm::Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}|hyperpage}{29}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}!endpoints@{endpoints}|hyperpage}{29}
+\indexentry{endpoints@{endpoints}!zcm::Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}|hyperpage}{29}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}!func\discretionary {-}{}{}\_\discretionary {-}{}{}mutex@{func\discretionary {-}{}{}\_\discretionary {-}{}{}mutex}|hyperpage}{29}
+\indexentry{func\discretionary {-}{}{}\_\discretionary {-}{}{}mutex@{func\discretionary {-}{}{}\_\discretionary {-}{}{}mutex}!zcm::Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}|hyperpage}{29}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}!name@{name}|hyperpage}{29}
+\indexentry{name@{name}!zcm::Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}|hyperpage}{29}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}!operation\discretionary {-}{}{}\_\discretionary {-}{}{}function@{operation\discretionary {-}{}{}\_\discretionary {-}{}{}function}|hyperpage}{29}
+\indexentry{operation\discretionary {-}{}{}\_\discretionary {-}{}{}function@{operation\discretionary {-}{}{}\_\discretionary {-}{}{}function}!zcm::Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}|hyperpage}{29}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}!operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue\discretionary {-}{}{}\_\discretionary {-}{}{}ptr@{operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue\discretionary {-}{}{}\_\discretionary {-}{}{}ptr}|hyperpage}{29}
+\indexentry{operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue\discretionary {-}{}{}\_\discretionary {-}{}{}ptr@{operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue\discretionary {-}{}{}\_\discretionary {-}{}{}ptr}!zcm::Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}|hyperpage}{29}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}!priority@{priority}|hyperpage}{29}
+\indexentry{priority@{priority}!zcm::Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}|hyperpage}{29}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}!ready@{ready}|hyperpage}{29}
+\indexentry{ready@{ready}!zcm::Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}|hyperpage}{29}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}!response@{response}|hyperpage}{29}
+\indexentry{response@{response}!zcm::Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}|hyperpage}{29}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}!server\discretionary {-}{}{}\_\discretionary {-}{}{}socket@{server\discretionary {-}{}{}\_\discretionary {-}{}{}socket}|hyperpage}{29}
+\indexentry{server\discretionary {-}{}{}\_\discretionary {-}{}{}socket@{server\discretionary {-}{}{}\_\discretionary {-}{}{}socket}!zcm::Server@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server}|hyperpage}{29}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{30}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{31}
+\indexentry{Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!zcm::Server_Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{31}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!execute@{execute}|hyperpage}{31}
+\indexentry{execute@{execute}!zcm::Server_Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{31}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!get\discretionary {-}{}{}\_\discretionary {-}{}{}name@{get\discretionary {-}{}{}\_\discretionary {-}{}{}name}|hyperpage}{31}
+\indexentry{get\discretionary {-}{}{}\_\discretionary {-}{}{}name@{get\discretionary {-}{}{}\_\discretionary {-}{}{}name}!zcm::Server_Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{31}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!get\discretionary {-}{}{}\_\discretionary {-}{}{}priority@{get\discretionary {-}{}{}\_\discretionary {-}{}{}priority}|hyperpage}{31}
+\indexentry{get\discretionary {-}{}{}\_\discretionary {-}{}{}priority@{get\discretionary {-}{}{}\_\discretionary {-}{}{}priority}!zcm::Server_Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{31}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!get\discretionary {-}{}{}\_\discretionary {-}{}{}response\discretionary {-}{}{}\_\discretionary {-}{}{}ptr@{get\discretionary {-}{}{}\_\discretionary {-}{}{}response\discretionary {-}{}{}\_\discretionary {-}{}{}ptr}|hyperpage}{31}
+\indexentry{get\discretionary {-}{}{}\_\discretionary {-}{}{}response\discretionary {-}{}{}\_\discretionary {-}{}{}ptr@{get\discretionary {-}{}{}\_\discretionary {-}{}{}response\discretionary {-}{}{}\_\discretionary {-}{}{}ptr}!zcm::Server_Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{31}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!get\discretionary {-}{}{}\_\discretionary {-}{}{}socket\discretionary {-}{}{}\_\discretionary {-}{}{}ptr@{get\discretionary {-}{}{}\_\discretionary {-}{}{}socket\discretionary {-}{}{}\_\discretionary {-}{}{}ptr}|hyperpage}{31}
+\indexentry{get\discretionary {-}{}{}\_\discretionary {-}{}{}socket\discretionary {-}{}{}\_\discretionary {-}{}{}ptr@{get\discretionary {-}{}{}\_\discretionary {-}{}{}socket\discretionary {-}{}{}\_\discretionary {-}{}{}ptr}!zcm::Server_Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{31}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!set\discretionary {-}{}{}\_\discretionary {-}{}{}ready@{set\discretionary {-}{}{}\_\discretionary {-}{}{}ready}|hyperpage}{31}
+\indexentry{set\discretionary {-}{}{}\_\discretionary {-}{}{}ready@{set\discretionary {-}{}{}\_\discretionary {-}{}{}ready}!zcm::Server_Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{31}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!operation\discretionary {-}{}{}\_\discretionary {-}{}{}function@{operation\discretionary {-}{}{}\_\discretionary {-}{}{}function}|hyperpage}{32}
+\indexentry{operation\discretionary {-}{}{}\_\discretionary {-}{}{}function@{operation\discretionary {-}{}{}\_\discretionary {-}{}{}function}!zcm::Server_Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{32}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!recv\discretionary {-}{}{}\_\discretionary {-}{}{}ready@{recv\discretionary {-}{}{}\_\discretionary {-}{}{}ready}|hyperpage}{32}
+\indexentry{recv\discretionary {-}{}{}\_\discretionary {-}{}{}ready@{recv\discretionary {-}{}{}\_\discretionary {-}{}{}ready}!zcm::Server_Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{32}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!response\discretionary {-}{}{}\_\discretionary {-}{}{}ptr@{response\discretionary {-}{}{}\_\discretionary {-}{}{}ptr}|hyperpage}{32}
+\indexentry{response\discretionary {-}{}{}\_\discretionary {-}{}{}ptr@{response\discretionary {-}{}{}\_\discretionary {-}{}{}ptr}!zcm::Server_Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{32}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!socket\discretionary {-}{}{}\_\discretionary {-}{}{}ptr@{socket\discretionary {-}{}{}\_\discretionary {-}{}{}ptr}|hyperpage}{32}
+\indexentry{socket\discretionary {-}{}{}\_\discretionary {-}{}{}ptr@{socket\discretionary {-}{}{}\_\discretionary {-}{}{}ptr}!zcm::Server_Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Server\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{32}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}|hyperpage}{32}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}!Subscriber@{Subscriber}|hyperpage}{33}
+\indexentry{Subscriber@{Subscriber}!zcm::Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}|hyperpage}{33}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}!Subscriber@{Subscriber}|hyperpage}{34}
+\indexentry{Subscriber@{Subscriber}!zcm::Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}|hyperpage}{34}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}!$\sim $\discretionary {-}{}{}Subscriber@{$\sim $\discretionary {-}{}{}Subscriber}|hyperpage}{34}
+\indexentry{$\sim $\discretionary {-}{}{}Subscriber@{$\sim $\discretionary {-}{}{}Subscriber}!zcm::Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}|hyperpage}{34}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}!add\discretionary {-}{}{}\_\discretionary {-}{}{}connection@{add\discretionary {-}{}{}\_\discretionary {-}{}{}connection}|hyperpage}{34}
+\indexentry{add\discretionary {-}{}{}\_\discretionary {-}{}{}connection@{add\discretionary {-}{}{}\_\discretionary {-}{}{}connection}!zcm::Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}|hyperpage}{34}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}!connect@{connect}|hyperpage}{34}
+\indexentry{connect@{connect}!zcm::Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}|hyperpage}{34}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}!get\discretionary {-}{}{}\_\discretionary {-}{}{}name@{get\discretionary {-}{}{}\_\discretionary {-}{}{}name}|hyperpage}{34}
+\indexentry{get\discretionary {-}{}{}\_\discretionary {-}{}{}name@{get\discretionary {-}{}{}\_\discretionary {-}{}{}name}!zcm::Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}|hyperpage}{34}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}!get\discretionary {-}{}{}\_\discretionary {-}{}{}priority@{get\discretionary {-}{}{}\_\discretionary {-}{}{}priority}|hyperpage}{34}
+\indexentry{get\discretionary {-}{}{}\_\discretionary {-}{}{}priority@{get\discretionary {-}{}{}\_\discretionary {-}{}{}priority}!zcm::Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}|hyperpage}{34}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}!is\discretionary {-}{}{}\_\discretionary {-}{}{}buffer\discretionary {-}{}{}\_\discretionary {-}{}{}empty@{is\discretionary {-}{}{}\_\discretionary {-}{}{}buffer\discretionary {-}{}{}\_\discretionary {-}{}{}empty}|hyperpage}{34}
+\indexentry{is\discretionary {-}{}{}\_\discretionary {-}{}{}buffer\discretionary {-}{}{}\_\discretionary {-}{}{}empty@{is\discretionary {-}{}{}\_\discretionary {-}{}{}buffer\discretionary {-}{}{}\_\discretionary {-}{}{}empty}!zcm::Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}|hyperpage}{34}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}!message@{message}|hyperpage}{35}
+\indexentry{message@{message}!zcm::Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}|hyperpage}{35}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}!rebind\discretionary {-}{}{}\_\discretionary {-}{}{}operation\discretionary {-}{}{}\_\discretionary {-}{}{}function@{rebind\discretionary {-}{}{}\_\discretionary {-}{}{}operation\discretionary {-}{}{}\_\discretionary {-}{}{}function}|hyperpage}{35}
+\indexentry{rebind\discretionary {-}{}{}\_\discretionary {-}{}{}operation\discretionary {-}{}{}\_\discretionary {-}{}{}function@{rebind\discretionary {-}{}{}\_\discretionary {-}{}{}operation\discretionary {-}{}{}\_\discretionary {-}{}{}function}!zcm::Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}|hyperpage}{35}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}!recv@{recv}|hyperpage}{35}
+\indexentry{recv@{recv}!zcm::Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}|hyperpage}{35}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}!spawn@{spawn}|hyperpage}{35}
+\indexentry{spawn@{spawn}!zcm::Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}|hyperpage}{35}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}!start@{start}|hyperpage}{35}
+\indexentry{start@{start}!zcm::Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}|hyperpage}{35}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}!buffer@{buffer}|hyperpage}{35}
+\indexentry{buffer@{buffer}!zcm::Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}|hyperpage}{35}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}!context@{context}|hyperpage}{35}
+\indexentry{context@{context}!zcm::Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}|hyperpage}{35}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}!endpoints@{endpoints}|hyperpage}{35}
+\indexentry{endpoints@{endpoints}!zcm::Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}|hyperpage}{35}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}!filter@{filter}|hyperpage}{35}
+\indexentry{filter@{filter}!zcm::Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}|hyperpage}{35}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}!func\discretionary {-}{}{}\_\discretionary {-}{}{}mutex@{func\discretionary {-}{}{}\_\discretionary {-}{}{}mutex}|hyperpage}{35}
+\indexentry{func\discretionary {-}{}{}\_\discretionary {-}{}{}mutex@{func\discretionary {-}{}{}\_\discretionary {-}{}{}mutex}!zcm::Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}|hyperpage}{35}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}!name@{name}|hyperpage}{36}
+\indexentry{name@{name}!zcm::Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}|hyperpage}{36}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}!operation\discretionary {-}{}{}\_\discretionary {-}{}{}function@{operation\discretionary {-}{}{}\_\discretionary {-}{}{}function}|hyperpage}{36}
+\indexentry{operation\discretionary {-}{}{}\_\discretionary {-}{}{}function@{operation\discretionary {-}{}{}\_\discretionary {-}{}{}function}!zcm::Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}|hyperpage}{36}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}!operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue\discretionary {-}{}{}\_\discretionary {-}{}{}ptr@{operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue\discretionary {-}{}{}\_\discretionary {-}{}{}ptr}|hyperpage}{36}
+\indexentry{operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue\discretionary {-}{}{}\_\discretionary {-}{}{}ptr@{operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue\discretionary {-}{}{}\_\discretionary {-}{}{}ptr}!zcm::Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}|hyperpage}{36}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}!priority@{priority}|hyperpage}{36}
+\indexentry{priority@{priority}!zcm::Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}|hyperpage}{36}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}!subscriber\discretionary {-}{}{}\_\discretionary {-}{}{}socket@{subscriber\discretionary {-}{}{}\_\discretionary {-}{}{}socket}|hyperpage}{36}
+\indexentry{subscriber\discretionary {-}{}{}\_\discretionary {-}{}{}socket@{subscriber\discretionary {-}{}{}\_\discretionary {-}{}{}socket}!zcm::Subscriber@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber}|hyperpage}{36}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{36}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!Subscriber\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{Subscriber\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{37}
+\indexentry{Subscriber\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{Subscriber\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!zcm::Subscriber_Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{37}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!execute@{execute}|hyperpage}{37}
+\indexentry{execute@{execute}!zcm::Subscriber_Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{37}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!get\discretionary {-}{}{}\_\discretionary {-}{}{}name@{get\discretionary {-}{}{}\_\discretionary {-}{}{}name}|hyperpage}{37}
+\indexentry{get\discretionary {-}{}{}\_\discretionary {-}{}{}name@{get\discretionary {-}{}{}\_\discretionary {-}{}{}name}!zcm::Subscriber_Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{37}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!get\discretionary {-}{}{}\_\discretionary {-}{}{}priority@{get\discretionary {-}{}{}\_\discretionary {-}{}{}priority}|hyperpage}{37}
+\indexentry{get\discretionary {-}{}{}\_\discretionary {-}{}{}priority@{get\discretionary {-}{}{}\_\discretionary {-}{}{}priority}!zcm::Subscriber_Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{37}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!operation\discretionary {-}{}{}\_\discretionary {-}{}{}function@{operation\discretionary {-}{}{}\_\discretionary {-}{}{}function}|hyperpage}{38}
+\indexentry{operation\discretionary {-}{}{}\_\discretionary {-}{}{}function@{operation\discretionary {-}{}{}\_\discretionary {-}{}{}function}!zcm::Subscriber_Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Subscriber\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{38}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}|hyperpage}{38}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}!Timer@{Timer}|hyperpage}{39}
+\indexentry{Timer@{Timer}!zcm::Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}|hyperpage}{39}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}!change\discretionary {-}{}{}\_\discretionary {-}{}{}period@{change\discretionary {-}{}{}\_\discretionary {-}{}{}period}|hyperpage}{39}
+\indexentry{change\discretionary {-}{}{}\_\discretionary {-}{}{}period@{change\discretionary {-}{}{}\_\discretionary {-}{}{}period}!zcm::Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}|hyperpage}{39}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}!get\discretionary {-}{}{}\_\discretionary {-}{}{}name@{get\discretionary {-}{}{}\_\discretionary {-}{}{}name}|hyperpage}{39}
+\indexentry{get\discretionary {-}{}{}\_\discretionary {-}{}{}name@{get\discretionary {-}{}{}\_\discretionary {-}{}{}name}!zcm::Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}|hyperpage}{39}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}!get\discretionary {-}{}{}\_\discretionary {-}{}{}priority@{get\discretionary {-}{}{}\_\discretionary {-}{}{}priority}|hyperpage}{39}
+\indexentry{get\discretionary {-}{}{}\_\discretionary {-}{}{}priority@{get\discretionary {-}{}{}\_\discretionary {-}{}{}priority}!zcm::Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}|hyperpage}{39}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}!operation@{operation}|hyperpage}{39}
+\indexentry{operation@{operation}!zcm::Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}|hyperpage}{39}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}!rebind\discretionary {-}{}{}\_\discretionary {-}{}{}operation\discretionary {-}{}{}\_\discretionary {-}{}{}function@{rebind\discretionary {-}{}{}\_\discretionary {-}{}{}operation\discretionary {-}{}{}\_\discretionary {-}{}{}function}|hyperpage}{39}
+\indexentry{rebind\discretionary {-}{}{}\_\discretionary {-}{}{}operation\discretionary {-}{}{}\_\discretionary {-}{}{}function@{rebind\discretionary {-}{}{}\_\discretionary {-}{}{}operation\discretionary {-}{}{}\_\discretionary {-}{}{}function}!zcm::Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}|hyperpage}{39}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}!spawn@{spawn}|hyperpage}{40}
+\indexentry{spawn@{spawn}!zcm::Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}|hyperpage}{40}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}!start@{start}|hyperpage}{40}
+\indexentry{start@{start}!zcm::Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}|hyperpage}{40}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}!func\discretionary {-}{}{}\_\discretionary {-}{}{}mutex@{func\discretionary {-}{}{}\_\discretionary {-}{}{}mutex}|hyperpage}{40}
+\indexentry{func\discretionary {-}{}{}\_\discretionary {-}{}{}mutex@{func\discretionary {-}{}{}\_\discretionary {-}{}{}mutex}!zcm::Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}|hyperpage}{40}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}!name@{name}|hyperpage}{40}
+\indexentry{name@{name}!zcm::Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}|hyperpage}{40}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}!operation\discretionary {-}{}{}\_\discretionary {-}{}{}function@{operation\discretionary {-}{}{}\_\discretionary {-}{}{}function}|hyperpage}{40}
+\indexentry{operation\discretionary {-}{}{}\_\discretionary {-}{}{}function@{operation\discretionary {-}{}{}\_\discretionary {-}{}{}function}!zcm::Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}|hyperpage}{40}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}!operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue\discretionary {-}{}{}\_\discretionary {-}{}{}ptr@{operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue\discretionary {-}{}{}\_\discretionary {-}{}{}ptr}|hyperpage}{40}
+\indexentry{operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue\discretionary {-}{}{}\_\discretionary {-}{}{}ptr@{operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue\discretionary {-}{}{}\_\discretionary {-}{}{}ptr}!zcm::Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}|hyperpage}{40}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}!period@{period}|hyperpage}{40}
+\indexentry{period@{period}!zcm::Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}|hyperpage}{40}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}!period\discretionary {-}{}{}\_\discretionary {-}{}{}mutex@{period\discretionary {-}{}{}\_\discretionary {-}{}{}mutex}|hyperpage}{40}
+\indexentry{period\discretionary {-}{}{}\_\discretionary {-}{}{}mutex@{period\discretionary {-}{}{}\_\discretionary {-}{}{}mutex}!zcm::Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}|hyperpage}{40}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}!priority@{priority}|hyperpage}{40}
+\indexentry{priority@{priority}!zcm::Timer@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer}|hyperpage}{40}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{41}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!Timer\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{Timer\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{41}
+\indexentry{Timer\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{Timer\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!zcm::Timer_Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{41}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!execute@{execute}|hyperpage}{42}
+\indexentry{execute@{execute}!zcm::Timer_Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{42}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!get\discretionary {-}{}{}\_\discretionary {-}{}{}name@{get\discretionary {-}{}{}\_\discretionary {-}{}{}name}|hyperpage}{42}
+\indexentry{get\discretionary {-}{}{}\_\discretionary {-}{}{}name@{get\discretionary {-}{}{}\_\discretionary {-}{}{}name}!zcm::Timer_Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{42}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!get\discretionary {-}{}{}\_\discretionary {-}{}{}priority@{get\discretionary {-}{}{}\_\discretionary {-}{}{}priority}|hyperpage}{42}
+\indexentry{get\discretionary {-}{}{}\_\discretionary {-}{}{}priority@{get\discretionary {-}{}{}\_\discretionary {-}{}{}priority}!zcm::Timer_Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{42}
+\indexentry{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}!operation\discretionary {-}{}{}\_\discretionary {-}{}{}function@{operation\discretionary {-}{}{}\_\discretionary {-}{}{}function}|hyperpage}{42}
+\indexentry{operation\discretionary {-}{}{}\_\discretionary {-}{}{}function@{operation\discretionary {-}{}{}\_\discretionary {-}{}{}function}!zcm::Timer_Operation@{zcm\discretionary {-}{}{}::\discretionary {-}{}{}Timer\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Operation}|hyperpage}{42}
+\indexentry{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/include/actor.\discretionary {-}{}{}hpp@{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/include/actor.\discretionary {-}{}{}hpp}|hyperpage}{43}
+\indexentry{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/include/client.\discretionary {-}{}{}hpp@{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/include/client.\discretionary {-}{}{}hpp}|hyperpage}{43}
+\indexentry{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/include/component.\discretionary {-}{}{}hpp@{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/include/component.\discretionary {-}{}{}hpp}|hyperpage}{44}
+\indexentry{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/include/operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue.\discretionary {-}{}{}hpp@{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/include/operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue.\discretionary {-}{}{}hpp}|hyperpage}{45}
+\indexentry{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/include/operation\discretionary {-}{}{}\_\discretionary {-}{}{}types.\discretionary {-}{}{}hpp@{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/include/operation\discretionary {-}{}{}\_\discretionary {-}{}{}types.\discretionary {-}{}{}hpp}|hyperpage}{45}
+\indexentry{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/include/publisher.\discretionary {-}{}{}hpp@{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/include/publisher.\discretionary {-}{}{}hpp}|hyperpage}{46}
+\indexentry{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/include/server.\discretionary {-}{}{}hpp@{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/include/server.\discretionary {-}{}{}hpp}|hyperpage}{46}
+\indexentry{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/include/subscriber.\discretionary {-}{}{}hpp@{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/include/subscriber.\discretionary {-}{}{}hpp}|hyperpage}{47}
+\indexentry{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/include/timer.\discretionary {-}{}{}hpp@{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/include/timer.\discretionary {-}{}{}hpp}|hyperpage}{48}
+\indexentry{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/src/actor.\discretionary {-}{}{}cpp@{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/src/actor.\discretionary {-}{}{}cpp}|hyperpage}{48}
+\indexentry{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/src/client.\discretionary {-}{}{}cpp@{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/src/client.\discretionary {-}{}{}cpp}|hyperpage}{49}
+\indexentry{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/src/component.\discretionary {-}{}{}cpp@{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/src/component.\discretionary {-}{}{}cpp}|hyperpage}{49}
+\indexentry{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/src/operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue.\discretionary {-}{}{}cpp@{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/src/operation\discretionary {-}{}{}\_\discretionary {-}{}{}queue.\discretionary {-}{}{}cpp}|hyperpage}{49}
+\indexentry{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/src/operation\discretionary {-}{}{}\_\discretionary {-}{}{}types.\discretionary {-}{}{}cpp@{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/src/operation\discretionary {-}{}{}\_\discretionary {-}{}{}types.\discretionary {-}{}{}cpp}|hyperpage}{50}
+\indexentry{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/src/publisher.\discretionary {-}{}{}cpp@{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/src/publisher.\discretionary {-}{}{}cpp}|hyperpage}{50}
+\indexentry{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/src/server.\discretionary {-}{}{}cpp@{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/src/server.\discretionary {-}{}{}cpp}|hyperpage}{51}
+\indexentry{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/src/subscriber.\discretionary {-}{}{}cpp@{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/src/subscriber.\discretionary {-}{}{}cpp}|hyperpage}{51}
+\indexentry{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/src/timer.\discretionary {-}{}{}cpp@{/home/kelsier/\discretionary {-}{}{}Git\discretionary {-}{}{}Hub/zcm/src/timer.\discretionary {-}{}{}cpp}|hyperpage}{52}

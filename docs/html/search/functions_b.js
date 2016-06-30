@@ -1,8 +1,13 @@
 var searchData=
 [
-  ['_7eclient',['~Client',['../classzcm_1_1Client.html#a927b35854850369d4d95b3101f3a9baa',1,'zcm::Client']]],
-  ['_7ecomponent',['~Component',['../classzcm_1_1Component.html#a0bab6bb89e49affa281179f5d6aeff6a',1,'zcm::Component']]],
-  ['_7epublisher',['~Publisher',['../classzcm_1_1Publisher.html#adde9cdf939d305abeec3ef98331f5f40',1,'zcm::Publisher']]],
-  ['_7eserver',['~Server',['../classzcm_1_1Server.html#a1aac28d71da6d5e66fff629d7206b3c6',1,'zcm::Server']]],
-  ['_7esubscriber',['~Subscriber',['../classzcm_1_1Subscriber.html#a6f647c7d9f952e07b22b3aa4b63778e7',1,'zcm::Subscriber']]]
+  ['send',['send',['../classzcm_1_1Publisher.html#a1e72bb0eef5a99fdbec0e2df957668e0',1,'zcm::Publisher']]],
+  ['server',['server',['../classzcm_1_1Component.html#ae4501077c33b5f86e384e15f2b6bbc50',1,'zcm::Component::server()'],['../classzcm_1_1Server.html#a3b672b6fdb377ffe5f478a9c7916acbb',1,'zcm::Server::Server(std::string name, unsigned int priority, zmq::context_t *actor_context, std::function&lt; void()&gt; operation_function, Operation_Queue *operation_queue_ptr)'],['../classzcm_1_1Server.html#af1dd8cc020d636884884eaefcdcc857b',1,'zcm::Server::Server(std::string name, unsigned int priority, zmq::context_t *actor_context, std::vector&lt; std::string &gt; endpoints, std::function&lt; void()&gt; operation_function, Operation_Queue *operation_queue_ptr)']]],
+  ['server_5foperation',['Server_Operation',['../classzcm_1_1Server__Operation.html#a79909424f8e316212190e0802183945b',1,'zcm::Server_Operation']]],
+  ['set_5fready',['set_ready',['../classzcm_1_1Server__Operation.html#a1477e76e1639bdebc6b855d3be4e9fb2',1,'zcm::Server_Operation']]],
+  ['set_5fresponse',['set_response',['../classzcm_1_1Server.html#a78ed8fd8fae034a9f79c181f3b0a4ee1',1,'zcm::Server']]],
+  ['set_5ftimeout',['set_timeout',['../classzcm_1_1Client.html#aec14e7e61a88c918df8c2bae729923b2',1,'zcm::Client']]],
+  ['spawn',['spawn',['../classzcm_1_1Component.html#a328d6f79aab5455e96a2badfdb6bb451',1,'zcm::Component::spawn()'],['../classzcm_1_1Operation__Queue.html#a7ee35bb38b4c40770043674e61a344e2',1,'zcm::Operation_Queue::spawn()'],['../classzcm_1_1Server.html#a77c0b86016dce3e6cef6a64118edd584',1,'zcm::Server::spawn()'],['../classzcm_1_1Subscriber.html#a05334a6b27ce47e46ad525c2fc015347',1,'zcm::Subscriber::spawn()'],['../classzcm_1_1Timer.html#a05e22ac74661a4891f610e0c0d364ca7',1,'zcm::Timer::spawn()']]],
+  ['start',['start',['../classzcm_1_1Server.html#ab94400c32a097989a769cfb1d77936b4',1,'zcm::Server::start()'],['../classzcm_1_1Subscriber.html#af255252bdc1808c7436208b919612a48',1,'zcm::Subscriber::start()'],['../classzcm_1_1Timer.html#a2a7ba9c6294a1a726844c71db962a280',1,'zcm::Timer::start()']]],
+  ['subscriber',['Subscriber',['../classzcm_1_1Subscriber.html#a8477e4359c83f009ad34bbbd5e0c7b68',1,'zcm::Subscriber::Subscriber(std::string name, unsigned int priority, zmq::context_t *actor_context, std::string filter, std::function&lt; void()&gt; operation_function, Operation_Queue *operation_queue_ptr)'],['../classzcm_1_1Subscriber.html#a248ea0aab7fc2d283f5373e33abd7287',1,'zcm::Subscriber::Subscriber(std::string name, unsigned int priority, zmq::context_t *actor_context, std::string filter, std::vector&lt; std::string &gt; endpoints, std::function&lt; void()&gt; operation_function, Operation_Queue *operation_queue_ptr)'],['../classzcm_1_1Component.html#a1a7a463512fbac9e88d04d62ff5fc244',1,'zcm::Component::subscriber()']]],
+  ['subscriber_5foperation',['Subscriber_Operation',['../classzcm_1_1Subscriber__Operation.html#aa0422263c6afea8bba3aa55b4c4e8c84',1,'zcm::Subscriber_Operation']]]
 ];

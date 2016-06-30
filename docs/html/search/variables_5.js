@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['period',['period',['../classzcm_1_1Timer.html#a36c7498a7ad5706ceca83429e6c1759c',1,'zcm::Timer']]],
-  ['period_5fmutex',['period_mutex',['../classzcm_1_1Timer.html#af9d6ce4df403e44b543241926ddcf41f',1,'zcm::Timer']]],
-  ['priority',['priority',['../classzcm_1_1Base__Operation.html#a38af3bcc2578ef215772d595bf3fa358',1,'zcm::Base_Operation::priority()'],['../classzcm_1_1Server.html#ad088a068dc025ff7aa4bf560cc7c43c1',1,'zcm::Server::priority()'],['../classzcm_1_1Subscriber.html#a208baedba808c9229887ab8af00725fd',1,'zcm::Subscriber::priority()'],['../classzcm_1_1Timer.html#a722f6390254d106117d8e1545b6092ab',1,'zcm::Timer::priority()']]],
-  ['publisher_5fsocket',['publisher_socket',['../classzcm_1_1Publisher.html#acb22f36a592a5a0beaf4100e472578d5',1,'zcm::Publisher']]],
-  ['publishers',['publishers',['../classzcm_1_1Component.html#a4dcce63b0b5495bc15bd18e5dce86094',1,'zcm::Component']]]
+  ['operation_5ffunction',['operation_function',['../classzcm_1_1Timer__Operation.html#a492e0ec6be1dfa846bbc83d9e5dea9b0',1,'zcm::Timer_Operation::operation_function()'],['../classzcm_1_1Subscriber__Operation.html#a5e3ca90f3ea6f1342d76f49363206e06',1,'zcm::Subscriber_Operation::operation_function()'],['../classzcm_1_1Server__Operation.html#af6df162db0b1f42248b52c8925dcc64d',1,'zcm::Server_Operation::operation_function()'],['../classzcm_1_1Server.html#a98a640c77898790e3ad10b3276e3cba8',1,'zcm::Server::operation_function()'],['../classzcm_1_1Subscriber.html#ab8e52c24d7dc57b33d2c1536de4197b2',1,'zcm::Subscriber::operation_function()'],['../classzcm_1_1Timer.html#a07f820c2d67029b83547bbfd77fc3690',1,'zcm::Timer::operation_function()']]],
+  ['operation_5fqueue',['operation_queue',['../classzcm_1_1Component.html#a4c9f3591c18dde89bc3c2af7717c6692',1,'zcm::Component::operation_queue()'],['../classzcm_1_1Operation__Queue.html#a5f846fe69a28fd93c1182bff69b20379',1,'zcm::Operation_Queue::operation_queue()']]],
+  ['operation_5fqueue_5fptr',['operation_queue_ptr',['../classzcm_1_1Server.html#a667c0fef537aa6acc6245d956250c860',1,'zcm::Server::operation_queue_ptr()'],['../classzcm_1_1Subscriber.html#a1cd579aa570832f9656b9fa24747dde3',1,'zcm::Subscriber::operation_queue_ptr()'],['../classzcm_1_1Timer.html#a9f2ce34fb9230c4251355fde956b7220',1,'zcm::Timer::operation_queue_ptr()']]]
 ];

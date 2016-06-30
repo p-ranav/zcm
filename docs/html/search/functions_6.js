@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['operation',['operation',['../classzcm_1_1Timer.html#a4baed4e019656ed2612aaa0374cc0fa9',1,'zcm::Timer']]],
-  ['operator_28_29',['operator()',['../structzcm_1_1Operation__Queue_1_1PriorityOrdering.html#a594289eea4384b3dc8902d17559e81d6',1,'zcm::Operation_Queue::PriorityOrdering']]]
+  ['is_5fbuffer_5fempty',['is_buffer_empty',['../classzcm_1_1Server.html#a9b11ed1a79a2f11ee6ff747937b428b0',1,'zcm::Server::is_buffer_empty()'],['../classzcm_1_1Subscriber.html#adabba1785e367df820f011fbdb2a52c2',1,'zcm::Subscriber::is_buffer_empty()']]]
 ];
