@@ -20,15 +20,18 @@ namespace zcm {
     /**
      * @brief Construct a publisher object
      * @param[in] name Publisher name
+     * @param[in] ZMQ Context of the Actor Process
      */  
-    Publisher(std::string name);
+    Publisher(std::string name, zmq::context_t * actor_context);
 
     /**
      * @brief Construct a publisher object with known endpoints
      * @param[in] name Publisher name
+     * @param[in] ZMQ Context of the Actor Process
      * @param[in] endpoints A vector of endpoint strings
      */  
-    Publisher(std::string name, std::vector<std::string> endpoints);
+    Publisher(std::string name, zmq::context_t * actor_context, 
+	      std::vector<std::string> endpoints);
 
     /**
      * @brief Close the publisher ZMQ socket and destroy the context

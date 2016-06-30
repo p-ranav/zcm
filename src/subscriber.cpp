@@ -10,6 +10,7 @@ namespace zcm {
 
   Subscriber::Subscriber(std::string name, 
 			 unsigned int priority, 
+			 zmq::context_t * actor_context,
 			 std::string filter,
 			 std::vector<std::string> endpoints, 
 			 std::function<void()> operation_function, 
@@ -20,7 +21,7 @@ namespace zcm {
     endpoints(endpoints),
     operation_function(operation_function),
     operation_queue_ptr(operation_queue_ptr) {
-    context = new zmq::context_t(2);
+    context = actor_context;
     subscriber_socket = new zmq::socket_t(*context, ZMQ_SUB);
     for (auto endpoint : endpoints)
       subscriber_socket->connect(endpoint);
@@ -35,7 +36,6 @@ namespace zcm {
 
   void Subscriber::connect(std::vector<std::string> new_endpoints) {
     endpoints = new_endpoints;
-    context = new zmq::context_t(2);
     subscriber_socket = new zmq::socket_t(*context, ZMQ_SUB);
     for (auto endpoint : endpoints)
       subscriber_socket->connect(endpoint);

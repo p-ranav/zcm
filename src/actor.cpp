@@ -14,6 +14,8 @@ namespace zcm {
     std::ifstream configuration(configuration_file, std::ifstream::binary);
     configuration >> root;
 
+    zmq::context_t * context = new zmq::context_t(1);
+
     for (unsigned int i = 0; i < root["Component Instances"].size(); i++) {
       std::string component_library = root["Component Instances"][i]["Definition"].asString();
       void * handle = dlopen(component_library.c_str(), RTLD_NOW);
@@ -51,7 +53,7 @@ namespace zcm {
 	  for (unsigned int k = 0; k < publisher_config["Endpoints"].size(); k++) {
 	    publishers_config_map[publisher_name].push_back(publisher_config["Endpoints"][k].asString());
 	  }
-	  Publisher * new_publisher = new Publisher(publisher_name);
+	  Publisher * new_publisher = new Publisher(publisher_name, context);
 	  component_instance->add_publisher(new_publisher);
 	}
 
@@ -67,6 +69,7 @@ namespace zcm {
 	  }
 	  Subscriber * new_subscriber = new Subscriber(subscriber_name,
 						       subscriber_priority,
+						       context,
 						       subscriber_filter,
 						       component_instance->
 						       functionality[subscriber_operation],
@@ -82,7 +85,7 @@ namespace zcm {
 	  for (unsigned int k = 0; k < client_config["Endpoints"].size(); k++) {
 	    clients_config_map[client_name].push_back(client_config["Endpoints"][k].asString());
 	  }
-	  Client * new_client = new Client(client_name, client_timeout);
+	  Client * new_client = new Client(client_name, context, client_timeout);
 	  component_instance->add_client(new_client);
 	}
 
@@ -97,6 +100,7 @@ namespace zcm {
 	  }
 	  Server * new_server = new Server(server_name,
 					   server_priority,
+					   context,
 					   component_instance->functionality[server_operation],
 					   component_instance->get_operation_queue());
 	  component_instance->add_server(new_server);	  
@@ -112,11 +116,15 @@ namespace zcm {
   }
 
   void Actor::run() {
+    std::vector<std::thread *> component_instance_threads;
     for (auto instance : component_instances) {
       std::thread * instance_thread = instance->spawn();
-      instance_thread->detach();
+      component_instance_threads.push_back(instance_thread);
     }
-    while(true) {} 
+
+    for (auto instance : component_instance_threads) {
+      instance->join();
+    }
   }
 
   std::string Actor::get_name() {
