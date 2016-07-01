@@ -1,5 +1,5 @@
-One-Server Many-Client Test
-===========================
+One-Server Many-Clients Test
+============================
 
 Screenshots
 -----------
