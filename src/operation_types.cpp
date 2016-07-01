@@ -33,7 +33,12 @@ namespace zcm {
     operation_function();
     zmq::message_t reply(response_ptr->length());
     memcpy(reply.data(), response_ptr->c_str(), response_ptr->length());
-    socket_ptr->send(reply);
+    try {
+      socket_ptr->send(reply);
+    }
+    catch (zmq::error_t &e) {
+      throw std::runtime_error(e.what());
+    }
     set_ready();
   }
 

@@ -57,7 +57,8 @@
 		    "Name" : "server",
 		    "Priority" : 60,
 		    "Function" : "server_function",
-		    "Endpoints" : ["tcp://*:5510"]
+		    "Endpoints" : ["tcp://*:5510"],
+		    "Timeout" : 0.5
 		}
 	    ] 
 	},

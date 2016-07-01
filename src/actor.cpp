@@ -92,6 +92,7 @@ namespace zcm {
 	// Configure all component instance servers
 	for (unsigned int j = 0; j < root["Component Instances"][i]["Servers"].size(); j++) {
 	  Json::Value server_config = root["Component Instances"][i]["Servers"][j];
+	  int server_timeout = (int)(1000 * server_config["Timeout"].asFloat());
 	  std::string server_name = server_config["Name"].asString();
 	  unsigned int server_priority = server_config["Priority"].asUInt();
 	  std::string server_operation = server_config["Function"].asString();	  	  
@@ -102,7 +103,8 @@ namespace zcm {
 					   server_priority,
 					   context,
 					   component_instance->functionality[server_operation],
-					   component_instance->get_operation_queue());
+					   component_instance->get_operation_queue(),
+					   server_timeout);
 	  component_instance->add_server(new_server);	  
 	}
 

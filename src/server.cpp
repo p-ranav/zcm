@@ -13,14 +13,17 @@ namespace zcm {
 		 zmq::context_t * actor_context,
 		 std::vector<std::string> endpoints,
 		 std::function<void()> operation_function,
-		 Operation_Queue * operation_queue_ptr) :
+		 Operation_Queue * operation_queue_ptr,
+		 int timeout = 500) :
     name(name),
     priority(priority),
     endpoints(endpoints),
     operation_function(operation_function),
-    operation_queue_ptr(operation_queue_ptr) {
+    operation_queue_ptr(operation_queue_ptr),
+    server_socket_timeout(timeout) {
     context = actor_context;
     server_socket = new zmq::socket_t(*context, ZMQ_REP);
+    server_socket->setsockopt(ZMQ_RCVTIMEO, server_socket_timeout); // milliseconds
     response = new std::string("");
     for (auto endpoint : endpoints)
       server_socket->bind(endpoint);
@@ -36,6 +39,7 @@ namespace zcm {
   void Server::bind(std::vector<std::string> new_endpoints) {
     endpoints = new_endpoints;
     server_socket = new zmq::socket_t(*context, ZMQ_REP);
+    server_socket->setsockopt(ZMQ_RCVTIMEO, server_socket_timeout); // milliseconds
     response = new std::string("");
     for (auto endpoint : endpoints)
       server_socket->bind(endpoint);
