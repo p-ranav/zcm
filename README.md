@@ -1,7 +1,7 @@
 ZeroMQ Component Model
 ======================
 
-A lightweight component model using ZeroMQ and Google Protobuf
+A lightweight component model using ZeroMQ
 
 ZCM Dependencies
 -----------------
