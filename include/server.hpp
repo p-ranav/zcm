@@ -33,12 +33,14 @@ namespace zcm {
 	   unsigned int priority,
 	   zmq::context_t * actor_context,
 	   std::function<void()> operation_function,
-	   Operation_Queue * operation_queue_ptr) :
+	   Operation_Queue * operation_queue_ptr,
+	   int timeout = 500) :
       name(name),
       priority(priority),
       context(actor_context),
       operation_function(operation_function),
-      operation_queue_ptr(operation_queue_ptr) {}
+      operation_queue_ptr(operation_queue_ptr),
+      server_socket_timeout(timeout) {}
 
     /**
      * @brief Construct a server object with known endpoints
@@ -54,7 +56,8 @@ namespace zcm {
 	   zmq::context_t * actor_context,
 	   std::vector<std::string> endpoints,
 	   std::function<void()> operation_function,
-	   Operation_Queue * operation_queue_ptr);
+	   Operation_Queue * operation_queue_ptr,
+	   int timeout);
 
     /**
      * @brief Close the server socket and destroy the ZMQ context
@@ -159,6 +162,10 @@ namespace zcm {
 
     /** @brief response string to send to client */
     std::string * response;
+
+    /** @brief Timeout of the server socket when replying to clients */
+    int server_socket_timeout;
+
   };
 
 }
