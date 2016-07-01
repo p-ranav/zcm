@@ -8,10 +8,6 @@ Screenshots
 
 ![Alt text](https://github.com/pranav-srinivas-kumar/zcm/blob/master/tests/one-server-many-clients/screenshots/00.png?raw=true "Starting the Test")
 
-* The server should be able to respond to all client requests 
-
-![Alt text](https://github.com/pranav-srinivas-kumar/zcm/blob/master/tests/one-server-many-clients/screenshots/00.png?raw=true "Time to Fail the Server")
-
 * When the server actor is killed, the clients stop receiving responses from the server and handle the exception
 
 ![Alt text](https://github.com/pranav-srinivas-kumar/zcm/blob/master/tests/one-server-many-clients/screenshots/02.png?raw=true "Server Failure Exception")
