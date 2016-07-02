@@ -133,4 +133,16 @@ namespace zcm {
     return name;
   }
 
+  std::string Actor::get_configuration() {
+    return configuration;
+  }
+
+  pid_t Actor::get_pid() {
+    return pid;
+  }
+
+  void Actor::set_pid(pid_t new_pid) {
+    pid = new_pid;
+  }
+
 }
